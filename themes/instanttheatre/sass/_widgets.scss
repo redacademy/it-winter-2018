@@ -4,7 +4,6 @@
 
 .widget {
 	margin: 0 0 $base__space-unit;
-
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
@@ -12,6 +11,42 @@
 }
 
 /* Search widget. */
+
 .widget_search .search-submit {
 	display: none;
 }
+
+.site-info {
+	background-color: #FEEA1E;
+	max-width: 1440px;
+	padding: 2rem;
+	margin: 0 auto;
+	h2, h3, p {
+		margin: 0;
+	}
+	.secondary {
+		display: flex;
+		justify-content: space-between;
+		.textwidget,p{
+			font-size: 14px;
+		}
+		.contact-info {
+			width: 161px;
+		}
+		.subscribe{
+			width:380px;
+		}
+		.our-mission {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 300px;
+		}
+	}
+	.email-field{
+		width: 380px;
+		height: 50px;
+		margin-bottom: 0.5rem;
+	}
+}
+

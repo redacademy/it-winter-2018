@@ -1,8 +1,8 @@
 /*!
-Theme Name: RED Starter Theme
-Theme URI: http://underscores.me/
-Author: RED Academy
-Author URI: http://www.redacademy.com
+Theme Name: Instant Theatre Company
+Theme URI: http://instanttheatre.com/
+Author: Guy Chappell
+Author URI: 
 Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -563,6 +563,43 @@ a {
 /* Search widget. */
 .widget_search .search-submit {
   display: none; }
+
+.site-info {
+  background-color: #FEEA1E;
+  max-width: 1440px;
+  padding: 2rem;
+  margin: 0 auto; }
+  .site-info h2, .site-info h3, .site-info p {
+    margin: 0; }
+  .site-info .secondary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .site-info .secondary .textwidget, .site-info .secondary p {
+      font-size: 14px; }
+    .site-info .secondary .contact-info {
+      width: 161px; }
+    .site-info .secondary .subscribe {
+      width: 380px; }
+    .site-info .secondary .our-mission {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 300px; }
+  .site-info .email-field {
+    width: 380px;
+    height: 50px;
+    margin-bottom: 0.5rem; }
 
 /*--------------------------------------------------------------
 # Content
