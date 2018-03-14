@@ -19,6 +19,11 @@ $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
 
+$color__yellow-brand: #FFEC00;
+$color__red-brand: #ED1651;
+$color__blue-brand: #00B6CB;
+$color__green-brand: #5bba47;
+
 // Typography
 
 $font__main: sans-serif;
@@ -26,3 +31,10 @@ $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+// Break Points
+
+$mobile_break: 480px;
+$desktop__content-area: 1240px;
+$desktop_break: 1440px;
+
