@@ -27,8 +27,11 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+					<button class="menu-toggle" id="toggle-button" aria-controls="primary-menu" aria-expanded="false" ><i class="fas fa-bars"></i></button>
+				<div class="toggle-menu-wrapper">
+					<input type="text" id="hamburger-search" placeholder="Search">"
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				</div>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 

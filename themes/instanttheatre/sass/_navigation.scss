@@ -26,21 +26,43 @@ a {
 
 /* Menus */
 
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	.main-navigation{
+		position: absolute;
+		right: 0;
+
+	#hamburger-search{
+		background: #fff;
+		border: 1px solid gray;
+		z-index: 1;
+		position: absolute;
+		right: 30px;
+		top: 0;
+	}
+	
 
 	ul {
-		display: none;
+		// display: none;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding:10%;
+		padding-top: 100px;
+		height: 100vh;
+		width: 80vw;
+		background: $color__yellow-brand;
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
+		.sub-menu{
+			border: 1px solid red;
+			width: 30vw;
+			right: 0;
+		}
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			border: 2px, red;
 			position: absolute;
 			top: $base__space-unit;
 			left: -999rem;
@@ -49,13 +71,6 @@ a {
 			ul {
 				left: -999rem;
 				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
 			}
 
 			a {
@@ -77,29 +92,43 @@ a {
 		}
 	}
 	li {
-		float: left;
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
-	}
+		color: black;
+		text-transform: uppercase;
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
 	}
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-toggle{
+	border: none;
+	background: none;
+	box-shadow: none;
+	outline: none;
+	font-size: 20px;
 }
+
+// .menu-toggle,
+// .main-navigation.toggled ul  {
+// }
+
+// .menu-toggle:before {
+// 	content: "\f0c9";
+// 	font-family: FontAwesome;
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	text-decoration: inherit;
+// 	color: #000;
+// 	font-size: 18px;
+// 	padding-right: 0.5em;
+// 	position: absolute;
+// 	border: none;
+// 	box-shadow: none;
+// }
 
 @media screen and (min-width: 768px) {
 	.menu-toggle {
@@ -120,12 +149,10 @@ a {
 	}
 
 	.nav-previous {
-		float: left;
 		width: 50%;
 	}
 
 	.nav-next {
-		float: right;
 		text-align: right;
 		width: 50%;
 	}
