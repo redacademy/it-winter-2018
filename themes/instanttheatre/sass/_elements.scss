@@ -68,3 +68,18 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
+
+//header
+body.home {
+	.site-header{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 480px;
+		width: 100vw;
+		height: 60px;
+		background-color: $color__yellow-brand;
+		position: relative;
+	}
+}
+
