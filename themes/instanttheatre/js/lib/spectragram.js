@@ -222,24 +222,4 @@ if (typeof Object.create !== "function") {
 		clientID: 'c242e8f88adb4b50a6b9849d1f5c2e8f'
 	};
 
-
 })(jQuery, window, document);
-
-var Spectra = {
-	instaToken: '2136707.4dd19c1.d077b227b0474d80a5665236d2e90fcf',
-	instaID: '4dd19c1f5c7745a2bca7b4b3524124d0',
-	
-	init: function () {
-$.fn.spectragram.accessData = {
-		accessToken: this.instaToken,
-		clientID: this.instaID
-};
-$('#instagram-feed').spectragram('getUserFeed',{
-max: 12,
-		query: 'adrianengine',
-		wrapEachWith: '<div class="photo">'
-});
-	}
-  }
-  
-Spectra.init();
