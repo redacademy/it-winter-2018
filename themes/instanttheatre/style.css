@@ -1,7 +1,7 @@
 /*!
 Theme Name: Instant Theatre Company
 Theme URI: http://instanttheatre.com/
-Author: Guy Chappell
+Author: Guy Chappell, Dakota Mauza, Brandon Liu, Ning Luo
 Author URI: 
 Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
@@ -46,7 +46,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
 body {
   margin: 0; }
@@ -925,6 +931,57 @@ object {
 .instagram-feed {
   width: 100%;
   height: 300px; }
+
+/* Taxonomy Role */
+.role-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .role-filters .filter {
+    min-width: 1240px; }
+
+.person-gallery {
+  max-width: 1240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.person-tile {
+  width: 265px;
+  height: 300px;
+  margin: 1.25% 0.5rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 8px #D5D5D5;
+          box-shadow: 0px 0px 8px #D5D5D5;
+  color: #fff; }
+  .person-tile a {
+    height: 100%;
+    width: 100%; }
+  .person-tile .person-image-wrapper {
+    position: relative;
+    width: 235px;
+    height: 235px;
+    margin: 15px auto;
+    border-radius: 4px;
+    overflow: hidden; }
+    .person-tile .person-image-wrapper img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      min-height: 100%;
+      width: auto;
+      max-width: none; }
+  .person-tile .person-tile-label {
+    padding: 0.5rem;
+    margin: 0;
+    color: #000;
+    text-align: center; }
 
 @media screen and (min-width: 480px) {
   .what-is-improv {

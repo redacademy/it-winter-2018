@@ -45,3 +45,44 @@ function show_genre_taxonomy() {
 
 }
 add_action( 'init', 'show_genre_taxonomy', 0 );
+
+
+// Register Custom Taxonomy - Role
+function person_role_taxonomy() {
+
+	$labels = array(
+		'name'                       => 'Roles',
+		'singular_name'              => 'Role',
+		'menu_name'                  => 'Role',
+		'all_items'                  => 'All Roles',
+		'parent_item'                => 'Parent Role',
+		'parent_item_colon'          => 'Parent Role:',
+		'new_item_name'              => 'New Role Name',
+		'add_new_item'               => 'Add New Role',
+		'edit_item'                  => 'Edit Role',
+		'update_item'                => 'Update Role',
+		'view_item'                  => 'View Role',
+		'separate_items_with_commas' => 'Separate roles with commas',
+		'add_or_remove_items'        => 'Add or remove roles',
+		'choose_from_most_used'      => 'Choose from the most used',
+		'popular_items'              => 'Popular roles',
+		'search_items'               => 'Search Roles',
+		'not_found'                  => 'Not Found',
+		'no_terms'                   => 'No roles',
+		'items_list'                 => 'Roles list',
+		'items_list_navigation'      => 'Roles list navigation',
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'show_in_rest'               => true,
+	);
+	register_taxonomy( 'role', array( 'post_people' ), $args );
+
+}
+add_action( 'init', 'person_role_taxonomy', 0 );
