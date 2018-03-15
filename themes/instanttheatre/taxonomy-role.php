@@ -22,8 +22,8 @@ get_header();
 			$term_id = 2;
 			$taxonomy_name = 'role';
 			$termchildren = get_term_children( $term_id, $taxonomy_name );
-			echo '<ul>';
-			echo '<li style="display: inline-block;">All</li>';
+			echo '<ul class="role-filters" >';
+			echo '<li style="filter;">All</li>';
 			foreach ( $termchildren as $child ) {
 					$term = get_term_by( 'id', $child, $taxonomy_name );
 					echo '<li style="display: inline-block;">'.$term->name.'</li>';
