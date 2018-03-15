@@ -428,6 +428,7 @@ textarea {
   width: 100%; }
 
 .blue-btn {
+  min-width: 130px;
   border-radius: 5px;
   border: none;
   background: #00B6CB;
@@ -435,7 +436,8 @@ textarea {
           box-shadow: none;
   color: white;
   padding: .6rem 1rem;
-  text-shadow: none; }
+  text-shadow: none;
+  margin-top: 0.5rem; }
   .blue-btn:hover {
     border: none;
     -webkit-box-shadow: none;
@@ -867,3 +869,74 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.site-content {
+  max-width: 1240px;
+  margin: 0 auto; }
+
+.carousel-cell {
+  margin-top: 3.75rem;
+  width: 1240px;
+  height: 500px;
+  background-color: gray; }
+
+.upcoming-shows,
+.upcoming-classes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.show-wrapper,
+.class-wrapper {
+  width: 380px;
+  height: 395px;
+  background-color: gray;
+  margin-bottom: 2rem; }
+
+.what-is-improv {
+  margin-top: 3.75rem;
+  max-width: 1240px;
+  padding: 0rem;
+  background: url("../../assets/images/yellow-wave-banner-background.png");
+  text-align: center; }
+  .what-is-improv .what-is-improv-containor {
+    padding: 3rem;
+    background: #FFEC00; }
+    .what-is-improv .what-is-improv-containor h2 {
+      margin-top: 0; }
+  .what-is-improv .improv-button-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+.instagram-feed {
+  width: 100%;
+  height: 300px; }
+
+@media screen and (min-width: 480px) {
+  .what-is-improv {
+    padding: 2rem; }
+    .what-is-improv .what-is-improv-containor {
+      background: rgba(255, 255, 255, 0.8); }
+    .what-is-improv .improv-button-set {
+      margin: 0 auto;
+      width: 40%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
