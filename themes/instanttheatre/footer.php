@@ -29,7 +29,12 @@
                 if(is_active_sidebar('contact-info')){
                 dynamic_sidebar('contact-info');
                 }
-                ?>
+								?>
+																<div class="social-icons">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
             </div>
 
 						<div id="subscribe" class="subscribe">
@@ -39,22 +44,22 @@
                 }
 								?>
 								      <div class="submit-form">
-        <form action="index.html">
-          <input class='email-field' type="email" id='email' placeholder="Your E-Mail">
+        <form action="index.html" class='email-field'>
+          <input class='email-input' type="email" id='email' placeholder="Your E-Mail">
           <button class="blue-btn" type="submit">Subscribe</button>
         </form>
       </div>
 						</div>
 
 						<div class= "footer-logo" >
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri();?>/assets/logo/rocket/black.svg" class="footer__logo-img"/><br>Back To Top</a>
-                </div>
+                <a href="#masthead" class='logo-wrapper'><img src="<?php echo get_template_directory_uri();?>/assets/logo/rocket/black.svg" class="footer__logo-img"/><p>Back To Top</p></a>
+							</div>
 				</div>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
-
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	</body>
 </html>
