@@ -22,15 +22,15 @@ get_header();
 			$term_id = 2;
 			$taxonomy_name = 'role';
 			$termchildren = get_term_children( $term_id, $taxonomy_name );
-			echo '<ul class="role-filters" >';
-			echo '<li style="filter;">All</li>';
-			foreach ( $termchildren as $child ) {
-					$term = get_term_by( 'id', $child, $taxonomy_name );
-					echo '<li style="display: inline-block;">'.$term->name.'</li>';
-			}
-			echo '</ul>';
 		?> 
 
+		<div class="filter-button-group">
+			<button data-filter="*">All</button>
+			<?php foreach ( $termchildren as $child ) : ?>
+				<?php $term = get_term_by( 'id', $child, $taxonomy_name ); ?>
+				<button data-filter=".role-<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
+			<?php endforeach; ?>
+		</div>
 
 		<section class="person-gallery">
 
@@ -39,16 +39,18 @@ get_header();
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="person-tile" ?>
-					<a href="">
-						<div class="person-image-wrapper">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( 'large' ); ?>
-							<?php endif; ?>
-						</div>
-						<?php the_title( '<p class="person-tile-label">', '</p>' ); ?>
-					</a>
-				</div><!-- #post-## -->
+					<?php $post_classes = implode(" ", get_post_class() ); ?>
+
+					<div id="post-<?php the_ID(); ?>" class="<?php echo $post_classes; ?> person-tile">
+						<a href="">
+							<div class="person-image-wrapper">
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php the_post_thumbnail( 'small' ); ?>
+								<?php endif; ?>
+							</div>
+							<?php the_title( '<p class="person-tile-label">', '</p>' ); ?>	
+						</a>
+					</div><!-- #post-## -->
 
 				<?php endwhile; ?>
 

@@ -109,6 +109,8 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'jquery' );	
 	wp_enqueue_script( 'spectragram.js', './js/lib/spectragram.js' );
 	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/build/js/isotope.pkgd.min.js', array(), '', true );
+	wp_enqueue_script( 'taxonomy-role.js', get_template_directory_uri() . '/build/js/taxonomy-role.min.js', array(), '', true );
+
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
