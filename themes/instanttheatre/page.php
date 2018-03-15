@@ -16,6 +16,8 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
+			 <script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script><script type="text/javascript"> var JFL_80118057984260 = new JotformFeedback({ formId: '80118057984260', base: 'https://form.jotform.com/', windowTitle: 'Studio Booking Enquiry', background: '#FFA500', fontColor: '#FFFFFF', type: 'false', height: 500, width: 700, openOnLoad: false }); </script> <a class="btn lightbox-80118057984260" style="margin-top: 16px"> Studio Booking Enquiry </a>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
