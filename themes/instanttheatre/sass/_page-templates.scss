@@ -3,3 +3,134 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.site-content {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.carousel-cell {
+  margin-top: 3.75rem;
+  width: 1240px;
+  height: 500px;
+  background-color: gray;
+}
+
+.upcoming-shows,
+.upcoming-classes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.show-wrapper,
+.class-wrapper {
+  width: 380px;
+  height: 395px;
+  background-color: gray;
+  margin-bottom: 2rem;
+}
+
+.what-is-improv {
+  margin-top: 3.75rem;
+  max-width: 1240px;
+  padding: 0rem;
+  background: url("../../assets/images/yellow-wave-banner-background.png");
+  text-align: center;
+  .what-is-improv-containor {
+    h2 {
+      margin-top: 0;
+    }
+    padding: 3rem;
+    background: $color__yellow-brand;
+  }
+  .improv-button-set{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.instagram-feed{
+  width: 100%;
+  height: 300px;
+  display: flex;
+}
+
+
+/* Taxonomy Role */
+.role-filters {
+  display: flex;
+  flex-wrap: wrap;
+
+  .filter {
+    min-width: 1240px;
+  }
+}
+
+
+.person-gallery {
+  max-width: 1240px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.person-tile {
+  width: 265px;
+  height: 300px;
+  margin: 1.25% 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px #D5D5D5;
+  color: #fff; 
+
+  a {
+    height: 100%;
+    width: 100%;
+  }
+
+  .person-image-wrapper {
+    position: relative;
+    width: 235px;
+    height: 235px;
+    margin: 15px auto;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-height: 100%;
+      width: auto;
+      max-width: none;
+
+    }
+  }
+
+  .person-tile-label {
+    padding: 0.5rem;
+    margin: 0;
+    color: #000;
+    text-align: center;
+  }
+
+
+}
+
+@media screen and (min-width: $mobile_break) {
+  .what-is-improv {
+    padding: 2rem;
+    .what-is-improv-containor {
+      background: rgba(255, 255, 255, 0.8);
+    }
+    .improv-button-set{
+      margin: 0 auto;
+      width: 40%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+}

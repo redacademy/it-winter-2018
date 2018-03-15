@@ -2,135 +2,153 @@
 # Navigation
 --------------------------------------------------------------*/
 
-/* Links */
-
-a {
-	color: $color__link;
-
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
-
 /* Menus */
 
 	.main-navigation{
-		position: absolute;
-		right: 0;
-
-	#hamburger-search{
-		background: #fff;
-		border: 1px solid gray;
-		z-index: 1;
-		position: absolute;
-		right: 30px;
-		top: 0;
-	}
-	
-
-	ul {
-		// display: none;
-		list-style: none;
-		margin: 0;
-		padding:10%;
-		padding-top: 100px;
-		height: 100vh;
-		width: 80vw;
-		background: $color__yellow-brand;
-		position: absolute;
-		right: 0;
-		top: 0;
 		display: flex;
-		flex-direction: column;
+		justify-content: center;
 		align-items: center;
+		position: fixed;
+		right: 0;
+		top: 0;
+		min-width: 100%;
+		height: 60px;
+		background-color: $color__yellow-brand;
 
-		.sub-menu{
-			border: 1px solid red;
-			width: 30vw;
-			right: 0;
-		}
-		ul {
-			border: 2px, red;
+		a{
+			max-width: 150px;
 			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				left: -999rem;
-				top: 0;
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
+
+	.search{
+		background-color: $color__yellow-brand;
 		position: relative;
+		margin-right:30px;
+		margin-top: 10px;
+		#hamburger-search{
+			position: absolute;
+			background: #fff;
+			border: 1px solid gray;
+			outline: none;
+			border: none;
+			z-index: 1;
+			right: 0px;
+			width: 50%;
+			top: 0;
+		}
+		#search-button{
+			position: absolute;
+			box-shadow: none;
+			border: none;
+			background: none;
+			outline: none;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			padding: 5px;
+			svg{
+				font-size: 20px;
+			}
+		}
 	}
-	a {
+
+	.hamburger-toggle{
+		display: none;
+	}
+
+	#toggle-button{
+		position: fixed;
+		left: 0;
+		// display: none;
+	}
+
+.hamburger-toggle{
+	cursor: pointer;
+	display: block;
+	height: 35px;
+	margin-top: 0.5em;
+	margin-left: 45%;
+	width: 35px;
+	position: absolute;
+}
+	
+ nav {
+	 .toggle-menu-wrapper{
+		 visibility: hidden;
+	 }
+	}
+
+	.toggle-menu-wrapper {
 		display: block;
-		text-decoration: none;
-		color: black;
-		text-transform: uppercase;
+		background-color: $color__yellow-brand;
+		list-style-type: none;
+		opacity: 0;
+		text-align: center;
+		transition: all 1s ease;
+		width: 100%;
+		visibility: hidden;
+		transform: translateX(300px);
+		ul {	
+			list-style: none;
+			a {
+				color: $color__yellow-brand;
+				text-decoration: none;
+				transition: all .5s ease;
+	
+				&:hover {color: darken 10%;}
+			}
+		}
+	
+		li.selector-nav  {
+      display: block;
+      font-size: 1.5em;
+			padding: 1em 0;
+			border: 1px solid red;
+			background-color: $color__yellow-brand;
+			a{
+				color: black;
+				display: inline-block;
+						}
+				.sub-menu {
+					display: none;
+					li {				
+						a{
+						font-size: 20px;
+						display: inline-block;
+					}
+				}
+			}//.submenu
+			}//li.selector-nav
+				#primary-menu{
+					display: block;
+					background-color: $color__yellow-brand;
+					list-style-type: none;
+					text-align: center;
+					transition: all 1s ease;
+					width: 90%;
+					height: 100vh;
+					position: absolute;
+					right: 0;
+					padding-top: 50px;
+			}
+	 }//toggle-menu-wrapper
 
-	}
+	 .menu-toggle:checked ~ .toggle-menu-wrapper {
+		opacity: 1;
+		transform: translateX(0);
+		position: absolute;
+		top:0;
+		// height:50vh;
+		visibility: visible;
 }
+}//main nav
 
-/* Small menu. */
-.menu-toggle{
-	border: none;
-	background: none;
-	box-shadow: none;
-	outline: none;
-	font-size: 20px;
-}
 
-// .menu-toggle,
-// .main-navigation.toggled ul  {
-// }
 
-// .menu-toggle:before {
-// 	content: "\f0c9";
-// 	font-family: FontAwesome;
-// 	font-style: normal;
-// 	font-weight: normal;
-// 	text-decoration: inherit;
-// 	color: #000;
-// 	font-size: 18px;
-// 	padding-right: 0.5em;
-// 	position: absolute;
-// 	border: none;
-// 	box-shadow: none;
-// }
 
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 1240px) {
 	.menu-toggle {
 		display: none;
 	}
