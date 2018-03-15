@@ -14,7 +14,7 @@ if ( ! function_exists('people_post_type') ) {
     $labels = array(
       'name'                  => _x( 'People', 'Post Type General Name', 'text_domain' ),
       'singular_name'         => _x( 'Person', 'Post Type Singular Name', 'text_domain' ),
-      'menu_name'             => __( 'People Types', 'text_domain' ),
+      'menu_name'             => __( 'People', 'text_domain' ),
       'name_admin_bar'        => __( 'People', 'text_domain' ),
       'archives'              => __( 'People Archives', 'text_domain' ),
       'attributes'            => __( 'People Attributes', 'text_domain' ),
@@ -76,7 +76,7 @@ if ( ! function_exists('people_post_type') ) {
       $labels = array(
         'name'                  => _x( 'Classes', 'Post Type General Name', 'text_domain' ),
         'singular_name'         => _x( 'Class', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'             => __( 'Class Types', 'text_domain' ),
+        'menu_name'             => __( 'Classes', 'text_domain' ),
         'name_admin_bar'        => __( 'Classes', 'text_domain' ),
         'archives'              => __( 'Class Archives', 'text_domain' ),
         'attributes'            => __( 'Class Attributes', 'text_domain' ),
