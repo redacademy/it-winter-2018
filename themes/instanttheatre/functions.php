@@ -107,6 +107,12 @@ function red_starter_scripts() {
 	wp_enqueue_script('jquery-library','https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 	wp_enqueue_script( 'instant.js', get_template_directory_uri() . '/build/js/instant.min.js', array(), '20130115', true );
+	wp_enqueue_script( 'jquery' );	
+	wp_enqueue_script( 'spectragram', get_template_directory_uri().'/js/lib/spectragram.js', array('jquery'), false, true );
+	wp_enqueue_script( 'isotope', './js/lib/isotope.pkgd.min.js' );
+
+	wp_enqueue_script( 'instagram-feed',  get_template_directory_uri().'/build/js/instagram-feed.min.js', array('jquery'), false, true );
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

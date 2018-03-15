@@ -1,7 +1,7 @@
 /*!
 Theme Name: Instant Theatre Company
 Theme URI: http://instanttheatre.com/
-Author: Guy Chappell
+Author: Guy Chappell, Dakota Mauza, Brandon Liu, Ning Luo
 Author URI: 
 Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
@@ -46,7 +46,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
 body {
   margin: 0; }
@@ -427,6 +433,7 @@ textarea {
   width: 100%; }
 
 .blue-btn {
+  min-width: 130px;
   border-radius: 5px;
   border: none;
   background: #00B6CB;
@@ -434,7 +441,8 @@ textarea {
           box-shadow: none;
   color: white;
   padding: .6rem 1rem;
-  text-shadow: none; }
+  text-shadow: none;
+  margin-top: 0.5rem; }
   .blue-btn:hover {
     border: none;
     -webkit-box-shadow: none;
@@ -905,3 +913,128 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.site-content {
+  max-width: 1240px;
+  margin: 0 auto; }
+
+.carousel-cell {
+  margin-top: 3.75rem;
+  width: 1240px;
+  height: 500px;
+  background-color: gray; }
+
+.upcoming-shows,
+.upcoming-classes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.show-wrapper,
+.class-wrapper {
+  width: 380px;
+  height: 395px;
+  background-color: gray;
+  margin-bottom: 2rem; }
+
+.what-is-improv {
+  margin-top: 3.75rem;
+  max-width: 1240px;
+  padding: 0rem;
+  background: url("../../assets/images/yellow-wave-banner-background.png");
+  text-align: center; }
+  .what-is-improv .what-is-improv-containor {
+    padding: 3rem;
+    background: #FFEC00; }
+    .what-is-improv .what-is-improv-containor h2 {
+      margin-top: 0; }
+  .what-is-improv .improv-button-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+.instagram-feed {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* Taxonomy Role */
+.role-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .role-filters .filter {
+    min-width: 1240px; }
+
+.person-gallery {
+  max-width: 1240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.person-tile {
+  width: 265px;
+  height: 300px;
+  margin: 1.25% 0.5rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 8px #D5D5D5;
+          box-shadow: 0px 0px 8px #D5D5D5;
+  color: #fff; }
+  .person-tile a {
+    height: 100%;
+    width: 100%; }
+  .person-tile .person-image-wrapper {
+    position: relative;
+    width: 235px;
+    height: 235px;
+    margin: 15px auto;
+    border-radius: 4px;
+    overflow: hidden; }
+    .person-tile .person-image-wrapper img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      min-height: 100%;
+      width: auto;
+      max-width: none; }
+  .person-tile .person-tile-label {
+    padding: 0.5rem;
+    margin: 0;
+    color: #000;
+    text-align: center; }
+
+@media screen and (min-width: 480px) {
+  .what-is-improv {
+    padding: 2rem; }
+    .what-is-improv .what-is-improv-containor {
+      background: rgba(255, 255, 255, 0.8); }
+    .what-is-improv .improv-button-set {
+      margin: 0 auto;
+      width: 40%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
