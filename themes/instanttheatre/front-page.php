@@ -47,7 +47,7 @@ get_header();
 
 			<div class="what-is-improv">
 				<div class="what-is-improv-containor">
-					<h2>wha is improv?</h2>
+					<h2>what is improv?</h2>
 					<p>Improvisation, or improv, is a form of live theatre in which the plot, characters, and dialogue of a game, scene, or story are made up in the moment. Often improvisers will take a suggestion from the audience, or draw on some other source of inspiration to get started. Improv is unique in that if you see a performance, that’s it… there will never be another show exactly like it ever done again. Improv is different every time.</p>
 					<a href="#">Learn More About Our Approach</a>
 					<h2>improv for bussiness</h2>

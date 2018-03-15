@@ -111,6 +111,8 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'isotope', './js/lib/isotope.pkgd.min.js' );
 
 	wp_enqueue_script( 'instagram-feed',  get_template_directory_uri().'/build/js/instagram-feed.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'flickity',   get_template_directory_uri().'/build/js/flickity.pkgd.min.js', array('jquery'), false, true  );
+	
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
