@@ -362,7 +362,6 @@ body.home .site-header {
           align-items: center;
   max-width: 1440px;
   width: 100vw;
-  height: 60px;
   position: relative; }
 
 /*--------------------------------------------------------------
@@ -473,6 +472,8 @@ textarea {
   min-width: 100%;
   height: 60px;
   background-color: #FFEC00; }
+  .main-navigation .circular-rocket-logo {
+    display: none; }
   .main-navigation a {
     max-width: 150px;
     position: absolute; }
@@ -574,28 +575,28 @@ textarea {
     top: 0;
     visibility: visible; }
 
-@media screen and (min-width: 1240px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  text-align: right;
-  width: 50%; }
+@media screen and (min-width: 481px) {
+  body.home .main-navigation {
+    position: relative;
+    height: 300px;
+    max-width: 1440px;
+    background-image: url("../../assets/images/yellow-wave-banner-background.png"); }
+    body.home .main-navigation .desktop-rocket-logo {
+      display: none; }
+    body.home .main-navigation .circular-rocket-logo {
+      display: block;
+      margin-left: 30px;
+      left: 0;
+      bottom: 0;
+      max-width: 300px; }
+    body.home .main-navigation .toggle-menu-wrapper {
+      display: none; }
+    body.home .main-navigation .menu-toggle {
+      display: none; }
+    body.home .main-navigation .hamburger-toggle {
+      display: none; }
+    body.home .main-navigation .search {
+      display: none; } }
 
 /*--------------------------------------------------------------
 # Accessibility
