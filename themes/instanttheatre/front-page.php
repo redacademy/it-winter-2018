@@ -62,8 +62,13 @@ get_header();
 			
 			<section class="instagram-carousel">
 				<h1>instagram</h1>
-			<div id="instagram-feed" class="instagram-feed"></div>
-			<section>
+			<div id="instagram-feed" class="instagram-feed"  >
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+</section>
 
 
 <!-- ///////////////hardcoding /////////////////////-->

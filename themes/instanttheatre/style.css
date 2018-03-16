@@ -976,6 +976,14 @@ object {
         flex-wrap: wrap; }
 
 /* //////////////////flickity/////////////////// */
+.cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell; }
+
 /* Taxonomy Role */
 .tax-role .archive-title-wrapper {
   text-align: center; }
