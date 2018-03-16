@@ -1,4 +1,4 @@
-(function ($) {
+jQuery(document).ready(function($) {
 
   $('.banner-caroucel').flickity({
     // options
@@ -6,4 +6,6 @@
     contain: true
   });
 
-})(jQuery);
+// })(jQuery);
+
+})
