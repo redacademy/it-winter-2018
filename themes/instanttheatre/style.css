@@ -239,7 +239,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: black;
   font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -1047,6 +1047,14 @@ object {
         flex-wrap: wrap; }
 
 /* //////////////////flickity/////////////////// */
+.photo {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell; }
+
 .cell {
   width: 66%;
   height: 200px;
@@ -1132,19 +1140,24 @@ object {
   text-align: center;
   width: 1240px; }
   .page main h1 {
-    margin-top: 3em;
+    margin-top: 1em;
     color: black; }
+    .page main h1:first-of-type {
+      margin-top: 3em; }
   .page main p {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    max-width: 800px; }
+    max-width: 1000px; }
   .page main .gform_wrapper .top_label input.medium {
     width: 100%; }
   .page main .gform_wrapper .top_label input.datepicker {
     width: 40%; }
   .page main .gform_wrapper .gform_heading {
-    text-align: center; }
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
     .page main .gform_wrapper .gform_heading .gform_title {
       font-size: 24px;
       color: black;
@@ -1193,6 +1206,54 @@ object {
     margin-top: 15px; }
   .page main .gform_wrapper .field_description_below .gfield_description {
     padding-top: 5px; }
+  .page main .hire-us-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .page main .hire-us-grid .hire-us-part {
+      border: 1px solid #979797;
+      border-radius: 5px;
+      width: 48%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      padding: 0 20px; }
+      .page main .hire-us-grid .hire-us-part:nth-of-type(odd) {
+        margin-right: 2%; }
+      .page main .hire-us-grid .hire-us-part:nth-of-type(even) {
+        margin-left: 2%; }
+      .page main .hire-us-grid .hire-us-part h2 {
+        text-align: left; }
+        .page main .hire-us-grid .hire-us-part h2::before {
+          content: '\f068';
+          font-family: FontAwesome;
+          color: #6AC5D0;
+          padding-right: 10px; }
+      .page main .hire-us-grid .hire-us-part h3 {
+        text-align: left;
+        margin: 0;
+        font-size: 16px; }
+      .page main .hire-us-grid .hire-us-part ul {
+        padding: 0 20px 20px 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+        .page main .hire-us-grid .hire-us-part ul li {
+          width: 50%;
+          text-align: left;
+          list-style-type: none; }
+          .page main .hire-us-grid .hire-us-part ul li::before {
+            content: '\f068';
+            font-family: FontAwesome;
+            color: #6AC5D0;
+            padding-right: 10px; }
+  .page main .business-widget {
+    width: 100%;
+    background: url("../../assets/images/yellow-wave-banner-background.png"); }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co

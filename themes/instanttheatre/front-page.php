@@ -19,7 +19,25 @@ get_header();
 				</header>
 			<?php endif; ?>
 <!-- ///////////////hardcoding /////////////////////-->
-			<div class="carousel-cell"></div>
+			<div class="banner-carousel">
+
+			<?php		$fields = CFS()->get( 'banner_loop' );
+foreach ( $fields as $field ) {
+	?>
+	<div class="banner-cell">
+	<img src="<?php echo $field['banner_image']; ?>" alt="Banner Image">
+	<?php
+		echo $field['title_link'];
+		
+		echo $field['banner_info'];
+		?>
+</div>
+		
+		<?php
+}   // end foreach /////////////////////////////////////////////////
+?>
+
+			</div>
 			<h1>upcoming shows</h1>
 			<div class="upcoming-shows">
 				<div class="show-wrapper">
@@ -59,16 +77,11 @@ get_header();
 				</div>
 				</div>
 			</div>
-			
-			<section class="instagram-carousel">
+
+		<section class="instagram-carousel">
 				<h1>instagram</h1>
-			<div id="instagram-feed" class="instagram-feed"  >
-				<div class="cell"></div>
-				<div class="cell"></div>
-				<div class="cell"></div>
-				<div class="cell"></div>
-			</div>
-</section>
+			<div id="instagram-feed" class="instagram-feed"></div>
+		</section>
 
 
 <!-- ///////////////hardcoding /////////////////////-->
@@ -77,7 +90,9 @@ get_header();
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
+		
 
+				
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
