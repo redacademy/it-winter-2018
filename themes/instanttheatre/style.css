@@ -1054,6 +1054,73 @@ object {
       -ms-flex-pack: distribute;
           justify-content: space-around; } }
 
+<<<<<<< HEAD
+.page main {
+  text-align: center;
+  width: 1240px; }
+  .page main h1 {
+    margin-top: 3em;
+    color: black; }
+  .page main p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 800px; }
+  .page main .gform_wrapper .top_label input.medium {
+    width: 100%; }
+  .page main .gform_wrapper .top_label input.datepicker {
+    width: 40%; }
+  .page main .gform_wrapper .gform_heading {
+    text-align: center; }
+    .page main .gform_wrapper .gform_heading .gform_title {
+      font-size: 24px;
+      color: black;
+      padding-bottom: 20px; }
+  .page main .gform_wrapper .gform_body {
+    background-color: #FFEC00; }
+    .page main .gform_wrapper .gform_body ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 570px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-top: 40px; }
+  .page main .gform_wrapper .gform_footer {
+    background-color: #FFEC00;
+    margin: 0;
+    padding-bottom: 40px; }
+    .page main .gform_wrapper .gform_footer .gform_button {
+      margin-left: 737px;
+      background-color: #00B6CB;
+      color: white;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      text-shadow: none;
+      padding: 10px 50px;
+      border: 0; }
+      .page main .gform_wrapper .gform_footer .gform_button:hover {
+        background-color: #008898; }
+  .page main .gform_wrapper .gfield_radio {
+    padding: 0;
+    margin-top: 0; }
+  .page main .gform_wrapper .gfield_calculation {
+    display: none; }
+  .page main .gform_wrapper .top_label .gfield_time_ampm {
+    margin-top: 15px; }
+  .page main .gform_wrapper .field_description_below .gfield_description {
+    padding-top: 5px; }
+=======
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -1172,3 +1239,4 @@ http://flickity.metafizzy.co
 
 .flickity-page-dots .dot.is-selected {
   opacity: 1; }
+>>>>>>> be80e5e46fb97f463036fef96e127f22259d51a8
