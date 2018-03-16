@@ -361,7 +361,6 @@ body.home .site-header {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1440px;
-  width: 100vw;
   position: relative; }
 
 /*--------------------------------------------------------------
@@ -480,6 +479,8 @@ textarea {
   min-width: 100%;
   height: 60px;
   background-color: #FFEC00; }
+  .main-navigation .home-banner-clickables {
+    display: none; }
   .main-navigation .circular-rocket-logo {
     display: none; }
   .main-navigation a {
@@ -490,6 +491,10 @@ textarea {
     position: relative;
     margin-right: 30px;
     margin-top: 10px; }
+    .main-navigation .search .hamburger-toggle-button {
+      font-size: 20px;
+      cursor: pointer;
+      margin-right: 200px; }
     .main-navigation .search #hamburger-search {
       position: absolute;
       background: #fff;
@@ -513,8 +518,6 @@ textarea {
       padding: 5px; }
       .main-navigation .search #search-button svg {
         font-size: 20px; }
-  .main-navigation .hamburger-toggle {
-    display: none; }
   .main-navigation #toggle-button {
     position: fixed;
     left: 0; }
@@ -522,7 +525,7 @@ textarea {
     cursor: pointer;
     display: block;
     height: 35px;
-    margin-top: 0.5em;
+    font-size: 20px;
     margin-left: 45%;
     width: 35px;
     position: absolute; }
@@ -540,41 +543,54 @@ textarea {
     visibility: hidden;
     -webkit-transform: translateX(300px);
             transform: translateX(300px); }
-    .main-navigation .toggle-menu-wrapper ul {
-      list-style: none; }
-      .main-navigation .toggle-menu-wrapper ul a {
-        color: #FFEC00;
-        text-decoration: none;
-        -webkit-transition: all .5s ease;
-        transition: all .5s ease; }
-        .main-navigation .toggle-menu-wrapper ul a:hover {
-          color: darken 10%; }
+    .main-navigation .toggle-menu-wrapper ul li a {
+      color: black;
+      position: relative; }
+    .main-navigation .toggle-menu-wrapper ul a {
+      color: #FFEC00;
+      text-decoration: none;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
+      .main-navigation .toggle-menu-wrapper ul a:hover {
+        color: darken 10%; }
     .main-navigation .toggle-menu-wrapper li.selector-nav {
       display: block;
       font-size: 1.5em;
-      padding: 1em 0;
-      border: 1px solid red;
+      padding: 20px;
       background-color: #FFEC00; }
       .main-navigation .toggle-menu-wrapper li.selector-nav a {
         color: black;
         display: inline-block; }
       .main-navigation .toggle-menu-wrapper li.selector-nav .sub-menu {
-        display: none; }
+        display: none;
+        list-style: none;
+        text-align: left; }
+        .main-navigation .toggle-menu-wrapper li.selector-nav .sub-menu::after {
+          content: ""; }
         .main-navigation .toggle-menu-wrapper li.selector-nav .sub-menu li a {
           font-size: 20px;
           display: inline-block; }
     .main-navigation .toggle-menu-wrapper #primary-menu {
-      display: block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       background-color: #FFEC00;
       list-style-type: none;
-      text-align: center;
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
       width: 90%;
       height: 100vh;
       position: absolute;
-      right: 0;
-      padding-top: 50px; }
+      padding-top: 50px;
+      padding-left: 85px;
+      padding-right: 50px; }
   .main-navigation .menu-toggle:checked ~ .toggle-menu-wrapper {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -582,21 +598,72 @@ textarea {
     position: absolute;
     top: 0;
     visibility: visible; }
+  .main-navigation .selector-nav ::after {
+    font-family: FontAwesome;
+    content: "\f005"; }
 
 @media screen and (min-width: 481px) {
   body.home .main-navigation {
     position: relative;
     height: 300px;
     max-width: 1440px;
-    background-image: url("../../assets/images/yellow-wave-banner-background.png"); }
+    background-image: url("../../assets/images/yellow-wave-banner-background.png");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    body.home .main-navigation a {
+      position: relative; }
+    body.home .main-navigation .selector-nav {
+      display: block;
+      color: black; }
+    body.home .main-navigation .home-banner-clickables {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      body.home .main-navigation .home-banner-clickables #desktop-search-button {
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        border: none;
+        background: transparent;
+        font-size: 20px; }
+      body.home .main-navigation .home-banner-clickables ul {
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin: 0;
+        margin-right: 15px;
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+        body.home .main-navigation .home-banner-clickables ul input {
+          outline: none;
+          padding: 0; }
+        body.home .main-navigation .home-banner-clickables ul button {
+          padding-left: 5px;
+          padding-right: 5px;
+          outline: none; }
+        body.home .main-navigation .home-banner-clickables ul li {
+          padding-left: 5px;
+          padding-right: 5px; }
+        body.home .main-navigation .home-banner-clickables ul a {
+          color: #000;
+          font-size: 25px; }
     body.home .main-navigation .desktop-rocket-logo {
       display: none; }
     body.home .main-navigation .circular-rocket-logo {
       display: block;
-      margin-left: 30px;
-      left: 0;
+      margin-left: 75px;
       bottom: 0;
-      max-width: 300px; }
+      max-width: 300px;
+      width: 50%;
+      margin-top: 100px; }
     body.home .main-navigation .toggle-menu-wrapper {
       display: none; }
     body.home .main-navigation .menu-toggle {
@@ -1067,13 +1134,16 @@ object {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    max-width: 800px; }
+    max-width: 1000px; }
   .page main .gform_wrapper .top_label input.medium {
     width: 100%; }
   .page main .gform_wrapper .top_label input.datepicker {
     width: 40%; }
   .page main .gform_wrapper .gform_heading {
-    text-align: center; }
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
     .page main .gform_wrapper .gform_heading .gform_title {
       font-size: 24px;
       color: black;
@@ -1122,6 +1192,29 @@ object {
     margin-top: 15px; }
   .page main .gform_wrapper .field_description_below .gfield_description {
     padding-top: 5px; }
+  .page main .hire-us-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .page main .hire-us-grid .hire-us-part {
+      border: 1px solid #979797;
+      border-radius: 5px;
+      width: 48%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      padding: 0 20px; }
+      .page main .hire-us-grid .hire-us-part:nth-of-type(odd) {
+        margin-right: 2%; }
+      .page main .hire-us-grid .hire-us-part:nth-of-type(even) {
+        margin-left: 2%; }
+      .page main .hire-us-grid .hire-us-part h2 {
+        text-align: left; }
+        .page main .hire-us-grid .hire-us-part h2::before {
+          content: '\f068';
+          font-family: FontAwesome;
+          color: #6AC5D0; }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co

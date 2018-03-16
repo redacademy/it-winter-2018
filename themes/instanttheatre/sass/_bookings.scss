@@ -12,7 +12,7 @@
       margin-left: auto;
       margin-right: auto;
       text-align: left;
-      max-width: 800px;
+      max-width: 1000px;
     }
 
     //css for forms
@@ -25,6 +25,9 @@
       }
       .gform_heading {
         text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
         .gform_title {
           font-size: 24px;
           color: black;
@@ -75,6 +78,34 @@
       }
       .field_description_below .gfield_description {
         padding-top: 5px;
+      }
+    }
+
+    //grid layout for hire us page
+    .hire-us-grid {
+      display: flex;
+      flex-wrap: wrap;
+      .hire-us-part {
+        border: 1px solid $color__grey-border;
+        border-radius: 5px;
+        width: 48%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 0 20px;
+        &:nth-of-type(odd) {
+          margin-right: 2%;
+        }
+        &:nth-of-type(even) {
+          margin-left: 2%;
+        }
+        h2 {
+          text-align: left;
+          &::before {
+            content: '\f068';
+            font-family: FontAwesome;
+            color: $color__lightblue-brand;
+          }
+        }
       }
     }
   }
