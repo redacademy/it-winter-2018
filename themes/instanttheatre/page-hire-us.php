@@ -12,7 +12,27 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+				<h1><?php the_title(); ?> </h1>
+				
+				<?php	the_post_thumbnail(); ?>
+				<p><?php echo CFS()->get( 'hire_us_description' ); ?></p>
+				
+				<div class="hire-us-grid">
+			  <?php
+					$fields = CFS()->get( 'type_of_events' ); ?>
+				
+				<?php 
+					foreach ( $fields as $field ) { ?>
+					<div class="hire-us-part">
+					<h2><?php echo $field['heading']; ?></h2>
+					<p><?php echo $field['description']; ?></p>
+					<p><?php echo $field['perfect_for']; ?></div>
+					<?php
+					}
+					?></div></p>
+				</div>
+
+				<?php the_content(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
