@@ -159,6 +159,51 @@
 			height: 300px;
 			max-width: 1440px;
 			background-image: url("../../assets/images/yellow-wave-banner-background.png");
+			display: flex;
+			justify-content: space-between;
+			a{
+				position: relative;
+			}
+
+			.home-banner-clickables{
+				display: flex;
+				#desktop-search-button{
+					box-shadow: none;
+					border: none;
+					background: transparent;
+					font-size: 20px;
+					// svg{
+					// 	font-size:
+					// }
+				}
+				ul{
+					list-style: none;
+					display: flex;
+					justify-content: space-between;
+					margin: 0;
+					margin-right: 15px;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+
+					input{
+						outline: none;
+					}
+
+					button{
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+					li{
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+					a{
+						color: #000;
+						font-size: 25px;
+					}
+				}
+			}
 
 		.desktop-rocket-logo{
 			display: none;

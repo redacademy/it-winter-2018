@@ -18,6 +18,24 @@ $('#toggle-button').on('click', function(){
   console.log('checked');
 });
 
+var $searchInput = $('.desktop-search .desktop-search-field');
+$searchInput.hide();
+
+$('.desktop-search .desktop-search-button').on('click', function (evt) {
+  evt.preventDefault();
+  $searchInput.show('slow');
+  $searchInput.focus();
+
+  $(document).on('keypress', function (event) {
+    if ($searchInput.val() !== '') {
+      if (event.which == 13) {
+        $('.desktop-search-field').submit();
+      }
+    }
+  });
+  
+});
+
 
     // $('.toggle-menu-wrapper').show('slide', { direction: 'left' }, 2000);
 

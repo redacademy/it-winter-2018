@@ -34,9 +34,19 @@
 						<input type="text" id="hamburger-search" placeholder="Search">
 						<button type="button" id="search-button"><i class="fas fa-search"></i></button>
 					</div>
-
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav>
+				<div class="home-banner-clickables">
+					<ul>
+						<div class="desktop-search">
+							<input type="text" id="desktop-search-field" placeholder="Search">
+							<button type="button" id="desktop-search-button"><i class="fas fa-search"></i></button>
+						</div>	
+						<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+				</div>	<!--home banner clickables -->
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
