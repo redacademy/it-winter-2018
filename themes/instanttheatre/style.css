@@ -494,7 +494,7 @@ textarea {
     .main-navigation .search .hamburger-toggle-button {
       font-size: 20px;
       cursor: pointer;
-      margin-right: 200px; }
+      margin-right: 150px; }
     .main-navigation .search #hamburger-search {
       position: absolute;
       background: #fff;
@@ -512,6 +512,7 @@ textarea {
       border: none;
       background: none;
       outline: none;
+      font-size: 20px;
       top: 0;
       right: 0;
       z-index: 2;
@@ -600,7 +601,10 @@ textarea {
     visibility: visible; }
   .main-navigation .selector-nav ::after {
     font-family: FontAwesome;
-    content: "\f005"; }
+    content: "\f105";
+    font-weight: bold;
+    font-size: 30px;
+    color: red; }
 
 @media screen and (min-width: 481px) {
   body.home .main-navigation {
