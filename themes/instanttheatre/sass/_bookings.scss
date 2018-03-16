@@ -1,0 +1,81 @@
+// Hire Us, Book Events and Book Studio
+
+.page {
+  main{
+    text-align: center;
+    width: $desktop__content-area;
+    h1 {
+      margin-top: 3em;
+      color: black;
+    }
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      max-width: 800px;
+    }
+
+    //css for forms
+    .gform_wrapper {
+      .top_label input.medium {
+        width: 100%;
+      }
+      .top_label input.datepicker {
+        width: 40%;
+      }
+      .gform_heading {
+        text-align: center;
+        .gform_title {
+          font-size: 24px;
+          color: black;
+          padding-bottom: 20px;
+        }
+      }
+      .gform_body {
+        background-color: $color__yellow-brand;
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 570px;
+          margin-left: auto!important;
+          margin-right: auto!important;
+          padding-top: 40px;
+        }
+      }
+      .gform_footer {
+        background-color: $color__yellow-brand;
+        margin: 0;
+        padding-bottom: 40px;
+        .gform_button {
+          margin-left: 737px;
+          background-color: $color__blue-brand;
+          color: white;
+          font-size: 14px;
+          text-transform: uppercase;
+          border-radius: 5px;
+          box-shadow: none;
+          text-shadow: none;
+          padding: 10px 50px;
+          border: 0;
+          &:hover {
+            background-color: darken($color__blue-brand, 10%);
+          }
+        }
+      }
+      .gfield_radio {
+        padding: 0;
+        margin-top: 0;
+      }
+      .gfield_calculation {
+        display: none;
+      }
+      .top_label .gfield_time_ampm {
+        margin-top: 15px;
+      }
+      .field_description_below .gfield_description {
+        padding-top: 5px;
+      }
+    }
+  }
+}
