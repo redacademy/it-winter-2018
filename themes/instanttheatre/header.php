@@ -31,6 +31,7 @@
 					<label for="toggle-button" class="hamburger-toggle"><i class="fas fa-bars"></i></label>
 				<nav class="toggle-menu-wrapper">
 					<div class="search">
+						<label for="toggle-button" class="hamburger-toggle-button"><i class="fas fa-bars"></i></label>
 						<input type="text" id="hamburger-search" placeholder="Search">
 						<button type="button" id="search-button"><i class="fas fa-search"></i></button>
 					</div>
@@ -39,7 +40,7 @@
 				<div class="home-banner-clickables">
 					<ul>
 						<div class="desktop-search">
-							<input type="text" id="desktop-search-field" placeholder="Search">
+							<input type="text" id="desktop-search-field" placeholder="Type and press enter">
 							<button type="button" id="desktop-search-button"><i class="fas fa-search"></i></button>
 						</div>	
 						<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>

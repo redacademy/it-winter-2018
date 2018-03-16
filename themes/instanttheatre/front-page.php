@@ -60,7 +60,7 @@ get_header();
 				</div>
 			</div>
 			
-			<section class="instagram-containor">
+			<section class="instagram-carousel">
 				<h1>instagram</h1>
 			<div id="instagram-feed" class="instagram-feed"></div>
 			<section>

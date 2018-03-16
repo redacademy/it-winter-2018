@@ -12,16 +12,12 @@
   //   $('.toggle-menu-wrapper').animate({width: 'toggle'});
   // });
 
-  $('')
-
-$('#toggle-button').on('click', function(){
-  console.log('checked');
-});
-
-var $searchInput = $('.desktop-search .desktop-search-field');
+(function ($) {
+//search bar
+var $searchInput = $('.desktop-search #desktop-search-field');
 $searchInput.hide();
 
-$('.desktop-search .desktop-search-button').on('click', function (evt) {
+$('.desktop-search #desktop-search-button').on('click', function (evt) {
   evt.preventDefault();
   $searchInput.show('slow');
   $searchInput.focus();
@@ -35,7 +31,39 @@ $('.desktop-search .desktop-search-button').on('click', function (evt) {
   });
   
 });
+$searchInput.on('blur', function () {
+  $searchInput.hide(500);
+});
 
+//toggled (open) hamburger menu accordion
+$('.selector-nav').on('click', function(e){
+  e.preventDefault();
+  $(this).children('.sub-menu').css('display', 'block');
+  $('.sub-menu').children('li').slideToggle('slow');
+});
+
+$('.selector-nav').on('blur', function(){
+  // $(this).find('li').css('display', 'none');
+  $('.sub-menu').children('li').css('display', 'none');
+});
+}(jQuery));
+
+// var acc = document.getElementsByClassName("selector-nav");
+// var i;
+
+// for (i = 0; i < acc.length; i++) {
+//     acc[i].addEventListener("click", function(e) {
+//         e.preventDefault();
+//         this.classList.toggle("active");
+
+//         var panel = this.children;
+//         if (panel.style.display === "block") {
+//             panel.style.display = "none";
+//         } else {
+//             panel.style.display = "block";
+//         }
+//     });
+// }
 
     // $('.toggle-menu-wrapper').show('slide', { direction: 'left' }, 2000);
 
