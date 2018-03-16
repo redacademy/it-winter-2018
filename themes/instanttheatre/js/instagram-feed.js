@@ -12,7 +12,7 @@ var Spectra = {
       clientID: this.instaID
     };
     
-    $('#instagram-feed').spectragram('getUserFeed',{
+    $('.instagram-feed').spectragram('getUserFeed',{
       max: 5,
       query: 'instanttheatre',
       wrapEachWith: '<div class="photo">'
