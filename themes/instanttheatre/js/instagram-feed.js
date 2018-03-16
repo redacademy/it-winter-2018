@@ -22,6 +22,9 @@ var Spectra = {
 
 Spectra.init();
 
+
+
+
 // generate auth token, uri redirect needs to be set in instagram app
 // https://www.instagram.com/oauth/authorize/?client_id=YOUR_CLIENT_ID&redirect_uri=http://codepen.io&response_type=token&scope=public_content
 

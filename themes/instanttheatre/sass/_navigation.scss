@@ -15,6 +15,10 @@
 		height: 60px;
 		background-color: $color__yellow-brand;
 
+		.home-banner-clickables{
+			display: none;
+		}
+
 		.circular-rocket-logo{
 			display: none;
 		}
@@ -30,6 +34,12 @@
 		position: relative;
 		margin-right:30px;
 		margin-top: 10px;
+
+		.hamburger-toggle-button{
+			font-size: 20px;
+			cursor:pointer;
+			margin-right: 200px;
+		}
 		#hamburger-search{
 			position: absolute;
 			background: #fff;
@@ -57,9 +67,9 @@
 		}
 	}
 
-	.hamburger-toggle{
-		display: none;
-	}
+	// .hamburger-toggle{
+	// 	display: none;
+	// }
 
 	#toggle-button{
 		position: fixed;
@@ -71,7 +81,7 @@
 	cursor: pointer;
 	display: block;
 	height: 35px;
-	margin-top: 0.5em;
+	font-size: 20px;
 	margin-left: 45%;
 	width: 35px;
 	position: absolute;
@@ -94,7 +104,12 @@
 		visibility: hidden;
 		transform: translateX(300px);
 		ul {	
-			list-style: none;
+			li{
+				a{
+					color: black;
+					position: relative;
+				}
+			}
 			a {
 				color: $color__yellow-brand;
 				text-decoration: none;
@@ -107,8 +122,7 @@
 		li.selector-nav  {
       display: block;
       font-size: 1.5em;
-			padding: 1em 0;
-			border: 1px solid red;
+			padding: 20px;
 			background-color: $color__yellow-brand;
 			a{
 				color: black;
@@ -116,6 +130,12 @@
 						}
 				.sub-menu {
 					display: none;
+					list-style: none;
+					// display: block;
+					text-align: left;
+					&::after{
+						content: "";
+					}
 					li {				
 						a{
 						font-size: 20px;
@@ -125,16 +145,18 @@
 			}//.submenu
 			}//li.selector-nav
 				#primary-menu{
-					display: block;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
 					background-color: $color__yellow-brand;
 					list-style-type: none;
-					text-align: center;
 					transition: all 1s ease;
 					width: 90%;
 					height: 100vh;
 					position: absolute;
-					right: 0;
 					padding-top: 50px;
+					padding-left: 85px;
+					padding-right: 50px;
 			}
 	 }//toggle-menu-wrapper
 
@@ -145,6 +167,13 @@
 		top:0;
 		// height:50vh;
 		visibility: visible;
+}
+
+.selector-nav{
+	::after{
+		font-family: FontAwesome;
+		content: "\f005";
+	}
 }
 }//main nav
 
@@ -159,16 +188,66 @@
 			height: 300px;
 			max-width: 1440px;
 			background-image: url("../../assets/images/yellow-wave-banner-background.png");
+			display: flex;
+			justify-content: space-between;
+			a{
+				position: relative;
+			}
+
+			.selector-nav{
+				display: block;
+				color: black;
+			}
+
+			.home-banner-clickables{
+				display: flex;
+				#desktop-search-button{
+					box-shadow: none;
+					border: none;
+					background: transparent;
+					font-size: 20px;
+				}
+				ul{
+					list-style: none;
+					display: flex;
+					justify-content: space-between;
+					margin: 0;
+					margin-right: 15px;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+
+					input{
+						outline: none;
+						padding: 0;
+					}
+
+					button{
+						padding-left: 5px;
+						padding-right: 5px;
+						outline: none;
+					}
+					li{
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+					a{
+						color: #000;
+						font-size: 25px;
+					}
+				}
+			}
 
 		.desktop-rocket-logo{
 			display: none;
 		}
 		.circular-rocket-logo{
 			display: block;
-			margin-left: 30px;
-			left: 0;
+			margin-left: 75px;
 			bottom: 0;
 			max-width: 300px;
+			width: 50%;
+			margin-top: 100px;
 		}
 		.toggle-menu-wrapper{
 			display: none;
