@@ -376,8 +376,6 @@ input[type="submit"] {
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
   background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
@@ -388,9 +386,7 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    border-color: #ccc #bbb #aaa; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -398,9 +394,7 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    border-color: #aaa #bbb #bbb; }
 
 /* Fields */
 input[type="text"],
@@ -451,6 +445,20 @@ textarea {
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none; }
+
+.filter-btn {
+  height: 2rem;
+  width: 10.5rem;
+  margin: 0.5rem;
+  border-radius: 15px;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  color: black;
+  background-color: #fff; }
+  .filter-btn:hover, .filter-btn.selected {
+    border: none;
+    color: #fff;
+    background-color: #5bba47; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -967,39 +975,25 @@ object {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
 
-.instagram-feed {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .instagram-feed .photo {
-    width: 220px;
-    height: 200px;
-    overflow: hidden;
-    position: relative; }
-    .instagram-feed .photo img {
-      max-width: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
-
+/* //////////////////flickity/////////////////// */
 /* Taxonomy Role */
-.role-filters {
+.tax-role .archive-title-wrapper {
+  text-align: center; }
+
+.tax-role .filter-button-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .role-filters .filter {
-    min-width: 1240px; }
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1000px;
+  margin: 1rem auto;
+  text-align: center; }
 
-.person-gallery {
+.tax-role .person-gallery {
   max-width: 1240px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1007,7 +1001,7 @@ object {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.person-tile {
+.tax-role .person-tile {
   width: 265px;
   height: 300px;
   margin: 1.25% 0.5rem;
@@ -1015,17 +1009,17 @@ object {
   -webkit-box-shadow: 0px 0px 8px #D5D5D5;
           box-shadow: 0px 0px 8px #D5D5D5;
   color: #fff; }
-  .person-tile a {
+  .tax-role .person-tile a {
     height: 100%;
     width: 100%; }
-  .person-tile .person-image-wrapper {
+  .tax-role .person-tile .person-image-wrapper {
     position: relative;
     width: 235px;
     height: 235px;
     margin: 15px auto;
     border-radius: 4px;
     overflow: hidden; }
-    .person-tile .person-image-wrapper img {
+    .tax-role .person-tile .person-image-wrapper img {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1034,7 +1028,7 @@ object {
       min-height: 100%;
       width: auto;
       max-width: none; }
-  .person-tile .person-tile-label {
+  .tax-role .person-tile .person-tile-label {
     padding: 0.5rem;
     margin: 0;
     color: #000;
@@ -1055,7 +1049,6 @@ object {
       -ms-flex-pack: distribute;
           justify-content: space-around; } }
 
-<<<<<<< HEAD
 .page main {
   text-align: center;
   width: 1240px; }
@@ -1121,7 +1114,7 @@ object {
     margin-top: 15px; }
   .page main .gform_wrapper .field_description_below .gfield_description {
     padding-top: 5px; }
-=======
+
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -1240,4 +1233,3 @@ http://flickity.metafizzy.co
 
 .flickity-page-dots .dot.is-selected {
   opacity: 1; }
->>>>>>> be80e5e46fb97f463036fef96e127f22259d51a8

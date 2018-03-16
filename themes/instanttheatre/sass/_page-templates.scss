@@ -52,26 +52,35 @@
   }
 }
 
-.instagram-feed{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  .photo{
-    // border: 5px solid $color__yellow-brand;
-    width: 220px;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    img{
-      max-width: none;
-      // height:100%;
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%); 
-    }
-  }
-}
+/* //////////////////flickity/////////////////// */
+
+
+
+// .instagram-feed {
+//   background: #EEE;
+
+
+// .photo {
+//   width: 66%;
+//   height: 200px;
+//   margin-right: 10px;
+//   background: #8C8;
+//   border-radius: 5px;
+//   counter-increment: gallery-cell;
+// }
+
+// /* cell number */
+// .photo:before {
+//   display: block;
+//   text-align: center;
+//   content: counter(gallery-cell);
+//   line-height: 200px;
+//   font-size: 80px;
+//   color: white;
+// }
+
+// }
+
 
 
 /* Taxonomy Role */
