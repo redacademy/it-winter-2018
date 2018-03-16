@@ -1,4 +1,4 @@
-(function ($) {
+jQuery(document).ready(function($) {
 
   $('.instagram-feed').flickity({
     // options
@@ -6,4 +6,6 @@
     contain: true
   });
 
-})(jQuery);
+// })(jQuery);
+
+})
