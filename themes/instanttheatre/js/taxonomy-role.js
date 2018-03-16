@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
     
     $.ajax({
     method: 'GET',
-    url: api_vars.root_url + 'wp/v2/post_people?_embed/' + postID,
+    url: api_vars.root_url + 'wp/v2/post_people/' + postID,
     success: function( response ) {
 
       console.log(response);
