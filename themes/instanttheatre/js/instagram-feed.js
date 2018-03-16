@@ -13,7 +13,7 @@ var Spectra = {
     };
     
     $('#instagram-feed').spectragram('getUserFeed',{
-      max: 3,
+      max: 5,
       query: 'instanttheatre',
       wrapEachWith: '<div class="photo">'
     });
