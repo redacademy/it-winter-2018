@@ -18,4 +18,29 @@ jQuery(document).ready(function($) {
     $(this).addClass('selected');
   });
 
+
+
+  //Get person post
+  $('.person-tile').on('click', function (e) {
+    e.preventDefault();
+
+    var postID = $(this).attr('id').match(/\d+$/)[0];
+
+    console.log(api_vars.root_url + 'wp/v2/post_people/' + postID);
+    
+    $.ajax({
+    method: 'GET',
+    url: api_vars.root_url + 'wp/v2/post_people?_embed/' + postID,
+    success: function( response ) {
+
+      console.log(response);
+      console.log(response.title.rendered);
+      console.log(response.content.rendered);
+
+
+    },
+    error: function() {}
+    });
+});
+
 })

@@ -19,7 +19,7 @@ get_header();
 		</div>
 
 		<?php
-			$term_id = 2;
+			$term_id = $term->term_id;
 			$taxonomy_name = 'role';
 			$termchildren = get_term_children( $term_id, $taxonomy_name );
 		?> 
