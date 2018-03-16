@@ -26,13 +26,45 @@ get_header(); ?>
 					<div class="hire-us-part">
 					<h2><?php echo $field['heading']; ?></h2>
 					<p><?php echo $field['description']; ?></p>
-					<p><?php echo $field['perfect_for']; ?></div>
+					<h3>Perfect for:</h3>
+					<?php 
+						$perfect_for = $field['perfect_for']; 
+						$perfect_for = explode(", ", $perfect_for); ?>
+						<ul><?php
+						foreach ( $perfect_for as $fits ) { ?>
+							<li><?php echo $fits; ?></li>
+						<?php 
+						}
+					?></ul></div>
 					<?php
 					}
-					?></div></p>
+					?></div>
+
+					<h1>Applied Improv</h1>
+					<p><?php echo CFS()->get( 'applied_improv' );  ?></p>
+
+					<div class="hire-us-grid">
+			  <?php
+					$applied_improv = CFS()->get( 'where_applied' ); ?>
+				
+				<?php 
+					foreach ( $applied_improv as $field ) { ?>
+					<div class="hire-us-part">
+					<h2><?php echo $field['title']; ?></h2>
+					<p><?php echo $field['description']; ?></p>
+					</div>
+					<?php
+					}
+					?></div>
+
+				<div class="business-widget">
+					
 				</div>
 
 				<?php the_content(); ?>
+				</div>
+
+
 
 			<?php endwhile; // End of the loop. ?>
 
