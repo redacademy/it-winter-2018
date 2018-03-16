@@ -1043,6 +1043,14 @@ object {
         flex-wrap: wrap; }
 
 /* //////////////////flickity/////////////////// */
+.photo {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell; }
+
 .cell {
   width: 66%;
   height: 200px;
