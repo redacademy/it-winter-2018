@@ -23,16 +23,17 @@ get_header();
 			$taxonomy_name = 'role';
 			$termchildren = get_term_children( $term_id, $taxonomy_name );
 		?> 
-
+		
 		<div class="filter-button-group">
-			<button data-filter="*">All</button>
+			<button class="filter-btn selected" data-filter="*">All</button>
 			<?php foreach ( $termchildren as $child ) : ?>
 				<?php $term = get_term_by( 'id', $child, $taxonomy_name ); ?>
-				<button data-filter=".role-<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
+				<button class="filter-btn" data-filter=".role-<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
 			<?php endforeach; ?>
 		</div>
 
-		<section class="person-gallery">
+
+		<section class="person-gallery">	
 
 			<?php if ( have_posts() ) : ?>
 

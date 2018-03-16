@@ -104,23 +104,18 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 	wp_enqueue_script('font-awsome-cdn', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
-	wp_enqueue_script('jquery-library','https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+	wp_enqueue_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 	wp_enqueue_script( 'instant.js', get_template_directory_uri() . '/build/js/instant.min.js', array(), '20130115', true );
-	wp_enqueue_script( 'jquery' );	
-<<<<<<< HEAD
-	wp_enqueue_script( 'spectragram.js', './js/lib/spectragram.js' );
-	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/build/js/isotope.pkgd.min.js', array(), '', true );
-	wp_enqueue_script( 'taxonomy-role.js', get_template_directory_uri() . '/build/js/taxonomy-role.min.js', array(), '', true );
+	// wp_enqueue_script( 'jquery' );	
+	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/build/js/isotope.pkgd.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'taxonomy-role.js', get_template_directory_uri() . '/build/js/taxonomy-role.min.js', array('jquery'), '', true );
 
-=======
 	wp_enqueue_script( 'spectragram', get_template_directory_uri().'/js/lib/spectragram.js', array('jquery'), false, true );
-	wp_enqueue_script( 'isotope', './js/lib/isotope.pkgd.min.js' );
 
 	wp_enqueue_script( 'instagram-feed',  get_template_directory_uri().'/build/js/instagram-feed.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'flickity',   get_template_directory_uri().'/build/js/flickity.pkgd.min.js', array('jquery'), false, true  );
 	
->>>>>>> e4b882bc40589f576d1ac76c6680449d06e0c430
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
