@@ -1,6 +1,6 @@
 (function ($) {
 
-  $('.instagram-feed').flickity({
+  $('.banner-caroucel').flickity({
     // options
     cellAlign: 'left',
     contain: true
