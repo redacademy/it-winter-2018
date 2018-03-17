@@ -25,22 +25,19 @@ jQuery(document).ready(function($) {
     e.preventDefault();
 
     var postID = $(this).attr('id').match(/\d+$/)[0];
-
-    console.log(api_vars.root_url + 'wp/v2/post_people/' + postID);
     
     $.ajax({
-    method: 'GET',
-    url: api_vars.root_url + 'wp/v2/post_people/' + postID,
-    success: function( response ) {
-
-      console.log(response);
-      console.log(response.title.rendered);
-      console.log(response.content.rendered);
-
-
-    },
-    error: function() {}
+      method: 'GET',
+      url: api_vars.root_url + 'wp/v2/post_people/' + postID + '?_embed',
+      success: function( response ) {
+        console.log(response);
+        console.log(response._embedded["wp:featuredmedia"]["0"].source_url);
+        var title = response.title.rendered;
+        var description = response.content.rendered;
+        var featured_image = response._embedded["wp:featuredmedia"]["0"].source_url;
+      },
+      error: function() {}
     });
-});
+  });
 
 })
