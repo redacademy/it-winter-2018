@@ -44,8 +44,7 @@ get_header(); ?>
 					<p><?php echo CFS()->get( 'applied_improv' );  ?></p>
 
 					<div class="hire-us-grid">
-			  <?php
-					$applied_improv = CFS()->get( 'where_applied' ); ?>
+			  <?php $applied_improv = CFS()->get( 'where_applied' ); ?>
 				
 				<?php 
 					foreach ( $applied_improv as $field ) { ?>

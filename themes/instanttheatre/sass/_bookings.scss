@@ -135,6 +135,7 @@
       }
     }
 
+    //business widget area for hire us page
     .business-widget {
       width: 100%;
       height: 350px;
@@ -185,6 +186,7 @@
       }
     }
 
+    //companies we've worked with section on hire us page
     .company-grid {
       img {
         width: 162px;
@@ -193,6 +195,8 @@
       }
     }
 
+
+    //testimonails section on hire us page
     .testimonial-widget {
       background: url("../../assets/images/yellow-wave-banner-background.png");
       .testimonial-grid {
@@ -234,6 +238,44 @@
             padding-left: 20px;
             margin-bottom: 0;
           }
+        }
+      }
+    }
+
+    //studio rooms grid on book studio page
+    .studio-grid {
+      display: flex;
+
+      .studio-grid-part {
+        width: 33%;
+        border: 1px solid $color__lightgrey-border;
+        border-radius: 5px;
+        margin: 20px;
+        padding: 15px;
+        img {
+          height: 200px;
+          width: 350px;
+          object-fit: cover;
+        }
+      }
+      .studio-information {
+        display: flex;
+        justify-content: space-between;
+        p {
+          margin: 0;
+          margin-top: 1em;
+        }
+      }
+      .studio-category {
+        font-weight: bold;
+      }
+      .studio-category-note {
+        font-weight: bold;
+        color: $color__red-brand;
+      }
+      .size-details {
+        p {
+          margin: 0;
         }
       }
     }

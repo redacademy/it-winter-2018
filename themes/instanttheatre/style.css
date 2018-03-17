@@ -1343,6 +1343,38 @@ object {
         .page main .testimonial-widget .testimonial-grid .testimonial-grid-part p {
           padding-left: 20px;
           margin-bottom: 0; }
+  .page main .studio-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .page main .studio-grid .studio-grid-part {
+      width: 33%;
+      border: 1px solid #D5D5D5;
+      border-radius: 5px;
+      margin: 20px;
+      padding: 15px; }
+      .page main .studio-grid .studio-grid-part img {
+        height: 200px;
+        width: 350px;
+        -o-object-fit: cover;
+           object-fit: cover; }
+    .page main .studio-grid .studio-information {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .page main .studio-grid .studio-information p {
+        margin: 0;
+        margin-top: 1em; }
+    .page main .studio-grid .studio-category {
+      font-weight: bold; }
+    .page main .studio-grid .studio-category-note {
+      font-weight: bold;
+      color: #ED1651; }
+    .page main .studio-grid .size-details p {
+      margin: 0; }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
