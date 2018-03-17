@@ -137,7 +137,105 @@
 
     .business-widget {
       width: 100%;
+      height: 350px;
       background: url("../../assets/images/yellow-wave-banner-background.png");
+      position: relative;
+      .business-grid {
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 75%;
+        width: 90%;
+        background-color: rgba(255,255,255, 0.8);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px;
+        h1 {
+          width: 100%;
+          margin: 0;
+          padding-top: 0;
+        }
+        .business-grid-part {
+          width: 50%;
+          padding: 0 20px 0 20px;
+          p {
+            margin-bottom: 0;
+          }
+          .article-source {
+            display: flex;
+            p {
+              margin: 0;
+              padding-right: 20px;
+              &::before {
+                content: "-";
+                padding-right: 5px;
+              }
+            }
+            a {
+              color: black;
+              &:hover {
+                color: $color__blue-brand;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .company-grid {
+      img {
+        width: 162px;
+        border-radius: 50%;
+        border: 2px solid $color__blue-brand;
+      }
+    }
+
+    .testimonial-widget {
+      background: url("../../assets/images/yellow-wave-banner-background.png");
+      .testimonial-grid {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(255,255,255, 0.8);
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        h1 {
+          margin: 0;
+          width: 100%;
+        }
+        .testimonial-grid-part {
+          width: 50%;
+          display: flex;
+
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+          }
+          .testimonial-source {
+            display: flex;
+            font-weight: bold;
+            p {
+              margin: 0;
+              padding: 0;
+            }
+            &::before {
+              content: '\f068';
+              font-family: FontAwesome;
+              color: $color__lightblue-brand;
+              padding-right: 10px;
+              padding-left: 20px;
+            }
+          }
+          p {
+            padding-left: 20px;
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }
