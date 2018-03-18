@@ -1375,6 +1375,8 @@ object {
       color: #ED1651; }
     .page main .studio-grid .size-details p {
       margin: 0; }
+    .page main .studio-grid p {
+      margin-bottom: 0; }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
