@@ -158,6 +158,13 @@
 					padding-top: 50px;
 					padding-left: 85px;
 					padding-right: 50px;
+					right: 0;
+					ul{
+						list-style: none;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+					}
 			}
 	 }//toggle-menu-wrapper
 

@@ -35,18 +35,10 @@ $searchInput.on('blur', function () {
   $searchInput.hide(500);
 });
 
-// toggled (open) hamburger menu accordion
-
-// $('.selector-nav').on('click', function(e){
-//   e.preventDefault();
-//   $(this).children('.sub-menu').css('display', 'block');
-//   $('.sub-menu').children('li').slideToggle('slow');
-// });
-
-// $('.selector-nav').on('blur', function(){
-//   $(this).children('.sub-menu').css('display', 'none');
-//   $('.sub-menu').children('li').css('display', 'none');
-// });
+$('.selector-nav').on('click', function(evt){
+  evt.preventDefault();
+  // $('.selector-nav').find('.sub-menu').find('li').show('a',1000);
+});
 }(jQuery));
 
 // var acc = document.getElementsByClassName("selector-nav");
