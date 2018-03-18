@@ -24,7 +24,7 @@ get_header();
 			<?php		$fields = CFS()->get( 'banner_loop' );
 foreach ( $fields as $field ) {
 	?>
-	<div class="banner-cell">
+	<div class="banner-cell" >
 	<img src="<?php echo $field['banner_image']; ?>" alt="Banner Image">
 	<?php
 		echo $field['title_link'];

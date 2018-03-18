@@ -1,17 +1,3 @@
-
-//   $(document).ready(function($) {
-//     $("#primary-menu").find(".selector-nav").on("focus", function(e){
-//       e.preventDefault();
-//       $(this).children(".sub-menu").slideToggle("slow");
-//     });//click function
-// });//document ready
-
-
-  // $('#toggle-button').on('click', function(e){
-  //   e.preventDefault();
-  //   $('.toggle-menu-wrapper').animate({width: 'toggle'});
-  // });
-
 (function ($) {
 //search bar
 var $searchInput = $('.desktop-search #desktop-search-field');
@@ -35,18 +21,10 @@ $searchInput.on('blur', function () {
   $searchInput.hide(500);
 });
 
-// toggled (open) hamburger menu accordion
-
-// $('.selector-nav').on('click', function(e){
-//   e.preventDefault();
-//   $(this).children('.sub-menu').css('display', 'block');
-//   $('.sub-menu').children('li').slideToggle('slow');
-// });
-
-// $('.selector-nav').on('blur', function(){
-//   $(this).children('.sub-menu').css('display', 'none');
-//   $('.sub-menu').children('li').css('display', 'none');
-// });
+$('.selector-nav').on('click', function(evt){
+  evt.preventDefault();
+  // $('.selector-nav').find('.sub-menu').find('li').show('a',1000);
+});
 }(jQuery));
 
 // var acc = document.getElementsByClassName("selector-nav");
