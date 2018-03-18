@@ -1,11 +1,11 @@
-jQuery(document).ready(function($) {
+(function ($) {
 
-  $('.banner-caroucel').flickity({
+  $('.banner-carousel').flickity({
     // options
     cellAlign: 'left',
-    contain: true
+    contain: true,
+    // complete: alert('done!')
+
   });
 
-// })(jQuery);
-
-})
+})(jQuery);

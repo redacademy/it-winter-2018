@@ -1043,6 +1043,23 @@ object {
         flex-wrap: wrap; }
 
 /* //////////////////flickity/////////////////// */
+.instagram-carousel {
+  max-width: 1240px; }
+  .instagram-carousel .photo {
+    width: 320px;
+    height: 200px;
+    margin-right: 10px;
+    overflow: hidden; }
+    .instagram-carousel .photo img {
+      max-width: none; }
+
+.banner-carousel {
+  margin-top: 3.75rem;
+  max-width: 1240px;
+  height: 500px; }
+  .banner-carousel .banner-cell {
+    width: 100%; }
+
 /* Taxonomy Role */
 .tax-role .archive-title-wrapper {
   text-align: center; }
