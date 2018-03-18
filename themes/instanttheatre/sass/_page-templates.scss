@@ -85,7 +85,11 @@
 }
 
 
-/* Taxonomy Role */
+/**
+ *PAGE: Cast and Instructor (taxonomy-role.php)
+ *
+ */
+
 .tax-role {
 
   .archive-title-wrapper {
@@ -146,6 +150,94 @@
       text-align: center;
     }
   }
+}
+
+/* Popup container */
+// .popout {
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   background-color: rgba(255, 0, 255, 0.5);
+  // z-index: 1;
+// }
+
+.person-bio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50% );
+  display: flex;
+  width: 800px;
+  padding: 1rem;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  // z-index: 1;
+
+  .portrait-wrapper {
+    // position: relative;
+    // top: 0;
+    // left: 0;
+    // display: inline-block;
+    width: 235px;
+    height: 235px;
+    margin-right: 1.25rem;
+    overflow: hidden;
+
+    img {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50% );
+      width: auto;
+      height: auto;
+      min-height: 100%;
+      max-height: none;
+      min-width: 100%;
+      max-width: none;
+    }
+  }
+
+  .bio-content {
+    flex-grow: 1;
+    border: 1px solid red;
+    vertical-align: top;
+
+    .person-title {
+      display: inline-block;
+
+    }
+    .social-links {
+      display: inline-block;
+
+    }
+    .close-link {
+      
+    }
+    .person-description {
+
+    }
+  }
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 0.5s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }
 
 

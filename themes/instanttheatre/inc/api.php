@@ -43,7 +43,7 @@ add_action( 'rest_api_init', function() {
 });
     
 /**
- * Handler for fetching the post status.
+ * Handler for fetching the facebook link.
  *
  * @param array           $object     Details of current post.
  * @param string          $field_name Name of field to add to response.
@@ -56,7 +56,7 @@ function get_person_facebook_link( $object, $field_name, $request ) {
 }
       
 /**
- * Handler for fetching the post status.
+ * Handler for fetching the twitter link.
  *
  * @param array           $object     Details of current post.
  * @param string          $field_name Name of field to add to response.
@@ -69,7 +69,7 @@ function get_person_twitter_link( $object, $field_name, $request ) {
 }
 
 /**
- * Handler for fetching the post status.
+ * Handler for fetching the instragram link.
  *
  * @param array           $object     Details of current post.
  * @param string          $field_name Name of field to add to response.

@@ -64,8 +64,21 @@ get_header();
 			<?php endif; ?>
 		
 		</section>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<!-- <div class="popout"> -->
+			<div class="person-bio">
+				<div class="portrait-wrapper">
+					<img src="http://localhost/instant_theatre/wp-content/uploads/2018/03/download-1.jpg" alt="Person portait">
+				</div>
+				<div class="bio-content">
+					<span class="person-title">Amanda HugnKiss</span>
+					<div class="social-links">Social Links</div>
+					<i class="fas fa-window-close link-close"></i>
+					<div class="person-description">Some text about person</div>
+				</div>
+
+			</div>
+	<!-- </div> -->
 
 <?php get_footer(); ?>
