@@ -1060,21 +1060,22 @@ object {
         flex-wrap: wrap; }
 
 /* //////////////////flickity/////////////////// */
-.photo {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: gallery-cell; }
+.instagram-carousel {
+  max-width: 1240px; }
+  .instagram-carousel .photo {
+    width: 320px;
+    height: 200px;
+    margin-right: 10px;
+    overflow: hidden; }
+    .instagram-carousel .photo img {
+      max-width: none; }
 
-.cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: gallery-cell; }
+.banner-carousel {
+  margin-top: 3.75rem;
+  max-width: 1240px;
+  height: 500px; }
+  .banner-carousel .banner-cell {
+    width: 100%; }
 
 /* Taxonomy Role */
 .tax-role .archive-title-wrapper {
