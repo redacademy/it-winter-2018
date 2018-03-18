@@ -239,7 +239,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: black;
   font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -494,7 +494,7 @@ textarea {
     .main-navigation .search .hamburger-toggle-button {
       font-size: 20px;
       cursor: pointer;
-      margin-right: 200px; }
+      margin-right: 150px; }
     .main-navigation .search #hamburger-search {
       position: absolute;
       background: #fff;
@@ -512,6 +512,7 @@ textarea {
       border: none;
       background: none;
       outline: none;
+      font-size: 20px;
       top: 0;
       right: 0;
       z-index: 2;
@@ -600,7 +601,10 @@ textarea {
     visibility: visible; }
   .main-navigation .selector-nav ::after {
     font-family: FontAwesome;
-    content: "\f005"; }
+    content: "\f105";
+    font-weight: bold;
+    font-size: 30px;
+    color: red; }
 
 @media screen and (min-width: 481px) {
   body.home .main-navigation {
@@ -1137,8 +1141,10 @@ object {
   text-align: center;
   width: 1240px; }
   .page main h1 {
-    margin-top: 3em;
+    margin-top: 1em;
     color: black; }
+    .page main h1:first-of-type {
+      margin-top: 3em; }
   .page main p {
     margin-left: auto;
     margin-right: auto;
@@ -1223,7 +1229,153 @@ object {
         .page main .hire-us-grid .hire-us-part h2::before {
           content: '\f068';
           font-family: FontAwesome;
-          color: #6AC5D0; }
+          color: #6AC5D0;
+          padding-right: 10px; }
+      .page main .hire-us-grid .hire-us-part h3 {
+        text-align: left;
+        margin: 0;
+        font-size: 16px; }
+      .page main .hire-us-grid .hire-us-part ul {
+        padding: 0 20px 20px 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+        .page main .hire-us-grid .hire-us-part ul li {
+          width: 50%;
+          text-align: left;
+          list-style-type: none; }
+          .page main .hire-us-grid .hire-us-part ul li::before {
+            content: '\f068';
+            font-family: FontAwesome;
+            color: #6AC5D0;
+            padding-right: 10px; }
+  .page main .business-widget {
+    width: 100%;
+    height: 350px;
+    background: url("../../assets/images/yellow-wave-banner-background.png");
+    position: relative; }
+    .page main .business-widget .business-grid {
+      position: absolute;
+      left: 5%;
+      top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 75%;
+      width: 90%;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding: 30px; }
+      .page main .business-widget .business-grid h1 {
+        width: 100%;
+        margin: 0;
+        padding-top: 0; }
+      .page main .business-widget .business-grid .business-grid-part {
+        width: 50%;
+        padding: 0 20px 0 20px; }
+        .page main .business-widget .business-grid .business-grid-part p {
+          margin-bottom: 0; }
+        .page main .business-widget .business-grid .business-grid-part .article-source {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .page main .business-widget .business-grid .business-grid-part .article-source p {
+            margin: 0;
+            padding-right: 20px; }
+            .page main .business-widget .business-grid .business-grid-part .article-source p::before {
+              content: "-";
+              padding-right: 5px; }
+          .page main .business-widget .business-grid .business-grid-part .article-source a {
+            color: black; }
+            .page main .business-widget .business-grid .business-grid-part .article-source a:hover {
+              color: #00B6CB; }
+  .page main .company-grid img {
+    width: 162px;
+    border-radius: 50%;
+    border: 2px solid #00B6CB; }
+  .page main .testimonial-widget {
+    background: url("../../assets/images/yellow-wave-banner-background.png"); }
+    .page main .testimonial-widget .testimonial-grid {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto; }
+      .page main .testimonial-widget .testimonial-grid h1 {
+        margin: 0;
+        width: 100%; }
+      .page main .testimonial-widget .testimonial-grid .testimonial-grid-part {
+        width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .page main .testimonial-widget .testimonial-grid .testimonial-grid-part img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%; }
+        .page main .testimonial-widget .testimonial-grid .testimonial-grid-part .testimonial-source {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          font-weight: bold; }
+          .page main .testimonial-widget .testimonial-grid .testimonial-grid-part .testimonial-source p {
+            margin: 0;
+            padding: 0; }
+          .page main .testimonial-widget .testimonial-grid .testimonial-grid-part .testimonial-source::before {
+            content: '\f068';
+            font-family: FontAwesome;
+            color: #6AC5D0;
+            padding-right: 10px;
+            padding-left: 20px; }
+        .page main .testimonial-widget .testimonial-grid .testimonial-grid-part p {
+          padding-left: 20px;
+          margin-bottom: 0; }
+  .page main .studio-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .page main .studio-grid .studio-grid-part {
+      width: 33%;
+      border: 1px solid #D5D5D5;
+      border-radius: 5px;
+      margin: 20px;
+      padding: 15px; }
+      .page main .studio-grid .studio-grid-part img {
+        height: 200px;
+        width: 350px;
+        -o-object-fit: cover;
+           object-fit: cover; }
+    .page main .studio-grid .studio-information {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .page main .studio-grid .studio-information p {
+        margin: 0;
+        margin-top: 1em; }
+    .page main .studio-grid .studio-category {
+      font-weight: bold; }
+    .page main .studio-grid .studio-category-note {
+      font-weight: bold;
+      color: #ED1651; }
+    .page main .studio-grid .size-details p {
+      margin: 0; }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
