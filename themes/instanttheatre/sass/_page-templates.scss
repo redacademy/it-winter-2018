@@ -54,36 +54,30 @@
 
 /* //////////////////flickity/////////////////// */
 
-.photo {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: gallery-cell;
+
+.instagram-carousel{
+  max-width: 1240px;
+  .photo {
+    width: 320px;
+    // max-width: none;
+    height: 200px;
+    margin-right: 10px;
+    overflow: hidden;
+    img{
+      max-width: none;
+    }
+  }
+  
 }
 
-// /* cell number */
-// .photo:before {
-//   display: block;
-//   text-align: center;
-//   content: counter(gallery-cell);
-//   line-height: 200px;
-//   font-size: 80px;
-//   color: white;
-// }
-
-// }
-
-.cell{
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: gallery-cell;
+.banner-carousel{
+  margin-top: 3.75rem;
+  max-width: 1240px;
+  height: 500px;
+  .banner-cell{
+    width: 100%;
+  }
 }
-
 
 /**
  *PAGE: Cast and Instructor (taxonomy-role.php)
