@@ -136,3 +136,9 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+ /**
+ * Custom WP API modifications.
+ */
+require get_template_directory() . '/inc/api.php';

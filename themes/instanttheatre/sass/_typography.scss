@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-
 body,
 button,
 input,
@@ -13,10 +12,62 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+a {
+	color: $color__link;
+
+	&:link {
+		color: $color__link;
+	}
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover {
+		color: $color__link-hover;
+	}
+	&:active {
+		color: $color__link-active;
+	}
+
+}
+
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+}
+
+h1 {
+	font-size: 1.375rem;
+	font-weight: 700;
+	
+	@include desktop {
+    font-size: 1.75rem;
+  }
+}
+h2 {
+	font-size: 1.125rem;
+	font-weight: 700;
+	
+	@include desktop {
+    font-size: 1.375rem;
+  }
+}
+h3 {
+	font-weight: 500;
+	
+	@include desktop {
+    font-size: 1.25rem;
+  }
+}
+
+.featured {
+	font-size: 2.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	
+	@include desktop {
+    font-size: 1.375rem;
+  }
 }
 
 /* Copy */
