@@ -1151,8 +1151,7 @@ object {
           justify-content: space-around; } }
 
 .page main {
-  text-align: center;
-  width: 1240px; }
+  text-align: center; }
   .page main h1 {
     margin-top: 1em;
     color: black; }
