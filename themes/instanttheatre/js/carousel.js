@@ -8,4 +8,8 @@
 
   });
 
+  if ($(window).width() < 480) {
+    $('.hire-us-grid').flickity();
+  }
+
 })(jQuery);
