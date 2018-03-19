@@ -7,6 +7,7 @@
 .site-content {
   max-width: 1240px;
   margin: 0 auto;
+  background: $site__background;
 }
 
 .carousel-cell {
@@ -79,12 +80,18 @@
   }
 }
 
-/**
- *PAGE: Cast and Instructor (taxonomy-role.php)
- *
- */
-
+/***************************
+ *PAGE: Cast and Instructor 
+ ***************************/
 .tax-role {
+
+  .content-area {
+    padding: 2rem 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
 
   .archive-title-wrapper {
     text-align: center;
@@ -106,12 +113,18 @@
   }
 
   .person-tile {
-    width: 265px;
-    height: 300px;
+    width: 46.5%;
+    height: auto;
+    padding: 1rem;
     margin: 1.25% 0.5rem;
     border-radius: 4px;
     box-shadow: 0px 0px 8px #D5D5D5;
     color: #fff; 
+
+    @include desktop {
+      width: 265px;
+      margin: 1.25% 0.5rem;
+    }
 
     a {
       height: 100%;
@@ -120,119 +133,174 @@
 
     .person-image-wrapper {
       position: relative;
-      width: 235px;
+      width: 100%;
       height: 235px;
-      margin: 15px auto;
+      margin: 0 auto;
       border-radius: 4px;
       overflow: hidden;
+
+      @include desktop {
+        width: 235px;
+        height: 235px;
+        margin: 0 auto;
+      }
 
       img {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        min-height: 100%;
         width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        max-width: none;
         max-width: none;
       }
     }
 
     .person-tile-label {
-      padding: 0.5rem;
+      padding: 0;
       margin: 0;
       color: #000;
+      font-size: 1.375rem;
       text-align: center;
+
+      @include desktop {
+        font-size: 1.5rem;
+      }
+
     }
   }
-}
 
-/* Popup container */
-// .popout {
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   background-color: rgba(255, 0, 255, 0.5);
-  // z-index: 1;
-// }
+  .overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    overflow-x: hidden;
+    z-index: 1;
+  
+    &.m-fadeIn {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s linear 0s, opacity 300ms;
+    }
+  }
+  
+  .overlay-content {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 1rem;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    z-index: 1;
 
-.person-bio {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50% );
-  display: flex;
-  width: 800px;
-  padding: 1rem;
-  margin: 0;
-  background: #fff;
-  border: 1px solid #979797;
-  border-radius: 4px;
-  // z-index: 1;
-
-  .portrait-wrapper {
-    // position: relative;
-    // top: 0;
-    // left: 0;
-    // display: inline-block;
-    width: 235px;
-    height: 235px;
-    margin-right: 1.25rem;
-    overflow: hidden;
-
-    img {
-      position: relative;
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      max-width: 800px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50% );
-      width: auto;
+    }
+  
+    .portrait-wrapper {
+      width: 85%;
       height: auto;
-      min-height: 100%;
-      max-height: none;
-      min-width: 100%;
-      max-width: none;
+      margin: 1rem auto;
+      overflow: hidden;
+      
+
+      @include desktop {
+        width: 20%;
+        height: 235px;
+        min-width: 235px;
+        margin: 0 1.25rem 0 0;
+        order: 1;
+      }
+  
+      img {
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        max-height: none;
+        min-width: 100%;
+        max-width: none;
+
+        @include desktop {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50% );
+        }
+      }
     }
-  }
-
-  .bio-content {
-    flex-grow: 1;
-    border: 1px solid red;
-    vertical-align: top;
-
+  
     .person-title {
-      display: inline-block;
+      display: block;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 1.375rem;
+      font-weight: 500;
+      background: $color__yellow-brand;
 
+      @include desktop {
+        display: inline-block;
+        padding: 0;
+        margin-right: 1rem;
+        background: none;
+        vertical-align: text-bottom;
+        order: 2;
+      }
     }
-    .social-links {
-      display: inline-block;
 
+    .social-links {
+      text-align: center;
+
+      @include desktop {
+        display: inline-block;
+        order: 3;
+      }
+
+      a[class|='social'] {
+        margin-right: 0.5rem;
+      }
     }
     .close-link {
-      
+      position: relative;
+      top: 48px;
+      left: 16px;
+
+      @include desktop {
+        position: static;
+        text-align: right;
+        flex-grow: 1;
+        order: 4;
+      }
     }
     .person-description {
 
+      @include desktop {
+        width: 67%;
+        margin-top: -185px;
+        order: 5;
+      }
     }
   }
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 0.5s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
 
 
 

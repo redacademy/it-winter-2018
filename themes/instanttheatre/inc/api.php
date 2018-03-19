@@ -33,7 +33,7 @@ add_action( 'rest_api_init', function() {
 
   register_rest_field( 
     'post_people',
-    'instragram_link',
+    'instagram_link',
     array(
       'get_callback'    => 'get_person_instagram_link',
       'update_callback' => null,

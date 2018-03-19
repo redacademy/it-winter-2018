@@ -15,9 +15,10 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
+$color__link: black;
 $color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link-hover: #333;
+$color__link-active: #00B6CB;
 
 $color__yellow-brand: #FFEC00;
 $color__red-brand: #ED1651;
@@ -30,7 +31,7 @@ $color__lightgrey-border: #D5D5D5;
 
 // Typography
 
-$font__main: sans-serif;
+$font__main: Roboto, Arial, sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
@@ -42,3 +43,6 @@ $mobile_break: 480px;
 $desktop__content-area: 1240px;
 $desktop_break: 1440px;
 
+
+//Site background
+$site__background: url('../../assets/images/cloud-bkg2.png') top center / cover fixed;
