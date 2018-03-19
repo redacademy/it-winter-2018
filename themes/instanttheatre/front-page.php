@@ -21,7 +21,7 @@ get_header();
 <!-- ///////////////banner /////////////////////-->
 			<div class="banner-carousel">
 
-			<?php		$fields = CFS()->get( 'banner_loop' );
+		<?php		$fields = CFS()->get( 'banner_loop' );
 foreach ( $fields as $field ) {
 	$keys = array_keys($field['title_link']);
 $values = array_values($field['title_link']);
