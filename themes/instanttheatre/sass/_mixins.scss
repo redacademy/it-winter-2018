@@ -11,9 +11,8 @@
 	margin-right: auto;
 }
 
-//mobile break point
-@mixin mobile {
-	@media (min-width: $mobile_break) {
+@mixin desktop {
+  @media (min-width: $mobile_break) {
     @content;
   }
-}	
+}
