@@ -833,7 +833,8 @@ textarea {
   max-width: 480px;
   min-width: none;
   padding: 2rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 3.75rem; }
   .site-info h2,
   .site-info h3,
   .site-info p {
@@ -1089,9 +1090,9 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
@@ -1106,11 +1107,12 @@ object {
   margin-top: 3.75rem;
   max-width: 1240px;
   padding: 0rem;
-  background: url("../../assets/images/yellow-wave-banner-background.png");
-  text-align: center; }
+  background: url("../../assets/images/yellow-wave-banner-background.png"); }
   .what-is-improv .what-is-improv-containor {
     padding: 3rem;
     background: #FFEC00; }
+    .what-is-improv .what-is-improv-containor p {
+      text-align: center; }
     .what-is-improv .what-is-improv-containor h2 {
       margin-top: 0; }
   .what-is-improv .improv-button-set {
@@ -1140,10 +1142,29 @@ object {
 
 .banner-carousel {
   margin-top: 3.75rem;
-  max-width: 1240px;
-  height: 500px; }
+  max-width: 1240px; }
   .banner-carousel .banner-cell {
     width: 100%; }
+    .banner-carousel .banner-cell .banner-thumbnail {
+      width: 100%;
+      height: 200px;
+      overflow: hidden; }
+      .banner-carousel .banner-cell .banner-thumbnail img {
+        min-width: 480px; }
+    .banner-carousel .banner-cell .banner-text-info {
+      padding: 2rem;
+      text-align: left; }
+      .banner-carousel .banner-cell .banner-text-info a {
+        font-size: 2rem;
+        font-weight: 500;
+        text-decoration: none; }
+        .banner-carousel .banner-cell .banner-text-info a:link, .banner-carousel .banner-cell .banner-text-info a:visited {
+          color: #000; }
+  .banner-carousel .flickity-page-dots {
+    top: 200px;
+    z-index: -1; }
+  .banner-carousel .flickity-prev-next-button {
+    top: 100px; }
 
 /***************************
  *PAGE: Cast and Instructor 
@@ -1356,6 +1377,29 @@ object {
           -ms-flex-order: 5;
               order: 5; } }
 
+/***************************
+ *PAGE: Auditions 
+ ***************************/
+.auditions-containor {
+  background-color: #FFEC00;
+  width: 100%; }
+  .auditions-containor .email-field {
+    max-width: 345px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    margin: 0 auto; }
+    .auditions-containor .email-field .fname, .auditions-containor .email-field .email-input {
+      width: 100%; }
+
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -1369,10 +1413,64 @@ object {
           -ms-flex-direction: row;
               flex-direction: row;
       -ms-flex-pack: distribute;
-          justify-content: space-around; } }
+          justify-content: space-around; }
+  .upcoming-shows,
+  .upcoming-classes {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .banner-carousel {
+    padding: 1rem;
+    border: 1px solid gray;
+    height: 500px; }
+    .banner-carousel .flickity-viewport {
+      max-height: 466px; }
+    .banner-carousel .banner-cell {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 100%; }
+      .banner-carousel .banner-cell .banner-thumbnail {
+        height: 100%;
+        margin-right: 2rem; }
+        .banner-carousel .banner-cell .banner-thumbnail img {
+          height: 100%;
+          max-width: none; }
+      .banner-carousel .banner-cell .banner-text-info {
+        min-width: 400px;
+        max-width: 400px;
+        padding: 0; }
+    .banner-carousel .flickity-page-dots {
+      top: 100%;
+      z-index: 0; }
+    .banner-carousel .flickity-prev-next-button {
+      top: 250px; }
+  .auditions-containor {
+    background-color: #FFEC00;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 3.75rem; }
+    .auditions-containor .email-field {
+      max-width: 570px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      text-align: left;
+      margin: 0 auto; }
+      .auditions-containor .email-field .fname, .auditions-containor .email-field .email-input {
+        width: 100%; } }
 
 .page main {
-  text-align: center; }
+  text-align: center;
+  max-width: 1240px; }
   .page main h1 {
     margin-top: 1em;
     color: black; }

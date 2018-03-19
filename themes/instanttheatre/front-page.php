@@ -18,19 +18,30 @@ get_header();
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php endif; ?>
-<!-- ///////////////hardcoding /////////////////////-->
+<!-- ///////////////banner /////////////////////-->
 			<div class="banner-carousel">
 
 			<?php		$fields = CFS()->get( 'banner_loop' );
 foreach ( $fields as $field ) {
+	$keys = array_keys($field['title_link']);
+$values = array_values($field['title_link']);
+
 	?>
 	<div class="banner-cell" >
-	<img src="<?php echo $field['banner_image']; ?>" alt="Banner Image">
+	<div class="banner-thumbnail">
+		<?php
+		echo '<a href="'.$values[0].'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
+		?>
+		
+	</div>
+	<div class="banner-text-info">
 	<?php
-		echo $field['title_link'];
+echo '<a href="'.$values[0].'" target="'.$values[2].'">'.$values[1].'</a>';
 		
 		echo $field['banner_info'];
 		?>
+		<button class="blue-btn">buy tickets</button>
+		</div>
 </div>
 		
 		<?php
@@ -63,36 +74,34 @@ foreach ( $fields as $field ) {
 				</div>
 				</div>
 
-			<div class="what-is-improv">
-				<div class="what-is-improv-containor">
-					<h2>what is improv?</h2>
-					<p>Improvisation, or improv, is a form of live theatre in which the plot, characters, and dialogue of a game, scene, or story are made up in the moment. Often improvisers will take a suggestion from the audience, or draw on some other source of inspiration to get started. Improv is unique in that if you see a performance, that’s it… there will never be another show exactly like it ever done again. Improv is different every time.</p>
-					<a href="#">Learn More About Our Approach</a>
-					<h2>improv for bussiness</h2>
-					<p>If you’ve got improv business needs, we have a full range of solutions.</p>
-					<div class="improv-button-set">
-					<button class="blue-btn">hire us</button>
-					<button class="blue-btn">event booking</button>
-					<button class="blue-btn">studio rental</button>					
-				</div>
-				</div>
-			</div>
-
-		<section class="instagram-carousel">
-				<h1>instagram</h1>
-			<div id="instagram-feed" class="instagram-feed"></div>
-		</section>
 
 
-<!-- ///////////////hardcoding /////////////////////-->
+
+
+		<!--/////////////////////// whats improv////////////////////////////// -->
 			
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content' ); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail( 'large' ); ?>
+		<?php endif; ?>
+
+		<?php if ( 'post' === get_post_type() ) : ?>
+		<div class="entry-meta">
+			<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
+		</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div><!-- .entry-content -->
+</article><!-- #post-## -->
 		
 
-				
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -102,6 +111,12 @@ foreach ( $fields as $field ) {
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+
+
+		<section class="instagram-carousel">
+				<h1>instagram</h1>
+			<div id="instagram-feed" class="instagram-feed"></div>
+		</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
