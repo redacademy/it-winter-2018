@@ -38,8 +38,8 @@
   padding: 0rem;
   background: url("../../assets/images/yellow-wave-banner-background.png");
   .what-is-improv-containor {
-    p{
-    text-align: center;
+    p {
+      text-align: center;
     }
     h2 {
       margin-top: 0;
@@ -79,7 +79,6 @@
       width: 100%;
       height: 200px;
       overflow: hidden;
-
       img {
         min-width: 480px;
       }
@@ -87,14 +86,22 @@
     .banner-text-info {
       padding: 2rem;
       text-align: left;
+      a{
+        font-size: 2rem;
+        font-weight: 500;
+        text-decoration: none;
+        &:link,
+        &:visited {
+          color: #000;
+        }
+      }
     }
-
   }
   .flickity-page-dots {
     top: 200px;
     z-index: -1;
   }
-  .flickity-prev-next-button{
+  .flickity-prev-next-button {
     top: 100px;
   }
 }
@@ -102,16 +109,14 @@
 /***************************
  *PAGE: Cast and Instructor 
  ***************************/
-.tax-role {
 
+.tax-role {
   .content-area {
     padding: 2rem 0;
   }
-
   a {
     text-decoration: none;
   }
-
   .archive-title-wrapper {
     text-align: center;
   }
@@ -135,13 +140,11 @@
     margin: 1.25% 0.5rem;
     border-radius: 4px;
     box-shadow: 0px 0px 8px #D5D5D5;
-    color: #fff; 
-
+    color: #fff;
     @include desktop {
       width: 265px;
       margin: 1.25% 0.5rem;
     }
-
     a {
       height: 100%;
       width: 100%;
@@ -153,13 +156,11 @@
       margin: 0 auto;
       border-radius: 4px;
       overflow: hidden;
-
       @include desktop {
         width: 235px;
         height: 235px;
         margin: 0 auto;
       }
-
       img {
         position: absolute;
         top: 50%;
@@ -179,14 +180,11 @@
       color: #000;
       font-size: 1.375rem;
       text-align: center;
-
       @include desktop {
         font-size: 1.5rem;
       }
-
     }
   }
-
   .overlay {
     visibility: hidden;
     opacity: 0;
@@ -198,14 +196,12 @@
     background: rgba(255, 255, 255, 0.8);
     overflow-x: hidden;
     z-index: 1;
-  
     &.m-fadeIn {
       visibility: visible;
       opacity: 1;
       transition: visibility 0s linear 0s, opacity 300ms;
     }
   }
-  
   .overlay-content {
     position: absolute;
     top: 0%;
@@ -219,7 +215,6 @@
     border: 1px solid #979797;
     border-radius: 4px;
     z-index: 1;
-
     @include desktop {
       flex-direction: row;
       flex-wrap: wrap;
@@ -227,16 +222,13 @@
       max-width: 800px;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50% );
+      transform: translate(-50%, -50%);
     }
-  
     .portrait-wrapper {
       width: 85%;
       height: auto;
       margin: 1rem auto;
       overflow: hidden;
-      
-
       @include desktop {
         width: 20%;
         height: 235px;
@@ -244,7 +236,6 @@
         margin: 0 1.25rem 0 0;
         order: 1;
       }
-  
       img {
         width: auto;
         height: auto;
@@ -252,16 +243,14 @@
         max-height: none;
         min-width: 100%;
         max-width: none;
-
         @include desktop {
           position: relative;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50% );
+          transform: translate(-50%, -50%);
         }
       }
     }
-  
     .person-title {
       display: block;
       padding: 1rem 0;
@@ -269,7 +258,6 @@
       font-size: 1.375rem;
       font-weight: 500;
       background: $color__yellow-brand;
-
       @include desktop {
         display: inline-block;
         padding: 0;
@@ -279,15 +267,12 @@
         order: 2;
       }
     }
-
     .social-links {
       text-align: center;
-
       @include desktop {
         display: inline-block;
         order: 3;
       }
-
       a[class|='social'] {
         margin-right: 0.5rem;
       }
@@ -296,7 +281,6 @@
       position: relative;
       top: 48px;
       left: 16px;
-
       @include desktop {
         position: static;
         text-align: right;
@@ -305,7 +289,6 @@
       }
     }
     .person-description {
-
       @include desktop {
         width: 67%;
         margin-top: -185px;
@@ -315,9 +298,26 @@
   }
 }
 
+/***************************
+ *PAGE: Auditions 
+ ***************************/
 
+.auditions-containor {
+  background-color: $color__yellow-brand;
+  width: 100%;  
+  .email-field{
+    max-width: 345px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto;
+    .fname, .email-input{
+      width: 100%;
+    }
+  }
 
-
+}
 
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
@@ -336,20 +336,17 @@
   .upcoming-classes {
     justify-content: space-between;
   }
-
   .banner-carousel {
     padding: 1rem;
     border: 1px solid gray;
     height: 500px;
-    .flickity-viewport{
+    .flickity-viewport {
       max-height: 466px;
     }
-    
     .banner-cell {
       display: flex;
       width: 100%;
       height: 100%;
-
       .banner-thumbnail {
         // max-width: none;
         height: 100%;
@@ -362,16 +359,35 @@
       .banner-text-info {
         min-width: 400px;
         max-width: 400px;
-        padding:0;
+        padding: 0;
       }
-  
     }
     .flickity-page-dots {
       top: 100%;
       z-index: 0;
     }
-    .flickity-prev-next-button{
+    .flickity-prev-next-button {
       top: 250px;
     }
   }
+
+  .auditions-containor {
+    background-color: $color__yellow-brand;
+    width: 100%;  
+    padding: 2rem;
+    margin-bottom: 3.75rem;
+    .email-field{
+      max-width: 570px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      margin: 0 auto;
+      .fname, .email-input{
+        width: 100%;
+      }
+    }
+  
+  }
+
 }
