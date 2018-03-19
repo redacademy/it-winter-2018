@@ -1021,9 +1021,9 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
@@ -1038,11 +1038,12 @@ object {
   margin-top: 3.75rem;
   max-width: 1240px;
   padding: 0rem;
-  background: url("../../assets/images/yellow-wave-banner-background.png");
-  text-align: center; }
+  background: url("../../assets/images/yellow-wave-banner-background.png"); }
   .what-is-improv .what-is-improv-containor {
     padding: 3rem;
     background: #FFEC00; }
+    .what-is-improv .what-is-improv-containor p {
+      text-align: center; }
     .what-is-improv .what-is-improv-containor h2 {
       margin-top: 0; }
   .what-is-improv .improv-button-set {
@@ -1072,10 +1073,23 @@ object {
 
 .banner-carousel {
   margin-top: 3.75rem;
-  max-width: 1240px;
-  height: 500px; }
+  max-width: 1240px; }
   .banner-carousel .banner-cell {
     width: 100%; }
+    .banner-carousel .banner-cell .banner-thumbnail {
+      width: 100%;
+      height: 200px;
+      overflow: hidden; }
+      .banner-carousel .banner-cell .banner-thumbnail img {
+        min-width: 480px; }
+    .banner-carousel .banner-cell .banner-text-info {
+      padding: 2rem;
+      text-align: left; }
+  .banner-carousel .flickity-page-dots {
+    top: 200px;
+    z-index: -1; }
+  .banner-carousel .flickity-prev-next-button {
+    top: 100px; }
 
 /* Taxonomy Role */
 .tax-role .archive-title-wrapper {
@@ -1148,11 +1162,43 @@ object {
           -ms-flex-direction: row;
               flex-direction: row;
       -ms-flex-pack: distribute;
-          justify-content: space-around; } }
+          justify-content: space-around; }
+  .upcoming-shows,
+  .upcoming-classes {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .banner-carousel {
+    padding: 1rem;
+    border: 1px solid gray;
+    height: 500px; }
+    .banner-carousel .flickity-viewport {
+      max-height: 466px; }
+    .banner-carousel .banner-cell {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 100%; }
+      .banner-carousel .banner-cell .banner-thumbnail {
+        height: 100%;
+        margin-right: 2rem; }
+        .banner-carousel .banner-cell .banner-thumbnail img {
+          height: 100%;
+          max-width: none; }
+      .banner-carousel .banner-cell .banner-text-info {
+        min-width: 400px;
+        max-width: 400px;
+        padding: 0; }
+    .banner-carousel .flickity-page-dots {
+      top: 100%;
+      z-index: 0; }
+    .banner-carousel .flickity-prev-next-button {
+      top: 250px; } }
 
 .page main {
   text-align: center;
-  width: 1240px; }
+  max-width: 1240px; }
   .page main h1 {
     margin-top: 1em;
     color: black; }

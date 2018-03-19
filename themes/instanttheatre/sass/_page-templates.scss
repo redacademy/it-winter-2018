@@ -19,7 +19,7 @@
 .upcoming-shows,
 .upcoming-classes {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -36,15 +36,17 @@
   max-width: 1240px;
   padding: 0rem;
   background: url("../../assets/images/yellow-wave-banner-background.png");
-  text-align: center;
   .what-is-improv-containor {
+    p{
+    text-align: center;
+    }
     h2 {
       margin-top: 0;
     }
     padding: 3rem;
     background: $color__yellow-brand;
   }
-  .improv-button-set{
+  .improv-button-set {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,38 +56,54 @@
 
 /* //////////////////flickity/////////////////// */
 
-
-.instagram-carousel{
+.instagram-carousel {
   max-width: 1240px;
   .photo {
-    width: 320px;
-    // max-width: none;
+    width: 320px; // max-width: none;
     height: 200px;
     margin-right: 10px;
     overflow: hidden;
-    img{
+    img {
       max-width: none;
     }
   }
-  
 }
 
-.banner-carousel{
+.banner-carousel {
   margin-top: 3.75rem;
   max-width: 1240px;
-  height: 500px;
-  .banner-cell{
+  .banner-cell {
     width: 100%;
+    .banner-thumbnail {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        min-width: 480px;
+      }
+    }
+    .banner-text-info {
+      padding: 2rem;
+      text-align: left;
+    }
+
+  }
+  .flickity-page-dots {
+    top: 200px;
+    z-index: -1;
+  }
+  .flickity-prev-next-button{
+    top: 100px;
   }
 }
 
 /* Taxonomy Role */
-.tax-role {
 
+.tax-role {
   .archive-title-wrapper {
     text-align: center;
   }
-
   .filter-button-group {
     display: flex;
     flex-wrap: wrap;
@@ -94,26 +112,22 @@
     margin: 1rem auto;
     text-align: center;
   }
-
   .person-gallery {
     max-width: 1240px;
     display: flex;
     flex-wrap: wrap;
   }
-
   .person-tile {
     width: 265px;
     height: 300px;
     margin: 1.25% 0.5rem;
     border-radius: 4px;
     box-shadow: 0px 0px 8px #D5D5D5;
-    color: #fff; 
-
+    color: #fff;
     a {
       height: 100%;
       width: 100%;
     }
-
     .person-image-wrapper {
       position: relative;
       width: 235px;
@@ -121,7 +135,6 @@
       margin: 15px auto;
       border-radius: 4px;
       overflow: hidden;
-
       img {
         position: absolute;
         top: 50%;
@@ -132,7 +145,6 @@
         max-width: none;
       }
     }
-
     .person-tile-label {
       padding: 0.5rem;
       margin: 0;
@@ -142,21 +154,59 @@
   }
 }
 
-
-
-
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
     padding: 2rem;
     .what-is-improv-containor {
       background: rgba(255, 255, 255, 0.8);
     }
-    .improv-button-set{
+    .improv-button-set {
       margin: 0 auto;
       width: 40%;
       flex-direction: row;
       justify-content: space-around;
     }
   }
+  .upcoming-shows,
+  .upcoming-classes {
+    justify-content: space-between;
+  }
 
+  .banner-carousel {
+    padding: 1rem;
+    border: 1px solid gray;
+    height: 500px;
+    .flickity-viewport{
+      max-height: 466px;
+    }
+    
+    .banner-cell {
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      .banner-thumbnail {
+        // max-width: none;
+        height: 100%;
+        margin-right: 2rem;
+        img {
+          height: 100%;
+          max-width: none;
+        }
+      }
+      .banner-text-info {
+        min-width: 400px;
+        max-width: 400px;
+        padding:0;
+      }
+  
+    }
+    .flickity-page-dots {
+      top: 100%;
+      z-index: 0;
+    }
+    .flickity-prev-next-button{
+      top: 250px;
+    }
+  }
 }

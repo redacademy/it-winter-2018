@@ -18,19 +18,30 @@ get_header();
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php endif; ?>
-<!-- ///////////////hardcoding /////////////////////-->
+<!-- ///////////////banner /////////////////////-->
 			<div class="banner-carousel">
 
 			<?php		$fields = CFS()->get( 'banner_loop' );
 foreach ( $fields as $field ) {
+	$keys = array_keys($field['title_link']);
+$values = array_values($field['title_link']);
+
 	?>
 	<div class="banner-cell" >
-	<img src="<?php echo $field['banner_image']; ?>" alt="Banner Image">
+	<div class="banner-thumbnail">
+		<?php
+		echo '<a href="'.$values[0].'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
+		?>
+		
+	</div>
+	<div class="banner-text-info">
 	<?php
-		echo $field['title_link'];
+echo '<a href="'.$values[0].'" target="'.$values[2].'">'.$values[1].'</a>';
 		
 		echo $field['banner_info'];
 		?>
+		<button class="blue-btn">buy tickets</button>
+		</div>
 </div>
 		
 		<?php
