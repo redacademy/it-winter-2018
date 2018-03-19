@@ -105,6 +105,8 @@
 		visibility: hidden;
 		transform: translateX(300px);
 		ul {	
+			display: none;
+			list-style: none;
 			li{
 				a{
 					color: black;
@@ -121,29 +123,22 @@
 		}
 	
 		li.selector-nav  {
-      display: block;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
       font-size: 1.5em;
-			padding: 20px;
-			background-color: $color__yellow-brand;
+			padding: 10px;
+			// background-color: $color__yellow-brand;
 			a{
 				color: black;
-				display: inline-block;
+				display: block;
 						}
-				.sub-menu {
-					display: none;
-					list-style: none;
-					// display: block;
-					text-align: left;
-					&::after{
-						content: "";
-					}
-					li {				
-						a{
-						font-size: 20px;
-						display: inline-block;
-					}
-				}
-			}//.submenu
+			.sub-menu{
+				font-size: 20px;
+				padding: 0;
+				white-space: nowrap;
+				text-align: left;
+			}
 			}//li.selector-nav
 				#primary-menu{
 					display: flex;
@@ -159,12 +154,13 @@
 					padding-left: 85px;
 					padding-right: 50px;
 					right: 0;
-					ul{
-						list-style: none;
-						display: flex;
-						flex-direction: column;
-						align-items: flex-start;
-					}
+					// ::after{
+					// font-family: FontAwesome;
+					// content: "\f105";
+					// font-weight: bold;
+					// font-size: 30px;
+					// color: red;
+					// }
 			}
 	 }//toggle-menu-wrapper
 
@@ -173,19 +169,8 @@
 		transform: translateX(0);
 		position: absolute;
 		top:0;
-		// height:50vh;
 		visibility: visible;
-}
-
-.selector-nav{
-	::after{
-		font-family: FontAwesome;
-		content: "\f105";
-		font-weight: bold;
-		font-size: 30px;
-		color: red;
 	}
-}
 }//main nav
 
 
@@ -262,6 +247,9 @@
 		}
 		.toggle-menu-wrapper{
 			display: none;
+			width: 100vw;
+			height: 60px;
+			transform: none;
 		}
 
 		.menu-toggle{
@@ -274,8 +262,46 @@
 		.search{
 			display: none;
 			}
+		}//main nav (home)
+	}//body.home 
+
+	.main-navigation{
+		align-items: flex-start;
+		a{
+			display: relative;
+			left: 0;
 		}
-	}
+		.hamburger-toggle{
+			display: none;
+		}
+		.toggle-menu-wrapper{
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+			li.selector-nav{
+				padding: 10px 20px;
+				width: 20%;
+			}
+			#primary-menu{
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				width: 100%;
+				padding: 0;
+				background-color: transparent;
+				.sub-menu{
+					width: 60vw;
+					margin-top: 20px;
+					background: #fff;
+					display: flex;
+					justify-content: space-around;
+				}
+			}
+		}
+		.search{
+			display: none;
+		}
+	}//main nav media min width 480px
 }	
 
 

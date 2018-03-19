@@ -19,19 +19,19 @@ get_header();
 				</header>
 			<?php endif; ?>
 <!-- ///////////////hardcoding /////////////////////-->
-			<div class="banner-carousel">
+		<!-- <div class="banner-carousel">
 
-			<?php		$fields = CFS()->get( 'banner_loop' );
+		<?php		$fields = CFS()->get( 'banner_loop' );
 foreach ( $fields as $field ) {
-	?>
-	<div class="banner-cell" >
-	<img src="<?php echo $field['banner_image']; ?>" alt="Banner Image">
-	<?php
+ 	?>
+ 	<div class="banner-cell" >
+ 	<img src="<?php echo $field['banner_image']; ?>" alt="Banner Image">
+ 	<?php
 		echo $field['title_link'];
 		
 		echo $field['banner_info'];
 		?>
-</div>
+ </div> -->
 		
 		<?php
 }   // end foreach /////////////////////////////////////////////////

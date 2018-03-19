@@ -21,10 +21,33 @@ $searchInput.on('blur', function () {
   $searchInput.hide(500);
 });
 
-$('.selector-nav').on('click', function(evt){
-  evt.preventDefault();
-  // $('.selector-nav').find('.sub-menu').find('li').show('a',1000);
-});
+// $('.selector-nav').on('click', function(evt){
+//   evt.preventDefault();
+//   $(this).find('.sub-menu').show();
+// });
+if(window.matchMedia('(max-width:480px)').matches){
+$('.selector-nav').click(function(e){
+  e.preventDefault();
+  $('.selector-nav').find('.sub-menu').hide('fast');
+  $(this).children('.sub-menu').slideToggle('fast');
+
+
+  });//selector-nav function
+}//if window
+else{
+      $('.selector-nav').hover(function(){
+        $('.selector-nav').find('.sub-menu').hide();
+        $(this).children('.sub-menu').show();
+      });
+     }
+
+// if(window.matchMedia( '(min-width: 480px)').matches){
+//   $('.selector-nav').hover(function(){
+//     $('.selector-nav').find('.sub-menu').hide();
+//     $(this).children('.sub-menu').show();
+//   });
+// }
+
 }(jQuery));
 
 // var acc = document.getElementsByClassName("selector-nav");
