@@ -47,19 +47,30 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          width: 570px;
+          max-width: 90%;
           margin-left: auto!important;
           margin-right: auto!important;
           padding-top: 40px;
+          @include desktop {
+            max-width: 570px;
+          }
         }
+
+        //targeting calendars for styling
+        // .gform_fields .gfield .gfield_date_month {
+        //   border: 2px solid red;
+        // }
       }
       .gform_footer {
         background-color: $color__yellow-brand;
         margin: 0;
         padding-bottom: 40px;
+        text-align: center;
+
         .gform_button {
-          margin-left: 737px;
+          // margin-left: 737px;
           background-color: $color__blue-brand;
+          max-width: 50%;
           color: white;
           font-size: 14px;
           text-transform: uppercase;
@@ -385,5 +396,6 @@
         margin-bottom: 0;
       }
     }
+    
   }
 }

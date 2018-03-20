@@ -1545,17 +1545,21 @@ object {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      width: 570px;
+      max-width: 90%;
       margin-left: auto !important;
       margin-right: auto !important;
       padding-top: 40px; }
+      @media (min-width: 480px) {
+        .page main .gform_wrapper .gform_body ul {
+          max-width: 570px; } }
   .page main .gform_wrapper .gform_footer {
     background-color: #FFEC00;
     margin: 0;
-    padding-bottom: 40px; }
+    padding-bottom: 40px;
+    text-align: center; }
     .page main .gform_wrapper .gform_footer .gform_button {
-      margin-left: 737px;
       background-color: #00B6CB;
+      max-width: 50%;
       color: white;
       font-size: 14px;
       text-transform: uppercase;
