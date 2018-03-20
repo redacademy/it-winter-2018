@@ -357,6 +357,79 @@
 }
 
 
+/**************
+  About-Us Page
+**************/
+.page-template-default{
+  .about-us-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    p{
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 1.125rem;
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    }
+    h1{
+      text-transform: capitalize;
+    }
+    h2{
+      text-transform: capitalize;
+    }
+    .our-story{
+      text-align: left;
+      padding: 0px;
+      @include desktop{
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .our-story-text{
+        padding: 2%;
+        @include desktop{
+          padding: 0;
+          padding-right: 5%;
+        }
+      }
+    }
+    .nikolai-pic{
+    width: 75%;
+    border-radius: 170px;
+    @include desktop{
+      width: 25%;
+      border-radius: 180px;
+    }
+    }
+    .nikolai-experience{
+      text-align: left;
+      margin-bottom: 20px;
+      padding: 2%;
+      @include desktop {
+        display: flex;
+      }
+      h2{
+        text-align: center;
+      }
+      .improv-experience{
+        @include desktop {
+          padding-right: 2%;
+        }
+      }
+      .acting-experience{
+        @include desktop {
+          padding-left: 2%;
+        }
+      }
+    }
+    #imdb-button{
+      text-transform: uppercase;
+    }
+  }
+}
+
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
     padding: 2rem;

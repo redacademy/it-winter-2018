@@ -1,0 +1,95 @@
+.single-tribe_events {
+  .entry-content {
+    margin-top: 60px;
+    h1 {
+      text-align: center;
+      margin: 20px;
+      text-transform: uppercase;
+      @include desktop {
+        font-size: 2em;
+      }
+    }
+
+    .tribe-events-event-image {
+      text-align: center;
+      margin: 0;
+      img {
+        width: 1240px;
+      }
+    }
+
+    .tribe_events {
+      margin: 20px 0;
+      text-align: center;
+      .tribe-events-content {
+        margin-top: 20px;
+        text-align: left;
+      }
+      .url {
+        &::before {
+          content: '\f0ac';
+          font-family: FontAwesome;
+        }
+      }
+    }
+
+    .tribe-events-start-date {
+      &::before {
+        content: '\f133';
+        font-family: FontAwesome;
+      }
+    }
+
+    .tribe-events-start-time {
+      &::before {
+        content: '\f017';
+        font-family: FontAwesome;
+      }
+    }
+
+    .tribe-events-event-cost {
+      &::before {
+        content: '\f3ff';
+        font-family: FontAwesome;
+      }
+    }
+
+    .tribe-venue {
+      &::before {
+        content: '\f3c5';
+        font-family: FontAwesome;
+      }
+    }
+
+    .tribe-event-tags {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      a {
+        padding: 5px 10px;
+        border: 1px solid $color__grey-border;
+        border-radius: 4px;
+        margin: 0 5px 10px 5px;
+        &:hover {
+          background-color: $color__blue-brand;
+          border-color: $color__blue-brand;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.buy-tickets-button {
+  background-color: $color__red-brand;
+  padding: 10px 30px;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+  &:link {
+    color: white; 
+  }
+  &:hover {
+    background-color: darken($color__red-brand, 10%);
+  }
+}
