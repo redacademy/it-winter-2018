@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<div id="contact-info" class="contact-info">
+							<div id="contact-info" class="contact-info">
                 <?php
                 if(is_active_sidebar('contact-info')){
                 dynamic_sidebar('contact-info');
