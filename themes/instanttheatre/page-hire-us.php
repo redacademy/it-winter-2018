@@ -77,16 +77,15 @@ get_header(); ?>
 				<div class="company-grid">
 				<?php 
 					$companies = CFS()->get( 'company_images' );
-					foreach ( $companies as $company ) {?>
+					foreach ( $companies as $company ) : ?>
 						<img src="<?php echo $company['image']; ?>">
-				<?php 
-					}
-				?>
+				<?php endforeach; ?>
 				</div>
 
 				<div class="testimonial-widget">
 					<div class="testimonial-grid">
 					<h1>Testimonials</h1>
+					<div class="testimonial-carousel-container">
 					<?php 
 						$testimonials = CFS()->get( 'testimonials' );
 						foreach ( $testimonials as $testimonial ) { ?>
@@ -101,6 +100,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<?php } ?>
+						</div>
 					</div>
 				</div>
 
