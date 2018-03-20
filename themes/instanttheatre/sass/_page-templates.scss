@@ -5,9 +5,13 @@
 /* Front page */
 
 .site-content {
-  max-width: 1240px;
-  margin: 0 auto;
+  max-width: 1440px;
   background: $site__background;
+  margin:0 auto;
+  .site-main{
+    margin: 0 auto;
+    padding: 3.75rem 0;
+  }
 }
 
 .carousel-cell {
@@ -99,7 +103,7 @@
   }
   .flickity-page-dots {
     top: 200px;
-    z-index: -1;
+    height: 10px;
   }
   .flickity-prev-next-button {
     top: 100px;

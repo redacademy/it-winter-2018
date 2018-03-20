@@ -23,6 +23,7 @@ get_header();
 
 		<?php		$fields = CFS()->get( 'banner_loop' );
 foreach ( $fields as $field ) {
+	
 	$keys = array_keys($field['title_link']);
 $values = array_values($field['title_link']);
 
