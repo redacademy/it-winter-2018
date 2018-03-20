@@ -12,14 +12,33 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-							<div id="contact-info" class="contact-info">
+
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content-contact-page">
+		
+		<?php the_content(); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+				'after'  => '</div>',
+			) );
+		?>
+
+<div id="contact-sidebar" class="contact-sidebar">
                 <?php
-                if(is_active_sidebar('contact-info')){
-                dynamic_sidebar('contact-info');
+                if(is_active_sidebar('contact-page-contact-sidebar')){
+                dynamic_sidebar('contact-page-contact-sidebar');
                 }
 								?>
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+	</div><!-- .entry-content -->
+</article><!-- #post-## -->
 
+				<?php echo CFS()->get( 'say_hello' ); ?>
 
 								
 			<?php endwhile; // End of the loop. ?>
