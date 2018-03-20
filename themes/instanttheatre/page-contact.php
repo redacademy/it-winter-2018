@@ -12,9 +12,16 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+			<div id="contact-info" class="contact-info">
+                <?php
+                if(is_active_sidebar('contact-info')){
+                dynamic_sidebar('contact-info');
+                }
+								?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-				<?php echo CFS()->get( 'say_hello' ); ?>
+
+								
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->

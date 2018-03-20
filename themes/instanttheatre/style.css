@@ -526,6 +526,14 @@ textarea {
     color: #fff;
     background-color: #5bba47; }
 
+.ginput_container_radio {
+  width: 100%; }
+  .ginput_container_radio .gfield_radio {
+    width: 100%; }
+
+.page main .audition_form .gform_footer .gform_button {
+  margin: 0 auto; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -868,8 +876,7 @@ textarea {
   max-width: 480px;
   min-width: none;
   padding: 2rem;
-  margin: 0 auto;
-  margin-top: 3.75rem; }
+  margin: 0 auto; }
   .site-info h2,
   .site-info h3,
   .site-info p {
@@ -1110,9 +1117,12 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .site-content {
-  max-width: 1240px;
-  margin: 0 auto;
-  background: url("../../assets/images/cloud-bkg2.png") top center/cover fixed; }
+  max-width: 1440px;
+  background: url("../../assets/images/cloud-bkg2.png") top center/cover fixed;
+  margin: 0 auto; }
+  .site-content .site-main {
+    margin: 0 auto;
+    padding: 3.75rem 0; }
 
 .carousel-cell {
   margin-top: 3.75rem;
