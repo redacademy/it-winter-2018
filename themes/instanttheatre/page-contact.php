@@ -14,6 +14,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
+				<?php echo CFS()->get( 'say_hello' ); ?>
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
