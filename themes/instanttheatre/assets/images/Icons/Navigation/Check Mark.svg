@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Navigation/Check Mark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon/Navigation/Check-Mark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tick" transform="translate(0.000000, 8.000000)" fill="#5BBA47" fill-rule="nonzero">
+            <path d="M63.064577,1.05992982 C61.8173879,-0.187384016 59.7953372,-0.187384016 58.5478986,1.05992982 L20.2846316,39.3235712 L5.5768577,24.6157973 C4.32966862,23.3684834 2.30761793,23.3686082 1.06017934,24.6157973 C-0.187134503,25.8629864 -0.187134503,27.885037 1.06017934,29.1323509 L18.0262924,46.0982144 C19.2731072,47.3454035 21.296655,47.3445302 22.5429708,46.0982144 L63.064577,5.57660819 C64.3118908,4.3294191 64.3117661,2.30724366 63.064577,1.05992982 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

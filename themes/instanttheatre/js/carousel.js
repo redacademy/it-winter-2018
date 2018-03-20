@@ -1,9 +1,4 @@
 (function ($) {
-  
-  // if (window.matchMedia('(max-width: 480px)').matches) {
-  //   console.log("this is working");
-  //   $('.hire-us-grid').flickity();
-  // };
 
   if ($(window).width() < 480) {
     $('.hire-us-grid').flickity({
