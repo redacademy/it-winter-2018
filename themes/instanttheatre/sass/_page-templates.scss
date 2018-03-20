@@ -5,10 +5,11 @@
 /* Front page */
 
 .site-content {
-  max-width: 1440px;
+  max-width: $desktop_break;
   background: $site__background;
   margin:0 auto;
   .site-main{
+    max-width: $desktop__content-area;
     margin: 0 auto;
     padding: 3.75rem 0;
   }
