@@ -802,8 +802,6 @@ textarea {
       display: none; }
     body.home .main-navigation .hamburger-toggle {
       display: none; }
-    body.home .main-navigation .search {
-      display: none; }
   .main-navigation {
     -webkit-box-align: start;
         -ms-flex-align: start;

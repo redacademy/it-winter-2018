@@ -277,7 +277,8 @@
 			width: 100%;
 			height: 60px;
 			transform: none;
-			position: relative;
+			position: absolute;
+			bottom: 0;
 			.menu-main-nav-container{
 				order: 1;
 				height: 60px;
@@ -285,6 +286,9 @@
 			}
 			.search{
 				order: 2;
+				#hamburger-search{
+				width: 35%;
+				}
 			}
 			.social-media-links{
 				order: 3;
@@ -298,10 +302,6 @@
 		.hamburger-toggle{
 			display: none;
 		}
-
-		.search{
-			display: none;
-			}
 		}//main nav (home)
 	}//body.home 
 
