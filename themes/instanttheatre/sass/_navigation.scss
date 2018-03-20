@@ -270,7 +270,8 @@
 			bottom: 0;
 			max-width: 300px;
 			width: 50%;
-			margin-top: 100px;
+			margin-top: 75px;
+			z-index: 2;
 		}
 		.toggle-menu-wrapper{
 			display: flex;
@@ -279,6 +280,18 @@
 			transform: none;
 			position: absolute;
 			bottom: 0;
+			background: transparent;
+			#primary-menu{
+				padding-left: 400px;
+				padding-right: 0px;
+				width: 80%;
+			.sub-menu{
+				z-index: 1;
+				margin-top: 14px;
+				background: #fff;
+				margin-left: 200px;
+			}//sub-menu
+		}//primary-menu
 			.menu-main-nav-container{
 				order: 1;
 				height: 60px;
@@ -286,6 +299,7 @@
 			}
 			.search{
 				order: 2;
+				background: transparent;
 				#hamburger-search{
 				width: 35%;
 				}

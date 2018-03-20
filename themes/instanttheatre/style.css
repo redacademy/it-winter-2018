@@ -773,7 +773,8 @@ textarea {
       bottom: 0;
       max-width: 300px;
       width: 50%;
-      margin-top: 100px; }
+      margin-top: 75px;
+      z-index: 2; }
     body.home .main-navigation .toggle-menu-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -782,7 +783,18 @@ textarea {
       height: 60px;
       -webkit-transform: none;
               transform: none;
-      position: relative; }
+      position: absolute;
+      bottom: 0;
+      background: transparent; }
+      body.home .main-navigation .toggle-menu-wrapper #primary-menu {
+        padding-left: 400px;
+        padding-right: 0px;
+        width: 80%; }
+        body.home .main-navigation .toggle-menu-wrapper #primary-menu .sub-menu {
+          z-index: 1;
+          margin-top: 14px;
+          background: #fff;
+          margin-left: 200px; }
       body.home .main-navigation .toggle-menu-wrapper .menu-main-nav-container {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
@@ -792,7 +804,10 @@ textarea {
       body.home .main-navigation .toggle-menu-wrapper .search {
         -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
-                order: 2; }
+                order: 2;
+        background: transparent; }
+        body.home .main-navigation .toggle-menu-wrapper .search #hamburger-search {
+          width: 35%; }
       body.home .main-navigation .toggle-menu-wrapper .social-media-links {
         -webkit-box-ordinal-group: 4;
             -ms-flex-order: 3;
@@ -1550,6 +1565,45 @@ object {
     margin: 0 auto; }
     .auditions-containor .email-field .fname, .auditions-containor .email-field .email-input {
       width: 100%; }
+
+/**************
+  About-Us Page
+**************/
+.page-template-default .about-us-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .page-template-default .about-us-page h1 {
+    text-transform: capitalize; }
+  .page-template-default .about-us-page h2 {
+    text-transform: capitalize; }
+  .page-template-default .about-us-page .our-story {
+    text-align: left;
+    padding: 0px; }
+    .page-template-default .about-us-page .our-story .our-story-text {
+      padding: 2%; }
+  .page-template-default .about-us-page .nikolai-pic {
+    width: 75%;
+    border-radius: 170px; }
+    @media (min-width: 480px) {
+      .page-template-default .about-us-page .nikolai-pic {
+        width: 30%;
+        border-radius: 180px; } }
+  .page-template-default .about-us-page .nikolai-experience {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 2%; }
+    .page-template-default .about-us-page .nikolai-experience h2 {
+      text-align: center; }
+  .page-template-default .about-us-page #imdb-button {
+    text-transform: uppercase; }
 
 @media screen and (min-width: 480px) {
   .what-is-improv {

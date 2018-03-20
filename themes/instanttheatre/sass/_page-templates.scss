@@ -319,6 +319,50 @@
 
 }
 
+/**************
+  About-Us Page
+**************/
+.page-template-default{
+  .about-us-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding: 2%;
+    h1{
+      text-transform: capitalize;
+    }
+    h2{
+      text-transform: capitalize;
+    }
+    .our-story{
+      text-align: left;
+      padding: 0px;
+      .our-story-text{
+        padding: 2%;
+      }
+    }
+    .nikolai-pic{
+    width: 75%;
+    border-radius: 170px;
+    @include desktop{
+      width: 30%;
+      border-radius: 180px;
+    }
+    }
+    .nikolai-experience{
+      text-align: left;
+      margin-bottom: 20px;
+      padding: 2%;
+      h2{
+        text-align: center;
+      }
+    }
+    #imdb-button{
+      text-transform: uppercase;
+    }
+  }
+}
+
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
     padding: 2rem;
