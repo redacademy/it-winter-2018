@@ -2216,21 +2216,13 @@ http://flickity.metafizzy.co
     .single-tribe_events .entry-content .tribe_events .tribe-events-content {
       margin-top: 20px;
       text-align: left; }
-    .single-tribe_events .entry-content .tribe_events .url::before {
-      content: '\f0ac';
-      font-family: FontAwesome; }
-  .single-tribe_events .entry-content .tribe-events-start-date::before {
-    content: '\f133';
-    font-family: FontAwesome; }
-  .single-tribe_events .entry-content .tribe-events-start-time::before {
-    content: '\f017';
-    font-family: FontAwesome; }
-  .single-tribe_events .entry-content .tribe-events-event-cost::before {
-    content: '\f3ff';
-    font-family: FontAwesome; }
-  .single-tribe_events .entry-content .tribe-venue::before {
-    content: '\f3c5';
-    font-family: FontAwesome; }
+  .single-tribe_events .entry-content .tribe-events-start-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2247,6 +2239,40 @@ http://flickity.metafizzy.co
         background-color: #00B6CB;
         border-color: #00B6CB;
         color: white; }
+  .single-tribe_events .entry-content .tribe-venue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .single-tribe_events .entry-content .url {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .single-tribe_events .entry-content .url a {
+      color: #00B6CB; }
+      .single-tribe_events .entry-content .url a:hover {
+        color: #008898; }
+  .single-tribe_events .entry-content .events-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .single-tribe_events .entry-content .show-meta-logo {
+    min-width: 20px;
+    margin: 0 10px 0 0; }
+  .single-tribe_events .entry-content .show-details-date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .single-tribe_events .entry-content abbr[title] {
+    text-decoration: none; }
 
 .buy-tickets-button {
   background-color: #ED1651;

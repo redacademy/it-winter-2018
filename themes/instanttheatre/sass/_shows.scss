@@ -25,40 +25,11 @@
         margin-top: 20px;
         text-align: left;
       }
-      .url {
-        &::before {
-          content: '\f0ac';
-          font-family: FontAwesome;
-        }
-      }
-    }
-
-    .tribe-events-start-date {
-      &::before {
-        content: '\f133';
-        font-family: FontAwesome;
-      }
     }
 
     .tribe-events-start-time {
-      &::before {
-        content: '\f017';
-        font-family: FontAwesome;
-      }
-    }
-
-    .tribe-events-event-cost {
-      &::before {
-        content: '\f3ff';
-        font-family: FontAwesome;
-      }
-    }
-
-    .tribe-venue {
-      &::before {
-        content: '\f3c5';
-        font-family: FontAwesome;
-      }
+      display: flex;
+      align-items: center;
     }
 
     .tribe-event-tags {
@@ -77,7 +48,41 @@
         }
       }
     }
-  }
+
+    .tribe-venue {
+      display: flex;
+    }
+
+    .url {
+      display: flex;
+      align-items: center;
+      a {
+        color: $color__blue-brand;
+        &:hover {
+          color: darken($color__blue-brand, 10%);
+        }
+      }
+    }
+
+    .events-tags {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .show-meta-logo {
+      min-width: 20px;
+      margin: 0 10px 0 0;
+    }
+
+    .show-details-date {
+      display: flex;
+      align-items: center;
+    }
+
+    abbr[title] {
+      text-decoration: none;
+    }
+   }
 }
 
 .buy-tickets-button {
