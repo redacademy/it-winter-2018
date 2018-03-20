@@ -29,15 +29,27 @@
 					<a class="circular-rocket-logo" href="<?php echo esc_url(home_url('/') );?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/circular/black.png";/></a>
 					<input type="checkbox" class="menu-toggle" id="toggle-button" aria-controls="primary-menu" aria-expanded="false" ></input>	
 					<label for="toggle-button" class="hamburger-toggle"><i class="fa fa-bars"></i></label>
+
 				<nav class="toggle-menu-wrapper">
+
 					<div class="search">
 						<label for="toggle-button" class="hamburger-toggle-button"><i class="fa fa-bars"></i></label>
 						<input type="text" id="hamburger-search" placeholder="Search">
 						<button type="button" id="search-button"><i class="fa fa-search"></i></button>
-					</div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav>
-				<div class="home-banner-clickables">
+					</div><!--search-->
+
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
+
+					<div class="social-media-links">	
+						<a href="#"><i class="fa fa-facebook-square"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</div><!--social media links-->
+
+				</nav><!--toggle menu wrapper-->
+
+				<!-- <div class="home-banner-clickables">
 					<ul>
 						<div class="desktop-search">
 							<input type="text" id="desktop-search-field" placeholder="Type and press enter">
@@ -47,7 +59,7 @@
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 					</ul>
-				</div>	<!--home banner clickables -->
+				</div>	home banner clickables -->
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
