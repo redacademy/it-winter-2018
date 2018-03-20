@@ -25,6 +25,7 @@ get_header(); ?>
 
 				<h1>our school director</h1>
 				<img src="<?php echo get_template_directory_uri();?>/assets/images/cast-images/nikolai_witschl_headshot_small_square-e1502153164354.jpg"class="nikolai-pic">
+				<p>nikolai witschl</p>
 				<div class="nikolai-experience">
 					<div class="improv-experience">
 						<h2>improv experience</h2>

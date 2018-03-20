@@ -1579,7 +1579,15 @@ object {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  padding-bottom: 5%; }
+  .page-template-default .about-us-page p {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.125rem; }
+    @media (min-width: 480px) {
+      .page-template-default .about-us-page p {
+        font-size: 1.5rem; } }
   .page-template-default .about-us-page h1 {
     text-transform: capitalize; }
   .page-template-default .about-us-page h2 {
@@ -1587,21 +1595,45 @@ object {
   .page-template-default .about-us-page .our-story {
     text-align: left;
     padding: 0px; }
+    @media (min-width: 480px) {
+      .page-template-default .about-us-page .our-story {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse; } }
     .page-template-default .about-us-page .our-story .our-story-text {
       padding: 2%; }
+      @media (min-width: 480px) {
+        .page-template-default .about-us-page .our-story .our-story-text {
+          padding: 0;
+          padding-right: 5%; } }
   .page-template-default .about-us-page .nikolai-pic {
     width: 75%;
     border-radius: 170px; }
     @media (min-width: 480px) {
       .page-template-default .about-us-page .nikolai-pic {
-        width: 30%;
+        width: 25%;
         border-radius: 180px; } }
   .page-template-default .about-us-page .nikolai-experience {
     text-align: left;
     margin-bottom: 20px;
     padding: 2%; }
+    @media (min-width: 480px) {
+      .page-template-default .about-us-page .nikolai-experience {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
     .page-template-default .about-us-page .nikolai-experience h2 {
       text-align: center; }
+    @media (min-width: 480px) {
+      .page-template-default .about-us-page .nikolai-experience .improv-experience {
+        padding-right: 2%; } }
+    @media (min-width: 480px) {
+      .page-template-default .about-us-page .nikolai-experience .acting-experience {
+        padding-left: 2%; } }
   .page-template-default .about-us-page #imdb-button {
     text-transform: uppercase; }
 
