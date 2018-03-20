@@ -905,11 +905,14 @@ textarea {
         display: flex;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center; }
-        .site-info .secondary .contact-info .social-icons svg {
-          margin: 0 15px;
-          width: 50px;
-          height: 50px; }
+                justify-content: center;
+        font-size: 3rem; }
+        .site-info .secondary .contact-info .social-icons a {
+          padding-right: 1rem; }
+        .site-info .secondary .contact-info .social-icons a:visited {
+          color: black; }
+        .site-info .secondary .contact-info .social-icons a:last-child {
+          padding: 0; }
     .site-info .secondary .subscribe {
       width: 360px; }
   .site-info .email-field {
@@ -976,12 +979,8 @@ textarea {
         .site-info .secondary .contact-info .social-icons {
           -webkit-box-pack: inherit;
               -ms-flex-pack: inherit;
-                  justify-content: inherit; }
-          .site-info .secondary .contact-info .social-icons svg {
-            margin: 0;
-            margin-right: 15px;
-            width: 20px;
-            height: 20px; }
+                  justify-content: inherit;
+          font-size: 2rem; }
       .site-info .secondary .subscribe {
         width: 380px; }
       .site-info .secondary .our-mission {
@@ -1445,6 +1444,41 @@ object {
     .auditions-containor .email-field .fname, .auditions-containor .email-field .email-input {
       width: 100%; }
 
+/***************************
+ *PAGE: Contact Us
+ ***************************/
+.page main .entry-content-contact-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left; }
+  .page main .entry-content-contact-page iframe {
+    display: none; }
+  .page main .entry-content-contact-page .contact-sidebar {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    line-height: 2rem; }
+    .page main .entry-content-contact-page .contact-sidebar ul {
+      margin: 0;
+      padding: 0; }
+  .page main .entry-content-contact-page p {
+    margin: 0; }
+  .page main .entry-content-contact-page li {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .page main .entry-content-contact-page span {
+    font-weight: 500;
+    width: 150px; }
+
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -1511,7 +1545,35 @@ object {
       text-align: left;
       margin: 0 auto; }
       .auditions-containor .email-field .fname, .auditions-containor .email-field .email-input {
-        width: 100%; } }
+        width: 100%; }
+  .page main .entry-content-contact-page {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .page main .entry-content-contact-page iframe {
+      display: block; }
+    .page main .entry-content-contact-page .contact-sidebar {
+      padding-left: 3rem;
+      width: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+      .page main .entry-content-contact-page .contact-sidebar ul {
+        margin: 0;
+        padding: 0; }
+    .page main .entry-content-contact-page p {
+      margin: 0; }
+    .page main .entry-content-contact-page li {
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .page main .entry-content-contact-page span {
+      font-weight: 500;
+      width: 200px; } }
 
 .page main {
   text-align: center;

@@ -323,6 +323,40 @@
 
 }
 
+/***************************
+ *PAGE: Contact Us
+ ***************************/
+.page main .entry-content-contact-page{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  iframe{
+    display: none;
+  }
+  .contact-sidebar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;    
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+  }
+  p{
+    margin: 0;
+  }
+  li{
+  list-style: none;
+  display: flex;
+  }
+  span{
+    font-weight: 500;
+    width: 150px;
+  }
+}
+
+
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
     padding: 2rem;
@@ -391,7 +425,34 @@
         width: 100%;
       }
     }
-  
+  }
+
+  .page main .entry-content-contact-page{
+    justify-content: center;
+    iframe{
+      display: block;
+    }
+    .contact-sidebar{
+      padding-left: 3rem;
+      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      ul{
+        margin: 0;
+        padding: 0;
+      }
+    }
+    p{
+      margin: 0;
+    }
+    li{
+    list-style: none;
+    display: flex;
+    }
+    span{
+      font-weight: 500;
+      width: 200px;
+    }
   }
 
 }
