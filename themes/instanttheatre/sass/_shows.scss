@@ -26,9 +26,24 @@
     .tribe_events {
       margin: 20px 0;
       text-align: center;
+      @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+      }
       .tribe-events-content {
         margin-top: 20px;
         text-align: left;
+        @include desktop {
+          order: -1;
+          width: 50%;
+        }
+      }
+
+      .buy-tickets-link-wrapper {
+        @include desktop {
+          width: 50%;
+          text-align: left;
+        }
       }
     }
 
@@ -96,6 +111,9 @@
         padding: 10px;
         margin-left: auto;
         margin-right: auto;
+        @include desktop {
+          width: 33%;
+        }
         .tribe-related-events-thumbnail {
           width: 100%;
         }
