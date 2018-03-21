@@ -10,6 +10,9 @@
     $('.studio-grid').flickity({
       prevNextButtons: false
     })
+    $('.community-mobile-carousel').flickity({
+      prevNextButtons: false
+    })
   }
 
   $(window).on('resize', function() {
@@ -23,10 +26,14 @@
         $('.studio-grid').flickity({
           prevNextButtons: false
         })
+        $('.community-mobile-carousel').flickity({
+          prevNextButtons: false
+        })
       } else {
         $('.hire-us-grid').flickity('destroy');
         $('.testimonial-carousel-container').flickity('destroy');
         $('.studio-grid').flickity('destroy');
+        $('.community-mobile-carousel').flickity('destroy');
       }
   });
 

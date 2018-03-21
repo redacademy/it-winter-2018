@@ -456,6 +456,31 @@ body {
     }
   }
 }
+/*
+Our Community page
+*/
+.page-template-default{
+  .our-community{
+    p{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .quote-entry{
+      margin-bottom: 5%;
+      padding: 0px;
+      background-color: $color__yellow-brand;
+    }
+  }
+  .havana-theatre{
+    h1{
+      text-transform: capitalize;
+    }
+    p{
+      padding-right: 5%;
+      padding-left: 5%;
+    }
+  }//havana theatre
+}
 
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
