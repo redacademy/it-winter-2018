@@ -456,9 +456,9 @@ body {
     }
   }
 }
-/*
+/*****************
 Our Community page
-*/
+*******************/
 .page-template-default{
   .our-community{
     p{
@@ -471,15 +471,29 @@ Our Community page
       background-color: $color__yellow-brand;
     }
   }
-  .havana-theatre{
-    h1{
-      text-transform: capitalize;
+.community-gallery-images{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 2% 8%;
+    @include desktop{
+      margin: 0px 2% 5%;
     }
-    p{
-      padding-right: 5%;
-      padding-left: 5%;
+  .flickity-viewport{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .community-gallery{
+    width: 95%;
+    @include desktop{
+      width: 33%;
     }
-  }//havana theatre
+    img{
+      height: 300px;
+      width: 95%;
+    }
+   }
+  }
 }
 
 @media screen and (min-width: $mobile_break) {

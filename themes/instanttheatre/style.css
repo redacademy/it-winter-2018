@@ -417,7 +417,7 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
-body.home .site-header {
+.home .site-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,6 +548,7 @@ textarea {
   position: fixed;
   top: 0;
   width: 100%;
+  margin-top: 60px;
   height: 60px;
   background-color: #FFEC00; }
   @media (min-width: 480px) {
@@ -673,7 +674,6 @@ textarea {
       width: 90%;
       position: absolute;
       padding-top: 50px;
-      padding-left: 85px;
       padding-right: 50px;
       right: 0; }
       .main-navigation .toggle-menu-wrapper #primary-menu .selector-nav {
@@ -702,7 +702,7 @@ textarea {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100vh;
-    z-index: 2; }
+    z-index: 9; }
     .main-navigation .menu-toggle:checked ~ .toggle-menu-wrapper .search {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
@@ -719,7 +719,7 @@ textarea {
       font-size: 30px; }
 
 @media screen and (min-width: 481px) {
-  body.home .main-navigation {
+  .front-page .main-navigation {
     position: relative;
     height: 300px;
     max-width: 1440px;
@@ -729,24 +729,26 @@ textarea {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-    body.home .main-navigation a {
+            justify-content: space-between;
+    -webkit-transition: .5s;
+    transition: .5s; }
+    .front-page .main-navigation a {
       position: relative; }
-    body.home .main-navigation .selector-nav {
+    .front-page .main-navigation .selector-nav {
       display: block;
       color: black; }
-    body.home .main-navigation .home-banner-clickables {
+    .front-page .main-navigation .home-banner-clickables {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      body.home .main-navigation .home-banner-clickables #desktop-search-button {
+      .front-page .main-navigation .home-banner-clickables #desktop-search-button {
         -webkit-box-shadow: none;
                 box-shadow: none;
         border: none;
         background: transparent;
         font-size: 1.5em;
         padding-top: 0px; }
-      body.home .main-navigation .home-banner-clickables ul {
+      .front-page .main-navigation .home-banner-clickables ul {
         list-style: none;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -759,22 +761,22 @@ textarea {
         position: absolute;
         bottom: 0;
         right: 0; }
-        body.home .main-navigation .home-banner-clickables ul input {
+        .front-page .main-navigation .home-banner-clickables ul input {
           outline: none;
           padding: 0; }
-        body.home .main-navigation .home-banner-clickables ul button {
+        .front-page .main-navigation .home-banner-clickables ul button {
           padding-left: 5px;
           padding-right: 5px;
           outline: none; }
-        body.home .main-navigation .home-banner-clickables ul li {
+        .front-page .main-navigation .home-banner-clickables ul li {
           padding-left: 5px;
           padding-right: 5px; }
-        body.home .main-navigation .home-banner-clickables ul a {
+        .front-page .main-navigation .home-banner-clickables ul a {
           color: #000;
           font-size: 25px; }
-    body.home .main-navigation .desktop-rocket-logo {
+    .front-page .main-navigation .desktop-rocket-logo {
       display: none; }
-    body.home .main-navigation .circular-rocket-logo {
+    .front-page .main-navigation .circular-rocket-logo {
       display: block;
       margin-left: 75px;
       bottom: 0;
@@ -782,7 +784,7 @@ textarea {
       width: 50%;
       margin-top: 75px;
       z-index: 2; }
-    body.home .main-navigation .toggle-menu-wrapper {
+    .front-page .main-navigation .toggle-menu-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -793,36 +795,35 @@ textarea {
       position: absolute;
       bottom: 0;
       background: transparent; }
-      body.home .main-navigation .toggle-menu-wrapper #primary-menu {
+      .front-page .main-navigation .toggle-menu-wrapper #primary-menu {
         padding-left: 400px;
         padding-right: 0px;
         width: 80%; }
-        body.home .main-navigation .toggle-menu-wrapper #primary-menu .sub-menu {
+        .front-page .main-navigation .toggle-menu-wrapper #primary-menu .sub-menu {
           z-index: 1;
-          margin-top: 14px;
           background: #fff;
           margin-left: 200px; }
-      body.home .main-navigation .toggle-menu-wrapper .menu-main-nav-container {
+      .front-page .main-navigation .toggle-menu-wrapper .menu-main-nav-container {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1;
         height: 60px;
         position: relative; }
-      body.home .main-navigation .toggle-menu-wrapper .search {
+      .front-page .main-navigation .toggle-menu-wrapper .search {
         -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
                 order: 2;
         background: transparent; }
-        body.home .main-navigation .toggle-menu-wrapper .search #hamburger-search {
+        .front-page .main-navigation .toggle-menu-wrapper .search #hamburger-search {
           width: 35%; }
-      body.home .main-navigation .toggle-menu-wrapper .social-media-links {
+      .front-page .main-navigation .toggle-menu-wrapper .social-media-links {
         -webkit-box-ordinal-group: 4;
             -ms-flex-order: 3;
                 order: 3;
         z-index: 0; }
-    body.home .main-navigation .menu-toggle {
+    .front-page .main-navigation .menu-toggle {
       display: none; }
-    body.home .main-navigation .hamburger-toggle {
+    .front-page .main-navigation .hamburger-toggle {
       display: none; }
   .main-navigation {
     -webkit-box-align: start;
@@ -1685,9 +1686,9 @@ body {
   .page-template-default .about-us-page #imdb-button {
     text-transform: uppercase; }
 
-/*
+/*****************
 Our Community page
-*/
+*******************/
 .page-template-default .our-community p {
   padding-left: 5%;
   padding-right: 5%; }
@@ -1697,12 +1698,29 @@ Our Community page
   padding: 0px;
   background-color: #FFEC00; }
 
-.page-template-default .havana-theatre h1 {
-  text-transform: capitalize; }
-
-.page-template-default .havana-theatre p {
-  padding-right: 5%;
-  padding-left: 5%; }
+.page-template-default .community-gallery-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 2% 8%; }
+  @media (min-width: 480px) {
+    .page-template-default .community-gallery-images {
+      margin: 0px 2% 5%; } }
+  .page-template-default .community-gallery-images .flickity-viewport {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto; }
+  .page-template-default .community-gallery-images .community-gallery {
+    width: 95%; }
+    @media (min-width: 480px) {
+      .page-template-default .community-gallery-images .community-gallery {
+        width: 33%; } }
+    .page-template-default .community-gallery-images .community-gallery img {
+      height: 300px;
+      width: 95%; }
 
 @media screen and (min-width: 480px) {
   .what-is-improv {

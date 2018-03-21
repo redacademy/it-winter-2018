@@ -34,8 +34,10 @@
 
 					<div class="search">
 						<label for="toggle-button" class="hamburger-toggle-button"><i class="fa fa-bars"></i></label>
-						<input type="text" id="hamburger-search" placeholder="Search">
-						<button type="button" id="search-button"><i class="fa fa-search"></i></button>
+						<form>
+							<input type="text" id="hamburger-search" placeholder="Search">
+							<button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+						</form>
 					</div><!--search-->
 
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
