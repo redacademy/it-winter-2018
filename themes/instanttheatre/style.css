@@ -2266,6 +2266,9 @@ http://flickity.metafizzy.co
     @media (min-width: 480px) {
       .single-tribe_events .entry-content h1 {
         font-size: 2em; } }
+  .single-tribe_events .entry-content .tribe-events-related-events-title {
+    text-align: left;
+    margin-left: 10px; }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
     margin: 0; }
@@ -2334,6 +2337,36 @@ http://flickity.metafizzy.co
             align-items: center; }
   .single-tribe_events .entry-content abbr[title] {
     text-decoration: none; }
+  .single-tribe_events .entry-content .tribe-related-events li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid #D5D5D5;
+    width: 95%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto; }
+    .single-tribe_events .entry-content .tribe-related-events li .tribe-related-events-thumbnail {
+      width: 100%; }
+    .single-tribe_events .entry-content .tribe-related-events li .tribe-related-event-info {
+      text-align: left;
+      margin: 10px 0;
+      width: 100%; }
+      .single-tribe_events .entry-content .tribe-related-events li .tribe-related-event-info h3 {
+        font-size: 16px; }
+    .single-tribe_events .entry-content .tribe-related-events li .related-events-links {
+      margin-top: 20px; }
+    .single-tribe_events .entry-content .tribe-related-events li a.learn-more-link {
+      margin-left: 20px;
+      text-decoration: underline !important; }
+      .single-tribe_events .entry-content .tribe-related-events li a.learn-more-link:hover {
+        color: #00B6CB; }
+    .single-tribe_events .entry-content .tribe-related-events li .related-events-time-info p {
+      margin: 5px 0; }
 
 .buy-tickets-button {
   background-color: #ED1651;
