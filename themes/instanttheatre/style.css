@@ -599,7 +599,8 @@ textarea {
         font-size: 20px; }
   .main-navigation #toggle-button {
     position: fixed;
-    left: 0; }
+    left: 0;
+    display: none; }
   .main-navigation .hamburger-toggle {
     cursor: pointer;
     display: block;
@@ -1646,6 +1647,25 @@ object {
         padding-left: 2%; } }
   .page-template-default .about-us-page #imdb-button {
     text-transform: uppercase; }
+
+/*
+Our Community page
+*/
+.page-template-default .our-community p {
+  padding-left: 5%;
+  padding-right: 5%; }
+
+.page-template-default .our-community .quote-entry {
+  margin-bottom: 5%;
+  padding: 0px;
+  background-color: #FFEC00; }
+
+.page-template-default .havana-theatre h1 {
+  text-transform: capitalize; }
+
+.page-template-default .havana-theatre p {
+  padding-right: 5%;
+  padding-left: 5%; }
 
 @media screen and (min-width: 480px) {
   .what-is-improv {
