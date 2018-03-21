@@ -53,7 +53,9 @@ $event_id = get_the_ID();
     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
       <!-- Buy Tickets button to link to eventbrite page -->
-      <a href="<?php echo tribe_get_event_website_url(); ?>" class="buy-tickets-button">Buy Tickets</a>
+      <div class="buy-tickets-link-wrapper">
+        <a href="<?php echo tribe_get_event_website_url(); ?>" class="buy-tickets-button">Buy Tickets</a>
+      </div>
 
 			<!-- Event content -->
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>

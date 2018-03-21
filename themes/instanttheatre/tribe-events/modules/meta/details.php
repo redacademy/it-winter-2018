@@ -76,7 +76,7 @@ $website = tribe_get_event_website_link();
 		elseif ( tribe_event_is_all_day() ):
 			?>
 
-			<dt> <?php esc_html_e( '', 'the-events-calendar' ) ?> </dt>
+			<dt> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/show-details/Time.svg" alt="time logo" class="show-meta-logo"><?php esc_html_e( '', 'the-events-calendar' ) ?> </dt>
 			<dd>
 				<abbr class="tribe-events-abbr tribe-events-start-datetime published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
 			</dd>
@@ -102,13 +102,14 @@ $website = tribe_get_event_website_link();
 			?>
 
 			<dt> <?php esc_html_e( '', 'the-events-calendar' ) ?> </dt>
-			<dd>
-				<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
+			<dd class="show-details-date">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/show-details/Date.svg" alt="date logo" class="show-meta-logo"><abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
 			</dd>
 
 			<dt> <?php echo esc_html( $time_title ); ?> </dt>
 			<dd>
-				<div class="tribe-events-abbr tribe-events-start-time published dtstart" title="<?php esc_attr_e( $end_ts ) ?>">
+      <div class="tribe-events-abbr tribe-events-start-time published dtstart" title="<?php esc_attr_e( $end_ts ) ?>">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/show-details/Time.svg" alt="time logo" class="show-meta-logo">
 					<?php echo $time_formatted; ?>
 				</div>
 			</dd>
@@ -120,7 +121,10 @@ $website = tribe_get_event_website_link();
 		if ( ! empty( $cost ) ) : ?>
 
 			<dt> <?php esc_html_e( '', 'the-events-calendar' ) ?> </dt>
-			<dd class="tribe-events-event-cost"> <?php esc_html_e( $cost ); ?> </dd>
+			<dd class="tribe-events-event-cost"> 
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/show-details/Ticket.svg" alt="ticket logo" class="show-meta-logo">
+        <?php esc_html_e( $cost ); ?> 
+      </dd>
     <?php endif ?>
 
 
