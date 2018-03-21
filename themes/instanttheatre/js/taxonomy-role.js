@@ -8,18 +8,17 @@ jQuery(document).ready(function($) {
     layoutMode: 'fitRows'
   });
 
-  // initialise filter buttons
+  // Register filter buttons click event
   $('.filter-button-group').on( 'click', 'button', function() {
     var filterValue = $(this).attr('data-filter');
     grid.isotope({ filter: filterValue });
   });
 
+  
   $('.tax-role .filter-btn').on('click', function(){
     $('.tax-role .filter-btn').removeClass('selected');
     $(this).addClass('selected');
   });
-
-
 
   //Display overlay when person tile is clicked
 
