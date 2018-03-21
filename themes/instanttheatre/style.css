@@ -546,12 +546,13 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  right: 0;
   top: 0;
-  min-width: 100%;
-  margin-top: 50px;
+  width: 100%;
   height: 60px;
   background-color: #FFEC00; }
+  @media (min-width: 480px) {
+    .main-navigation {
+      max-width: 1440px; } }
   .main-navigation .home-banner-clickables {
     display: block; }
   .main-navigation .desktop-rocket-logo {
@@ -1242,16 +1243,32 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
-.site-content {
-  max-width: 1440px;
-  background: url("../../assets/images/cloud-bkg2.png") top center/cover fixed;
-  margin: 0 auto; }
-  .site-content .site-main {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 3.75rem 0; }
+/*******************
+ *SITE WIDE
+ *******************/
+html {
+  background: #fff; }
 
+body {
+  max-width: 1440px;
+  background: #fff; }
+  @media (min-width: 480px) {
+    body {
+      margin: 0 auto;
+      background: url("../../assets/images/cloud-bkg2.png") top center/cover fixed; } }
+
+.site-content {
+  max-width: 1240px; }
+  @media (min-width: 480px) {
+    .site-content {
+      margin: 0 auto; } }
+
+#wpadminbar {
+  opacity: 0.05; }
+  #wpadminbar:hover {
+    opacity: 1; }
+
+/* Front page */
 .carousel-cell {
   margin-top: 3.75rem;
   width: 1240px;
@@ -1373,18 +1390,14 @@ object {
       flex-wrap: wrap; }
 
 .tax-role .person-tile {
-  width: 46.5%;
+  width: 265px;
   height: auto;
   padding: 1rem;
   margin: 1.25% 0.5rem;
   border-radius: 4px;
   -webkit-box-shadow: 0px 0px 8px #D5D5D5;
           box-shadow: 0px 0px 8px #D5D5D5;
-  color: #fff; }
-  @media (min-width: 480px) {
-    .tax-role .person-tile {
-      width: 265px;
-      margin: 1.25% 0.5rem; } }
+  background: #fff; }
   .tax-role .person-tile a {
     height: 100%;
     width: 100%; }
@@ -1407,14 +1420,12 @@ object {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       width: auto;
-      height: auto;
-      min-width: 100%;
-      min-height: 100%;
+      height: 100%;
       max-width: none;
       max-width: none; }
   .tax-role .person-tile .person-tile-label {
     padding: 0;
-    margin: 0;
+    margin: 1rem 0 0;
     color: #000;
     font-size: 1.375rem;
     text-align: center; }
@@ -1474,8 +1485,8 @@ object {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); } }
   .tax-role .overlay-content .portrait-wrapper {
-    width: 85%;
-    height: auto;
+    width: 85vw;
+    height: 85vw;
     margin: 1rem auto;
     overflow: hidden; }
     @media (min-width: 480px) {
@@ -1489,7 +1500,7 @@ object {
                 order: 1; } }
     .tax-role .overlay-content .portrait-wrapper img {
       width: auto;
-      height: auto;
+      height: 100%;
       min-height: 100%;
       max-height: none;
       min-width: 100%;
@@ -1775,10 +1786,104 @@ object {
       font-weight: 500;
       width: 200px; } }
 
+/*************************
+ *PAGE: List of Classes
+ *************************/
+.list-of-classes .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .list-of-classes .page-header ul {
+    display: none; }
+  .list-of-classes .page-header h1.main-heading {
+    margin: 0.5rem; }
+
+.schedule-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .schedule-header .schedule-header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 2rem; }
+    .schedule-header .schedule-header-logo img {
+      height: 125px;
+      width: auto; }
+  .schedule-header .schedule-header-text {
+    max-width: 1000px;
+    text-align: left; }
+
+.class-schedule {
+  width: 100%;
+  margin: 0 0 3rem;
+  padding: 0; }
+  @media (min-width: 480px) {
+    .class-schedule {
+      border: 0.75rem solid #fff;
+      border-radius: 4px; } }
+  .class-schedule li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5rem 0;
+    background: #fff; }
+    .class-schedule li:nth-of-type(odd) {
+      background: #FFFBD2; }
+    .class-schedule li.class-schedule-header {
+      background: #FFEC00;
+      font-size: 1.25rem;
+      font-weight: 700; }
+    .class-schedule li .class-schedule-row {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .class-schedule li p {
+      padding: 0;
+      margin: 0; }
+      .class-schedule li p:first-of-type, .class-schedule li p:last-of-type {
+        width: 50%; }
+      .class-schedule li p:not(:first-child):not(:last-child) {
+        display: none; }
+        @media (min-width: 480px) {
+          .class-schedule li p:not(:first-child):not(:last-child) {
+            display: inline; } }
+      @media (min-width: 480px) {
+        .class-schedule li p:nth-child(1) {
+          width: 30%; }
+        .class-schedule li p:nth-child(2) {
+          width: 10%; }
+        .class-schedule li p:nth-child(3) {
+          width: 12.5%; }
+        .class-schedule li p:nth-child(4) {
+          width: 12.5%; }
+        .class-schedule li p:nth-child(5) {
+          width: 10%; }
+        .class-schedule li p:nth-child(6) {
+          width: 10%; }
+        .class-schedule li p:nth-child(7) {
+          -webkit-box-flex: 1;
+              -ms-flex: 1 0 10%;
+                  flex: 1 0 10%; } }
+    .class-schedule li .blue-btn {
+      margin: auto 0;
+      font-size: 1rem; }
+
 .page {
-  text-align: center;
-  max-width: 1440px;
-  margin: 0 auto; }
+  text-align: center; }
   .page h1 {
     margin-top: 1em;
     color: black;
