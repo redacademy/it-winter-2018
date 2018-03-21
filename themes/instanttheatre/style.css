@@ -1322,6 +1322,21 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
 
+.page .instagram-carousel a:link, .page .instagram-carousel a:visited,
+.page .footer-logo a:link,
+.page .footer-logo a:visited {
+  text-decoration: none;
+  color: black; }
+
+.page .instagram-carousel a p,
+.page .footer-logo a p {
+  text-transform: capitalize;
+  max-width: none;
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: right; }
+
 /* //////////////////flickity/////////////////// */
 .instagram-carousel {
   max-width: 1240px; }
@@ -1332,6 +1347,8 @@ body {
     overflow: hidden; }
     .instagram-carousel .photo img {
       max-width: none; }
+  .instagram-carousel .instagram-feed {
+    margin-bottom: 2rem; }
 
 .banner-carousel {
   margin-top: 3.75rem;
@@ -1584,7 +1601,8 @@ body {
             align-items: flex-start;
     text-align: left;
     margin: 0 auto; }
-    .auditions-containor .email-field .fname, .auditions-containor .email-field .email-input {
+    .auditions-containor .email-field .fname,
+    .auditions-containor .email-field .email-input {
       width: 100%; }
 
 /***************************
@@ -1777,7 +1795,8 @@ Our Community page
               align-items: flex-start;
       text-align: left;
       margin: 0 auto; }
-      .auditions-containor .email-field .fname, .auditions-containor .email-field .email-input {
+      .auditions-containor .email-field .fname,
+      .auditions-containor .email-field .email-input {
         width: 100%; }
   .page main .entry-content-contact-page {
     -webkit-box-pack: center;

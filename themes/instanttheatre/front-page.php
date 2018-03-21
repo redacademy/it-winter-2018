@@ -117,6 +117,7 @@ echo '<a href="'.$values[0].'" target="'.$values[2].'">'.$values[1].'</a>';
 		<section class="instagram-carousel">
 				<h1>instagram</h1>
 			<div id="instagram-feed" class="instagram-feed"></div>
+			<a class="front-page-links" href="https://www.instagram.com/instanttheatre/"><p>view on instagram <i class="fa fa-chevron-right"></i><p></a>
 		</section>
 
 		</main><!-- #main -->
