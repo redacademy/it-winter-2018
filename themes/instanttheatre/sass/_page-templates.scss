@@ -12,6 +12,7 @@ body {
   max-width: $desktop_break;
   background: #fff;
 
+<<<<<<< HEAD
   @include desktop {
     margin: 0 auto;
     background: $site__background;
@@ -33,6 +34,17 @@ body {
     opacity:1;
   }
   
+=======
+.site-content {
+  max-width: $desktop_break;
+  background: $site__background;
+  margin:0 auto;
+  .site-main{
+    max-width: $desktop__content-area;
+    margin: 0 auto;
+    padding: 3.75rem 0;
+  }
+>>>>>>> aed404522b0240e738896ba45ac676c52ee7a417
 }
 
 
@@ -126,7 +138,7 @@ body {
   }
   .flickity-page-dots {
     top: 200px;
-    z-index: -1;
+    height: 10px;
   }
   .flickity-prev-next-button {
     top: 100px;
@@ -350,6 +362,113 @@ body {
 
 }
 
+/***************************
+ *PAGE: Contact Us
+ ***************************/
+.page main .entry-content-contact-page{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  iframe{
+    display: none;
+  }
+  .contact-sidebar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;    
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+  }
+  p{
+    margin: 0;
+  }
+  li{
+  list-style: none;
+  display: flex;
+  }
+  span{
+    font-weight: 500;
+    width: 150px;
+  }
+}
+
+
+/**************
+  About-Us Page
+**************/
+.page-template-default{
+  .about-us-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    p{
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 1.125rem;
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    }
+    h1{
+      text-transform: capitalize;
+    }
+    h2{
+      text-transform: capitalize;
+    }
+    .our-story{
+      text-align: left;
+      padding: 0px;
+      @include desktop{
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .our-story-text{
+        padding: 2%;
+        @include desktop{
+          padding: 0;
+          padding-right: 5%;
+        }
+      }
+    }
+    .nikolai-pic{
+    width: 75%;
+    border-radius: 170px;
+    @include desktop{
+      width: 25%;
+      border-radius: 180px;
+    }
+    }
+    .nikolai-experience{
+      text-align: left;
+      margin-bottom: 20px;
+      padding: 2%;
+      @include desktop {
+        display: flex;
+      }
+      h2{
+        text-align: center;
+      }
+      .improv-experience{
+        @include desktop {
+          padding-right: 2%;
+        }
+      }
+      .acting-experience{
+        @include desktop {
+          padding-left: 2%;
+        }
+      }
+    }
+    #imdb-button{
+      text-transform: uppercase;
+    }
+  }
+}
+
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
     padding: 2rem;
@@ -418,7 +537,34 @@ body {
         width: 100%;
       }
     }
-  
+  }
+
+  .page main .entry-content-contact-page{
+    justify-content: center;
+    iframe{
+      display: block;
+    }
+    .contact-sidebar{
+      padding-left: 3rem;
+      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      ul{
+        margin: 0;
+        padding: 0;
+      }
+    }
+    p{
+      margin: 0;
+    }
+    li{
+    list-style: none;
+    display: flex;
+    }
+    span{
+      font-weight: 500;
+      width: 200px;
+    }
   }
 
 }

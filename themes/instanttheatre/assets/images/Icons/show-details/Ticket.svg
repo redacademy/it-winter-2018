@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Show Details/Ticket</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon/Show-Details/Ticket" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill="#4BB7CB">
+            <path d="M0.0193829341,20.8467537 L13.9020511,6.96401997 L24.7904433,17.8524391 L10.9077365,31.7351074 L8.94273444,29.7701053 C10.3693281,27.8153817 10.2202707,25.0590123 8.45787429,23.2966159 C6.6954394,21.5342195 3.9306394,21.376462 1.97587729,22.8032481 L0.0193829341,20.8467537 Z" id="Path"></path>
+            <path d="M14.9908788,5.87518075 L20.7073011,0.158781594 L22.6637955,2.11528758 C21.2370093,4.07005738 21.3947669,6.83485738 23.1572018,8.59727687 C24.9195597,10.3596656 27.675929,10.5087384 29.6306526,9.08214857 L31.5956932,11.0471622 L25.879271,16.7636114 L14.9908788,5.87518075 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

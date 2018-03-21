@@ -1,0 +1,142 @@
+.single-tribe_events {
+  .entry-content {
+    margin-top: 60px;
+    h1 {
+      text-align: center;
+      margin: 20px;
+      text-transform: uppercase;
+      @include desktop {
+        font-size: 2em;
+      }
+    }
+
+    .tribe-events-related-events-title {
+      text-align: left;
+      margin-left: 10px;
+    }
+
+    .tribe-events-event-image {
+      text-align: center;
+      margin: 0;
+      img {
+        width: 1240px;
+      }
+    }
+
+    .tribe_events {
+      margin: 20px 0;
+      text-align: center;
+      .tribe-events-content {
+        margin-top: 20px;
+        text-align: left;
+      }
+    }
+
+    .tribe-events-start-time {
+      display: flex;
+      align-items: center;
+    }
+
+    .tribe-event-tags {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      a {
+        padding: 5px 10px;
+        border: 1px solid $color__grey-border;
+        border-radius: 4px;
+        margin: 0 5px 10px 5px;
+        &:hover {
+          background-color: $color__blue-brand;
+          border-color: $color__blue-brand;
+          color: white;
+        }
+      }
+    }
+
+    .tribe-venue {
+      display: flex;
+    }
+
+    .url {
+      display: flex;
+      align-items: center;
+      a {
+        color: $color__blue-brand;
+        &:hover {
+          color: darken($color__blue-brand, 10%);
+        }
+      }
+    }
+
+    .events-tags {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .show-meta-logo {
+      min-width: 20px;
+      margin: 0 10px 0 0;
+    }
+
+    .show-details-date {
+      display: flex;
+      align-items: center;
+    }
+    abbr[title] {
+      text-decoration: none;
+    }
+
+    .tribe-related-events {
+      li {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $color__lightgrey-border;
+        width: 95%;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        .tribe-related-events-thumbnail {
+          width: 100%;
+        }
+        .tribe-related-event-info {
+          text-align: left;
+          margin: 10px 0;
+          width: 100%;
+          h3 {
+            font-size: 16px;
+          }
+        }
+        .related-events-links {
+          margin-top: 20px;
+        }
+        a.learn-more-link {
+          margin-left: 20px;
+          text-decoration: underline!important;
+          &:hover {
+            color: $color__blue-brand;
+          }
+        }
+        .related-events-time-info {
+          p {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+   }
+}
+
+.buy-tickets-button {
+  background-color: $color__red-brand;
+  padding: 10px 30px;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+  &:link {
+    color: white; 
+  }
+  &:hover {
+    background-color: darken($color__red-brand, 10%);
+  }
+}
