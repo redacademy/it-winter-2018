@@ -1,9 +1,8 @@
 // Hire Us, Book Events and Book Studio
 
 .page {
-  main{
     text-align: center;
-    max-width: $desktop__content-area;
+    // max-width: $desktop__content-area;
     h1 {
       margin-top: 1em;
       color: black;
@@ -291,5 +290,4 @@
         margin-bottom: 0;
       }
     }
-  }
 }

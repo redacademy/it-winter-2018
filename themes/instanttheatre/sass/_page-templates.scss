@@ -1,15 +1,42 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-
-/* Front page */
-
-.site-content {
-  max-width: 1240px;
-  margin: 0 auto;
-  background: $site__background;
+/*******************
+ *SITE WIDE
+ *******************/
+html {
+  background: #fff;
 }
 
+body {
+  max-width: $desktop_break;
+  background: #fff;
+
+  @include desktop {
+    margin: 0 auto;
+    background: $site__background;
+  }
+}
+
+ .site-content {
+  max-width: $desktop__content-area;
+
+  @include desktop {
+    margin: 0 auto;
+  }
+}
+
+#wpadminbar {
+  opacity: 0.05;
+
+  &:hover {
+    opacity:1;
+  }
+  
+}
+
+
+/* Front page */
 .carousel-cell {
   margin-top: 3.75rem;
   width: 1240px;
@@ -134,56 +161,53 @@
     flex-wrap: wrap;
   }
   .person-tile {
-    width: 46.5%;
+    width: 265px;
     height: auto;
     padding: 1rem;
     margin: 1.25% 0.5rem;
     border-radius: 4px;
     box-shadow: 0px 0px 8px #D5D5D5;
-    color: #fff;
-    @include desktop {
-      width: 265px;
-      margin: 1.25% 0.5rem;
-    }
-    a {
-      height: 100%;
-      width: 100%;
-    }
-    .person-image-wrapper {
-      position: relative;
-      width: 100%;
-      height: 235px;
-      margin: 0 auto;
-      border-radius: 4px;
-      overflow: hidden;
-      @include desktop {
-        width: 235px;
+    background: #fff;
+
+      a {
+        height: 100%;
+        width: 100%;
+      }
+      .person-image-wrapper {
+        position: relative;
+        width: 100%;
         height: 235px;
         margin: 0 auto;
+        border-radius: 4px;
+        overflow: hidden;
+        
+          @include desktop {
+            width: 235px;
+            height: 235px;
+            margin: 0 auto;
+          }
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: 100%;
+            max-width: none;
+            max-width: none;
+          }
       }
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: auto;
-        height: auto;
-        min-width: 100%;
-        min-height: 100%;
-        max-width: none;
-        max-width: none;
+      .person-tile-label {
+        padding: 0;
+        margin: 1rem 0 0;
+        color: #000;
+        font-size: 1.375rem;
+        text-align: center;
+
+          @include desktop {
+            font-size: 1.5rem;
+          }
       }
-    }
-    .person-tile-label {
-      padding: 0;
-      margin: 0;
-      color: #000;
-      font-size: 1.375rem;
-      text-align: center;
-      @include desktop {
-        font-size: 1.5rem;
-      }
-    }
   }
   .overlay {
     visibility: hidden;
@@ -215,6 +239,7 @@
     border: 1px solid #979797;
     border-radius: 4px;
     z-index: 1;
+    
     @include desktop {
       flex-direction: row;
       flex-wrap: wrap;
@@ -225,10 +250,11 @@
       transform: translate(-50%, -50%);
     }
     .portrait-wrapper {
-      width: 85%;
-      height: auto;
+      width: 85vw;
+      height: 85vw;
       margin: 1rem auto;
       overflow: hidden;
+
       @include desktop {
         width: 20%;
         height: 235px;
@@ -236,13 +262,15 @@
         margin: 0 1.25rem 0 0;
         order: 1;
       }
+
       img {
         width: auto;
-        height: auto;
+        height: 100%;
         min-height: 100%;
         max-height: none;
         min-width: 100%;
         max-width: none;
+
         @include desktop {
           position: relative;
           top: 50%;
@@ -258,6 +286,7 @@
       font-size: 1.375rem;
       font-weight: 500;
       background: $color__yellow-brand;
+
       @include desktop {
         display: inline-block;
         padding: 0;
@@ -269,6 +298,7 @@
     }
     .social-links {
       text-align: center;
+
       @include desktop {
         display: inline-block;
         order: 3;
@@ -281,6 +311,7 @@
       position: relative;
       top: 48px;
       left: 16px;
+      
       @include desktop {
         position: static;
         text-align: right;
@@ -388,6 +419,113 @@
       }
     }
   
+  }
+
+}
+
+/*************************
+ *PAGE: List of Classes
+ *************************/
+.list-of-classes {
+  
+  .page-header {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      display: none;
+    }
+
+    h1.main-heading {
+      margin: 0.5rem;
+    }
+  }
+}
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+
+  .schedule-header-logo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+
+    img {
+      height: 125px;
+      width: auto;
+    }
+  }
+
+  .schedule-header-text {
+    max-width: 1000px;
+    text-align: left;
+  }
+}
+
+.class-schedule {
+    width: 100%;
+    margin: 0 0 3rem;
+    padding: 0;
+
+    @include desktop {
+      border: 0.75rem solid #fff;
+      border-radius: 4px;
+    }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    background: #fff;
+
+    &:nth-of-type(odd) {
+      background: #FFFBD2
+    }
+
+    &.class-schedule-header {
+      background: $color__yellow-brand;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .class-schedule-row {
+      align-items: center;
+    }
+    
+    p {
+      padding: 0;
+      margin: 0;
+
+      &:first-of-type,
+      &:last-of-type {
+        width: 50%;
+      }
+
+      &:not(:first-child):not(:last-child) {
+        display: none;
+
+        @include desktop {
+          display: inline;
+        }
+      }
+
+      @include desktop {
+        &:nth-child(1) { width: 30%;}
+        &:nth-child(2) { width: 10% ;}
+        &:nth-child(3) { width: 12.5% ;}
+        &:nth-child(4) { width: 12.5% ;}
+        &:nth-child(5) { width: 10% ;}
+        &:nth-child(6) { width: 10% ;}
+        &:nth-child(7) { flex: 1 0 10%;}
+      }
+    }
+
+    .blue-btn {
+      margin: auto 0;
+      font-size: 1rem;
+    }
+
   }
 
 }
