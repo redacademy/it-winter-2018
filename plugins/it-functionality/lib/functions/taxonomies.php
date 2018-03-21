@@ -86,3 +86,43 @@ function person_role_taxonomy() {
 
 }
 add_action( 'init', 'person_role_taxonomy', 0 );
+
+// Register Custom Taxonomy
+function taxonomy_class_type() {
+
+	$labels = array(
+		'name'                       => 'Class Types',
+		'singular_name'              => 'Class Type',
+		'menu_name'                  => 'Class Type',
+		'all_items'                  => 'All Class Types',
+		'parent_item'                => 'Parent Class Type',
+		'parent_item_colon'          => 'Parent Class Type:',
+		'new_item_name'              => 'New Class Type Name',
+		'add_new_item'               => 'Add New Class Type',
+		'edit_item'                  => 'Edit Class Type',
+		'update_item'                => 'Update Class Type',
+		'view_item'                  => 'View Class Type',
+		'separate_items_with_commas' => 'Separate class types with commas',
+		'add_or_remove_items'        => 'Add or remove class types',
+		'choose_from_most_used'      => 'Choose from the most used',
+		'popular_items'              => 'Popular Class Types',
+		'search_items'               => 'Search Class Types',
+		'not_found'                  => 'Not Found',
+		'no_terms'                   => 'No class types',
+		'items_list'                 => 'Class Types list',
+		'items_list_navigation'      => 'Class Types list navigation',
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'show_in_rest'               => true,
+	);
+	register_taxonomy( 'class_type', array( 'tribe_events' ), $args );
+
+}
+add_action( 'init', 'taxonomy_class_type', 0 );

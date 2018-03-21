@@ -2,8 +2,7 @@
 
 .page {
     text-align: center;
-    max-width: $desktop_break;
-    margin: 0 auto;
+    // max-width: $desktop__content-area;
     h1 {
       margin-top: 1em;
       color: black;
@@ -396,5 +395,9 @@
         margin-bottom: 0;
       }
     }
+<<<<<<< HEAD
+}
+=======
     
   }
+>>>>>>> aed404522b0240e738896ba45ac676c52ee7a417
