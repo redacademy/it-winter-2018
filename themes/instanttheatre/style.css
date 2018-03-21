@@ -1043,7 +1043,7 @@ textarea {
           margin: 0; }
     .site-info .secondary .subscribe {
       width: 360px; }
-  .site-info .email-field {
+  .site-info .mc4wp-form-fields {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1054,12 +1054,6 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .site-info .email-field .email-input {
-      padding-left: 20px;
-      width: 360px;
-      height: 50px;
-      margin: 0 auto;
-      margin-bottom: 0.5rem; }
   .site-info .logo-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1123,11 +1117,11 @@ textarea {
             -ms-flex-pack: justify;
                 justify-content: space-between;
         width: 300px; }
-    .site-info .email-field {
+    .site-info .mc4wp-form-fields {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; }
-      .site-info .email-field .email-input {
+      .site-info .mc4wp-form-fields .email-input {
         width: 380px; }
     .site-info .footer-logo {
       display: -webkit-box;
