@@ -81,21 +81,18 @@ body {
 }
 
 .page {
+  .front-page-links{
+    text-align: right;
+    margin-bottom: 2rem;
+  }
   .instagram-carousel,
   .footer-logo {
     a {
       &:link,
       &:visited {
+        text-transform: capitalize;
         text-decoration: none;
         color: black;
-      }
-      p {
-        text-transform: capitalize;
-        max-width: none;
-        margin: 0;
-        margin-left: 0;
-        margin-right: 0;
-        text-align: right;
       }
     }
   }

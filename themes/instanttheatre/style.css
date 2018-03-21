@@ -1322,20 +1322,16 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
 
+.page .front-page-links {
+  text-align: right;
+  margin-bottom: 2rem; }
+
 .page .instagram-carousel a:link, .page .instagram-carousel a:visited,
 .page .footer-logo a:link,
 .page .footer-logo a:visited {
+  text-transform: capitalize;
   text-decoration: none;
   color: black; }
-
-.page .instagram-carousel a p,
-.page .footer-logo a p {
-  text-transform: capitalize;
-  max-width: none;
-  margin: 0;
-  margin-left: 0;
-  margin-right: 0;
-  text-align: right; }
 
 /* //////////////////flickity/////////////////// */
 .instagram-carousel {
