@@ -491,7 +491,8 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
-.blue-btn {
+.blue-btn,
+input[type="submit"] {
   min-width: 130px;
   border-radius: 5px;
   border: none;
@@ -502,12 +503,15 @@ textarea {
   padding: .6rem 1rem;
   text-shadow: none;
   margin-top: 0.5rem; }
-  .blue-btn:hover {
+  .blue-btn:hover,
+  input[type="submit"]:hover {
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none;
     background: #008898; }
-  .blue-btn:active, .blue-btn:focus {
+  .blue-btn:active, .blue-btn:focus,
+  input[type="submit"]:active,
+  input[type="submit"]:focus {
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none; }
@@ -1044,6 +1048,8 @@ textarea {
           margin: 0; }
     .site-info .secondary .subscribe {
       width: 360px; }
+      .site-info .secondary .subscribe p {
+        margin-bottom: 1rem; }
   .site-info .mc4wp-form-fields {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1055,6 +1061,8 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .site-info .mc4wp-form-fields input[type="email"] {
+      margin-bottom: 1rem; }
   .site-info .logo-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2338,15 +2346,16 @@ http://flickity.metafizzy.co
   margin: 0;
   list-style: none;
   text-align: center;
-  line-height: 1; }
+  line-height: 1;
+  margin-top: 1rem; }
 
 .flickity-rtl .flickity-page-dots {
   direction: rtl; }
 
 .flickity-page-dots .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 13px;
+  height: 13px;
   margin: 0 8px;
   background: #333;
   border-radius: 50%;
@@ -2354,7 +2363,8 @@ http://flickity.metafizzy.co
   cursor: pointer; }
 
 .flickity-page-dots .dot.is-selected {
-  opacity: 1; }
+  opacity: 1;
+  background: #00B6CB; }
 
 .single-tribe_events .entry-content {
   margin-top: 60px; }

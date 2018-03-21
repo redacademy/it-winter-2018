@@ -46,29 +46,29 @@
 				a {
 					margin-right: 1rem;
 				}
-				a:visited{
+				a:visited {
 					color: black;
 				}
-				a:last-child{
-					margin:0;
+				a:last-child {
+					margin: 0;
 				}
 			}
 		}
 		.subscribe {
 			width: 360px;
+			p{
+				margin-bottom: 1rem;
+			}
 		}
 	}
+
 	.mc4wp-form-fields {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		// .email-input {
-		// 	padding-left: 20px;
-		// 	width: 360px;
-		// 	height: 50px;
-		// 	margin: 0 auto;
-		// 	margin-bottom: 0.5rem;
-		// }
+		input[type="email"] {
+			margin-bottom: 1rem;
+		}
 	}
 	.logo-wrapper {
 		display: flex;
@@ -103,8 +103,8 @@
 			.contact-info {
 				width: 161px;
 				.social-icons {
-				justify-content: inherit;	
-					font-size:2rem;
+					justify-content: inherit;
+					font-size: 2rem;
 				}
 			}
 			.subscribe {
