@@ -12,7 +12,6 @@ body {
   max-width: $desktop_break;
   background: #fff;
 
-<<<<<<< HEAD
   @include desktop {
     margin: 0 auto;
     background: $site__background;
@@ -34,17 +33,6 @@ body {
     opacity:1;
   }
   
-=======
-.site-content {
-  max-width: $desktop_break;
-  background: $site__background;
-  margin:0 auto;
-  .site-main{
-    max-width: $desktop__content-area;
-    margin: 0 auto;
-    padding: 3.75rem 0;
-  }
->>>>>>> aed404522b0240e738896ba45ac676c52ee7a417
 }
 
 
