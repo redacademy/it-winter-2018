@@ -2371,9 +2371,12 @@ http://flickity.metafizzy.co
     @media (min-width: 480px) {
       .single-tribe_events .entry-content h1 {
         font-size: 2em; } }
-  .single-tribe_events .entry-content .tribe-events-related-events-title {
-    text-align: left;
-    margin-left: 10px; }
+  @media (min-width: 480px) {
+    .single-tribe_events .entry-content .tribe-events-single-section {
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      width: 50%; } }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
     margin: 0; }
@@ -2387,21 +2390,30 @@ http://flickity.metafizzy.co
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
+            flex-wrap: wrap;
+        width: 100%; } }
     .single-tribe_events .entry-content .tribe_events .tribe-events-content {
       margin-top: 20px;
       text-align: left; }
       @media (min-width: 480px) {
         .single-tribe_events .entry-content .tribe_events .tribe-events-content {
-          -webkit-box-ordinal-group: 0;
-              -ms-flex-order: -1;
-                  order: -1;
+          -webkit-box-ordinal-group: -1;
+              -ms-flex-order: -2;
+                  order: -2;
           width: 50%; } }
     @media (min-width: 480px) {
       .single-tribe_events .entry-content .tribe_events .buy-tickets-link-wrapper {
         width: 50%;
-        text-align: left; } }
+        height: 30px;
+        text-align: left;
+        -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+                order: -1; } }
   .single-tribe_events .entry-content .tribe-events-start-time {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2459,7 +2471,49 @@ http://flickity.metafizzy.co
             align-items: center; }
   .single-tribe_events .entry-content abbr[title] {
     text-decoration: none; }
-  .single-tribe_events .entry-content .tribe-related-events li {
+
+.buy-tickets-button {
+  background-color: #ED1651;
+  padding: 10px 30px;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .buy-tickets-button:link {
+    color: white; }
+  .buy-tickets-button:hover {
+    background-color: #c10f40; }
+
+.shows-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0; }
+  .shows-grid li {
+    margin: 20px 0;
+    padding: 10px;
+    width: 30%;
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+    list-style-type: none; }
+
+.site-main ul.tribe-events-grid-view {
+  margin: 0;
+  padding: 0; }
+  @media (min-width: 480px) {
+    .site-main ul.tribe-events-grid-view {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  .site-main ul.tribe-events-grid-view li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2473,33 +2527,32 @@ http://flickity.metafizzy.co
     margin-left: auto;
     margin-right: auto; }
     @media (min-width: 480px) {
-      .single-tribe_events .entry-content .tribe-related-events li {
+      .site-main ul.tribe-events-grid-view li {
         width: 33%; } }
-    .single-tribe_events .entry-content .tribe-related-events li .tribe-related-events-thumbnail {
+    .site-main ul.tribe-events-grid-view li .tribe-events-grid-thumbnail {
       width: 100%; }
-    .single-tribe_events .entry-content .tribe-related-events li .tribe-related-event-info {
+    .site-main ul.tribe-events-grid-view li h3 {
+      text-align: left;
+      margin: 5px;
+      font-size: 16px; }
+    .site-main ul.tribe-events-grid-view li .tribe-related-event-info {
       text-align: left;
       margin: 10px 0;
       width: 100%; }
-      .single-tribe_events .entry-content .tribe-related-events li .tribe-related-event-info h3 {
+      .site-main ul.tribe-events-grid-view li .tribe-related-event-info h3 {
         font-size: 16px; }
-    .single-tribe_events .entry-content .tribe-related-events li .related-events-links {
-      margin-top: 20px; }
-    .single-tribe_events .entry-content .tribe-related-events li a.learn-more-link {
+    .site-main ul.tribe-events-grid-view li .related-events-links {
+      text-align: left;
+      margin: 20px 0; }
+    .site-main ul.tribe-events-grid-view li a.learn-more-link {
       margin-left: 20px;
       text-decoration: underline !important; }
-      .single-tribe_events .entry-content .tribe-related-events li a.learn-more-link:hover {
+      .site-main ul.tribe-events-grid-view li a.learn-more-link:hover {
         color: #00B6CB; }
-    .single-tribe_events .entry-content .tribe-related-events li .related-events-time-info p {
+    .site-main ul.tribe-events-grid-view li .related-events-venue-info {
+      text-align: left; }
+    .site-main ul.tribe-events-grid-view li p {
       margin: 5px 0; }
-
-.buy-tickets-button {
-  background-color: #ED1651;
-  padding: 10px 30px;
-  border-radius: 4px;
-  color: white;
-  text-transform: uppercase; }
-  .buy-tickets-button:link {
-    color: white; }
-  .buy-tickets-button:hover {
-    background-color: #c10f40; }
+    .site-main ul.tribe-events-grid-view li .tribe-events-related-events-title {
+      text-align: left;
+      margin-left: 10px; }

@@ -123,6 +123,7 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'flickity',   get_template_directory_uri().'/build/js/flickity.pkgd.min.js', array('jquery'), false, true  );
 	// wp_enqueue_style( 'flickity-css', get_template_directory_uri().'/build/css/flickity.min.css');
 	wp_enqueue_script( 'banner-carousel',   get_template_directory_uri().'/build/js/carousel.min.js', array('jquery'), false, true  );
+	wp_enqueue_script( 'datepicker',   get_template_directory_uri().'/build/js/datepicker.min.js', array('jquery'), false, true  );
 	
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
