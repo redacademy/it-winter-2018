@@ -52,6 +52,10 @@ $website = tribe_get_event_website_link();
 ?>
 
 <div class="tribe-events-meta-group tribe-events-meta-group-details">
+
+	<div class="buy-tickets-link-wrapper mobile-view-hidden">
+      <a href="<?php echo tribe_get_event_website_url(); ?>" class="buy-tickets-button">Buy Tickets</a>
+  </div>
 	<dl>
 
 		<?php
