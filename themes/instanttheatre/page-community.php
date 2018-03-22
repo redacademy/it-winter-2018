@@ -15,19 +15,24 @@ get_header(); ?>
         <?php get_template_part( 'template-parts/content', 'page' ); ?>
         <div class="our-community">
           <div class="quote-entry">
-            <p><?php echo CFS() -> get ('entry_quote'); ?></p>
-            <p><?php echo CFS() -> get ('author_of_quote'); ?></p>
+            <p class="quote-hook"><?php echo CFS() -> get ('entry_quote'); ?></p>
+            <p class="quote-hook"> - <?php echo CFS() -> get ('author_of_quote'); ?></p>
           </div>
-          <p><?php echo CFS() -> get ('our_community'); ?></p>
+          <p class="community-block"><?php echo CFS() -> get ('our_community'); ?></p>
         </div>
 
       <?php endwhile; // End of the loop. ?>
-      <div class="havana-theatre">
-        <h1>havana theatre</h1>
-        <p>Located right in the heart of Vancouver’s famous Commercial Drive (1212 Commercial Drive), Havana offers a professional theatre space nestled in the back of a fantastic Cuban restaurant. Offering dinner, drinks, and a show, Havana is the ideal location for a night out on the town. With an award-winning kitchen and fantastic patio, Instant is proud to compliment your evening with our Sunday night performances.</p>
-      </div>
 
-      <!-- cfs get in variable - foreach -->
+<div class="community-gallery-images">
+<?php 
+$venues = CFS()->get( 'featured_venue_images' );
+foreach ( $venues as $venue ) :?>
+  <div class="community-gallery">
+    <?php echo '<img src=" ' . $venue['image'] . '">'; ?>
+  </div>
+<?php endforeach; ?> 
+</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

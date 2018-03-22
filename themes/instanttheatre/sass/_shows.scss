@@ -10,9 +10,11 @@
       }
     }
 
-    .tribe-events-related-events-title {
-      text-align: left;
-      margin-left: 10px;
+    .tribe-events-single-section {
+      @include desktop {
+        order: -1;
+        width: 50%;
+      }
     }
 
     .tribe-events-event-image {
@@ -28,13 +30,15 @@
       text-align: center;
       @include desktop {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
       }
       .tribe-events-content {
         margin-top: 20px;
         text-align: left;
         @include desktop {
-          order: -1;
+          order: -2;
           width: 50%;
         }
       }
@@ -42,7 +46,9 @@
       .buy-tickets-link-wrapper {
         @include desktop {
           width: 50%;
+          height: 30px;
           text-align: left;
+          order: -1;
         }
       }
     }
@@ -101,47 +107,6 @@
     abbr[title] {
       text-decoration: none;
     }
-
-    .tribe-related-events {
-      li {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid $color__lightgrey-border;
-        width: 95%;
-        padding: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        @include desktop {
-          width: 33%;
-        }
-        .tribe-related-events-thumbnail {
-          width: 100%;
-        }
-        .tribe-related-event-info {
-          text-align: left;
-          margin: 10px 0;
-          width: 100%;
-          h3 {
-            font-size: 16px;
-          }
-        }
-        .related-events-links {
-          margin-top: 20px;
-        }
-        a.learn-more-link {
-          margin-left: 20px;
-          text-decoration: underline!important;
-          &:hover {
-            color: $color__blue-brand;
-          }
-        }
-        .related-events-time-info {
-          p {
-            margin: 5px 0;
-          }
-        }
-      }
-    }
    }
 }
 
@@ -151,10 +116,181 @@
   border-radius: 4px;
   color: white;
   text-transform: uppercase;
+  text-decoration: none;
   &:link {
     color: white; 
   }
   &:hover {
     background-color: darken($color__red-brand, 10%);
   }
+}
+
+.shows-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 20px 0;
+    padding: 10px;
+    width: 30%;
+    border: 1px solid $color__lightgrey-border;
+    border-radius: 4px;
+    list-style-type: none;
+  }
+}
+
+//css for displaying events in grid view
+ul.tribe-events-grid-view {
+  margin: 0;
+  padding: 0;
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $color__lightgrey-border;
+    width: 95%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    @include desktop {
+      width: 33%;
+    }
+    .tribe-events-grid-thumbnail {
+      width: 100%;
+    }
+    h3 {
+      text-align: left;
+      margin: 5px;
+      font-size: 16px;
+    }
+    .tribe-related-event-info {
+      text-align: left;
+      margin: 10px 0;
+      width: 100%;
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .related-events-links {
+      text-align: left;
+      margin: 20px 0;
+    }
+    a.learn-more-link {
+      margin-left: 20px;
+      text-decoration: underline!important;
+      &:hover {
+        color: $color__blue-brand;
+      }
+    }
+    .related-events-venue-info {
+      text-align: left;
+    }
+    p {
+      margin: 5px 0;
+    }
+
+    .tribe-events-related-events-title {
+      text-align: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+//styling for shows list/calendar view
+ #calendar-area {
+   border: 1px solid $color__lightgrey-border;
+   border-radius: 4px;
+   padding: 30px;
+   display: flex;
+   justify-content: space-between;
+   .shows-calendar-date-area {
+     width: 25%;
+   }
+   .shows-taxonomy-filter-area {
+     width: 70%;
+   }
+   h3 {
+     text-align: left;
+     margin: 10px 0;
+   }
+   .widget-title {
+     display: none;
+   }
+   table {
+     margin: 0;
+     border: 1px solid $color__lightgrey-border;
+   }
+    .tribe-mini-calendar-wrapper {
+      .tribe-mini-calendar-nav {
+        td {
+          padding: 5px 0;
+          background: $color__yellow-brand;
+          border-color: $color__yellow-brand;
+        }
+        span {
+          color: black;
+          text-transform: none;
+        }
+        a.tribe-mini-calendar-nav-link {
+          span {
+            color: $color__red-brand;
+          }
+          &:visited {
+            color: $color__red-brand;
+          }
+        }
+      }
+      th {
+        background-color: $color__yellow-brand;
+        border-color: $color__yellow-brand;
+        color: black;
+      }
+      tbody {
+        td {
+          background-color: white;
+          border: 0;
+          a {
+            color: black;
+          }
+          .tribe-mini-calendar-no-event {
+            color: black;
+          }
+        }
+      }
+   } 
+
+   //overriding calendar's styles for dots underneath events
+   .tribe-mini-calendar .tribe-events-has-events div[id*='daynum-'] a:before {
+     background-color: $color__blue-brand;
+   }
+
+   //overriding hover state for calendar 
+   .tribe-mini-calendar td.tribe-events-has-events a:hover {
+     background: $color__blue-brand;
+   }
+ }
+
+ //JUST FOR TESTING REMOVE SOON!
+.site-content {
+  margin-top: 150px;
+}
+
+//isotope css for shows page 
+.show-item {
+  @include desktop {
+    width: 33%;
+  }
+}
+
+.show-events-page {
+  width: 100%!important;
+}
+
+.filter-shows-group {
+  display: flex;
 }

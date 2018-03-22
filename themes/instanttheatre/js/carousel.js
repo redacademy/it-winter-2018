@@ -10,7 +10,7 @@
     $('.studio-grid').flickity({
       prevNextButtons: false
     })
-    $('.community-mobile-carousel').flickity({
+    $('.community-gallery-images').flickity({
       prevNextButtons: false
     })
   }
@@ -26,14 +26,14 @@
         $('.studio-grid').flickity({
           prevNextButtons: false
         })
-        $('.community-mobile-carousel').flickity({
+        $('.community-gallery-images').flickity({
           prevNextButtons: false
         })
       } else {
         $('.hire-us-grid').flickity('destroy');
         $('.testimonial-carousel-container').flickity('destroy');
         $('.studio-grid').flickity('destroy');
-        $('.community-mobile-carousel').flickity('destroy');
+        $('.community-gallery-images').flickity('destroy');
       }
   });
 

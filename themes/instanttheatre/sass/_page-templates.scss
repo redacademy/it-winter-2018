@@ -466,22 +466,58 @@ body {
     }
   }
 }
-
-/*
+/*****************
 Our Community page
-*/
-
-.page-template-default {
-  .our-community {
-    p {
+*******************/
+.page-template-default{
+  .our-community{
+    @include desktop{
+      display: flex;
+      align-items: flex-start;
+      .community-block{
+        margin-top: 0px;
+      }
+    }
+    p{
       padding-left: 5%;
       padding-right: 5%;
     }
     .quote-entry {
       margin-bottom: 5%;
       padding: 0px;
-      background-color: $color__yellow-brand;
+      background-image: url("../../assets/images/yellow-wave-banner-background.png");
+      background-position: center;
+      @include desktop{
+        padding: 3%;
+        .quote-hook{
+          background-color: rgba(255, 255, 255, 0.8);
+          margin: 0px;
+        }
+      }
     }
+  }
+.community-gallery-images{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 2% 8%;
+    @include desktop{
+      margin: 0px 2% 5%;
+    }
+  .flickity-viewport{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .community-gallery{
+    width: 95%;
+    @include desktop{
+      width: 33%;
+    }
+    img{
+      height: 300px;
+      width: 95%;
+    }
+   }
   }
   .havana-theatre {
     h1 {
@@ -607,6 +643,17 @@ Our Community page
       margin: 0.5rem;
     }
   }
+
+  .no-classes {
+    border: 0.75rem solid #fff;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    background: #FFFBD2;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+
+  }
 }
 
 .schedule-header {
@@ -643,54 +690,65 @@ Our Community page
     &:nth-of-type(odd) {
       background: #FFFBD2
     }
-    &.class-schedule-header {
+
+    &:first-child {
       background: $color__yellow-brand;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 700;
     }
-    .class-schedule-row {
-      align-items: center;
-    }
+    
     p {
       padding: 0;
       margin: 0;
-      &:first-of-type,
-      &:last-of-type {
+    }
+
+    .cell {
+
+      text-align: left;
+
+      &:first-child,
+      &:last-child {
         width: 50%;
       }
       &:not(:first-child):not(:last-child) {
         display: none;
         @include desktop {
-          display: inline;
+          display: block;
         }
       }
       @include desktop {
-        &:nth-child(1) {
-          width: 30%;
-        }
-        &:nth-child(2) {
-          width: 10%;
-        }
-        &:nth-child(3) {
-          width: 12.5%;
-        }
-        &:nth-child(4) {
-          width: 12.5%;
-        }
-        &:nth-child(5) {
-          width: 10%;
-        }
-        &:nth-child(6) {
-          width: 10%;
-        }
-        &:nth-child(7) {
-          flex: 1 0 10%;
-        }
+        &:nth-child(1) { width: 25%;}
+        &:nth-child(2) { width: 12.5% ;}
+        &:nth-child(3) { width: 10% ;}
+        &:nth-child(4) { width: 12.5% ;}
+        &:nth-child(5) { width: 15% ;}
+        &:nth-child(6) { width: 10%;}
+        &:nth-child(7) { flex: 1 1 5%;}
       }
     }
-    .blue-btn {
+
+    a {
+      max-width: 125px;
+      padding: .5rem 1rem;
       margin: auto 0;
+
+      color: white;
       font-size: 1rem;
+      text-decoration: none;
+      text-shadow: none;
+
+      border-radius: 5px;
+      border: none;
+      background: $color__blue-brand;
+      box-shadow: none;
+      
+      &:hover {
+        background: darken($color__blue-brand, 10%);
+      }
+      &:active,
+      &:focus {
+        border: none;
+      }
     }
   }
 }

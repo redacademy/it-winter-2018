@@ -24,6 +24,9 @@ get_header(); ?>
 									'hide_empty' => 0
 									);
 				$terms = get_terms( $args );
+				usort( $terms, function($a, $b) {
+					return (($a < $b) && $a !== 'other') ? -1 : 1;
+				});
 			?>
 			<?php foreach ( $terms as $term ) : ?>
 				<div class="schedule-header">
@@ -55,30 +58,36 @@ get_header(); ?>
 				<?php // The Loop ?>
 				<?php if ( $classes->have_posts() ) : ?>
 					<ul class="class-schedule">
-						<li class="class-schedule-header">
-							<p>Class</p>
-							<p>Date</p>
-							<p>Time</p>
-							<p>Prerequisite</p>
-							<p>Instructor</p>
-							<p>Price</p>
-							<p>Register</p>
+						<li>
+							<p class="cell">Class</p>
+							<p class="cell">Date</p>
+							<p class="cell">Time</p>
+							<p class="cell">Prerequisite</p>
+							<p class="cell">Instructor</p>
+							<p class="cell">Price</p>
+							<p class="cell">Register</p>
 						</li>
 						<?php while ( $classes->have_posts() ) : $classes->the_post(); ?>
 						<?php //Retrieve Events Calendar Pro data
-							$event_day = tribe_get_start_date( $post->ID, false, 'l', null );
+							$event_day = tribe_get_start_date( $post->ID, false, 'D, M  jS', null );
 							$event_start_time = tribe_get_start_time( $post->ID, 'g:iA' );
 							$event_end_time = tribe_get_end_time( $post->ID, 'g:iA' );
 							$event_cost = tribe_get_cost( $post->ID );
+							$event_link = tribe_get_event_website_link( null, 'Class Details' );
 						?>
 						<?php //Retrieve Custom Fields data
 							$prerequisite = CFS()->get('prerequisite', false );
-							$instructor = CFS()->get('instructor', false );
+							$instructors = get_posts (
+								array(
+									'post_type' => 'post_people',
+									'post__in' => CFS()->get( 'instructor', false )
+								)
+							);
 						?>
-							<li class="class-schedule-row">
-								<p><?php echo $post->post_title; ?></p>
-								<p><?php echo $event_day; ?></p>
-								<p>
+							<li>
+								<p class="cell"><?php echo $post->post_title; ?></p>
+								<p class="cell"><?php echo $event_day; ?></p>
+								<p class="cell">
 									<?php 
 										if( $event_start_time !== $event_end_time ) {
 											echo $event_start_time.' - '.$event_end_time;
@@ -88,16 +97,20 @@ get_header(); ?>
 										 } 
 									?>
 								</p>
-								<p><?php echo $prerequisite; ?></p>
-								<p><?php echo $instructor; ?></p>
-								<p><?php echo $event_cost; ?></p>
-								<button class="blue-btn">Class Details</button>
+								<p class="cell"><?php echo $prerequisite; ?></p>
+								<div class="cell">
+									<?php foreach( $instructors as $instructor) : ?>
+									<?php echo '<div>' . $instructor->post_title . '</div>'; ?>
+									<?php endforeach; ?>
+								</div>
+								<p class="cell"><?php echo $event_cost; ?></p>
+								<?php echo $event_link; ?>
 							</li>
 						<?php endwhile; ?>	
 					</ul>
 				
 				<?php else: ?>
-					// no posts found
+					<p class="no-classes">No classes scheduled</p>
 				<?php endif; ?>
 			<?php
 				// Restore original Post Data

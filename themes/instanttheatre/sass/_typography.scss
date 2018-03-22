@@ -53,6 +53,7 @@ h2 {
   }
 }
 h3 {
+	font-size: 1rem;
 	font-weight: 500;
 	
 	@include desktop {
@@ -61,12 +62,12 @@ h3 {
 }
 
 .featured {
-	font-size: 2.5rem;
+	font-size: 1.375rem;
 	font-weight: 700;
 	text-transform: uppercase;
 	
 	@include desktop {
-    font-size: 1.375rem;
+    font-size: 2rem;
   }
 }
 
