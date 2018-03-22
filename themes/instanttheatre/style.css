@@ -1796,6 +1796,30 @@ Our Community page
   padding-right: 5%;
   padding-left: 5%; }
 
+/*****************
+tags archive page
+*******************/
+.tag-articles-containor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .tag-articles-containor .tags-article-wrapper {
+    margin: 0 1rem;
+    width: 300px;
+    background: white;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    padding: 1rem; }
+    .tag-articles-containor .tags-article-wrapper a {
+      text-decoration: none; }
+      .tag-articles-containor .tags-article-wrapper a:link, .tag-articles-containor .tags-article-wrapper a:visited {
+        color: black; }
+
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
