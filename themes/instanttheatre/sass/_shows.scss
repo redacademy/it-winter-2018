@@ -12,7 +12,7 @@
 
     .tribe-events-single-section {
       @include desktop {
-        order: -1;
+        order: 0;
         width: 50%;
       }
     }
@@ -294,4 +294,54 @@ ul.tribe-events-grid-view {
 
 .filter-shows-group {
   display: flex;
+}
+
+//styling for day view of shows
+
+#tribe-events-bar {
+  display: none;
+}
+
+.tribe-events-list .tribe-events-loop {
+  .tribe-events-event-image {
+    width: 100%;
+    float: none;
+  }
+  .tribe-events-category-shows, .tribe-events-category-classes {
+    text-align: left;
+  }
+}
+
+.tribe-events-day .tribe-events-day-time-slot h5 {
+  background-color: $color__blue-brand;
+}
+
+#tribe-events-content .tribe-events-list-event-description {
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: $color__blue-brand;
+    }
+    &::visited {
+      color: black;
+    }
+  }
+}
+
+//styling for cast members on show details page
+
+.show-cast-container {
+  .show-cast-item {
+    max-width: 100px;
+    margin: 0 20px;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    p {
+      text-align: center;
+    }
+  }
 }

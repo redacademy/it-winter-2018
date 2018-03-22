@@ -144,10 +144,10 @@ body {
       }
       .buy-tickets-button {
         margin-right: 2rem;
-        &:empty{
-          display:none;
+        &:empty {
+          display: none;
         }
-                .cfs-hyperlink {
+        .cfs-hyperlink {
           font-size: 1rem;
           text-decoration: none;
           &:link,
@@ -156,7 +156,6 @@ body {
           }
         }
       }
-    
     }
     .flickity-page-dots {
       top: 200px;
@@ -167,198 +166,445 @@ body {
     }
   }
 }
-  /***************************
+
+/***************************
  *PAGE: Cast and Instructor 
  ***************************/
-  .tax-role {
-    .content-area {
-      padding: 2rem 0;
-    }
+
+.tax-role {
+  .content-area {
+    padding: 2rem 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  .archive-title-wrapper {
+    text-align: center;
+  }
+  .filter-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  .person-gallery {
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .person-tile {
+    width: 265px;
+    height: auto;
+    padding: 1rem;
+    margin: 1.25% 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px #D5D5D5;
+    background: #fff;
     a {
-      text-decoration: none;
+      height: 100%;
+      width: 100%;
     }
-    .archive-title-wrapper {
-      text-align: center;
-    }
-    .filter-button-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-width: 1000px;
-      margin: 1rem auto;
-      text-align: center;
-    }
-    .person-gallery {
-      max-width: 1240px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .person-tile {
-      width: 265px;
-      height: auto;
-      padding: 1rem;
-      margin: 1.25% 0.5rem;
+    .person-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 235px;
+      margin: 0 auto;
       border-radius: 4px;
-      box-shadow: 0px 0px 8px #D5D5D5;
-      background: #fff;
-      a {
-        height: 100%;
-        width: 100%;
-      }
-      .person-image-wrapper {
-        position: relative;
-        width: 100%;
+      overflow: hidden;
+      @include desktop {
+        width: 235px;
         height: 235px;
         margin: 0 auto;
-        border-radius: 4px;
-        overflow: hidden;
-        @include desktop {
-          width: 235px;
-          height: 235px;
-          margin: 0 auto;
-        }
-        img {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: auto;
-          height: 100%;
-          max-width: none;
-          max-width: none;
-        }
       }
-      .person-tile-label {
-        padding: 0;
-        margin: 1rem 0 0;
-        color: #000;
-        font-size: 1.375rem;
-        text-align: center;
-        @include desktop {
-          font-size: 1.5rem;
-        }
-      }
-    }
-    .overlay {
-      visibility: hidden;
-      opacity: 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(255, 255, 255, 0.8);
-      overflow-x: hidden;
-      z-index: 1;
-      &.m-fadeIn {
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 0s linear 0s, opacity 300ms;
-      }
-    }
-    .overlay-content {
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-      padding: 1rem;
-      margin: 0;
-      background: #fff;
-      border: 1px solid #979797;
-      border-radius: 4px;
-      z-index: 1;
-      @include desktop {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        max-width: 800px;
+      img {
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: auto;
+        height: 100%;
+        max-width: none;
+        max-width: none;
       }
-      .portrait-wrapper {
-        width: 85vw;
-        height: 85vw;
-        margin: 1rem auto;
-        overflow: hidden;
+    }
+    .person-tile-label {
+      padding: 0;
+      margin: 1rem 0 0;
+      color: #000;
+      font-size: 1.375rem;
+      text-align: center;
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    overflow-x: hidden;
+    z-index: 1;
+    &.m-fadeIn {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s linear 0s, opacity 300ms;
+    }
+  }
+  .overlay-content {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 1rem;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    z-index: 1;
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      max-width: 800px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .portrait-wrapper {
+      width: 85vw;
+      height: 85vw;
+      margin: 1rem auto;
+      overflow: hidden;
+      @include desktop {
+        width: 20%;
+        height: 235px;
+        min-width: 235px;
+        margin: 0 1.25rem 0 0;
+        order: 1;
+      }
+      img {
+        width: auto;
+        height: 100%;
+        min-height: 100%;
+        max-height: none;
+        min-width: 100%;
+        max-width: none;
         @include desktop {
-          width: 20%;
-          height: 235px;
-          min-width: 235px;
-          margin: 0 1.25rem 0 0;
-          order: 1;
-        }
-        img {
-          width: auto;
-          height: 100%;
-          min-height: 100%;
-          max-height: none;
-          min-width: 100%;
-          max-width: none;
-          @include desktop {
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
-      .person-title {
-        display: block;
-        padding: 1rem 0;
-        text-align: center;
-        font-size: 1.375rem;
-        font-weight: 500;
-        background: $color__yellow-brand;
+    }
+    .person-title {
+      display: block;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 1.375rem;
+      font-weight: 500;
+      background: $color__yellow-brand;
+      @include desktop {
+        display: inline-block;
+        padding: 0;
+        margin-right: 1rem;
+        background: none;
+        vertical-align: text-bottom;
+        order: 2;
+      }
+    }
+    .social-links {
+      text-align: center;
+      @include desktop {
+        display: inline-block;
+        order: 3;
+      }
+      a[class|='social'] {
+        margin-right: 0.5rem;
+      }
+    }
+    .close-link {
+      position: relative;
+      top: 48px;
+      left: 16px;
+      @include desktop {
+        position: static;
+        text-align: right;
+        flex-grow: 1;
+        order: 4;
+      }
+    }
+    .person-description {
+      @include desktop {
+        width: 67%;
+        margin-top: -185px;
+        order: 5;
+      }
+    }
+  }
+}
+
+/***************************
+ *PAGE: Auditions 
+ ***************************/
+
+.auditions-containor {
+  background-color: $color__yellow-brand;
+  width: 100%;
+  .email-field {
+    max-width: 345px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto;
+    .fname,
+    .email-input {
+      width: 100%;
+    }
+  }
+}
+
+/***************************
+ *PAGE: Contact Us
+ ***************************/
+
+.page main .entry-content-contact-page {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  iframe {
+    display: none;
+  }
+  .contact-sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    display: flex;
+  }
+  span {
+    font-weight: 500;
+    width: 150px;
+  }
+}
+
+/**************
+  About-Us Page
+**************/
+
+.page-template-default {
+  .about-us-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    p {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 1.125rem;
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    }
+    h1 {
+      text-transform: capitalize;
+    }
+    h2 {
+      text-transform: capitalize;
+    }
+    .our-story {
+      text-align: left;
+      padding: 0px;
+      @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .our-story-text {
+        padding: 2%;
         @include desktop {
-          display: inline-block;
           padding: 0;
-          margin-right: 1rem;
-          background: none;
-          vertical-align: text-bottom;
-          order: 2;
+          padding-right: 5%;
         }
       }
-      .social-links {
+    }
+    .nikolai-pic {
+      width: 75%;
+      border-radius: 170px;
+      @include desktop {
+        width: 25%;
+        border-radius: 180px;
+      }
+    }
+    .nikolai-experience {
+      text-align: left;
+      margin-bottom: 20px;
+      padding: 2%;
+      @include desktop {
+        display: flex;
+      }
+      h2 {
         text-align: center;
+      }
+      .improv-experience {
         @include desktop {
-          display: inline-block;
-          order: 3;
-        }
-        a[class|='social'] {
-          margin-right: 0.5rem;
+          padding-right: 2%;
         }
       }
-      .close-link {
-        position: relative;
-        top: 48px;
-        left: 16px;
+      .acting-experience {
         @include desktop {
-          position: static;
-          text-align: right;
-          flex-grow: 1;
-          order: 4;
+          padding-left: 2%;
         }
       }
-      .person-description {
-        @include desktop {
-          width: 67%;
-          margin-top: -185px;
-          order: 5;
+    }
+    #imdb-button {
+      text-transform: uppercase;
+    }
+  }
+}
+
+/*****************
+Our Community page
+*******************/
+
+.page-template-default {
+  .our-community {
+    @include desktop {
+      display: flex;
+      align-items: flex-start;
+      .community-block {
+        margin-top: 0px;
+      }
+    }
+    p {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .quote-entry {
+      margin-bottom: 5%;
+      padding: 0px;
+      background-image: url("../../assets/images/yellow-wave-banner-background.png");
+      background-position: center;
+      @include desktop {
+        padding: 3%;
+        .quote-hook {
+          background-color: rgba(255, 255, 255, 0.8);
+          margin: 0px;
         }
       }
     }
   }
-  /***************************
- *PAGE: Auditions 
- ***************************/
+  .community-gallery-images {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 2% 8%;
+    @include desktop {
+      margin: 0px 2% 5%;
+    }
+    .flickity-viewport {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .community-gallery {
+      width: 95%;
+      @include desktop {
+        width: 33%;
+      }
+      img {
+        height: 300px;
+        width: 95%;
+      }
+    }
+  }
+  .havana-theatre {
+    h1 {
+      text-transform: capitalize;
+    }
+    p {
+      padding-right: 5%;
+      padding-left: 5%;
+    }
+  } //havana theatre
+}
+
+@media screen and (min-width: $mobile_break) {
+  .what-is-improv {
+    padding: 2rem;
+    .what-is-improv-containor {
+      background: rgba(255, 255, 255, 0.8);
+    }
+    .improv-button-set {
+      margin: 0 auto;
+      width: 40%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  .upcoming-shows,
+  .upcoming-classes {
+    justify-content: space-between;
+  }
+  .banner-carousel {
+    padding: 1rem;
+    border: 1px solid gray;
+    height: 500px;
+    .flickity-viewport {
+      max-height: 466px;
+    }
+    .banner-cell {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .banner-thumbnail {
+        // max-width: none;
+        height: 100%;
+        margin-right: 2rem;
+        img {
+          height: 100%;
+          max-width: none;
+        }
+      }
+      .banner-text-info {
+        min-width: 400px;
+        max-width: 400px;
+        padding: 0;
+      }
+    }
+    .flickity-page-dots {
+      top: 100%;
+      z-index: 0;
+    }
+    .flickity-prev-next-button {
+      top: 250px;
+    }
+  }
   .auditions-containor {
     background-color: $color__yellow-brand;
     width: 100%;
+    padding: 2rem;
+    margin-bottom: 3.75rem;
     .email-field {
-      max-width: 345px;
+      max-width: 570px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -370,21 +616,16 @@ body {
       }
     }
   }
-  /***************************
- *PAGE: Contact Us
- ***************************/
   .page main .entry-content-contact-page {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
+    justify-content: center;
     iframe {
-      display: none;
+      display: block;
     }
     .contact-sidebar {
-      width: 100%;
+      padding-left: 3rem;
+      width: auto;
       display: flex;
-      justify-content: center;
-      line-height: 2rem;
+      justify-content: flex-start;
       ul {
         margin: 0;
         padding: 0;
@@ -399,362 +640,185 @@ body {
     }
     span {
       font-weight: 500;
-      width: 150px;
+      width: 200px;
     }
   }
-  /**************
-  About-Us Page
-**************/
-  .page-template-default {
-    .about-us-page {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 5%;
-      p {
-        font-weight: bold;
-        text-transform: capitalize;
-        font-size: 1.125rem;
-        @include desktop {
-          font-size: 1.5rem;
-        }
-      }
-      h1 {
-        text-transform: capitalize;
-      }
-      h2 {
-        text-transform: capitalize;
-      }
-      .our-story {
-        text-align: left;
-        padding: 0px;
-        @include desktop {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-        .our-story-text {
-          padding: 2%;
-          @include desktop {
-            padding: 0;
-            padding-right: 5%;
-          }
-        }
-      }
-      .nikolai-pic {
-        width: 75%;
-        border-radius: 170px;
-        @include desktop {
-          width: 25%;
-          border-radius: 180px;
-        }
-      }
-      .nikolai-experience {
-        text-align: left;
-        margin-bottom: 20px;
-        padding: 2%;
-        @include desktop {
-          display: flex;
-        }
-        h2 {
-          text-align: center;
-        }
-        .improv-experience {
-          @include desktop {
-            padding-right: 2%;
-          }
-        }
-        .acting-experience {
-          @include desktop {
-            padding-left: 2%;
-          }
-        }
-      }
-      #imdb-button {
-        text-transform: uppercase;
-      }
-    }
-  }
-  /*****************
-Our Community page
-*******************/
-  .page-template-default {
-    .our-community {
-      @include desktop {
-        display: flex;
-        align-items: flex-start;
-        .community-block {
-          margin-top: 0px;
-        }
-      }
-      p {
-        padding-left: 5%;
-        padding-right: 5%;
-      }
-      .quote-entry {
-        margin-bottom: 5%;
-        padding: 0px;
-        background-image: url("../../assets/images/yellow-wave-banner-background.png");
-        background-position: center;
-        @include desktop {
-          padding: 3%;
-          .quote-hook {
-            background-color: rgba(255, 255, 255, 0.8);
-            margin: 0px;
-          }
-        }
-      }
-    }
-    .community-gallery-images {
-      display: flex;
-      justify-content: space-between;
-      margin: 0px 2% 8%;
-      @include desktop {
-        margin: 0px 2% 5%;
-      }
-      .flickity-viewport {
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      .community-gallery {
-        width: 95%;
-        @include desktop {
-          width: 33%;
-        }
-        img {
-          height: 300px;
-          width: 95%;
-        }
-      }
-    }
-    .havana-theatre {
-      h1 {
-        text-transform: capitalize;
-      }
-      p {
-        padding-right: 5%;
-        padding-left: 5%;
-      }
-    } //havana theatre
-  }
-  @media screen and (min-width: $mobile_break) {
-    .what-is-improv {
-      padding: 2rem;
-      .what-is-improv-containor {
-        background: rgba(255, 255, 255, 0.8);
-      }
-      .improv-button-set {
-        margin: 0 auto;
-        width: 40%;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-    }
-    .upcoming-shows,
-    .upcoming-classes {
-      justify-content: space-between;
-    }
-    .banner-carousel {
-      padding: 1rem;
-      border: 1px solid gray;
-      height: 500px;
-      .flickity-viewport {
-        max-height: 466px;
-      }
-      .banner-cell {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        .banner-thumbnail {
-          // max-width: none;
-          height: 100%;
-          margin-right: 2rem;
-          img {
-            height: 100%;
-            max-width: none;
-          }
-        }
-        .banner-text-info {
-          min-width: 400px;
-          max-width: 400px;
-          padding: 0;
-        }
-      }
-      .flickity-page-dots {
-        top: 100%;
-        z-index: 0;
-      }
-      .flickity-prev-next-button {
-        top: 250px;
-      }
-    }
-    .auditions-containor {
-      background-color: $color__yellow-brand;
-      width: 100%;
-      padding: 2rem;
-      margin-bottom: 3.75rem;
-      .email-field {
-        max-width: 570px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        margin: 0 auto;
-        .fname,
-        .email-input {
-          width: 100%;
-        }
-      }
-    }
-    .page main .entry-content-contact-page {
-      justify-content: center;
-      iframe {
-        display: block;
-      }
-      .contact-sidebar {
-        padding-left: 3rem;
-        width: auto;
-        display: flex;
-        justify-content: flex-start;
-        ul {
-          margin: 0;
-          padding: 0;
-        }
-      }
-      p {
-        margin: 0;
-      }
-      li {
-        list-style: none;
-        display: flex;
-      }
-      span {
-        font-weight: 500;
-        width: 200px;
-      }
-    }
-  }
-  /*************************
+}
+
+/*************************
  *PAGE: List of Classes
  *************************/
-  .list-of-classes {
-    .page-header {
-      display: flex;
-      justify-content: center;
-      ul {
-        display: none;
-      }
-      h1.main-heading {
-        margin: 0.5rem;
-      }
+
+.list-of-classes {
+  .page-header {
+    display: flex;
+    justify-content: center;
+    ul {
+      display: none;
     }
-    .no-classes {
-      border: 0.75rem solid #fff;
-      padding: 0.5rem 0;
-      border-radius: 4px;
-      background: #FFFBD2;
-      text-align: center;
-      font-size: 1.125rem;
-      font-weight: 500;
+    h1.main-heading {
+      margin: 0.5rem;
     }
   }
-  .schedule-header {
+  .no-classes {
+    border: 0.75rem solid #fff;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    background: #FFFBD2;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+  .schedule-header-logo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    img {
+      height: 125px;
+      width: auto;
+    }
+  }
+  .schedule-header-text {
+    max-width: 1000px;
+    text-align: left;
+  }
+}
+
+.class-schedule {
+  width: 100%;
+  margin: 0 0 3rem;
+  padding: 0;
+  @include desktop {
+    border: 0.75rem solid #fff;
+    border-radius: 4px;
+  }
+  li {
     display: flex;
     align-items: center;
-    .schedule-header-logo {
-      display: flex;
-      flex-direction: column;
-      margin: 0 2rem;
-      img {
-        height: 125px;
-        width: auto;
-      }
+    padding: 0.5rem 0;
+    background: #fff;
+    &:nth-of-type(odd) {
+      background: #FFFBD2
     }
-    .schedule-header-text {
-      max-width: 1000px;
+    &:first-child {
+      background: $color__yellow-brand;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    .cell {
       text-align: left;
-    }
-  }
-  .class-schedule {
-    width: 100%;
-    margin: 0 0 3rem;
-    padding: 0;
-    @include desktop {
-      border: 0.75rem solid #fff;
-      border-radius: 4px;
-    }
-    li {
-      display: flex;
-      align-items: center;
-      padding: 0.5rem 0;
-      background: #fff;
-      &:nth-of-type(odd) {
-        background: #FFFBD2
+      &:first-child,
+      &:last-child {
+        width: 50%;
       }
-      &:first-child {
-        background: $color__yellow-brand;
-        font-size: 1rem;
-        font-weight: 700;
-      }
-      p {
-        padding: 0;
-        margin: 0;
-      }
-      .cell {
-        text-align: left;
-        &:first-child,
-        &:last-child {
-          width: 50%;
-        }
-        &:not(:first-child):not(:last-child) {
-          display: none;
-          @include desktop {
-            display: block;
-          }
-        }
+      &:not(:first-child):not(:last-child) {
+        display: none;
         @include desktop {
-          &:nth-child(1) {
-            width: 25%;
-          }
-          &:nth-child(2) {
-            width: 12.5%;
-          }
-          &:nth-child(3) {
-            width: 10%;
-          }
-          &:nth-child(4) {
-            width: 12.5%;
-          }
-          &:nth-child(5) {
-            width: 15%;
-          }
-          &:nth-child(6) {
-            width: 10%;
-          }
-          &:nth-child(7) {
-            flex: 1 1 5%;
-          }
+          display: block;
         }
       }
-      a {
-        max-width: 125px;
-        padding: .5rem 1rem;
-        margin: auto 0;
-        color: white;
-        font-size: 1rem;
-        text-decoration: none;
-        text-shadow: none;
-        border-radius: 5px;
-        border: none;
-        background: $color__blue-brand;
-        box-shadow: none;
-        &:hover {
-          background: darken($color__blue-brand, 10%);
+      @include desktop {
+        &:nth-child(1) {
+          width: 25%;
         }
-        &:active,
-        &:focus {
-          border: none;
+        &:nth-child(2) {
+          width: 12.5%;
+        }
+        &:nth-child(3) {
+          width: 10%;
+        }
+        &:nth-child(4) {
+          width: 12.5%;
+        }
+        &:nth-child(5) {
+          width: 15%;
+        }
+        &:nth-child(6) {
+          width: 10%;
+        }
+        &:nth-child(7) {
+          flex: 1 1 5%;
         }
       }
     }
+    a {
+      max-width: 125px;
+      padding: .5rem 1rem;
+      margin: auto 0;
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      text-shadow: none;
+      border-radius: 5px;
+      border: none;
+      background: $color__blue-brand;
+      box-shadow: none;
+      &:hover {
+        background: darken($color__blue-brand, 10%);
+      }
+      &:active,
+      &:focus {
+        border: none;
+      }
+    }
   }
+}
+
+
+/*********************
+ERROR404
+*********************/
+
+.error404 {
+  .error-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    .page-title {
+      font-weight: normal;
+      font-size: 50px;
+      margin-bottom: 0px;
+    }
+  }
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include desktop {
+      align-items: flex-start;
+      width: 60%;
+    }
+    p {
+      text-align: center;
+      padding: 2%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      @include desktop {
+        text-align: left;
+        padding-left: 0px;
+      }
+    }
+  }
+  .blue-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: .7rem 2rem;
+    &:visited {
+      color: #fff;
+    }
+  }
+}

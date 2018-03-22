@@ -557,7 +557,8 @@ input[type="submit"] {
   width: 100%;
   margin-top: 60px;
   height: 60px;
-  background-color: #FFEC00; }
+  background-color: #FFEC00;
+  z-index: 10; }
   @media (min-width: 480px) {
     .main-navigation {
       max-width: 1440px; } }
@@ -738,7 +739,8 @@ input[type="submit"] {
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-transition: .5s;
-    transition: .5s; }
+    transition: .5s;
+    z-index: 10; }
     .front-page .main-navigation a {
       position: relative; }
     .front-page .main-navigation .selector-nav {
@@ -847,7 +849,8 @@ input[type="submit"] {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-top: 50px; }
+    margin-top: 50px;
+    z-index: 10; }
     .main-navigation .home-banner-clickables {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2004,6 +2007,68 @@ Our Community page
       .class-schedule li a:active, .class-schedule li a:focus {
         border: none; }
 
+/*********************
+ERROR404
+*********************/
+.error404 .error-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 100px; }
+  .error404 .error-404 .page-title {
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 0px; }
+
+.error404 .page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 480px) {
+    .error404 .page-content {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      width: 60%; } }
+  .error404 .page-content p {
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-top: 0px; }
+    @media (min-width: 480px) {
+      .error404 .page-content p {
+        text-align: left;
+        padding-left: 0px; } }
+
+.error404 .blue-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: .7rem 2rem; }
+  .error404 .blue-btn:visited {
+    color: #fff; }
+
 .page {
   text-align: center; }
   .page h1 {
@@ -2497,9 +2562,9 @@ http://flickity.metafizzy.co
         font-size: 2em; } }
   @media (min-width: 480px) {
     .single-tribe_events .entry-content .tribe-events-single-section {
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1;
+      -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 0;
+              order: 0;
       width: 50%; } }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
@@ -2744,3 +2809,33 @@ ul.tribe-events-grid-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+#tribe-events-bar {
+  display: none; }
+
+.tribe-events-list .tribe-events-loop .tribe-events-event-image {
+  width: 100%;
+  float: none; }
+
+.tribe-events-list .tribe-events-loop .tribe-events-category-shows, .tribe-events-list .tribe-events-loop .tribe-events-category-classes {
+  text-align: left; }
+
+.tribe-events-day .tribe-events-day-time-slot h5 {
+  background-color: #00B6CB; }
+
+#tribe-events-content .tribe-events-list-event-description a {
+  text-decoration: underline; }
+  #tribe-events-content .tribe-events-list-event-description a:hover {
+    color: #00B6CB; }
+  #tribe-events-content .tribe-events-list-event-description a::visited {
+    color: black; }
+
+.show-cast-container .show-cast-item {
+  max-width: 100px;
+  margin: 0 20px; }
+  .show-cast-container .show-cast-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+  .show-cast-container .show-cast-item p {
+    text-align: center; }
