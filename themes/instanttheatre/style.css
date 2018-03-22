@@ -1289,6 +1289,9 @@ body {
     opacity: 1; }
 
 /* Front page */
+.learn-more-link {
+  text-transform: capitalize; }
+
 .carousel-cell {
   margin-top: 3.75rem;
   width: 1240px;
