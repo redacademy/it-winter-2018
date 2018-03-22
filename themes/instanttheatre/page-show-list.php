@@ -10,13 +10,40 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<!-- outputs event calendar shortcode onto page -->
-			<?php //echo do_shortcode('[tribe_events view="month"]') ?>
+			
 
 			<?php if ( is_active_sidebar( 'shows-calendar' ) ) : ?>
 				<div id="calendar-area" class="shows-calendar-area widget-area" role="complementary">
-					<?php dynamic_sidebar( 'shows-calendar' ); ?>
-				</div><!-- #primary-sidebar -->
+					<div class="shows-calendar-date-area">
+						<h3>Select a Date:</h3>
+						<?php dynamic_sidebar( 'shows-calendar' ); ?>
+					</div><!-- end of shows-calendar-date-area -->
+
+					<div class="shows-taxonomy-filter-area">
+
+						<?php 
+							$terms = get_terms( array (
+								'taxonomy' => 'show_genre',
+								'hide_empty' => 0,
+							));
+
+							if ( !empty($terms) ) :
+						?>
+								<div class="filter-shows-group">
+									<button class="filter-btn selected" data-filter="*">Show All</button>
+									<h3>Genres:</h3>
+									<?php foreach ( $terms as $term ) : ?>
+										<button class="filter-btn" data-filter=".<?php echo $term->slug; ?>">
+											<?php echo $term->name; ?>
+										</button>
+									<?php endforeach; ?>
+								</div><!-- end of filter-button-group -->
+							
+					
+							<?php endif; ?>
+
+					</div><!-- end of shows-taxonomy-filter-area -->
+				</div><!-- #calendar-area -->
 			<?php endif; ?>
 
 			<div class="shows-grid">
@@ -26,7 +53,6 @@ get_header(); ?>
 					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 					$args = array(
 						'post_type'              => 'tribe_events',
-						'posts_per_page'         => '9',
 						'order'                  => 'DESC',
 						'paged'									 => $paged,
 						'tax_query' => array(
@@ -40,12 +66,23 @@ get_header(); ?>
 
 					<?php $show_query = new WP_Query( $args ); ?>
 
-					<ul class="tribe-events-grid-view">
+					<ul class="tribe-events-grid-view show-events-page">
 					<?php if ( $show_query->have_posts() ) { ?>
 						<?php 
 						while ( $show_query->have_posts() ) { ?>
-							<li>
+				
 								<?php $show_query->the_post(); ?>
+								
+								<!-- grabbing genres associated with show to add to div class for isotope -->
+								<?php 
+									$show_genres = get_the_terms( $post->ID, 'show_genre' );
+									$genre_list = '';
+									foreach ( $show_genres as $genre) {
+										$genre_list .= $genre->slug . ' ';
+									}
+								?>
+
+								<li class="show-item <?php echo $genre_list; ?>">
 								<?php 
 								$thumb = ( has_post_thumbnail( $post->ID ) ) ? get_the_post_thumbnail( $post->ID, 'large' ) : '<img src="' . esc_url( trailingslashit( Tribe__Events__Pro__Main::instance()->pluginUrl ) . 'src/resources/images/tribe-related-events-placeholder.png' ) . '" alt="' . esc_attr( get_the_title( $post->ID ) ) . '" />';
 								?>

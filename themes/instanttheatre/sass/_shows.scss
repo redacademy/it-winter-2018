@@ -142,7 +142,7 @@
 }
 
 //css for displaying events in grid view
-.site-main ul.tribe-events-grid-view {
+ul.tribe-events-grid-view {
   margin: 0;
   padding: 0;
   @include desktop {
@@ -206,6 +206,14 @@
    border: 1px solid $color__lightgrey-border;
    border-radius: 4px;
    padding: 30px;
+   display: flex;
+   .shows-calendar-date-area {
+     width: 25%;
+   }
+   h3 {
+     text-align: left;
+     margin: 10px 0;
+   }
    .widget-title {
      display: none;
    }
@@ -214,7 +222,6 @@
      border: 1px solid $color__lightgrey-border;
    }
     .tribe-mini-calendar-wrapper {
-      width: 25%;
       .tribe-mini-calendar-nav {
         td {
           padding: 5px 0;
@@ -257,9 +264,25 @@
    .tribe-mini-calendar .tribe-events-has-events div[id*='daynum-'] a:before {
      background-color: $color__blue-brand;
    }
+
+   //overriding hover state for calendar 
+   .tribe-mini-calendar td.tribe-events-has-events a:hover {
+     background: $color__blue-brand;
+   }
  }
 
  //JUST FOR TESTING REMOVE SOON!
 .site-content {
   margin-top: 150px;
+}
+
+//isotope css for shows page 
+.show-item {
+  @include desktop {
+    width: 33%;
+  }
+}
+
+.show-events-page {
+  width: 100%!important;
 }
