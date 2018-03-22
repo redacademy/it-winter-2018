@@ -121,6 +121,70 @@ echo '<a href="'.$values[0].'" target="'.$values[2].'">'.$values[1].'</a>';
 </div>
 		</section>
 
+		<!-- ///////////////////////////shows///////////////////////// -->
+
+		<!-- // Grab the 5 next "party" events (by tag) -->
+<?php $events = array(
+		'post_type' => 'tribe_events',
+    'eventDisplay'   => 'list',
+    'posts_per_page' => 3,
+		'tax_query'=> array(
+			array(
+					'taxonomy' => 'tribe_events_cat',
+					'field' => 'slug',
+					'terms' => 'shows'
+			)
+	)
+
+);
+?>
+
+<?php $shows = new WP_Query( $events ); /* $args set above*/ ?>
+
+<?php if ( $shows->have_posts() ) : ?>
+<div class="show-containor">
+	 <?php while ( $shows->have_posts() ) : $shows->the_post(); ?>
+	 
+
+    <div class="show-thumbnail">
+	 <?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail( 'large' ); ?>
+				<?php endif; ?>
+				
+				<div class="entry-meta">
+			<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> 
+			<!-- / -->
+			<?php echo $shows->post_content; ?>
+			 <?php 
+			 
+			//  inhabitent_posted_by(); 
+			 ?>
+			
+			<h1><?php the_title(); ?></h1>
+		<p><?php echo tribe_get_start_date( $post, true, 'l, F j' ); ?></p>
+				 <p><?php echo tribe_get_start_date( $post, true, 'h:i A' ); ?></p>
+				 <?php	
+		echo tribe_get_venue();
+		echo tribe_get_cost();
+?>
+		<a href="<?php echo tribe_get_event_website_url( $post ); ?>" class="buy-tickets-button">Buy Tickets</a>
+       <a href="<?php echo tribe_get_event_link( $post ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
+		
+			<a class="buttonReadMore" href="<?php the_permalink();?>"> read more</a>
+		</div><!-- .entry-meta -->
+
+
+</div><!-- .journal-wrapper -->
+	 <?php endwhile; ?>
+
+</div><!-- .journal-blocks -->
+
+<?php the_posts_navigation(); ?>
+   <?php wp_reset_postdata(); ?>
+<?php else : ?>
+      <h2>Nothing found!</h2>
+<?php endif; ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
