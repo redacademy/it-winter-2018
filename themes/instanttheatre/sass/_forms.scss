@@ -8,6 +8,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+	text-transform: uppercase;
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
