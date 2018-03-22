@@ -286,7 +286,8 @@ a {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  text-transform: capitalize; }
 
 h1 {
   font-size: 1.375rem;
@@ -439,6 +440,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  text-transform: uppercase;
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
@@ -1360,7 +1362,8 @@ body {
 
 .banner-carousel {
   margin-top: 3.75rem;
-  max-width: 1240px; }
+  max-width: 1240px;
+  background: #fff; }
   .banner-carousel .banner-cell {
     width: 100%; }
     .banner-carousel .banner-cell .banner-thumbnail {
@@ -1372,17 +1375,24 @@ body {
     .banner-carousel .banner-cell .banner-text-info {
       padding: 2rem;
       text-align: left; }
-      .banner-carousel .banner-cell .banner-text-info a {
-        font-size: 2rem;
-        font-weight: 500;
+      .banner-carousel .banner-cell .banner-text-info h2 a {
         text-decoration: none; }
-        .banner-carousel .banner-cell .banner-text-info a:link, .banner-carousel .banner-cell .banner-text-info a:visited {
-          color: #000; }
-  .banner-carousel .flickity-page-dots {
-    top: 200px;
-    height: 10px; }
-  .banner-carousel .flickity-prev-next-button {
-    top: 100px; }
+        .banner-carousel .banner-cell .banner-text-info h2 a:link, .banner-carousel .banner-cell .banner-text-info h2 a:visited {
+          color: black; }
+      .banner-carousel .banner-cell .banner-text-info .buy-tickets-button {
+        margin-right: 2rem; }
+        .banner-carousel .banner-cell .banner-text-info .buy-tickets-button:empty {
+          display: none; }
+        .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink {
+          font-size: 1rem;
+          text-decoration: none; }
+          .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink:link, .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink:visited {
+            color: white; }
+    .banner-carousel .banner-cell .flickity-page-dots {
+      top: 200px;
+      height: 10px; }
+    .banner-carousel .banner-cell .flickity-prev-next-button {
+      top: 100px; }
 
 /***************************
  *PAGE: Cast and Instructor 
