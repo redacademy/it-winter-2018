@@ -599,6 +599,17 @@ Our Community page
       margin: 0.5rem;
     }
   }
+
+  .no-classes {
+    border: 0.75rem solid #fff;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    background: #FFFBD2;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+
+  }
 }
 
 .schedule-header {
@@ -642,22 +653,23 @@ Our Community page
       background: #FFFBD2
     }
 
-    &.class-schedule-header {
+    &:first-child {
       background: $color__yellow-brand;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 700;
-    }
-
-    .class-schedule-row {
-      align-items: center;
     }
     
     p {
       padding: 0;
       margin: 0;
+    }
 
-      &:first-of-type,
-      &:last-of-type {
+    .cell {
+
+      text-align: left;
+
+      &:first-child,
+      &:last-child {
         width: 50%;
       }
 
@@ -665,26 +677,44 @@ Our Community page
         display: none;
 
         @include desktop {
-          display: inline;
+          display: block;
         }
       }
 
       @include desktop {
-        &:nth-child(1) { width: 30%;}
-        &:nth-child(2) { width: 10% ;}
-        &:nth-child(3) { width: 12.5% ;}
+        &:nth-child(1) { width: 25%;}
+        &:nth-child(2) { width: 12.5% ;}
+        &:nth-child(3) { width: 10% ;}
         &:nth-child(4) { width: 12.5% ;}
-        &:nth-child(5) { width: 10% ;}
-        &:nth-child(6) { width: 10% ;}
-        &:nth-child(7) { flex: 1 0 10%;}
+        &:nth-child(5) { width: 15% ;}
+        &:nth-child(6) { width: 10%;}
+        &:nth-child(7) { flex: 1 1 5%;}
       }
     }
 
-    .blue-btn {
+    a {
+      max-width: 125px;
+      padding: .5rem 1rem;
       margin: auto 0;
-      font-size: 1rem;
-    }
 
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      text-shadow: none;
+
+      border-radius: 5px;
+      border: none;
+      background: $color__blue-brand;
+      box-shadow: none;
+      
+      &:hover {
+        background: darken($color__blue-brand, 10%);
+      }
+      &:active,
+      &:focus {
+        border: none;
+      }
+    }
   }
 
 }
