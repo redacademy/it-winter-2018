@@ -10,8 +10,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<!-- outputs event calendar shortcode onto page -->
+			<?php //echo do_shortcode('[tribe_events view="month"]') ?>
 
-			<?php echo do_shortcode('[tribe_events view="month"]') ?>
+			<?php if ( is_active_sidebar( 'shows-calendar' ) ) : ?>
+				<div id="calendar-area" class="shows-calendar-area widget-area" role="complementary">
+					<?php dynamic_sidebar( 'shows-calendar' ); ?>
+				</div><!-- #primary-sidebar -->
+			<?php endif; ?>
 
 			<div class="shows-grid">
 

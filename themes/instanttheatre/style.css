@@ -2595,3 +2595,42 @@ http://flickity.metafizzy.co
     .site-main ul.tribe-events-grid-view li .tribe-events-related-events-title {
       text-align: left;
       margin-left: 10px; }
+
+#calendar-area {
+  border: 1px solid #D5D5D5;
+  border-radius: 4px;
+  padding: 30px; }
+  #calendar-area .widget-title {
+    display: none; }
+  #calendar-area table {
+    margin: 0;
+    border: 1px solid #D5D5D5; }
+  #calendar-area .tribe-mini-calendar-wrapper {
+    width: 25%; }
+    #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar-nav td {
+      padding: 5px 0;
+      background: #FFEC00;
+      border-color: #FFEC00; }
+    #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar-nav span {
+      color: black;
+      text-transform: none; }
+    #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar-nav a.tribe-mini-calendar-nav-link span {
+      color: #ED1651; }
+    #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar-nav a.tribe-mini-calendar-nav-link:visited {
+      color: #ED1651; }
+    #calendar-area .tribe-mini-calendar-wrapper th {
+      background-color: #FFEC00;
+      border-color: #FFEC00;
+      color: black; }
+    #calendar-area .tribe-mini-calendar-wrapper tbody td {
+      background-color: white;
+      border: 0; }
+      #calendar-area .tribe-mini-calendar-wrapper tbody td a {
+        color: black; }
+      #calendar-area .tribe-mini-calendar-wrapper tbody td .tribe-mini-calendar-no-event {
+        color: black; }
+  #calendar-area .tribe-mini-calendar .tribe-events-has-events div[id*='daynum-'] a:before {
+    background-color: #00B6CB; }
+
+.site-content {
+  margin-top: 150px; }

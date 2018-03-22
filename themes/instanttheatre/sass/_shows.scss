@@ -200,3 +200,66 @@
     }
   }
 }
+
+//styling for shows list/calendar view
+ #calendar-area {
+   border: 1px solid $color__lightgrey-border;
+   border-radius: 4px;
+   padding: 30px;
+   .widget-title {
+     display: none;
+   }
+   table {
+     margin: 0;
+     border: 1px solid $color__lightgrey-border;
+   }
+    .tribe-mini-calendar-wrapper {
+      width: 25%;
+      .tribe-mini-calendar-nav {
+        td {
+          padding: 5px 0;
+          background: $color__yellow-brand;
+          border-color: $color__yellow-brand;
+        }
+        span {
+          color: black;
+          text-transform: none;
+        }
+        a.tribe-mini-calendar-nav-link {
+          span {
+            color: $color__red-brand;
+          }
+          &:visited {
+            color: $color__red-brand;
+          }
+        }
+      }
+      th {
+        background-color: $color__yellow-brand;
+        border-color: $color__yellow-brand;
+        color: black;
+      }
+      tbody {
+        td {
+          background-color: white;
+          border: 0;
+          a {
+            color: black;
+          }
+          .tribe-mini-calendar-no-event {
+            color: black;
+          }
+        }
+      }
+   } 
+
+   //overriding calendar's styles for dots underneath events
+   .tribe-mini-calendar .tribe-events-has-events div[id*='daynum-'] a:before {
+     background-color: $color__blue-brand;
+   }
+ }
+
+ //JUST FOR TESTING REMOVE SOON!
+.site-content {
+  margin-top: 150px;
+}
