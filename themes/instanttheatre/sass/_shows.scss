@@ -12,7 +12,7 @@
 
     .tribe-events-single-section {
       @include desktop {
-        order: 0;
+        order: -1;
         width: 50%;
       }
     }
@@ -29,6 +29,7 @@
       margin: 20px 0;
       text-align: center;
       @include desktop {
+        display: block;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -56,6 +57,12 @@
     .tribe-events-start-time {
       display: flex;
       align-items: center;
+    }
+
+    .tribe-events-cal-links {
+      @include desktop {
+        width: 50%;
+      }
     }
 
     .tribe-event-tags {
@@ -345,3 +352,17 @@ ul.tribe-events-grid-view {
     }
   }
 }
+
+.mobile-view-hidden {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
+.desktop-view-hidden {
+  @include desktop {
+    display: none;
+  }
+}
+

@@ -2565,9 +2565,9 @@ http://flickity.metafizzy.co
         font-size: 2em; } }
   @media (min-width: 480px) {
     .single-tribe_events .entry-content .tribe-events-single-section {
-      -webkit-box-ordinal-group: 1;
-          -ms-flex-order: 0;
-              order: 0;
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
       width: 50%; } }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
@@ -2579,6 +2579,7 @@ http://flickity.metafizzy.co
     text-align: center; }
     @media (min-width: 480px) {
       .single-tribe_events .entry-content .tribe_events {
+        display: block;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2613,6 +2614,9 @@ http://flickity.metafizzy.co
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  @media (min-width: 480px) {
+    .single-tribe_events .entry-content .tribe-events-cal-links {
+      width: 50%; } }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2842,3 +2846,13 @@ ul.tribe-events-grid-view {
     border-radius: 50%; }
   .show-cast-container .show-cast-item p {
     text-align: center; }
+
+.mobile-view-hidden {
+  display: none; }
+  @media (min-width: 480px) {
+    .mobile-view-hidden {
+      display: block; } }
+
+@media (min-width: 480px) {
+  .desktop-view-hidden {
+    display: none; } }
