@@ -207,8 +207,12 @@ ul.tribe-events-grid-view {
    border-radius: 4px;
    padding: 30px;
    display: flex;
+   justify-content: space-between;
    .shows-calendar-date-area {
      width: 25%;
+   }
+   .shows-taxonomy-filter-area {
+     width: 70%;
    }
    h3 {
      text-align: left;
@@ -285,4 +289,8 @@ ul.tribe-events-grid-view {
 
 .show-events-page {
   width: 100%!important;
+}
+
+.filter-shows-group {
+  display: flex;
 }

@@ -2602,9 +2602,14 @@ ul.tribe-events-grid-view {
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   #calendar-area .shows-calendar-date-area {
     width: 25%; }
+  #calendar-area .shows-taxonomy-filter-area {
+    width: 70%; }
   #calendar-area h3 {
     text-align: left;
     margin: 10px 0; }
@@ -2649,3 +2654,8 @@ ul.tribe-events-grid-view {
 
 .show-events-page {
   width: 100% !important; }
+
+.filter-shows-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

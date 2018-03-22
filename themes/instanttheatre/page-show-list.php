@@ -30,13 +30,15 @@ get_header(); ?>
 							if ( !empty($terms) ) :
 						?>
 								<div class="filter-shows-group">
-									<button class="filter-btn selected" data-filter="*">Show All</button>
 									<h3>Genres:</h3>
+									<div class="genre-buttons">
 									<?php foreach ( $terms as $term ) : ?>
 										<button class="filter-btn" data-filter=".<?php echo $term->slug; ?>">
 											<?php echo $term->name; ?>
 										</button>
 									<?php endforeach; ?>
+									</div><!-- genre-buttons -->
+									<button class="filter-btn selected" data-filter="*">Show All</button>
 								</div><!-- end of filter-button-group -->
 							
 					
@@ -53,7 +55,7 @@ get_header(); ?>
 					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 					$args = array(
 						'post_type'              => 'tribe_events',
-						'order'                  => 'DESC',
+						'order'                  => 'ASC',
 						'paged'									 => $paged,
 						'tax_query' => array(
 							array(
