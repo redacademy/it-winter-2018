@@ -752,3 +752,51 @@ Our Community page
     }
   }
 }
+
+/*********************
+ERROR404
+*********************/
+.error404{
+  .error-404{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    .page-title{
+      font-weight: normal;
+      font-size: 50px;
+      margin-bottom: 0px;
+    }
+  }
+  .page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include desktop{
+      align-items: flex-start;
+      width: 60%;
+    }
+    p{
+      text-align: center;
+      padding: 2%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      @include desktop{
+        text-align: left;
+        padding-left: 0px;
+      }
+    }
+  }
+  .blue-btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: .7rem 2rem;
+    &:visited{
+      color: #fff;
+    }
+  }
+}

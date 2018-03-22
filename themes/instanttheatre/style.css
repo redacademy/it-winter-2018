@@ -555,7 +555,8 @@ input[type="submit"] {
   width: 100%;
   margin-top: 60px;
   height: 60px;
-  background-color: #FFEC00; }
+  background-color: #FFEC00;
+  z-index: 10; }
   @media (min-width: 480px) {
     .main-navigation {
       max-width: 1440px; } }
@@ -736,7 +737,8 @@ input[type="submit"] {
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-transition: .5s;
-    transition: .5s; }
+    transition: .5s;
+    z-index: 10; }
     .front-page .main-navigation a {
       position: relative; }
     .front-page .main-navigation .selector-nav {
@@ -845,7 +847,8 @@ input[type="submit"] {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-top: 50px; }
+    margin-top: 50px;
+    z-index: 10; }
     .main-navigation .home-banner-clickables {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1773,6 +1776,13 @@ Our Community page
       height: 300px;
       width: 95%; }
 
+.page-template-default .havana-theatre h1 {
+  text-transform: capitalize; }
+
+.page-template-default .havana-theatre p {
+  padding-right: 5%;
+  padding-left: 5%; }
+
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -1986,6 +1996,68 @@ Our Community page
         background: #008898; }
       .class-schedule li a:active, .class-schedule li a:focus {
         border: none; }
+
+/*********************
+ERROR404
+*********************/
+.error404 .error-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 100px; }
+  .error404 .error-404 .page-title {
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 0px; }
+
+.error404 .page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 480px) {
+    .error404 .page-content {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      width: 60%; } }
+  .error404 .page-content p {
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-top: 0px; }
+    @media (min-width: 480px) {
+      .error404 .page-content p {
+        text-align: left;
+        padding-left: 0px; } }
+
+.error404 .blue-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: .7rem 2rem; }
+  .error404 .blue-btn:visited {
+    color: #fff; }
 
 .page {
   text-align: center; }
