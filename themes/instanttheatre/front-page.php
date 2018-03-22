@@ -32,16 +32,25 @@ $values = array_values($field['title_link']);
 	<div class="banner-thumbnail">
 		<?php
 		echo '<a href="'.$values[0].'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
-		?>
+					?>
 		
 	</div>
 	<div class="banner-text-info">
 	<?php
-echo '<a href="'.$values[0].'" target="'.$values[2].'">'.$values[1].'</a>';
+echo '<h2><a href="'.$values[0].'" target="'.$values[2].'"> '. $values[1]. '</a></h2>';
 		
 		echo $field['banner_info'];
+		
 		?>
-		<button class="blue-btn">buy tickets</button>
+		<div class='button-wrapper'>
+		<button class="buy-tickets-button"><?php echo $field[ 'eb_link' ]; ?></button>
+
+		<?php
+echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >learn more</a>';
+?>
+</div>
+
+
 		</div>
 </div>
 		
