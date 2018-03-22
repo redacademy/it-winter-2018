@@ -68,6 +68,18 @@ $event_id = get_the_ID();
 			<!-- Event meta -->
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 			<?php tribe_get_template_part( 'modules/meta' ); ?>
+			<h3>Cast</h3>
+			<div class="show-cast-container">
+				<?php
+					$actors = CFS()->get( 'people' );		
+					foreach( $actors as $post_id ) : ?>
+					<div class="show-cast-item">
+						<?php $the_post = get_post( $post_id ); ?>
+						<?php echo get_the_post_thumbnail( $the_post->ID ); ?>
+						<p><?php echo $the_post->post_title; ?></p>
+					</div>
+				<?php endforeach; ?>
+			</div>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>

@@ -2487,9 +2487,9 @@ http://flickity.metafizzy.co
         font-size: 2em; } }
   @media (min-width: 480px) {
     .single-tribe_events .entry-content .tribe-events-single-section {
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1;
+      -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 0;
+              order: 0;
       width: 50%; } }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
@@ -2734,3 +2734,33 @@ ul.tribe-events-grid-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+#tribe-events-bar {
+  display: none; }
+
+.tribe-events-list .tribe-events-loop .tribe-events-event-image {
+  width: 100%;
+  float: none; }
+
+.tribe-events-list .tribe-events-loop .tribe-events-category-shows, .tribe-events-list .tribe-events-loop .tribe-events-category-classes {
+  text-align: left; }
+
+.tribe-events-day .tribe-events-day-time-slot h5 {
+  background-color: #00B6CB; }
+
+#tribe-events-content .tribe-events-list-event-description a {
+  text-decoration: underline; }
+  #tribe-events-content .tribe-events-list-event-description a:hover {
+    color: #00B6CB; }
+  #tribe-events-content .tribe-events-list-event-description a::visited {
+    color: black; }
+
+.show-cast-container .show-cast-item {
+  max-width: 100px;
+  margin: 0 20px; }
+  .show-cast-container .show-cast-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+  .show-cast-container .show-cast-item p {
+    text-align: center; }
