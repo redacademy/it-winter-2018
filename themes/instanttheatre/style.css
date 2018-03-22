@@ -2564,11 +2564,11 @@ http://flickity.metafizzy.co
       .single-tribe_events .entry-content h1 {
         font-size: 2em; } }
   @media (min-width: 480px) {
-    .single-tribe_events .entry-content .tribe-events-single-section {
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1;
-      width: 50%; } }
+    .single-tribe_events .entry-content .show-page-container {
+      width: 45%; } }
+  @media (min-width: 480px) {
+    .single-tribe_events .entry-content .show-page-container .tribe-events-single-section {
+      display: none; } }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
     margin: 0; }
@@ -2589,16 +2589,13 @@ http://flickity.metafizzy.co
                 flex-direction: row;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        width: 100%; } }
+        width: 100%;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     .single-tribe_events .entry-content .tribe_events .tribe-events-content {
       margin-top: 20px;
       text-align: left; }
-      @media (min-width: 480px) {
-        .single-tribe_events .entry-content .tribe_events .tribe-events-content {
-          -webkit-box-ordinal-group: -1;
-              -ms-flex-order: -2;
-                  order: -2;
-          width: 50%; } }
     @media (min-width: 480px) {
       .single-tribe_events .entry-content .tribe_events .buy-tickets-link-wrapper {
         width: 50%;
@@ -2680,6 +2677,10 @@ http://flickity.metafizzy.co
   .buy-tickets-button:hover {
     background-color: #c10f40; }
 
+@media (min-width: 480px) {
+  .tribe-events-meta-group .buy-tickets-link-wrapper {
+    margin-bottom: 10px; } }
+
 .shows-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2752,6 +2753,20 @@ ul.tribe-events-grid-view {
     ul.tribe-events-grid-view li .tribe-events-related-events-title {
       text-align: left;
       margin-left: 10px; }
+
+@media (min-width: 480px) {
+  .tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group-details {
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 0; } }
+
+@media (min-width: 480px) {
+  .tribe-events-event-meta address.tribe-events-address, .tribe-events-list .tribe-events-venue-details {
+    font-style: normal; } }
+
+@media (min-width: 480px) {
+  .tribe-events-event-meta .tribe-events-meta-group-venue {
+    width: 100%; } }
 
 #calendar-area {
   border: 1px solid #D5D5D5;
@@ -2851,7 +2866,8 @@ ul.tribe-events-grid-view {
   display: none; }
   @media (min-width: 480px) {
     .mobile-view-hidden {
-      display: block; } }
+      display: block;
+      width: 45%; } }
 
 @media (min-width: 480px) {
   .desktop-view-hidden {

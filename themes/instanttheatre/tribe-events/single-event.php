@@ -72,14 +72,16 @@ $event_id = get_the_ID();
 				<h3>Cast</h3>
 				<div class="show-cast-container">
 					<?php
-						$actors = CFS()->get( 'people' );		
-						foreach( $actors as $post_id ) : ?>
+						$actors = CFS()->get( 'people' ); ?>
+						<?php if (isset($actors)) : ?>
+						<?php foreach( $actors as $post_id ) : ?>
 						<div class="show-cast-item">
 							<?php $the_post = get_post( $post_id ); ?>
 							<?php echo get_the_post_thumbnail( $the_post->ID ); ?>
 							<p><?php echo $the_post->post_title; ?></p>
 						</div><!-- show-cast-item -->
 					<?php endforeach; ?>
+						<?php endif; ?>
 				</div><!-- show-cast-container -->
 			</div>
 			<div class="mobile-view-hidden">

@@ -1,5 +1,9 @@
 (function ($) {
 
+  $('.show-cast-container').flickity({
+    
+  })
+
   if ($(window).width() < 480) {
     $('.hire-us-grid').flickity({
       prevNextButtons: false
@@ -40,7 +44,9 @@
         $('.testimonial-carousel-container').flickity('destroy');
         $('.studio-grid').flickity('destroy');
         $('.community-gallery-images').flickity('destroy');
-        $('.show-cast-container').flickity('destroy');
+        $('.show-cast-container').flickity({
+          prevNextButtons: true
+        })
       }
   });
 
