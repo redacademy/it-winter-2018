@@ -796,13 +796,24 @@ textarea {
       bottom: 0;
       background: transparent; }
       .front-page .main-navigation .toggle-menu-wrapper #primary-menu {
-        padding-left: 400px;
+        padding-left: 150px;
         padding-right: 0px;
-        width: 80%; }
+        width: 100%; }
+        .front-page .main-navigation .toggle-menu-wrapper #primary-menu li.selector-nav {
+          padding: 10px 15px;
+          margin-top: 8px;
+          font-size: 20px;
+          font-weight: bold; }
         .front-page .main-navigation .toggle-menu-wrapper #primary-menu .sub-menu {
           z-index: 1;
           background: #fff;
-          margin-left: 200px; }
+          padding-left: 200px;
+          margin-top: 40px;
+          font-size: 16px;
+          height: 40px;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
       .front-page .main-navigation .toggle-menu-wrapper .menu-main-nav-container {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
@@ -908,7 +919,6 @@ textarea {
         margin: 0; }
         .main-navigation .toggle-menu-wrapper #primary-menu .selector-nav {
           position: static;
-          width: 100%;
           font-family: "Roboto";
           text-transform: uppercase; }
           .main-navigation .toggle-menu-wrapper #primary-menu .selector-nav::after {
@@ -1689,6 +1699,17 @@ body {
 /*****************
 Our Community page
 *******************/
+@media (min-width: 480px) {
+  .page-template-default .our-community {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .page-template-default .our-community .community-block {
+      margin-top: 0px; } }
+
 .page-template-default .our-community p {
   padding-left: 5%;
   padding-right: 5%; }
@@ -1696,7 +1717,14 @@ Our Community page
 .page-template-default .our-community .quote-entry {
   margin-bottom: 5%;
   padding: 0px;
-  background-color: #FFEC00; }
+  background-image: url("../../assets/images/yellow-wave-banner-background.png");
+  background-position: center; }
+  @media (min-width: 480px) {
+    .page-template-default .our-community .quote-entry {
+      padding: 3%; }
+      .page-template-default .our-community .quote-entry .quote-hook {
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 0px; } }
 
 .page-template-default .community-gallery-images {
   display: -webkit-box;

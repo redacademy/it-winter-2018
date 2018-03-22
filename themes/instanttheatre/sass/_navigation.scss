@@ -258,13 +258,23 @@
 				bottom: 0;
 				background: transparent;
 				#primary-menu {
-					padding-left: 400px;
+					padding-left: 150px;
 					padding-right: 0px;
-					width: 80%;
+					width: 100%;
+					li.selector-nav{
+						padding: 10px 15px;
+						margin-top: 8px;
+						font-size: 20px;
+						font-weight: bold;
+					}
 					.sub-menu {
 						z-index: 1;
 						background: #fff;
-						margin-left: 200px;
+						padding-left: 200px;
+						margin-top: 40px;
+						font-size: 16px;
+						height: 40px;
+						align-items: center;
 					} //sub-menu
 				} //primary-menu
 				.menu-main-nav-container {
@@ -363,7 +373,6 @@
 				margin: 0;
 				.selector-nav {
 					position: static;
-					width: 100%;
 					font-family: "Roboto";
 					text-transform: uppercase;
 					&::after {

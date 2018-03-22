@@ -15,10 +15,10 @@ get_header(); ?>
         <?php get_template_part( 'template-parts/content', 'page' ); ?>
         <div class="our-community">
           <div class="quote-entry">
-            <p><?php echo CFS() -> get ('entry_quote'); ?></p>
-            <p><?php echo CFS() -> get ('author_of_quote'); ?></p>
+            <p class="quote-hook"><?php echo CFS() -> get ('entry_quote'); ?></p>
+            <p class="quote-hook"> - <?php echo CFS() -> get ('author_of_quote'); ?></p>
           </div>
-          <p><?php echo CFS() -> get ('our_community'); ?></p>
+          <p class="community-block"><?php echo CFS() -> get ('our_community'); ?></p>
         </div>
 
       <?php endwhile; // End of the loop. ?>
