@@ -11,8 +11,8 @@
 function show_genre_taxonomy() {
 
 	$labels = array(
-		'name'                       => 'Show_Genres',
-		'singular_name'              => 'Show_Genre',
+		'name'                       => 'Show Genres',
+		'singular_name'              => 'Show Genre',
 		'menu_name'                  => 'Show Genre',
 		'all_items'                  => 'All Show Genres',
 		'parent_item'                => 'Parent Show Genre',
@@ -40,8 +40,10 @@ function show_genre_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+		'query_var'             		 => true,
+		'show_in_rest' 							 => true
 	);
-	register_taxonomy( 'show_genre', array( 'genre' ), $args );
+	register_taxonomy( 'show_genre', array( 'tribe_events' ), $args );
 
 }
 add_action( 'init', 'show_genre_taxonomy', 0 );

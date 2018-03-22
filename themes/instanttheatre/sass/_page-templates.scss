@@ -1,9 +1,11 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+
 /*******************
  *SITE WIDE
  *******************/
+
 html {
   background: #fff;
 }
@@ -11,16 +13,14 @@ html {
 body {
   max-width: $desktop_break;
   background: #fff;
-
   @include desktop {
     margin: 0 auto;
     background: $site__background;
   }
 }
 
- .site-content {
+.site-content {
   max-width: $desktop__content-area;
-
   @include desktop {
     margin: 0 auto;
   }
@@ -28,15 +28,13 @@ body {
 
 #wpadminbar {
   opacity: 0.05;
-
   &:hover {
-    opacity:1;
+    opacity: 1;
   }
-  
 }
 
-
 /* Front page */
+
 .carousel-cell {
   margin-top: 3.75rem;
   width: 1240px;
@@ -82,6 +80,24 @@ body {
   }
 }
 
+.page {
+  .front-page-links{
+    text-align: right;
+    margin-bottom: 2rem;
+  }
+  .instagram-carousel,
+  .footer-logo {
+    a {
+      &:link,
+      &:visited {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
 /* //////////////////flickity/////////////////// */
 
 .instagram-carousel {
@@ -94,6 +110,9 @@ body {
     img {
       max-width: none;
     }
+  }
+  .instagram-feed{
+    margin-bottom: 2rem;
   }
 }
 
@@ -113,7 +132,7 @@ body {
     .banner-text-info {
       padding: 2rem;
       text-align: left;
-      a{
+      a {
         font-size: 2rem;
         font-weight: 500;
         text-decoration: none;
@@ -168,46 +187,43 @@ body {
     border-radius: 4px;
     box-shadow: 0px 0px 8px #D5D5D5;
     background: #fff;
-
-      a {
-        height: 100%;
-        width: 100%;
-      }
-      .person-image-wrapper {
-        position: relative;
-        width: 100%;
+    a {
+      height: 100%;
+      width: 100%;
+    }
+    .person-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 235px;
+      margin: 0 auto;
+      border-radius: 4px;
+      overflow: hidden;
+      @include desktop {
+        width: 235px;
         height: 235px;
         margin: 0 auto;
-        border-radius: 4px;
-        overflow: hidden;
-        
-          @include desktop {
-            width: 235px;
-            height: 235px;
-            margin: 0 auto;
-          }
-          img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: auto;
-            height: 100%;
-            max-width: none;
-            max-width: none;
-          }
       }
-      .person-tile-label {
-        padding: 0;
-        margin: 1rem 0 0;
-        color: #000;
-        font-size: 1.375rem;
-        text-align: center;
-
-          @include desktop {
-            font-size: 1.5rem;
-          }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: 100%;
+        max-width: none;
+        max-width: none;
       }
+    }
+    .person-tile-label {
+      padding: 0;
+      margin: 1rem 0 0;
+      color: #000;
+      font-size: 1.375rem;
+      text-align: center;
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    }
   }
   .overlay {
     visibility: hidden;
@@ -239,7 +255,6 @@ body {
     border: 1px solid #979797;
     border-radius: 4px;
     z-index: 1;
-    
     @include desktop {
       flex-direction: row;
       flex-wrap: wrap;
@@ -254,7 +269,6 @@ body {
       height: 85vw;
       margin: 1rem auto;
       overflow: hidden;
-
       @include desktop {
         width: 20%;
         height: 235px;
@@ -262,7 +276,6 @@ body {
         margin: 0 1.25rem 0 0;
         order: 1;
       }
-
       img {
         width: auto;
         height: 100%;
@@ -270,7 +283,6 @@ body {
         max-height: none;
         min-width: 100%;
         max-width: none;
-
         @include desktop {
           position: relative;
           top: 50%;
@@ -286,7 +298,6 @@ body {
       font-size: 1.375rem;
       font-weight: 500;
       background: $color__yellow-brand;
-
       @include desktop {
         display: inline-block;
         padding: 0;
@@ -298,7 +309,6 @@ body {
     }
     .social-links {
       text-align: center;
-
       @include desktop {
         display: inline-block;
         order: 3;
@@ -311,7 +321,6 @@ body {
       position: relative;
       top: 48px;
       left: 16px;
-      
       @include desktop {
         position: static;
         text-align: right;
@@ -335,65 +344,66 @@ body {
 
 .auditions-containor {
   background-color: $color__yellow-brand;
-  width: 100%;  
-  .email-field{
+  width: 100%;
+  .email-field {
     max-width: 345px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     margin: 0 auto;
-    .fname, .email-input{
+    .fname,
+    .email-input {
       width: 100%;
     }
   }
-
 }
 
 /***************************
  *PAGE: Contact Us
  ***************************/
-.page main .entry-content-contact-page{
+
+.page main .entry-content-contact-page {
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  iframe{
+  iframe {
     display: none;
   }
-  .contact-sidebar{
+  .contact-sidebar {
     width: 100%;
     display: flex;
     justify-content: center;
-    line-height: 2rem;    
-    ul{
+    line-height: 2rem;
+    ul {
       margin: 0;
       padding: 0;
     }
   }
-  p{
+  p {
     margin: 0;
   }
-  li{
-  list-style: none;
-  display: flex;
+  li {
+    list-style: none;
+    display: flex;
   }
-  span{
+  span {
     font-weight: 500;
     width: 150px;
   }
 }
 
-
 /**************
   About-Us Page
 **************/
-.page-template-default{
-  .about-us-page{
+
+.page-template-default {
+  .about-us-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 5%;
-    p{
+    p {
       font-weight: bold;
       text-transform: capitalize;
       font-size: 1.125rem;
@@ -401,85 +411,87 @@ body {
         font-size: 1.5rem;
       }
     }
-    h1{
+    h1 {
       text-transform: capitalize;
     }
-    h2{
+    h2 {
       text-transform: capitalize;
     }
-    .our-story{
+    .our-story {
       text-align: left;
       padding: 0px;
-      @include desktop{
+      @include desktop {
         display: flex;
         flex-direction: row-reverse;
       }
-      .our-story-text{
+      .our-story-text {
         padding: 2%;
-        @include desktop{
+        @include desktop {
           padding: 0;
           padding-right: 5%;
         }
       }
     }
-    .nikolai-pic{
-    width: 75%;
-    border-radius: 170px;
-    @include desktop{
-      width: 25%;
-      border-radius: 180px;
+    .nikolai-pic {
+      width: 75%;
+      border-radius: 170px;
+      @include desktop {
+        width: 25%;
+        border-radius: 180px;
+      }
     }
-    }
-    .nikolai-experience{
+    .nikolai-experience {
       text-align: left;
       margin-bottom: 20px;
       padding: 2%;
       @include desktop {
         display: flex;
       }
-      h2{
+      h2 {
         text-align: center;
       }
-      .improv-experience{
+      .improv-experience {
         @include desktop {
           padding-right: 2%;
         }
       }
-      .acting-experience{
+      .acting-experience {
         @include desktop {
           padding-left: 2%;
         }
       }
     }
-    #imdb-button{
+    #imdb-button {
       text-transform: uppercase;
     }
   }
 }
+
 /*
 Our Community page
 */
-.page-template-default{
-  .our-community{
-    p{
+
+.page-template-default {
+  .our-community {
+    p {
       padding-left: 5%;
       padding-right: 5%;
     }
-    .quote-entry{
+    .quote-entry {
       margin-bottom: 5%;
       padding: 0px;
       background-color: $color__yellow-brand;
     }
   }
-  .havana-theatre{
-    h1{
+  .havana-theatre {
+    h1 {
       text-transform: capitalize;
     }
-    p{
+    p {
       padding-right: 5%;
       padding-left: 5%;
     }
-  }//havana theatre
+  } //havana theatre
 }
 
 @media screen and (min-width: $mobile_break) {
@@ -533,68 +545,64 @@ Our Community page
       top: 250px;
     }
   }
-
   .auditions-containor {
     background-color: $color__yellow-brand;
-    width: 100%;  
+    width: 100%;
     padding: 2rem;
     margin-bottom: 3.75rem;
-    .email-field{
+    .email-field {
       max-width: 570px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
       margin: 0 auto;
-      .fname, .email-input{
+      .fname,
+      .email-input {
         width: 100%;
       }
     }
   }
-
-  .page main .entry-content-contact-page{
+  .page main .entry-content-contact-page {
     justify-content: center;
-    iframe{
+    iframe {
       display: block;
     }
-    .contact-sidebar{
+    .contact-sidebar {
       padding-left: 3rem;
       width: auto;
       display: flex;
       justify-content: flex-start;
-      ul{
+      ul {
         margin: 0;
         padding: 0;
       }
     }
-    p{
+    p {
       margin: 0;
     }
-    li{
-    list-style: none;
-    display: flex;
+    li {
+      list-style: none;
+      display: flex;
     }
-    span{
+    span {
       font-weight: 500;
       width: 200px;
     }
   }
-
 }
 
 /*************************
  *PAGE: List of Classes
  *************************/
+
 .list-of-classes {
-  
   .page-header {
     display: flex;
     justify-content: center;
-
     ul {
       display: none;
     }
-
     h1.main-heading {
       margin: 0.5rem;
     }
@@ -615,18 +623,15 @@ Our Community page
 .schedule-header {
   display: flex;
   align-items: center;
-
   .schedule-header-logo {
     display: flex;
     flex-direction: column;
     margin: 0 2rem;
-
     img {
       height: 125px;
       width: auto;
     }
   }
-
   .schedule-header-text {
     max-width: 1000px;
     text-align: left;
@@ -634,21 +639,18 @@ Our Community page
 }
 
 .class-schedule {
-    width: 100%;
-    margin: 0 0 3rem;
-    padding: 0;
-
-    @include desktop {
-      border: 0.75rem solid #fff;
-      border-radius: 4px;
-    }
-
+  width: 100%;
+  margin: 0 0 3rem;
+  padding: 0;
+  @include desktop {
+    border: 0.75rem solid #fff;
+    border-radius: 4px;
+  }
   li {
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
     background: #fff;
-
     &:nth-of-type(odd) {
       background: #FFFBD2
     }
@@ -672,15 +674,12 @@ Our Community page
       &:last-child {
         width: 50%;
       }
-
       &:not(:first-child):not(:last-child) {
         display: none;
-
         @include desktop {
           display: block;
         }
       }
-
       @include desktop {
         &:nth-child(1) { width: 25%;}
         &:nth-child(2) { width: 12.5% ;}
@@ -716,5 +715,4 @@ Our Community page
       }
     }
   }
-
 }

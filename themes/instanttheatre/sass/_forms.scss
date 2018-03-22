@@ -55,7 +55,8 @@ textarea {
 	width: 100%;
 }
 
-.blue-btn {
+.blue-btn,
+input[type="submit"] {
 	min-width: 130px;
 	border-radius: 5px;
 	border: none;
