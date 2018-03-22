@@ -1773,6 +1773,13 @@ Our Community page
       height: 300px;
       width: 95%; }
 
+.page-template-default .havana-theatre h1 {
+  text-transform: capitalize; }
+
+.page-template-default .havana-theatre p {
+  padding-right: 5%;
+  padding-left: 5%; }
+
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -2586,7 +2593,7 @@ http://flickity.metafizzy.co
   color: white;
   text-transform: uppercase;
   text-decoration: none; }
-  .buy-tickets-button:link {
+  .buy-tickets-button:link, .buy-tickets-button:visited {
     color: white; }
   .buy-tickets-button:hover {
     background-color: #c10f40; }

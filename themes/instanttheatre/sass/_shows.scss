@@ -117,7 +117,8 @@
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  &:link {
+  &:link,
+  &:visited {
     color: white; 
   }
   &:hover {
