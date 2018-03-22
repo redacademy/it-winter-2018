@@ -25,11 +25,11 @@ if ( is_array( $posts ) && ! empty( $posts ) ) : ?>
 
 <h3 class="tribe-events-related-events-title"><?php printf( __( 'Suggested %s', 'tribe-events-calendar-pro' ), tribe_get_event_label_plural() ); ?></h3>
 
-<ul class="tribe-related-events tribe-clearfix">
+<ul class="tribe-events-grid-view tribe-clearfix">
 	<?php foreach ( $posts as $post ) : ?>
 	<li>
 		<?php $thumb = ( has_post_thumbnail( $post->ID ) ) ? get_the_post_thumbnail( $post->ID, 'large' ) : '<img src="' . esc_url( trailingslashit( Tribe__Events__Pro__Main::instance()->pluginUrl ) . 'src/resources/images/tribe-related-events-placeholder.png' ) . '" alt="' . esc_attr( get_the_title( $post->ID ) ) . '" />'; ?>
-		<div class="tribe-related-events-thumbnail">
+		<div class="tribe-events-grid-thumbnail">
 			<a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="url" rel="bookmark"><?php echo $thumb ?></a>
 		</div>
 		<div class="tribe-related-event-info">

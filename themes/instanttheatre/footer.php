@@ -30,11 +30,7 @@
                 dynamic_sidebar('contact-info');
                 }
 								?>
-																<div class="social-icons">
-			<a href="https://www.facebook.com/instanttheatrecompany"><i class="fa fa-facebook-square"></i></a>
-			<a href="https://twitter.com/instanttheatre"><i class="fa fa-twitter"></i></a>
-			<a href="https://www.instagram.com/instanttheatre/"><i class="fa fa-instagram"></i></a>
-</div>
+
             </div>
 
 						<div id="subscribe" class="subscribe">
@@ -43,16 +39,10 @@
                 dynamic_sidebar('subscribe');
                 }
 								?>
-								      <div class="submit-form">
-        <form action="index.html" class='email-field'>
-          <input class='email-input' type="email" id='email' placeholder="Your E-Mail">
-          <button class="blue-btn" type="submit">Subscribe</button>
-        </form>
-      </div>
 						</div>
 
 						<div class= "footer-logo" >
-                <a href="#masthead" class='logo-wrapper'><img src="<?php echo get_template_directory_uri();?>/assets/logo/rocket/black.svg" class="footer__logo-img"/><p>Back To Top</p></a>
+                <a href="#masthead" class='logo-wrapper'><img src="<?php echo get_template_directory_uri();?>/assets/logo/rocket/black.svg" class="footer__logo-img"/>Back To Top</a>
 							</div>
 				</div>
 				</div><!-- .site-info -->
