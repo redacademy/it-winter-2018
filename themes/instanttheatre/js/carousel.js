@@ -1,5 +1,9 @@
 (function ($) {
 
+  $('.show-cast-container').flickity({
+    
+  })
+
   if ($(window).width() < 480) {
     $('.hire-us-grid').flickity({
       prevNextButtons: false
@@ -12,12 +16,19 @@
     });
     $('.community-gallery-images').flickity({
       prevNextButtons: false
+<<<<<<< HEAD
     });
     $('.class-type-gallery').flickity({
       prevNextButtons: false,
       cellAlign: 'left',
       contain: true
     });
+=======
+    })
+    $('.show-cast-container').flickity({
+      prevNextButtons: false
+    })
+>>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
   }
 
   $(window).on('resize', function() {
@@ -33,19 +44,32 @@
         });
         $('.community-gallery-images').flickity({
           prevNextButtons: false
+<<<<<<< HEAD
         });
         $('.class-type-gallery').flickity({
           prevNextButtons: false,
           cellAlign: 'left',
           contain: true
         });
+=======
+        })
+        $('.show-cast-container').flickity({
+          prevNextButtons: false
+        })
+>>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       } else {
         $('.hire-us-grid').flickity('destroy');
         $('.testimonial-carousel-container').flickity('destroy');
         $('.studio-grid').flickity('destroy');
         $('.community-gallery-images').flickity('destroy');
+<<<<<<< HEAD
         $('.class-type-gallery').flickity('destroy');
         $('.photo-gallery-container').flickity('destroy');
+=======
+        $('.show-cast-container').flickity({
+          prevNextButtons: true
+        })
+>>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       }
   });
 
@@ -82,18 +106,7 @@ $('a[href*="#"]')
       event.preventDefault();
       $('html, body').animate({
         scrollTop: target.offset().top
-      }, 1000, function () {
-        // Callback after animation
-        // Must change focus!
-        // var $target = $(target);
-        // $target.focus();
-        // if ($target.is(":focus")) { // Checking if the target was focused
-        //   return false;
-        // } else {
-        //   $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-        //   $target.focus(); // Set focus again
-        // };
-      });
+      }, 1000 );
     }
   }
 });

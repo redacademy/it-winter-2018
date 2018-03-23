@@ -35,6 +35,10 @@ body {
 
 /* Front page */
 
+.learn-more-link {
+  text-transform: capitalize;
+}
+
 .carousel-cell {
   margin-top: 3.75rem;
   width: 1240px;
@@ -81,7 +85,7 @@ body {
 }
 
 .page {
-  .front-page-links{
+  .front-page-links {
     text-align: right;
     margin-bottom: 2rem;
   }
@@ -111,7 +115,7 @@ body {
       max-width: none;
     }
   }
-  .instagram-feed{
+  .instagram-feed {
     margin-bottom: 2rem;
   }
 }
@@ -119,6 +123,7 @@ body {
 .banner-carousel {
   margin-top: 3.75rem;
   max-width: 1240px;
+  background: #fff;
   .banner-cell {
     width: 100%;
     .banner-thumbnail {
@@ -132,23 +137,37 @@ body {
     .banner-text-info {
       padding: 2rem;
       text-align: left;
-      a {
-        font-size: 2rem;
-        font-weight: 500;
-        text-decoration: none;
-        &:link,
-        &:visited {
-          color: #000;
+      h2 {
+        a {
+          text-decoration: none;
+          &:link,
+          &:visited {
+            color: black;
+          }
+        }
+      }
+      .buy-tickets-button {
+        margin-right: 2rem;
+        &:empty {
+          display: none;
+        }
+        .cfs-hyperlink {
+          font-size: 1rem;
+          text-decoration: none;
+          &:link,
+          &:visited {
+            color: white;
+          }
         }
       }
     }
-  }
-  .flickity-page-dots {
-    top: 200px;
-    height: 10px;
-  }
-  .flickity-prev-next-button {
-    top: 100px;
+    .flickity-page-dots {
+      top: 200px;
+      height: 10px;
+    }
+    .flickity-prev-next-button {
+      top: 100px;
+    }
   }
 }
 
@@ -466,19 +485,21 @@ body {
     }
   }
 }
+
 /*****************
 Our Community page
 *******************/
-.page-template-default{
-  .our-community{
-    @include desktop{
+
+.page-template-default {
+  .our-community {
+    @include desktop {
       display: flex;
       align-items: flex-start;
-      .community-block{
+      .community-block {
         margin-top: 0px;
       }
     }
-    p{
+    p {
       padding-left: 5%;
       padding-right: 5%;
     }
@@ -487,37 +508,37 @@ Our Community page
       padding: 0px;
       background-image: url("../../assets/images/yellow-wave-banner-background.png");
       background-position: center;
-      @include desktop{
+      @include desktop {
         padding: 3%;
-        .quote-hook{
+        .quote-hook {
           background-color: rgba(255, 255, 255, 0.8);
           margin: 0px;
         }
       }
     }
   }
-.community-gallery-images{
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 2% 8%;
-    @include desktop{
+  .community-gallery-images {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 2% 8%;
+    @include desktop {
       margin: 0px 2% 5%;
     }
-  .flickity-viewport{
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .community-gallery{
-    width: 95%;
-    @include desktop{
-      width: 33%;
+    .flickity-viewport {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
     }
-    img{
-      height: 300px;
+    .community-gallery {
       width: 95%;
+      @include desktop {
+        width: 33%;
+      }
+      img {
+        height: 300px;
+        width: 95%;
+      }
     }
-   }
   }
   .havana-theatre {
     h1 {
@@ -528,6 +549,30 @@ Our Community page
       padding-left: 5%;
     }
   } //havana theatre
+}
+
+/*****************
+tags archive page
+*******************/
+
+.tag-articles-containor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .tags-article-wrapper {
+    margin: 0 1rem;
+    width: 300px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    a {
+      text-decoration: none;
+      &:link,
+      &:visited {
+        color: black;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $mobile_break) {
@@ -643,7 +688,6 @@ Our Community page
       margin: 0.5rem;
     }
   }
-
   .no-classes {
     border: 0.75rem solid #fff;
     padding: 0.5rem 0;
@@ -652,7 +696,6 @@ Our Community page
     text-align: center;
     font-size: 1.125rem;
     font-weight: 500;
-
   }
 }
 
@@ -690,25 +733,25 @@ Our Community page
     &:nth-of-type(odd) {
       background: #FFFBD2
     }
-
     &:first-child {
       background: $color__yellow-brand;
       font-size: 1rem;
       font-weight: 700;
     }
-    
     p {
       padding: 0;
       margin: 0;
     }
-
     .cell {
-
       text-align: left;
+<<<<<<< HEAD
 
       &:first-child{
         width: 65%
       }
+=======
+      &:first-child,
+>>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       &:last-child {
         width: 35%;
       }
@@ -719,22 +762,44 @@ Our Community page
         }
       }
       @include desktop {
-        &:nth-child(1) { width: 25%;}
-        &:nth-child(2) { width: 12.5% ;}
-        &:nth-child(3) { width: 10% ;}
-        &:nth-child(4) { width: 12.5% ;}
-        &:nth-child(5) { width: 15% ;}
-        &:nth-child(6) { width: 10%;}
-        &:nth-child(7) { flex: 1 1 5%;}
+        &:nth-child(1) {
+          width: 25%;
+        }
+        &:nth-child(2) {
+          width: 12.5%;
+        }
+        &:nth-child(3) {
+          width: 10%;
+        }
+        &:nth-child(4) {
+          width: 12.5%;
+        }
+        &:nth-child(5) {
+          width: 15%;
+        }
+        &:nth-child(6) {
+          width: 10%;
+        }
+        &:nth-child(7) {
+          flex: 1 1 5%;
+        }
       }
     }
+<<<<<<< HEAD
 
     .blue-btn {
       max-width: 125px;
+=======
+    a {
+      max-width: 125px;
+      padding: .5rem 1rem;
+      margin: auto 0;
+>>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       color: white;
       font-size: 1rem;
       text-decoration: none;
       text-shadow: none;
+<<<<<<< HEAD
     }
   }
 }
@@ -830,6 +895,14 @@ Our Community page
         height: 100%;
         width: auto;
         max-width: none;
+=======
+      border-radius: 5px;
+      border: none;
+      background: $color__blue-brand;
+      box-shadow: none;
+      &:hover {
+        background: darken($color__blue-brand, 10%);
+>>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       }
 
       &:nth-child(odd) {
@@ -856,5 +929,57 @@ Our Community page
       // }
     }
   }
+<<<<<<< HEAD
   
+=======
+}
+
+/*********************
+ERROR404
+*********************/
+
+.error404 {
+  .error-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    .page-title {
+      font-weight: normal;
+      font-size: 50px;
+      margin-bottom: 0px;
+    }
+  }
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include desktop {
+      align-items: flex-start;
+      width: 60%;
+    }
+    p {
+      text-align: center;
+      padding: 2%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      @include desktop {
+        text-align: left;
+        padding-left: 0px;
+      }
+    }
+  }
+  .blue-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: .7rem 2rem;
+    &:visited {
+      color: #fff;
+    }
+  }
+>>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
 }

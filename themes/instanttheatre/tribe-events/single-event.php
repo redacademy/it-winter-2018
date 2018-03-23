@@ -51,23 +51,52 @@ $event_id = get_the_ID();
   <!-- Event featured image, but exclude link -->
   <?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    
-      <!-- Buy Tickets button to link to eventbrite page -->
-      <div class="buy-tickets-link-wrapper">
-        <a href="<?php echo tribe_get_event_website_url(); ?>" class="buy-tickets-button">Buy Tickets</a>
-      </div>
+		
+			<div class="show-page-container">
+				<!-- Buy Tickets button to link to eventbrite page -->
+				<div class="buy-tickets-link-wrapper desktop-view-hidden">
+					<a href="<?php echo tribe_get_event_website_url(); ?>" class="buy-tickets-button">Buy Tickets</a>
+				</div>
 
-			<!-- Event content -->
-			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
-			<div class="tribe-events-single-event-description tribe-events-content">
-				<?php the_content(); ?>
+				<!-- Event content -->
+				<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
+				<div class="tribe-events-single-event-description tribe-events-content">
+					<?php the_content(); ?>
+				</div>
+
+				<!-- using this to grab website url to pass to jquery to create the social media share links -->
+				<div class="website-url-for-javascript-hidden"><?php echo tribe_get_event_website_url(); ?></div>
+				<ul class="social-media-share-links">
+					<li class="social-share facebook"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Facebook.png" alt="Share Page on Facebook" /></li>
+					<li class="social-share twitter"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Twitter.png" alt="Share Page on Twitter" /></li>
+				</ul>
+
+
+				<!-- .tribe-events-single-event-description -->
+				<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
+
+				<!-- Event meta -->
+				<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
+				<?php tribe_get_template_part( 'modules/meta' ); ?>
+				<h3>Cast</h3>
+				<div class="show-cast-container">
+					<?php
+						$actors = CFS()->get( 'people' ); ?>
+						<?php if (isset($actors)) : ?>
+						<?php foreach( $actors as $post_id ) : ?>
+						<div class="show-cast-item">
+							<?php $the_post = get_post( $post_id ); ?>
+							<?php echo get_the_post_thumbnail( $the_post->ID ); ?>
+							<p><?php echo $the_post->post_title; ?></p>
+						</div><!-- show-cast-item -->
+					<?php endforeach; ?>
+						<?php endif; ?>
+				</div><!-- show-cast-container -->
 			</div>
-			<!-- .tribe-events-single-event-description -->
-			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
+			<div class="mobile-view-hidden">
+					<?php tribe_get_template_part( 'modules/meta' ); ?>
+			</div>
 
-			<!-- Event meta -->
-			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-			<?php tribe_get_template_part( 'modules/meta' ); ?>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>

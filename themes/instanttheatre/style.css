@@ -286,7 +286,8 @@ a {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  text-transform: capitalize; }
 
 h1 {
   font-size: 1.375rem;
@@ -439,6 +440,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  text-transform: uppercase;
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
@@ -555,7 +557,8 @@ input[type="submit"] {
   width: 100%;
   margin-top: 60px;
   height: 60px;
-  background-color: #FFEC00; }
+  background-color: #FFEC00;
+  z-index: 10; }
   @media (min-width: 480px) {
     .main-navigation {
       max-width: 1440px; } }
@@ -736,7 +739,8 @@ input[type="submit"] {
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-transition: .5s;
-    transition: .5s; }
+    transition: .5s;
+    z-index: 10; }
     .front-page .main-navigation a {
       position: relative; }
     .front-page .main-navigation .selector-nav {
@@ -845,7 +849,8 @@ input[type="submit"] {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-top: 50px; }
+    margin-top: 50px;
+    z-index: 10; }
     .main-navigation .home-banner-clickables {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1284,6 +1289,9 @@ body {
     opacity: 1; }
 
 /* Front page */
+.learn-more-link {
+  text-transform: capitalize; }
+
 .carousel-cell {
   margin-top: 3.75rem;
   width: 1240px;
@@ -1360,7 +1368,8 @@ body {
 
 .banner-carousel {
   margin-top: 3.75rem;
-  max-width: 1240px; }
+  max-width: 1240px;
+  background: #fff; }
   .banner-carousel .banner-cell {
     width: 100%; }
     .banner-carousel .banner-cell .banner-thumbnail {
@@ -1372,17 +1381,24 @@ body {
     .banner-carousel .banner-cell .banner-text-info {
       padding: 2rem;
       text-align: left; }
-      .banner-carousel .banner-cell .banner-text-info a {
-        font-size: 2rem;
-        font-weight: 500;
+      .banner-carousel .banner-cell .banner-text-info h2 a {
         text-decoration: none; }
-        .banner-carousel .banner-cell .banner-text-info a:link, .banner-carousel .banner-cell .banner-text-info a:visited {
-          color: #000; }
-  .banner-carousel .flickity-page-dots {
-    top: 200px;
-    height: 10px; }
-  .banner-carousel .flickity-prev-next-button {
-    top: 100px; }
+        .banner-carousel .banner-cell .banner-text-info h2 a:link, .banner-carousel .banner-cell .banner-text-info h2 a:visited {
+          color: black; }
+      .banner-carousel .banner-cell .banner-text-info .buy-tickets-button {
+        margin-right: 2rem; }
+        .banner-carousel .banner-cell .banner-text-info .buy-tickets-button:empty {
+          display: none; }
+        .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink {
+          font-size: 1rem;
+          text-decoration: none; }
+          .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink:link, .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink:visited {
+            color: white; }
+    .banner-carousel .banner-cell .flickity-page-dots {
+      top: 200px;
+      height: 10px; }
+    .banner-carousel .banner-cell .flickity-prev-next-button {
+      top: 100px; }
 
 /***************************
  *PAGE: Cast and Instructor 
@@ -1780,6 +1796,30 @@ Our Community page
   padding-right: 5%;
   padding-left: 5%; }
 
+/*****************
+tags archive page
+*******************/
+.tag-articles-containor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .tag-articles-containor .tags-article-wrapper {
+    margin: 0 1rem;
+    width: 300px;
+    background: white;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    padding: 1rem; }
+    .tag-articles-containor .tags-article-wrapper a {
+      text-decoration: none; }
+      .tag-articles-containor .tags-article-wrapper a:link, .tag-articles-containor .tags-article-wrapper a:visited {
+        color: black; }
+
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -1994,6 +2034,68 @@ Our Community page
       .class-schedule li a:active, .class-schedule li a:focus {
         border: none; }
 
+/*********************
+ERROR404
+*********************/
+.error404 .error-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 100px; }
+  .error404 .error-404 .page-title {
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 0px; }
+
+.error404 .page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 480px) {
+    .error404 .page-content {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      width: 60%; } }
+  .error404 .page-content p {
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 0px;
+    margin-top: 0px; }
+    @media (min-width: 480px) {
+      .error404 .page-content p {
+        text-align: left;
+        padding-left: 0px; } }
+
+.error404 .blue-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: .7rem 2rem; }
+  .error404 .blue-btn:visited {
+    color: #fff; }
+
 .page {
   text-align: center; }
   .page h1 {
@@ -2003,8 +2105,6 @@ Our Community page
     @media (min-width: 480px) {
       .page h1 {
         padding: 0; } }
-    .page h1:first-of-type {
-      margin-top: 3em; }
   .page p {
     margin-left: auto;
     margin-right: auto;
@@ -2486,11 +2586,11 @@ http://flickity.metafizzy.co
       .single-tribe_events .entry-content h1 {
         font-size: 2em; } }
   @media (min-width: 480px) {
-    .single-tribe_events .entry-content .tribe-events-single-section {
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1;
-      width: 50%; } }
+    .single-tribe_events .entry-content .show-page-container {
+      width: 45%; } }
+  @media (min-width: 480px) {
+    .single-tribe_events .entry-content .show-page-container .tribe-events-single-section {
+      display: none; } }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
     margin: 0; }
@@ -2501,6 +2601,7 @@ http://flickity.metafizzy.co
     text-align: center; }
     @media (min-width: 480px) {
       .single-tribe_events .entry-content .tribe_events {
+        display: block;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2510,16 +2611,13 @@ http://flickity.metafizzy.co
                 flex-direction: row;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        width: 100%; } }
+        width: 100%;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     .single-tribe_events .entry-content .tribe_events .tribe-events-content {
       margin-top: 20px;
       text-align: left; }
-      @media (min-width: 480px) {
-        .single-tribe_events .entry-content .tribe_events .tribe-events-content {
-          -webkit-box-ordinal-group: -1;
-              -ms-flex-order: -2;
-                  order: -2;
-          width: 50%; } }
     @media (min-width: 480px) {
       .single-tribe_events .entry-content .tribe_events .buy-tickets-link-wrapper {
         width: 50%;
@@ -2535,6 +2633,14 @@ http://flickity.metafizzy.co
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
+    text-align: left; }
+    .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
+      background-color: #00B6CB;
+      padding: 10px 20px;
+      border-radius: 20px; }
+      .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
+        background-color: #008898; }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2597,6 +2703,10 @@ http://flickity.metafizzy.co
     color: white; }
   .buy-tickets-button:hover {
     background-color: #c10f40; }
+
+@media (min-width: 480px) {
+  .tribe-events-meta-group .buy-tickets-link-wrapper {
+    margin-bottom: 10px; } }
 
 .shows-grid {
   display: -webkit-box;
@@ -2671,6 +2781,20 @@ ul.tribe-events-grid-view {
       text-align: left;
       margin-left: 10px; }
 
+@media (min-width: 480px) {
+  .tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group-details {
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 0; } }
+
+@media (min-width: 480px) {
+  .tribe-events-event-meta address.tribe-events-address, .tribe-events-list .tribe-events-venue-details {
+    font-style: normal; } }
+
+@media (min-width: 480px) {
+  .tribe-events-event-meta .tribe-events-meta-group-venue {
+    width: 100%; } }
+
 #calendar-area {
   border: 1px solid #D5D5D5;
   border-radius: 4px;
@@ -2734,3 +2858,73 @@ ul.tribe-events-grid-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+#tribe-events-bar {
+  display: none; }
+
+.tribe-events-list .tribe-events-loop .tribe-events-event-image {
+  width: 100%;
+  float: none; }
+
+.tribe-events-list .tribe-events-loop .tribe-events-category-shows, .tribe-events-list .tribe-events-loop .tribe-events-category-classes {
+  text-align: left; }
+
+.tribe-events-day .tribe-events-day-time-slot h5 {
+  background-color: #00B6CB; }
+
+#tribe-events-content .tribe-events-list-event-description a {
+  text-decoration: underline; }
+  #tribe-events-content .tribe-events-list-event-description a:hover {
+    color: #00B6CB; }
+  #tribe-events-content .tribe-events-list-event-description a::visited {
+    color: black; }
+
+.show-cast-container .show-cast-item {
+  max-width: 100px;
+  margin: 0 20px; }
+  .show-cast-container .show-cast-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+  .show-cast-container .show-cast-item p {
+    text-align: center; }
+
+.mobile-view-hidden {
+  display: none; }
+  @media (min-width: 480px) {
+    .mobile-view-hidden {
+      display: block;
+      width: 45%; } }
+
+@media (min-width: 480px) {
+  .desktop-view-hidden {
+    display: none; } }
+
+.website-url-for-javascript-hidden {
+  display: none; }
+
+.social-media-share-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .social-media-share-links li {
+    width: 50px;
+    margin: 0 5px; }
+
+@media (min-width: 480px) {
+  .show-page-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+@media (min-width: 480px) {
+  .show-page-container h3, .show-page-container .show-cast-container {
+    width: 100%;
+    text-align: left;
+    margin: 0; } }
