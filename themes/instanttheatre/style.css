@@ -2633,9 +2633,14 @@ http://flickity.metafizzy.co
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  @media (min-width: 480px) {
-    .single-tribe_events .entry-content .tribe-events-cal-links {
-      width: 50%; } }
+  .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
+    text-align: left; }
+    .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
+      background-color: #00B6CB;
+      padding: 10px 20px;
+      border-radius: 20px; }
+      .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
+        background-color: #008898; }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2894,3 +2899,32 @@ ul.tribe-events-grid-view {
 @media (min-width: 480px) {
   .desktop-view-hidden {
     display: none; } }
+
+.website-url-for-javascript-hidden {
+  display: none; }
+
+.social-media-share-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .social-media-share-links li {
+    width: 50px;
+    margin: 0 5px; }
+
+@media (min-width: 480px) {
+  .show-page-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+@media (min-width: 480px) {
+  .show-page-container h3, .show-page-container .show-cast-container {
+    width: 100%;
+    text-align: left;
+    margin: 0; } }
