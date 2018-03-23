@@ -2750,13 +2750,15 @@ http://flickity.metafizzy.co
   .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
     text-align: left;
     margin: 0;
-    vertical-align: center; }
+    margin-top: 2%; }
     .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
       background-color: #00B6CB;
       padding: 10px 20px;
       border-radius: 20px; }
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
         background-color: #008898; }
+      .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a.tribe-events-button {
+        margin: 0 5px; }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2867,6 +2869,7 @@ ul.tribe-events-grid-view {
     border: 1px solid #D5D5D5;
     width: 95%;
     padding: 10px;
+    background-color: white;
     margin-left: auto;
     margin-right: auto; }
     @media (min-width: 480px) {
@@ -2934,8 +2937,22 @@ ul.tribe-events-grid-view {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:hover {
+        background-color: #00B6CB;
+        text-shadow: none; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn.selected {
+        background-color: #00B6CB; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:focus {
+        outline: 0;
+        background-color: #00B6CB;
+        color: white;
+        text-shadow: none; }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
         width: 10%; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
+        width: 100%;
+        text-align: left;
+        padding-left: 10%; }
   #calendar-area .genre-buttons {
     width: 90%;
     text-align: left; }
@@ -3063,3 +3080,6 @@ ul.tribe-events-grid-view {
 
 .show-events-page li {
   margin: 0 10%; }
+
+#tribe-events-content .single-event-description {
+  text-align: center; }

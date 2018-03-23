@@ -25,7 +25,7 @@
     $('.show-cast-container').flickity({
       prevNextButtons: false
     })
-};
+  };
 
   $(window).on('resize', function() {
       if ($(window).width() < 480) {
@@ -55,7 +55,7 @@
         $('.studio-grid').flickity('destroy');
         $('.community-gallery-images').flickity('destroy');
         $('.class-type-gallery').flickity('destroy');
-        $('.photo-gallery-container').flickity('destroy');
+        // $('.photo-gallery-container').flickity('destroy');
         $('.show-cast-container').flickity({
           prevNextButtons: true
         })
@@ -66,13 +66,12 @@
     // options
     cellAlign: 'left',
     contain: true,
-    // prevNextButtons: false
-    // complete: alert('done!')
-
   });
   $('.photo-gallery-container').flickity({
     prevNextButtons: false,
     cellAlign: 'left',
+    contain: true,
+    wrapAround: true,
   });
 
   // Select all links with hashes

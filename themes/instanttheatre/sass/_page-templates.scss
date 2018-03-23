@@ -892,6 +892,22 @@ tags archive page
   }
 }
 
+.about-classes {
+  .photo-gallery {
+    .gallery-item {
+      width: 100%;
+      margin-right: 2rem;
+      overflow: hidden;
+
+      @include desktop {
+        width: 250px;
+        height: auto;
+      }
+    }
+  }
+}
+
+
 /*******************
 SEARCH RESULTS
 ********************/
@@ -943,10 +959,11 @@ SEARCH RESULTS
   
 }
 
+
+
 /*********************
 ERROR404
 *********************/
-
 .error404 {
   .error-404 {
     display: flex;
