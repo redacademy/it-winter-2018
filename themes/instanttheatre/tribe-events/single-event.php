@@ -67,8 +67,8 @@ $event_id = get_the_ID();
 				<!-- using this to grab website url to pass to jquery to create the social media share links -->
 				<div class="website-url-for-javascript-hidden"><?php echo tribe_get_event_website_url(); ?></div>
 				<ul class="social-media-share-links">
-					<li class="social-share facebook"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Facebook.png" alt="Share Page on Facebook" /></li>
-					<li class="social-share twitter"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Twitter.png" alt="Share Page on Twitter" /></li>
+					<li class="social-share facebook"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Facebook.svg" alt="Share Page on Facebook" /></li>
+					<li class="social-share twitter"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Twitter.svg" alt="Share Page on Twitter" /></li>
 				</ul>
 
 

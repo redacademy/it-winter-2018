@@ -37,10 +37,9 @@
     $('.social-share.twitter').on('click', function() {
         var url = 'https://twitter.com/intent/tweet?url=' + pageUrl;
         socialWindow(url);
-    })();
+    });
+  }
 
-
-}
-
+  setShareLinks();
 
 })(jQuery);
