@@ -1275,7 +1275,9 @@ body {
   @media (min-width: 480px) {
     body {
       margin: 0 auto;
-      background: url("../../assets/images/cloud-bkg2.png") top center/cover fixed; } }
+      background: url("../../assets/images/blue-rocket.png") 45% 25% fixed, url("../../assets/images/cloud-bkg2.png") top center/cover fixed;
+      background-size: 150px, 100%;
+      background-repeat: no-repeat; } }
 
 .site-content {
   max-width: 1240px; }
@@ -1369,7 +1371,9 @@ body {
 .banner-carousel {
   margin-top: 3.75rem;
   max-width: 1240px;
-  background: #fff; }
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
   .banner-carousel .banner-cell {
     width: 100%; }
     .banner-carousel .banner-cell .banner-thumbnail {
@@ -1815,27 +1819,6 @@ Our Community page
 /*****************
 tags archive page
 *******************/
-.tag-articles-containor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .tag-articles-containor .tags-article-wrapper {
-    margin: 0 1rem;
-    width: 300px;
-    background: white;
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    padding: 1rem; }
-    .tag-articles-containor .tags-article-wrapper a {
-      text-decoration: none; }
-      .tag-articles-containor .tags-article-wrapper a:link, .tag-articles-containor .tags-article-wrapper a:visited {
-        color: black; }
-
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -1857,7 +1840,6 @@ tags archive page
             justify-content: space-between; }
   .banner-carousel {
     padding: 1rem;
-    border: 1px solid gray;
     height: 500px; }
     .banner-carousel .flickity-viewport {
       max-height: 466px; }
