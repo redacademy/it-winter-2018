@@ -20,6 +20,10 @@ get_header(); ?>
           </div>
           <p class="community-block"><?php echo CFS() -> get ('our_community'); ?></p>
         </div>
+        <div class="venue-wrapper">
+          <h2><?php echo CFS()->get( 'venue_name' ); ?></h2>
+          <p><?php echo CFS()->get( 'venue_description' ); ?></p>
+        </div>
 
       <?php endwhile; // End of the loop. ?>
 

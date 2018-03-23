@@ -1754,16 +1754,32 @@ Our Community page
   padding-right: 5%; }
 
 .page-template-default .our-community .quote-entry {
-  margin-bottom: 5%;
-  padding: 0px;
-  background-image: url("../../assets/images/yellow-wave-banner-background.png");
-  background-position: center; }
-  @media (min-width: 480px) {
-    .page-template-default .our-community .quote-entry {
-      padding: 3%; }
+  background-color: #FFEC00;
+  text-align: center;
+  width: 100%; }
+  .page-template-default .our-community .quote-entry .quote-hook {
+    text-align: center;
+    margin: 0;
+    padding: 2%; }
+    @media (min-width: 480px) {
       .page-template-default .our-community .quote-entry .quote-hook {
+        text-align: left;
         background-color: rgba(255, 255, 255, 0.8);
         margin: 0px; } }
+  @media (min-width: 480px) {
+    .page-template-default .our-community .quote-entry {
+      margin-bottom: 5%;
+      padding: 0px;
+      background-image: url("../../assets/images/yellow-wave-banner-background.png");
+      background-position: center;
+      padding: 3%; } }
+
+.page-template-default .venue-wrapper {
+  text-align: center;
+  padding: 5%; }
+  .page-template-default .venue-wrapper h2 {
+    margin-top: 0;
+    font-size: 1.375rem; }
 
 .page-template-default .community-gallery-images {
   display: -webkit-box;
@@ -2009,6 +2025,39 @@ Our Community page
         background: #008898; }
       .class-schedule li a:active, .class-schedule li a:focus {
         border: none; }
+
+/*******************
+SEARCH RESULTS
+********************/
+@media (min-width: 480px) {
+  .search-results .search-results-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0; } }
+
+.search-results .search-results-wrapper article {
+  width: 100%;
+  height: 500px;
+  border: 1px solid darkslategrey;
+  margin-bottom: 10px;
+  padding-top: 10px; }
+  @media (min-width: 480px) {
+    .search-results .search-results-wrapper article {
+      width: 33%; } }
+  .search-results .search-results-wrapper article .image-wrapper {
+    height: 300px;
+    position: relative;
+    overflow: hidden; }
+    .search-results .search-results-wrapper article .image-wrapper img {
+      position: absolute;
+      height: 100%;
+      max-width: none; }
 
 /*********************
 ERROR404

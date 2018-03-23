@@ -503,17 +503,34 @@ Our Community page
       padding-right: 5%;
     }
     .quote-entry {
-      margin-bottom: 5%;
-      padding: 0px;
-      background-image: url("../../assets/images/yellow-wave-banner-background.png");
-      background-position: center;
-      @include desktop {
-        padding: 3%;
+      background-color: $color__yellow-brand;
+      text-align: center;
+      width: 100%;
         .quote-hook {
-          background-color: rgba(255, 255, 255, 0.8);
-          margin: 0px;
+          text-align: center;
+          margin: 0;
+          padding: 2%;
+          @include desktop{
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0px;
+          }
         }
+        @include desktop {
+          margin-bottom: 5%;
+          padding: 0px;
+          background-image: url("../../assets/images/yellow-wave-banner-background.png");
+          background-position: center;
+          padding: 3%;
       }
+    }
+  }
+  .venue-wrapper{
+    text-align: center;
+    padding: 5%;
+    h2{
+      margin-top: 0;
+      font-size: 1.375rem;
     }
   }
   .community-gallery-images {
@@ -548,7 +565,7 @@ Our Community page
       padding-left: 5%;
     }
   } //havana theatre
-}
+}//page-template-default
 
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
@@ -776,6 +793,41 @@ Our Community page
   }
 }
 
+/*******************
+SEARCH RESULTS
+********************/
+.search-results{
+.search-results-wrapper{
+  @include desktop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+  }
+  article{
+    width: 100%;
+    height: 500px;
+    border: 1px solid darkslategrey;
+    margin-bottom:10px;
+    padding-top: 10px;
+    @include desktop{
+      width: 33%;
+    }
+    .image-wrapper{
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+    img{
+      position: absolute;
+      
+      // width:100%;
+      height: 100%;
+      max-width: none;
+      }
+    }
+    }
+  }
+}
 
 /*********************
 ERROR404
