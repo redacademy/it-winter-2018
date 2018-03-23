@@ -7,6 +7,15 @@ jQuery(document).ready(function($){
     if($('body').hasClass('home') ){
       $('body').addClass('front-page');
     }    
+    if( $(window).width() < 480 ) {
+      console.log('captain, were below 480');
+      $('.sub-menu').css('display', 'none')
+      $('.menu-item-has-children').on('click', hamburgerMenu)
+    }else{
+      console.log('captain, were above 480');
+      $('.sub-menu').css('display', 'none')
+     $('.menu-item-has-children').on('hover', desktopMenu)
+    }
   })
   
   /*********************
@@ -39,10 +48,13 @@ $(window).bind('resizeEnd', function() {
 
    if( $(window).width() < 480 ) {
      console.log('captain, were below 480');
+     $('.sub-menu').css('display', 'block')
+     $('.sub-menu').hide()
      $('.menu-item-has-children').off('hover', desktopMenu)
      $('.menu-item-has-children').on('click', hamburgerMenu)
    }else{
      console.log('captain, were above 480');
+     $('.sub-menu').css('display', 'none')
     $('.menu-item-has-children').off('click', hamburgerMenu)
     $('.menu-item-has-children').on('hover', desktopMenu)
    }
@@ -51,9 +63,9 @@ $(window).bind('resizeEnd', function() {
 
 function hamburgerMenu(e) {
     e.preventDefault();
+    $('.sub-menu').removeClass('active');
       $('.menu-item-has-children').not(this).find('.sub-menu').hide();
-
-      $('.sub-menu').removeClass('active');
+    
       $(this).find('.sub-menu').addClass('active');
       $('.active').slideToggle();
       $('.active').on('click', 'a', function(){
@@ -63,6 +75,7 @@ function hamburgerMenu(e) {
 }
 
 function desktopMenu() {
+  $('.sub-menu').css('display', 'flex')
   $('.sub-menu').removeClass('active');
   $('.menu-item-has-children').find('.sub-menu').hide();
   $(this).children('.sub-menu').show();

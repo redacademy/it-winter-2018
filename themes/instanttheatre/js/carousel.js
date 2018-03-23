@@ -25,7 +25,7 @@
     $('.show-cast-container').flickity({
       prevNextButtons: false
     })
-};
+}
 
   $(window).on('resize', function() {
       if ($(window).width() < 480) {
