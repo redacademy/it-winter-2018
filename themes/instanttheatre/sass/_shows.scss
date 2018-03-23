@@ -10,10 +10,16 @@
       }
     }
 
-    .tribe-events-single-section {
+    .show-page-container {
       @include desktop {
-        order: -1;
-        width: 50%;
+        width: 45%;
+      }
+    }
+
+    .show-page-container .tribe-events-single-section {
+      @include desktop {
+        display: none;
+
       }
     }
 
@@ -34,14 +40,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+        justify-content: space-between;
       }
       .tribe-events-content {
         margin-top: 20px;
         text-align: left;
-        @include desktop {
-          order: -2;
-          width: 50%;
-        }
       }
 
       .buy-tickets-link-wrapper {
@@ -59,9 +62,15 @@
       align-items: center;
     }
 
-    .tribe-events-cal-links {
-      @include desktop {
-        width: 50%;
+    #tribe-events .tribe-events-cal-links {
+      text-align: left;
+      a {
+        background-color: $color__blue-brand;
+        padding: 10px 20px;
+        border-radius: 20px;
+        &:hover {
+          background-color: darken($color__blue-brand, 10%);
+        }
       }
     }
 
@@ -117,6 +126,8 @@
    }
 }
 
+
+//red buy tickets button
 .buy-tickets-button {
   background-color: $color__red-brand;
   padding: 10px 30px;
@@ -130,6 +141,14 @@
   }
   &:hover {
     background-color: darken($color__red-brand, 10%);
+  }
+}
+
+.tribe-events-meta-group {
+  .buy-tickets-link-wrapper {
+    @include desktop {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -209,6 +228,27 @@ ul.tribe-events-grid-view {
   }
 }
 
+//overriding styles for events single page meta area
+.tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group-details {
+  @include desktop {
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.tribe-events-event-meta address.tribe-events-address, .tribe-events-list .tribe-events-venue-details {
+  @include desktop {
+    font-style: normal;
+  }
+}
+
+.tribe-events-event-meta .tribe-events-meta-group-venue {
+  @include desktop {
+    width: 100%;
+  }
+}
+
 //styling for shows list/calendar view
  #calendar-area {
    border: 1px solid $color__lightgrey-border;
@@ -220,7 +260,18 @@ ul.tribe-events-grid-view {
      width: 25%;
    }
    .shows-taxonomy-filter-area {
-     width: 70%;
+     width: 70%; 
+     .filter-shows-group {
+        display: flex;
+        flex-wrap: wrap;
+        h3 {
+          width: 10%;
+        }
+     }
+   }
+   .genre-buttons {
+     width: 90%;
+     text-align: left;
    }
    h3 {
      text-align: left;
@@ -357,6 +408,7 @@ ul.tribe-events-grid-view {
   display: none;
   @include desktop {
     display: block;
+    width: 45%;
   }
 }
 
@@ -366,3 +418,33 @@ ul.tribe-events-grid-view {
   }
 }
 
+//css to hide the link to pass into the jquery function
+.website-url-for-javascript-hidden {
+  display: none;
+}
+
+.social-media-share-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  display: flex;
+  li {
+    width: 50px;
+    margin: 0 5px;
+  }
+}
+
+.show-page-container {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h3, .show-cast-container {
+    @include desktop {
+      width: 100%;
+      text-align: left;
+      margin: 0;
+    }
+  }
+}

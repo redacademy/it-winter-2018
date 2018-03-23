@@ -34,7 +34,8 @@ body {
 }
 
 /* Front page */
-.learn-more-link{
+
+.learn-more-link {
   text-transform: capitalize;
 }
 
@@ -567,6 +568,30 @@ Our Community page
   } //havana theatre
 }//page-template-default
 
+/*****************
+tags archive page
+*******************/
+
+.tag-articles-containor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .tags-article-wrapper {
+    margin: 0 1rem;
+    width: 300px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    a {
+      text-decoration: none;
+      &:link,
+      &:visited {
+        color: black;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
     padding: 2rem;
@@ -736,9 +761,12 @@ Our Community page
     }
     .cell {
       text-align: left;
-      &:first-child,
+
+      &:first-child{
+        width: 65%
+      }
       &:last-child {
-        width: 50%;
+        width: 35%;
       }
       &:not(:first-child):not(:last-child) {
         display: none;
@@ -770,29 +798,121 @@ Our Community page
         }
       }
     }
-    a {
+
+    .blue-btn {
       max-width: 125px;
-      padding: .5rem 1rem;
-      margin: auto 0;
       color: white;
       font-size: 1rem;
       text-decoration: none;
       text-shadow: none;
-      border-radius: 5px;
-      border: none;
-      background: $color__blue-brand;
-      box-shadow: none;
-      &:hover {
-        background: darken($color__blue-brand, 10%);
+    }
+  }
+}
+
+/*************************
+ *PAGE: About Our Classes
+ *************************/
+ .yellow-wave-panel {
+
+  background: $color__yellow-brand;
+
+  > * {
+    background: #fff content-box;
+    padding: 1rem;
+  }
+
+  @include desktop {
+    background: url("../../assets/images/yellow-wave-banner-background.png");
+    > * {
+      background: rgba(255, 255, 255, 0.75) content-box;
+      padding: 3rem;
+    }
+  }
+}
+
+.class-type-gallery {
+
+  @include desktop {
+    display: flex;
+  }
+  
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: middle;
+    width: 100%;
+    padding: 0.5rem;
+
+    @include desktop {
+      width: 25%;
+    }
+
+    &:first-child {
+      padding-left: 1rem;
+    }
+    &:last-child {
+      padding-right: 1rem;
+    }
+
+    .item-logo {
+      width: 66px;
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .blue-btn {
+      max-width: 125px;
+      margin: auto auto 0;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.why-take-classes {
+
+  p {
+    padding: 0.5rem;
+
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  @include desktop {
+    .content-panel {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      > * {
+        width: 47.5%
       }
-      &:active,
-      &:focus {
-        border: none;
+
+      .panel-image {
+        overflow: hidden;
+      }
+      img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+      }
+
+      &:nth-child(odd) {
+        flex-direction: row;
+      }
+      &:nth-child(even) {
+        flex-direction: row-reverse;
       }
     }
   }
 }
 
+<<<<<<< HEAD
 /*******************
 SEARCH RESULTS
 ********************/
@@ -827,6 +947,23 @@ SEARCH RESULTS
     }
     }
   }
+=======
+.photo-gallery {
+
+  .gallery-item {
+    width: 95%;
+    margin: 0 auto;
+
+    @include desktop {
+      width: 33.333%;
+      
+      // :not(:last-child) {
+        margin-right: 1rem;
+      // }
+    }
+  }
+  
+>>>>>>> fb4799610a5a4fc4a9399dcd15c86527abf2a450
 }
 
 /*********************

@@ -63,6 +63,15 @@ $event_id = get_the_ID();
 				<div class="tribe-events-single-event-description tribe-events-content">
 					<?php the_content(); ?>
 				</div>
+
+				<!-- using this to grab website url to pass to jquery to create the social media share links -->
+				<div class="website-url-for-javascript-hidden"><?php echo tribe_get_event_website_url(); ?></div>
+				<ul class="social-media-share-links">
+					<li class="social-share facebook"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Facebook.svg" alt="Share Page on Facebook" /></li>
+					<li class="social-share twitter"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Twitter.svg" alt="Share Page on Twitter" /></li>
+				</ul>
+
+
 				<!-- .tribe-events-single-event-description -->
 				<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
 
@@ -72,14 +81,16 @@ $event_id = get_the_ID();
 				<h3>Cast</h3>
 				<div class="show-cast-container">
 					<?php
-						$actors = CFS()->get( 'people' );		
-						foreach( $actors as $post_id ) : ?>
+						$actors = CFS()->get( 'people' ); ?>
+						<?php if (isset($actors)) : ?>
+						<?php foreach( $actors as $post_id ) : ?>
 						<div class="show-cast-item">
 							<?php $the_post = get_post( $post_id ); ?>
 							<?php echo get_the_post_thumbnail( $the_post->ID ); ?>
 							<p><?php echo $the_post->post_title; ?></p>
 						</div><!-- show-cast-item -->
 					<?php endforeach; ?>
+						<?php endif; ?>
 				</div><!-- show-cast-container -->
 			</div>
 			<div class="mobile-view-hidden">

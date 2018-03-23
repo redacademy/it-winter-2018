@@ -1812,6 +1812,30 @@ Our Community page
   padding-right: 5%;
   padding-left: 5%; }
 
+/*****************
+tags archive page
+*******************/
+.tag-articles-containor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .tag-articles-containor .tags-article-wrapper {
+    margin: 0 1rem;
+    width: 300px;
+    background: white;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    padding: 1rem; }
+    .tag-articles-containor .tags-article-wrapper a {
+      text-decoration: none; }
+      .tag-articles-containor .tags-article-wrapper a:link, .tag-articles-containor .tags-article-wrapper a:visited {
+        color: black; }
+
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -1984,8 +2008,10 @@ Our Community page
       margin: 0; }
     .class-schedule li .cell {
       text-align: left; }
-      .class-schedule li .cell:first-child, .class-schedule li .cell:last-child {
-        width: 50%; }
+      .class-schedule li .cell:first-child {
+        width: 65%; }
+      .class-schedule li .cell:last-child {
+        width: 35%; }
       .class-schedule li .cell:not(:first-child):not(:last-child) {
         display: none; }
         @media (min-width: 480px) {
@@ -2008,23 +2034,109 @@ Our Community page
           -webkit-box-flex: 1;
               -ms-flex: 1 1 5%;
                   flex: 1 1 5%; } }
-    .class-schedule li a {
+    .class-schedule li .blue-btn {
       max-width: 125px;
-      padding: .5rem 1rem;
-      margin: auto 0;
       color: white;
       font-size: 1rem;
       text-decoration: none;
-      text-shadow: none;
-      border-radius: 5px;
-      border: none;
-      background: #00B6CB;
-      -webkit-box-shadow: none;
-              box-shadow: none; }
-      .class-schedule li a:hover {
-        background: #008898; }
-      .class-schedule li a:active, .class-schedule li a:focus {
-        border: none; }
+      text-shadow: none; }
+
+/*************************
+ *PAGE: About Our Classes
+ *************************/
+.yellow-wave-panel {
+  background: #FFEC00; }
+  .yellow-wave-panel > * {
+    background: #fff content-box;
+    padding: 1rem; }
+  @media (min-width: 480px) {
+    .yellow-wave-panel {
+      background: url("../../assets/images/yellow-wave-banner-background.png"); }
+      .yellow-wave-panel > * {
+        background: rgba(255, 255, 255, 0.75) content-box;
+        padding: 3rem; } }
+
+@media (min-width: 480px) {
+  .class-type-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.class-type-gallery .gallery-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: middle;
+      -ms-flex-align: middle;
+          align-items: middle;
+  width: 100%;
+  padding: 0.5rem; }
+  @media (min-width: 480px) {
+    .class-type-gallery .gallery-item {
+      width: 25%; } }
+  .class-type-gallery .gallery-item:first-child {
+    padding-left: 1rem; }
+  .class-type-gallery .gallery-item:last-child {
+    padding-right: 1rem; }
+  .class-type-gallery .gallery-item .item-logo {
+    width: 66px;
+    margin: 0 auto; }
+  .class-type-gallery .gallery-item p {
+    text-align: center; }
+  .class-type-gallery .gallery-item .blue-btn {
+    max-width: 125px;
+    margin: auto auto 0;
+    text-decoration: none;
+    color: white; }
+
+.why-take-classes p {
+  padding: 0.5rem; }
+  @media (min-width: 480px) {
+    .why-take-classes p {
+      padding: 0; } }
+
+@media (min-width: 480px) {
+  .why-take-classes .content-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 2rem; }
+    .why-take-classes .content-panel > * {
+      width: 47.5%; }
+    .why-take-classes .content-panel .panel-image {
+      overflow: hidden; }
+    .why-take-classes .content-panel img {
+      height: 100%;
+      width: auto;
+      max-width: none; }
+    .why-take-classes .content-panel:nth-child(odd) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+    .why-take-classes .content-panel:nth-child(even) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; } }
+
+.photo-gallery .gallery-item {
+  width: 95%;
+  margin: 0 auto; }
+  @media (min-width: 480px) {
+    .photo-gallery .gallery-item {
+      width: 33.333%;
+      margin-right: 1rem; } }
 
 /*******************
 SEARCH RESULTS
@@ -2130,8 +2242,6 @@ ERROR404
     @media (min-width: 480px) {
       .page h1 {
         padding: 0; } }
-    .page h1:first-of-type {
-      margin-top: 3em; }
   .page p {
     margin-left: auto;
     margin-right: auto;
@@ -2613,11 +2723,11 @@ http://flickity.metafizzy.co
       .single-tribe_events .entry-content h1 {
         font-size: 2em; } }
   @media (min-width: 480px) {
-    .single-tribe_events .entry-content .tribe-events-single-section {
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1;
-      width: 50%; } }
+    .single-tribe_events .entry-content .show-page-container {
+      width: 45%; } }
+  @media (min-width: 480px) {
+    .single-tribe_events .entry-content .show-page-container .tribe-events-single-section {
+      display: none; } }
   .single-tribe_events .entry-content .tribe-events-event-image {
     text-align: center;
     margin: 0; }
@@ -2638,16 +2748,13 @@ http://flickity.metafizzy.co
                 flex-direction: row;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        width: 100%; } }
+        width: 100%;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     .single-tribe_events .entry-content .tribe_events .tribe-events-content {
       margin-top: 20px;
       text-align: left; }
-      @media (min-width: 480px) {
-        .single-tribe_events .entry-content .tribe_events .tribe-events-content {
-          -webkit-box-ordinal-group: -1;
-              -ms-flex-order: -2;
-                  order: -2;
-          width: 50%; } }
     @media (min-width: 480px) {
       .single-tribe_events .entry-content .tribe_events .buy-tickets-link-wrapper {
         width: 50%;
@@ -2663,9 +2770,14 @@ http://flickity.metafizzy.co
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  @media (min-width: 480px) {
-    .single-tribe_events .entry-content .tribe-events-cal-links {
-      width: 50%; } }
+  .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
+    text-align: left; }
+    .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
+      background-color: #00B6CB;
+      padding: 10px 20px;
+      border-radius: 20px; }
+      .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
+        background-color: #008898; }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2728,6 +2840,10 @@ http://flickity.metafizzy.co
     color: white; }
   .buy-tickets-button:hover {
     background-color: #c10f40; }
+
+@media (min-width: 480px) {
+  .tribe-events-meta-group .buy-tickets-link-wrapper {
+    margin-bottom: 10px; } }
 
 .shows-grid {
   display: -webkit-box;
@@ -2802,6 +2918,20 @@ ul.tribe-events-grid-view {
       text-align: left;
       margin-left: 10px; }
 
+@media (min-width: 480px) {
+  .tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group-details {
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 0; } }
+
+@media (min-width: 480px) {
+  .tribe-events-event-meta address.tribe-events-address, .tribe-events-list .tribe-events-venue-details {
+    font-style: normal; } }
+
+@media (min-width: 480px) {
+  .tribe-events-event-meta .tribe-events-meta-group-venue {
+    width: 100%; } }
+
 #calendar-area {
   border: 1px solid #D5D5D5;
   border-radius: 4px;
@@ -2816,6 +2946,17 @@ ul.tribe-events-grid-view {
     width: 25%; }
   #calendar-area .shows-taxonomy-filter-area {
     width: 70%; }
+    #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
+        width: 10%; }
+  #calendar-area .genre-buttons {
+    width: 90%;
+    text-align: left; }
   #calendar-area h3 {
     text-align: left;
     margin: 10px 0; }
@@ -2900,8 +3041,38 @@ ul.tribe-events-grid-view {
   display: none; }
   @media (min-width: 480px) {
     .mobile-view-hidden {
-      display: block; } }
+      display: block;
+      width: 45%; } }
 
 @media (min-width: 480px) {
   .desktop-view-hidden {
     display: none; } }
+
+.website-url-for-javascript-hidden {
+  display: none; }
+
+.social-media-share-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .social-media-share-links li {
+    width: 50px;
+    margin: 0 5px; }
+
+@media (min-width: 480px) {
+  .show-page-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+@media (min-width: 480px) {
+  .show-page-container h3, .show-page-container .show-cast-container {
+    width: 100%;
+    text-align: left;
+    margin: 0; } }
