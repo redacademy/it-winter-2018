@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main about-classes" role="main">
 
 		<?php //Fetch class_type terms
 			$args = array(
@@ -41,6 +41,7 @@ get_header(); ?>
 		<!-- Why Take Classes At Instant -->
 		<section class="why-take-classes">
 			<h1>Why Classes at Instant?</h1>
+
 			<div class="content-panel">
 				<div class="panel-image">
 					<img src="<?php echo get_template_directory_uri() . '/assets/images/why-take-classes1.jpg" alt="Improv class scene"'?>"/>
@@ -67,7 +68,7 @@ get_header(); ?>
 			<div class="testimonial-grid">
 				<h1>Testimonials</h1>
 				<div class="testimonial-carousel-container">
-				<?php $testimonials = CFS()->get( 'testimonials', get_page_by_path('hire-us')->ID); ?>
+				<?php $testimonials = CFS()->get( 'testimonials' ); ?>
 				<?php foreach ( $testimonials as $testimonial ) : ?>
 					<div class="testimonial-grid-part">
 						<img src="<?php echo $testimonial['image'] ?>">
