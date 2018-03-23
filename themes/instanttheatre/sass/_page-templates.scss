@@ -134,7 +134,8 @@ body {
       height: 200px;
       overflow: hidden;
       img {
-        min-width: 480px;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .banner-text-info {
@@ -607,10 +608,6 @@ tags archive page
         // max-width: none;
         height: 100%;
         margin-right: 2rem;
-        img {
-          height: 100%;
-          max-width: none;
-        }
       }
       .banner-text-info {
         min-width: 400px;
