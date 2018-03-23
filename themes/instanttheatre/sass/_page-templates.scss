@@ -744,14 +744,10 @@ tags archive page
     }
     .cell {
       text-align: left;
-<<<<<<< HEAD
 
       &:first-child{
         width: 65%
       }
-=======
-      &:first-child,
->>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       &:last-child {
         width: 35%;
       }
@@ -785,21 +781,13 @@ tags archive page
         }
       }
     }
-<<<<<<< HEAD
 
     .blue-btn {
       max-width: 125px;
-=======
-    a {
-      max-width: 125px;
-      padding: .5rem 1rem;
-      margin: auto 0;
->>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       color: white;
       font-size: 1rem;
       text-decoration: none;
       text-shadow: none;
-<<<<<<< HEAD
     }
   }
 }
@@ -895,14 +883,6 @@ tags archive page
         height: 100%;
         width: auto;
         max-width: none;
-=======
-      border-radius: 5px;
-      border: none;
-      background: $color__blue-brand;
-      box-shadow: none;
-      &:hover {
-        background: darken($color__blue-brand, 10%);
->>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       }
 
       &:nth-child(odd) {
@@ -929,9 +909,7 @@ tags archive page
       // }
     }
   }
-<<<<<<< HEAD
   
-=======
 }
 
 /*********************
@@ -981,5 +959,4 @@ ERROR404
       color: #fff;
     }
   }
->>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
 }

@@ -16,20 +16,16 @@
     });
     $('.community-gallery-images').flickity({
       prevNextButtons: false
-<<<<<<< HEAD
     });
     $('.class-type-gallery').flickity({
       prevNextButtons: false,
       cellAlign: 'left',
       contain: true
     });
-=======
-    })
     $('.show-cast-container').flickity({
       prevNextButtons: false
     })
->>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
-  }
+};
 
   $(window).on('resize', function() {
       if ($(window).width() < 480) {
@@ -44,32 +40,25 @@
         });
         $('.community-gallery-images').flickity({
           prevNextButtons: false
-<<<<<<< HEAD
         });
         $('.class-type-gallery').flickity({
           prevNextButtons: false,
           cellAlign: 'left',
           contain: true
         });
-=======
-        })
         $('.show-cast-container').flickity({
           prevNextButtons: false
         })
->>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       } else {
         $('.hire-us-grid').flickity('destroy');
         $('.testimonial-carousel-container').flickity('destroy');
         $('.studio-grid').flickity('destroy');
         $('.community-gallery-images').flickity('destroy');
-<<<<<<< HEAD
         $('.class-type-gallery').flickity('destroy');
         $('.photo-gallery-container').flickity('destroy');
-=======
         $('.show-cast-container').flickity({
           prevNextButtons: true
         })
->>>>>>> dcf0518587afe6cdd5d989848de3d0560b81958e
       }
   });
 
