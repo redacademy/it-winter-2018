@@ -555,7 +555,6 @@ input[type="submit"] {
   position: fixed;
   top: 0;
   width: 100%;
-  margin-top: 60px;
   height: 60px;
   background-color: #FFEC00;
   z-index: 10; }
@@ -849,7 +848,6 @@ input[type="submit"] {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-top: 50px;
     z-index: 10; }
     .main-navigation .home-banner-clickables {
       display: -webkit-box;
@@ -2870,6 +2868,8 @@ ul.tribe-events-grid-view {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
+  ul.tribe-events-grid-view .people-content-info {
+    display: none; }
   ul.tribe-events-grid-view li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2913,6 +2913,18 @@ ul.tribe-events-grid-view {
     ul.tribe-events-grid-view li .tribe-events-related-events-title {
       text-align: left;
       margin-left: 10px; }
+  ul.tribe-events-grid-view .type-post_people .show-item .tribe-events-grid-thumbnail img {
+    width: 100%; }
+  ul.tribe-events-grid-view .type-post_people .show-item .people-content-info {
+    display: block; }
+  ul.tribe-events-grid-view .type-post_people .show-item .related-events-time-info {
+    display: none; }
+  ul.tribe-events-grid-view .type-post_people .show-item .related-events-venue-info {
+    display: none; }
+  ul.tribe-events-grid-view .type-post_people .show-item .related-events-links a {
+    margin-left: 0; }
+  ul.tribe-events-grid-view .type-post_people .show-item .related-events-links .buy-tickets-button {
+    display: none; }
 
 @media (min-width: 480px) {
   .tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group-details {

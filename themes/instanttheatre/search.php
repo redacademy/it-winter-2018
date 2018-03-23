@@ -15,9 +15,8 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
-<div class="search-results-wrapper">
 			<?php /* Start the Loop */ ?>
-			<div class="shows-grid">
+		<div class="shows-grid">
 <ul class="tribe-events-grid-view show-events-page">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -33,6 +32,11 @@ get_header(); ?>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
+
+	<div class="people-content-info">
+	<!-- <?php $content = get_the_content(); echo mb_strimwidth($content, 0, 400, '...');?> -->
+				<?php 	echo wp_trim_words( get_the_content(), 40, '...' ); ?>
+	</div>
 
 		<div class="related-events-time-info">
 
@@ -56,10 +60,16 @@ get_header(); ?>
 </ul>
 			</div>
 
-<?php red_starter_numbered_pagination(); ?>
+			<?php the_posts_navigation(); ?>
+
+		<?php else : ?>
+
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+		<?php endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

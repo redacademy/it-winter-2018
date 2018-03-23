@@ -176,6 +176,9 @@ ul.tribe-events-grid-view {
     display: flex;
     flex-wrap: wrap;
   }
+  .people-content-info{
+    display: none;
+  }
   li {
     display: flex;
     flex-direction: column;
@@ -224,6 +227,32 @@ ul.tribe-events-grid-view {
     .tribe-events-related-events-title {
       text-align: left;
       margin-left: 10px;
+    }
+  }
+  .type-post_people{
+    .show-item{
+    .tribe-events-grid-thumbnail{
+      img{
+        width: 100%;
+      }
+    }
+    .people-content-info{
+      display: block;
+    }
+      .related-events-time-info{
+        display: none;
+      }
+      .related-events-venue-info{
+        display: none;
+      }
+      .related-events-links{
+        a{
+          margin-left: 0;
+        }
+        .buy-tickets-button{
+          display: none;
+        }
+      }
     }
   }
 }
