@@ -1287,7 +1287,9 @@ body {
   @media (min-width: 480px) {
     body {
       margin: 0 auto;
-      background: url("../../assets/images/cloud-bkg2.png") top center/cover fixed; } }
+      background: url("../../assets/images/blue-rocket.png") 45% 25% fixed, url("../../assets/images/cloud-bkg2.png") top center/cover fixed;
+      background-size: 150px, 100%;
+      background-repeat: no-repeat; } }
 
 .site-content {
   max-width: 1240px; }
@@ -1381,7 +1383,9 @@ body {
 .banner-carousel {
   margin-top: 3.75rem;
   max-width: 1240px;
-  background: #fff; }
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
   .banner-carousel .banner-cell {
     width: 100%; }
     .banner-carousel .banner-cell .banner-thumbnail {
@@ -1827,27 +1831,6 @@ Our Community page
 /*****************
 tags archive page
 *******************/
-.tag-articles-containor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .tag-articles-containor .tags-article-wrapper {
-    margin: 0 1rem;
-    width: 300px;
-    background: white;
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    padding: 1rem; }
-    .tag-articles-containor .tags-article-wrapper a {
-      text-decoration: none; }
-      .tag-articles-containor .tags-article-wrapper a:link, .tag-articles-containor .tags-article-wrapper a:visited {
-        color: black; }
-
 @media screen and (min-width: 480px) {
   .what-is-improv {
     padding: 2rem; }
@@ -1869,7 +1852,6 @@ tags archive page
             justify-content: space-between; }
   .banner-carousel {
     padding: 1rem;
-    border: 1px solid gray;
     height: 500px; }
     .banner-carousel .flickity-viewport {
       max-height: 466px; }
@@ -2779,13 +2761,17 @@ http://flickity.metafizzy.co
         -ms-flex-align: center;
             align-items: center; }
   .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
-    text-align: left; }
+    text-align: left;
+    margin: 0;
+    margin-top: 2%; }
     .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
       background-color: #00B6CB;
       padding: 10px 20px;
       border-radius: 20px; }
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
         background-color: #008898; }
+      .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a.tribe-events-button {
+        margin: 0 5px; }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2884,6 +2870,10 @@ ul.tribe-events-grid-view {
           flex-wrap: wrap; } }
   ul.tribe-events-grid-view .people-content-info {
     display: none; }
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   ul.tribe-events-grid-view li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2895,11 +2885,12 @@ ul.tribe-events-grid-view {
     border: 1px solid #D5D5D5;
     width: 95%;
     padding: 10px;
+    background-color: white;
     margin-left: auto;
     margin-right: auto; }
     @media (min-width: 480px) {
       ul.tribe-events-grid-view li {
-        width: 33%; } }
+        width: 31%; } }
     ul.tribe-events-grid-view li .tribe-events-grid-thumbnail {
       width: 100%; }
     ul.tribe-events-grid-view li h3 {
@@ -2974,8 +2965,22 @@ ul.tribe-events-grid-view {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:hover {
+        background-color: #00B6CB;
+        text-shadow: none; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn.selected {
+        background-color: #00B6CB; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:focus {
+        outline: 0;
+        background-color: #00B6CB;
+        color: white;
+        text-shadow: none; }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
         width: 10%; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
+        width: 100%;
+        text-align: left;
+        padding-left: 10%; }
   #calendar-area .genre-buttons {
     width: 90%;
     text-align: left; }
@@ -3084,6 +3089,8 @@ ul.tribe-events-grid-view {
   .social-media-share-links li {
     width: 50px;
     margin: 0 5px; }
+    .social-media-share-links li:hover {
+      cursor: pointer; }
 
 @media (min-width: 480px) {
   .show-page-container {
@@ -3099,5 +3106,8 @@ ul.tribe-events-grid-view {
     text-align: left;
     margin: 0; } }
 
-.social-share:hover {
-  cursor: pointer; }
+.show-events-page li {
+  margin: 0 10%; }
+
+#tribe-events-content .single-event-description {
+  text-align: center; }
