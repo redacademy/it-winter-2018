@@ -65,7 +65,7 @@
     #tribe-events .tribe-events-cal-links {
       text-align: left;
       margin: 0;
-      vertical-align: center;
+      margin-top: 2%;
       a {
         background-color: $color__blue-brand;
         padding: 10px 20px;
@@ -73,6 +73,9 @@
         &:hover {
           background-color: darken($color__blue-brand, 10%);
         }
+        &.tribe-events-button {
+          margin: 0 5px;
+        } 
       }
     }
 
@@ -185,6 +188,7 @@ ul.tribe-events-grid-view {
     border: 1px solid $color__lightgrey-border;
     width: 95%;
     padding: 10px;
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
     @include desktop {
@@ -459,4 +463,8 @@ ul.tribe-events-grid-view {
   li {
     margin: 0 10%;
   }
+}
+
+#tribe-events-content .single-event-description {
+  text-align: center;
 }

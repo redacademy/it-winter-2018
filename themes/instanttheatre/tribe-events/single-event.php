@@ -31,7 +31,14 @@ $event_id = get_the_ID();
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
 
-  <?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
+	<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
+
+	<p class="single-event-description">
+	<?php 
+		$event_description = esc_html( CFS()->get('event_description') );
+		echo $event_description;
+	?>
+	</p>
 
 
 	<!-- Event header -->
