@@ -2809,6 +2809,17 @@ ul.tribe-events-grid-view {
     width: 25%; }
   #calendar-area .shows-taxonomy-filter-area {
     width: 70%; }
+    #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
+        width: 10%; }
+  #calendar-area .genre-buttons {
+    width: 90%;
+    text-align: left; }
   #calendar-area h3 {
     text-align: left;
     margin: 10px 0; }

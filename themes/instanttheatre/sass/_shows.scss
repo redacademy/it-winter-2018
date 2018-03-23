@@ -260,7 +260,18 @@ ul.tribe-events-grid-view {
      width: 25%;
    }
    .shows-taxonomy-filter-area {
-     width: 70%;
+     width: 70%; 
+     .filter-shows-group {
+        display: flex;
+        flex-wrap: wrap;
+        h3 {
+          width: 10%;
+        }
+     }
+   }
+   .genre-buttons {
+     width: 90%;
+     text-align: left;
    }
    h3 {
      text-align: left;
