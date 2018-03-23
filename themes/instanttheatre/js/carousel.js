@@ -6,13 +6,18 @@
     });
     $('.testimonial-carousel-container').flickity({
       prevNextButtons: false
-    })
+    });
     $('.studio-grid').flickity({
       prevNextButtons: false
-    })
+    });
     $('.community-gallery-images').flickity({
       prevNextButtons: false
-    })
+    });
+    $('.class-type-gallery').flickity({
+      prevNextButtons: false,
+      cellAlign: 'left',
+      contain: true
+    });
   }
 
   $(window).on('resize', function() {
@@ -22,18 +27,25 @@
         });
         $('.testimonial-carousel-container').flickity({
           prevNextButtons: false
-        })
+        });
         $('.studio-grid').flickity({
           prevNextButtons: false
-        })
+        });
         $('.community-gallery-images').flickity({
           prevNextButtons: false
-        })
+        });
+        $('.class-type-gallery').flickity({
+          prevNextButtons: false,
+          cellAlign: 'left',
+          contain: true
+        });
       } else {
         $('.hire-us-grid').flickity('destroy');
         $('.testimonial-carousel-container').flickity('destroy');
         $('.studio-grid').flickity('destroy');
         $('.community-gallery-images').flickity('destroy');
+        $('.class-type-gallery').flickity('destroy');
+        $('.photo-gallery-container').flickity('destroy');
       }
   });
 
@@ -44,6 +56,10 @@
     // prevNextButtons: false
     // complete: alert('done!')
 
+  });
+  $('.photo-gallery-container').flickity({
+    prevNextButtons: false,
+    cellAlign: 'left',
   });
 
   // Select all links with hashes

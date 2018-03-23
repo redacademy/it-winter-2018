@@ -57,7 +57,7 @@ get_header(); ?>
 
 				<?php // The Loop ?>
 				<?php if ( $classes->have_posts() ) : ?>
-					<ul class="class-schedule">
+					<ul id="<?php echo $term->slug ?>" class="class-schedule">
 						<li>
 							<p class="cell">Class</p>
 							<p class="cell">Date</p>
@@ -73,16 +73,12 @@ get_header(); ?>
 							$event_start_time = tribe_get_start_time( $post->ID, 'g:iA' );
 							$event_end_time = tribe_get_end_time( $post->ID, 'g:iA' );
 							$event_cost = tribe_get_cost( $post->ID );
-							$event_link = tribe_get_event_website_link( null, 'Class Details' );
+							// $event_link = tribe_get_event_website_link( null, 'Class Details' );
+							$event_link = tribe_get_event_website_url( $post->ID );
 						?>
 						<?php //Retrieve Custom Fields data
 							$prerequisite = CFS()->get('prerequisite', false );
-							$instructors = get_posts (
-								array(
-									'post_type' => 'post_people',
-									'post__in' => CFS()->get( 'instructor', false )
-								)
-							);
+							$instructors = CFS()->get( 'people' );
 						?>
 							<li>
 								<p class="cell"><?php echo $post->post_title; ?></p>
@@ -99,12 +95,15 @@ get_header(); ?>
 								</p>
 								<p class="cell"><?php echo $prerequisite; ?></p>
 								<div class="cell">
-									<?php foreach( $instructors as $instructor) : ?>
-									<?php echo '<div>' . $instructor->post_title . '</div>'; ?>
-									<?php endforeach; ?>
+									<?php if ( isset($instructors) ) : ?>
+										<?php foreach( $instructors as $post_id ) : ?>
+											<?php $instructor = get_post( $post_id ); ?>
+											<?php echo '<div>' . $instructor->post_title . '</div>'; ?>
+										<?php endforeach; ?>
+									<?php endif; ?>
 								</div>
 								<p class="cell"><?php echo $event_cost; ?></p>
-								<?php echo $event_link; ?>
+								<a class="blue-btn cell" href="<?php echo $event_link ?>" target="_blank">Class Details</a>
 							</li>
 						<?php endwhile; ?>	
 					</ul>
