@@ -42,4 +42,8 @@
 
   setShareLinks();
 
+  if ($(window).width() < 480) {
+    $('.shows-taxonomy-filter-area').hide();
+  }
+
 })(jQuery);

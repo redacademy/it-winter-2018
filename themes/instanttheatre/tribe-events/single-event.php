@@ -31,7 +31,14 @@ $event_id = get_the_ID();
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
 
-  <?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
+	<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
+
+	<p class="single-event-description">
+	<?php 
+		$event_description = esc_html( CFS()->get('event_description') );
+		echo $event_description;
+	?>
+	</p>
 
 
 	<!-- Event header -->
@@ -101,17 +108,5 @@ $event_id = get_the_ID();
 		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
-
-	<!-- Event footer -->
-	<div id="tribe-events-footer">
-		<!-- Navigation -->
-		<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Navigation', 'the-events-calendar' ), $events_label_singular ); ?></h3>
-		<ul class="tribe-events-sub-nav">
-			<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
-			<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
-		</ul>
-		<!-- .tribe-events-sub-nav -->
-	</div>
-	<!-- #tribe-events-footer -->
 
 </div><!-- #tribe-events-content -->

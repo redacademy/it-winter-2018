@@ -64,6 +64,8 @@
 
     #tribe-events .tribe-events-cal-links {
       text-align: left;
+      margin: 0;
+      margin-top: 2%;
       a {
         background-color: $color__blue-brand;
         padding: 10px 20px;
@@ -71,6 +73,9 @@
         &:hover {
           background-color: darken($color__blue-brand, 10%);
         }
+        &.tribe-events-button {
+          margin: 0 5px;
+        } 
       }
     }
 
@@ -175,6 +180,7 @@ ul.tribe-events-grid-view {
   @include desktop {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   li {
     display: flex;
@@ -182,10 +188,11 @@ ul.tribe-events-grid-view {
     border: 1px solid $color__lightgrey-border;
     width: 95%;
     padding: 10px;
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
     @include desktop {
-      width: 33%;
+      width: 31%;
     }
     .tribe-events-grid-thumbnail {
       width: 100%;
@@ -264,8 +271,28 @@ ul.tribe-events-grid-view {
      .filter-shows-group {
         display: flex;
         flex-wrap: wrap;
+        .filter-btn {
+          &:hover {
+            background-color: $color__blue-brand;
+            text-shadow: none;
+          }
+          &.selected {
+            background-color: $color__blue-brand;
+          }
+          &:focus {
+            outline: 0;
+            background-color: $color__blue-brand;
+            color: white;
+            text-shadow: none;
+          }
+        }
         h3 {
           width: 10%;
+        }
+        .show-all-container {
+          width: 100%;
+          text-align: left;
+          padding-left: 10%;
         }
      }
    }
@@ -432,6 +459,9 @@ ul.tribe-events-grid-view {
   li {
     width: 50px;
     margin: 0 5px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -449,8 +479,12 @@ ul.tribe-events-grid-view {
   }
 }
 
-.social-share {
-  &:hover {
-    cursor: pointer;
+.show-events-page {
+  li {
+    margin: 0 10%;
   }
+}
+
+#tribe-events-content .single-event-description {
+  text-align: center;
 }

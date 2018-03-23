@@ -15,7 +15,9 @@ body {
   background: #fff;
   @include desktop {
     margin: 0 auto;
-    background: $site__background;
+    background: $site__background__rokect,$site__background;
+    background-size: 150px, 100%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -124,6 +126,7 @@ body {
   margin-top: 3.75rem;
   max-width: 1240px;
   background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);  
   .banner-cell {
     width: 100%;
     .banner-thumbnail {
@@ -572,25 +575,6 @@ Our Community page
 tags archive page
 *******************/
 
-.tag-articles-containor {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  .tags-article-wrapper {
-    margin: 0 1rem;
-    width: 300px;
-    background: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    padding: 1rem;
-    a {
-      text-decoration: none;
-      &:link,
-      &:visited {
-        color: black;
-      }
-    }
-  }
-}
 
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
@@ -611,7 +595,6 @@ tags archive page
   }
   .banner-carousel {
     padding: 1rem;
-    border: 1px solid gray;
     height: 500px;
     .flickity-viewport {
       max-height: 466px;
