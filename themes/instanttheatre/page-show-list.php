@@ -38,7 +38,9 @@ get_header(); ?>
 										</button>
 									<?php endforeach; ?>
 									</div><!-- genre-buttons -->
-									<button class="filter-btn selected show-all-button" data-filter="*">Show All</button>
+									<div class="show-all-container">
+										<button class="filter-btn selected show-all-button" data-filter="*">Show All</button>
+									</div>
 								</div><!-- end of filter-button-group -->
 							
 					

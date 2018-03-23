@@ -271,8 +271,28 @@ ul.tribe-events-grid-view {
      .filter-shows-group {
         display: flex;
         flex-wrap: wrap;
+        .filter-btn {
+          &:hover {
+            background-color: $color__blue-brand;
+            text-shadow: none;
+          }
+          &.selected {
+            background-color: $color__blue-brand;
+          }
+          &:focus {
+            outline: 0;
+            background-color: $color__blue-brand;
+            color: white;
+            text-shadow: none;
+          }
+        }
         h3 {
           width: 10%;
+        }
+        .show-all-container {
+          width: 100%;
+          text-align: left;
+          padding-left: 10%;
         }
      }
    }
