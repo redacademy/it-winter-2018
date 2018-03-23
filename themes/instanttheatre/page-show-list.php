@@ -48,7 +48,6 @@ get_header(); ?>
 				</div><!-- #calendar-area -->
 			<?php endif; ?>
 
-			<div class="shows-grid">
 
 			<?php
 					// WP_Query arguments
@@ -125,7 +124,6 @@ get_header(); ?>
 					// Restore original Post Data
 					wp_reset_postdata();
 				?>
-				</div>
 
       
 		</main><!-- #main -->
