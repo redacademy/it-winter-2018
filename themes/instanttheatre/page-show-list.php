@@ -59,6 +59,9 @@ get_header(); ?>
 									<div class="show-all-container">
 										<button class="filter-btn selected show-all-button" data-filter="*">Show All</button>
 									</div>
+									<div class="done-area">
+										<button class="done-button">Done</button>
+									</div>
 								</div><!-- end of filter-button-group -->
 							
 					

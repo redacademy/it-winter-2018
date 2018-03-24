@@ -21,13 +21,11 @@
 
 
   var pageUrl = $('.website-url-for-javascript-hidden').text();
-  console.log(pageUrl);
 
   //initilizing share buttons on show page
   
   function setShareLinks() {
     var pageUrl = $('.website-url-for-javascript-hidden').text();
-    console.log(pageUrl);
     
     $('.social-share.facebook').on('click', function() {
         var url = 'https://www.facebook.com/sharer.php?u=' + pageUrl;
@@ -57,6 +55,11 @@
   })
 
   $('.close-button').on('click', function() {
+    $('.shows-taxonomy-filter-area').hide();
+  })
+
+  $('.done-button').on('click', function(e) {
+    e.preventDefault();
     $('.shows-taxonomy-filter-area').hide();
   })
 

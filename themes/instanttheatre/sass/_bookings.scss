@@ -46,7 +46,6 @@
           max-width: 90%;
           margin-left: auto!important;
           margin-right: auto!important;
-          padding-top: 40px;
           @include desktop {
             max-width: 570px;
           }
@@ -84,9 +83,9 @@
         padding: 0;
         margin-top: 0;
       }
-      .gfield_calculation {
-        display: none;
-      }
+      // .gfield_calculation {
+      //   // display: none;
+      // }
       .top_label .gfield_time_ampm {
         margin-top: 15px;
       }
@@ -110,6 +109,7 @@
         width: 95%;
         margin: 2% 1%;
         padding: 0 20px;
+        background-color: white;
         @include desktop {
           width: 48%;
           margin: 2% 0;
@@ -358,6 +358,7 @@
         margin: 20px;
         padding: 15px;
         margin-bottom: 0px;
+        background-color: white;
         @include desktop {
           margin-bottom: 0;
           width: 33%;

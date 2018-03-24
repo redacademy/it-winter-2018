@@ -291,12 +291,6 @@ ul.tribe-events-grid-view {
        height: inherit;
        background-color: transparent;
      }
-
-     .close-row {
-       @include desktop {
-         display: none;
-       }
-     }
      .filter-shows-group {
         display: block;
         @include desktop {
@@ -333,6 +327,21 @@ ul.tribe-events-grid-view {
             text-align: left;
           }
         }
+     }
+
+     .done-button {
+       font-size: 16px;
+       text-transform: none;
+       outline: 0;
+       position: absolute;
+       bottom: 30px;
+       right: 10px;
+       background-color: transparent;
+       border: 0;
+       color: $color__blue-brand;
+       @include desktop {
+         display: none;
+       }
      }
    }
 
@@ -398,7 +407,11 @@ ul.tribe-events-grid-view {
        border: 0;
        font-size: 20px;
        font-weight: bold;
+       outline: 0;
      }
+     @include desktop {
+      display: none;
+    }
    }
 
    .genre-buttons {

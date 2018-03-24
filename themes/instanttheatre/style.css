@@ -2261,8 +2261,7 @@ ERROR404
               justify-content: center;
       max-width: 90%;
       margin-left: auto !important;
-      margin-right: auto !important;
-      padding-top: 40px; }
+      margin-right: auto !important; }
       @media (min-width: 480px) {
         .page .gform_wrapper .gform_body ul {
           max-width: 570px; } }
@@ -2288,8 +2287,6 @@ ERROR404
   .page .gform_wrapper .gfield_radio {
     padding: 0;
     margin-top: 0; }
-  .page .gform_wrapper .gfield_calculation {
-    display: none; }
   .page .gform_wrapper .top_label .gfield_time_ampm {
     margin-top: 15px; }
   .page .gform_wrapper .field_description_below .gfield_description {
@@ -2309,7 +2306,8 @@ ERROR404
       border-radius: 4px;
       width: 95%;
       margin: 2% 1%;
-      padding: 0 20px; }
+      padding: 0 20px;
+      background-color: white; }
       @media (min-width: 480px) {
         .page .hire-us-grid .hire-us-part {
           width: 48%;
@@ -2548,7 +2546,8 @@ ERROR404
       border-radius: 5px;
       margin: 20px;
       padding: 15px;
-      margin-bottom: 0px; }
+      margin-bottom: 0px;
+      background-color: white; }
       @media (min-width: 480px) {
         .page .studio-grid .studio-grid-part {
           margin-bottom: 0;
@@ -2963,9 +2962,6 @@ ul.tribe-events-grid-view {
         position: static;
         height: inherit;
         background-color: transparent; } }
-    @media (min-width: 480px) {
-      #calendar-area .shows-taxonomy-filter-area .close-row {
-        display: none; } }
     #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
       display: block; }
       @media (min-width: 480px) {
@@ -2998,6 +2994,19 @@ ul.tribe-events-grid-view {
           #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
             padding-left: 10%;
             text-align: left; } }
+    #calendar-area .shows-taxonomy-filter-area .done-button {
+      font-size: 16px;
+      text-transform: none;
+      outline: 0;
+      position: absolute;
+      bottom: 30px;
+      right: 10px;
+      background-color: transparent;
+      border: 0;
+      color: #00B6CB; }
+      @media (min-width: 480px) {
+        #calendar-area .shows-taxonomy-filter-area .done-button {
+          display: none; } }
   #calendar-area .mobile-filter-area {
     width: 100%;
     display: -webkit-box;
@@ -3054,7 +3063,11 @@ ul.tribe-events-grid-view {
       background-color: transparent;
       border: 0;
       font-size: 20px;
-      font-weight: bold; }
+      font-weight: bold;
+      outline: 0; }
+    @media (min-width: 480px) {
+      #calendar-area .close-row {
+        display: none; } }
   @media (min-width: 480px) {
     #calendar-area .genre-buttons {
       width: 90%;
