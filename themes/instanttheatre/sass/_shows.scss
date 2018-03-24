@@ -260,11 +260,11 @@ ul.tribe-events-grid-view {
  #calendar-area {
    border-radius: 4px;
    padding: 15px;
-   display: flex;
-   justify-content: space-between;
    @include desktop {
     border: 1px solid $color__lightgrey-border;
     padding: 30px;
+    display: flex;
+    justify-content: space-between;
    }
    .shows-calendar-date-area {
      width: 25%;
@@ -274,10 +274,28 @@ ul.tribe-events-grid-view {
      }
    }
    .shows-taxonomy-filter-area {
-     width: 70%; 
+     position: fixed;
+     width: 100%; 
+     height: 100%;
+     top: 0; 
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: white;
+     z-index: 100;
      display: none;
      @include desktop {
+       width: 70%; 
        display: block;
+       position: static;
+       height: inherit;
+       background-color: transparent;
+     }
+
+     .close-row {
+       @include desktop {
+         display: none;
+       }
      }
      .filter-shows-group {
         display: flex;
@@ -331,6 +349,28 @@ ul.tribe-events-grid-view {
        text-align: left;
      }
    }
+
+   .mobile-shows-calendar-date-area {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 100;
+    @include desktop {
+      display: none;
+    }
+   }
+
+   .close-row {
+     background-color: $color__yellow-brand;
+     padding: 15px 0;
+   }
+
    .genre-buttons {
      width: 90%;
      text-align: left;

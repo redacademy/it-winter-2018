@@ -42,4 +42,22 @@
 
   setShareLinks();
 
+  //mobile show list view functionality to show/hide filter areas
+
+  $('.mobile-filter-button.date').on('click', function() {
+    $('.mobile-shows-calendar-date-area').show();
+  })
+
+  $('.close-button').on('click', function() {
+    $('.mobile-shows-calendar-date-area').hide();
+  })
+
+  $('.mobile-filter-button.genre').on('click', function() {
+    $('.shows-taxonomy-filter-area').show();
+  })
+
+  $('.close-button').on('click', function() {
+    $('.shows-taxonomy-filter-area').hide();
+  })
+
 })(jQuery);

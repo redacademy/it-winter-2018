@@ -2928,17 +2928,17 @@ ul.tribe-events-grid-view {
 
 #calendar-area {
   border-radius: 4px;
-  padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  padding: 15px; }
   @media (min-width: 480px) {
     #calendar-area {
       border: 1px solid #D5D5D5;
-      padding: 30px; } }
+      padding: 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   #calendar-area .shows-calendar-date-area {
     width: 25%;
     display: none; }
@@ -2946,11 +2946,26 @@ ul.tribe-events-grid-view {
       #calendar-area .shows-calendar-date-area {
         display: block; } }
   #calendar-area .shows-taxonomy-filter-area {
-    width: 70%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 100;
     display: none; }
     @media (min-width: 480px) {
       #calendar-area .shows-taxonomy-filter-area {
-        display: block; } }
+        width: 70%;
+        display: block;
+        position: static;
+        height: inherit;
+        background-color: transparent; } }
+    @media (min-width: 480px) {
+      #calendar-area .shows-taxonomy-filter-area .close-row {
+        display: none; } }
     #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2998,6 +3013,23 @@ ul.tribe-events-grid-view {
     #calendar-area .mobile-filter-area h2 {
       width: 100%;
       text-align: left; }
+  #calendar-area .mobile-shows-calendar-date-area {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 100; }
+    @media (min-width: 480px) {
+      #calendar-area .mobile-shows-calendar-date-area {
+        display: none; } }
+  #calendar-area .close-row {
+    background-color: #FFEC00;
+    padding: 15px 0; }
   #calendar-area .genre-buttons {
     width: 90%;
     text-align: left; }
