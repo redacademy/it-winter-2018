@@ -2967,11 +2967,14 @@ ul.tribe-events-grid-view {
       #calendar-area .shows-taxonomy-filter-area .close-row {
         display: none; } }
     #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+      display: block; }
+      @media (min-width: 480px) {
+        #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:hover {
         background-color: #00B6CB;
         text-shadow: none; }
@@ -2983,11 +2986,18 @@ ul.tribe-events-grid-view {
         color: white;
         text-shadow: none; }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
-        width: 10%; }
+        margin-left: 5%; }
+        @media (min-width: 480px) {
+          #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
+            width: 10%;
+            margin: 0; } }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
         width: 100%;
-        text-align: left;
-        padding-left: 10%; }
+        text-align: center; }
+        @media (min-width: 480px) {
+          #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
+            padding-left: 10%;
+            text-align: left; } }
   #calendar-area .mobile-filter-area {
     width: 100%;
     display: -webkit-box;
@@ -3027,12 +3037,28 @@ ul.tribe-events-grid-view {
     @media (min-width: 480px) {
       #calendar-area .mobile-shows-calendar-date-area {
         display: none; } }
+    #calendar-area .mobile-shows-calendar-date-area #shows-calendar {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      height: 300px; }
+    #calendar-area .mobile-shows-calendar-date-area p {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto; }
   #calendar-area .close-row {
     background-color: #FFEC00;
-    padding: 15px 0; }
-  #calendar-area .genre-buttons {
-    width: 90%;
+    padding: 15px 0;
     text-align: left; }
+    #calendar-area .close-row button {
+      background-color: transparent;
+      border: 0;
+      font-size: 20px;
+      font-weight: bold; }
+  @media (min-width: 480px) {
+    #calendar-area .genre-buttons {
+      width: 90%;
+      text-align: left; } }
   #calendar-area h3 {
     text-align: left;
     margin: 10px 0; }
@@ -3041,6 +3067,11 @@ ul.tribe-events-grid-view {
   #calendar-area table {
     margin: 0;
     border: 1px solid #D5D5D5; }
+  #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar {
+    line-height: 1.6; }
+    @media (min-width: 480px) {
+      #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar {
+        line-height: 1.5; } }
   #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar-nav td {
     padding: 5px 0;
     background: #FFEC00;
