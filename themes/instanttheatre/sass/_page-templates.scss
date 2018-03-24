@@ -134,7 +134,8 @@ body {
       height: 200px;
       overflow: hidden;
       img {
-        min-width: 480px;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .banner-text-info {
@@ -607,10 +608,6 @@ tags archive page
         // max-width: none;
         height: 100%;
         margin-right: 2rem;
-        img {
-          height: 100%;
-          max-width: none;
-        }
       }
       .banner-text-info {
         min-width: 400px;
@@ -895,6 +892,22 @@ tags archive page
   }
 }
 
+.about-classes {
+  .photo-gallery {
+    .gallery-item {
+      width: 100%;
+      margin-right: 2rem;
+      overflow: hidden;
+
+      @include desktop {
+        width: 250px;
+        height: auto;
+      }
+    }
+  }
+}
+
+
 /*******************
 SEARCH RESULTS
 ********************/
@@ -946,10 +959,11 @@ SEARCH RESULTS
   
 }
 
+
+
 /*********************
 ERROR404
 *********************/
-
 .error404 {
   .error-404 {
     display: flex;

@@ -1381,7 +1381,9 @@ body {
       height: 200px;
       overflow: hidden; }
       .banner-carousel .banner-cell .banner-thumbnail img {
-        min-width: 480px; }
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
     .banner-carousel .banner-cell .banner-text-info {
       padding: 2rem;
       text-align: left; }
@@ -1852,9 +1854,6 @@ tags archive page
       .banner-carousel .banner-cell .banner-thumbnail {
         height: 100%;
         margin-right: 2rem; }
-        .banner-carousel .banner-cell .banner-thumbnail img {
-          height: 100%;
-          max-width: none; }
       .banner-carousel .banner-cell .banner-text-info {
         min-width: 400px;
         max-width: 400px;
