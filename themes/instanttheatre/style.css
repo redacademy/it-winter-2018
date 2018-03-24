@@ -2867,9 +2867,6 @@ ul.tribe-events-grid-view {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
-  ul.tribe-events-grid-view .people-content-info {
-    display: none; }
           flex-wrap: wrap;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
