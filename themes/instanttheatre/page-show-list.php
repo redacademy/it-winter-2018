@@ -10,10 +10,18 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			
+			<h1>Shows</h1>
 
 			<?php if ( is_active_sidebar( 'shows-calendar' ) ) : ?>
 				<div id="calendar-area" class="shows-calendar-area widget-area" role="complementary">
+					<div class="mobile-filter-area">
+						<h2>Filter by:</h2>
+						<button class="mobile-filter-button date">Date</button>
+						<button class="mobile-filter-button genre">Genre</button>
+					</div><!-- end of mobile-filter-area -->
+
+					
+
 					<div class="shows-calendar-date-area">
 						<h3>Select a Date:</h3>
 						<?php dynamic_sidebar( 'shows-calendar' ); ?>

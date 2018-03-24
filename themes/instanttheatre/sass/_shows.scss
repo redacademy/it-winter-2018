@@ -258,16 +258,27 @@ ul.tribe-events-grid-view {
 
 //styling for shows list/calendar view
  #calendar-area {
-   border: 1px solid $color__lightgrey-border;
    border-radius: 4px;
-   padding: 30px;
+   padding: 15px;
    display: flex;
    justify-content: space-between;
+   @include desktop {
+    border: 1px solid $color__lightgrey-border;
+    padding: 30px;
+   }
    .shows-calendar-date-area {
      width: 25%;
+     display: none;
+     @include desktop {
+       display: block;
+     }
    }
    .shows-taxonomy-filter-area {
      width: 70%; 
+     display: none;
+     @include desktop {
+       display: block;
+     }
      .filter-shows-group {
         display: flex;
         flex-wrap: wrap;
@@ -294,6 +305,30 @@ ul.tribe-events-grid-view {
           text-align: left;
           padding-left: 10%;
         }
+     }
+   }
+
+   .mobile-filter-area {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     @include desktop {
+       display: none;
+     }
+     .mobile-filter-button {
+       background-color: $color__blue-brand;
+       border: 0;
+       border-radius: 4px;
+       color: white;
+       text-shadow: none;
+       width: 48%;
+       margin: 1%;
+       padding: 15px 0;
+     }
+     h2 {
+       width: 100%;
+       text-align: left;
      }
    }
    .genre-buttons {
