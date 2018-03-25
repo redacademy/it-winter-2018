@@ -722,7 +722,6 @@ tags archive page
 .list-of-classes {
   .page-header {
     position: relative;
-    // justify-content: center;
 
     .view-switch {
       display: none;
@@ -814,10 +813,21 @@ tags archive page
       text-align: left;
 
       &:first-child{
-        width: 65%
+        width: 65%;
+        padding-left: 0.5rem;
+
+        @include desktop {
+          padding-left: none;
+        }
+
       }
       &:last-child {
         width: 35%;
+        padding-right: 0.5rem;
+
+        @include desktop {
+          padding-right: none;
+        }
       }
       &:not(:first-child):not(:last-child) {
         display: none;

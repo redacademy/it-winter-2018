@@ -1,16 +1,7 @@
 (function ($) {
 
   if ($(window).width() < 480) {
-    $('.hire-us-grid').flickity({
-      prevNextButtons: false
-    });
-    $('.testimonial-carousel-container').flickity({
-      prevNextButtons: false
-    });
-    $('.studio-grid').flickity({
-      prevNextButtons: false
-    });
-    $('.community-gallery-images').flickity({
+    $('.hire-us-grid, .testimonial-carousel-container, .studio-grid, .community-gallery-images').flickity({
       prevNextButtons: false
     });
     $('.class-type-gallery').flickity({
@@ -28,16 +19,7 @@
 
   $(window).on('resize', function() {
       if ($(window).width() < 480) {
-        $('.hire-us-grid').flickity({
-          prevNextButtons: false
-        });
-        $('.testimonial-carousel-container').flickity({
-          prevNextButtons: false
-        });
-        $('.studio-grid').flickity({
-          prevNextButtons: false
-        });
-        $('.community-gallery-images').flickity({
+        $('.hire-us-grid, .testimonial-carousel-container, .studio-grid, .community-gallery-images').flickity({
           prevNextButtons: false
         });
         $('.class-type-gallery').flickity({
@@ -45,7 +27,6 @@
           cellAlign: 'left',
           contain: true
         });
-
         $('.show-cast-container').flickity('destroy');
         $('.show-cast-container').flickity({
           prevNextButtons: false,
@@ -55,13 +36,7 @@
         });
       } 
       else {
-        $('.hire-us-grid').flickity('destroy');
-        $('.testimonial-carousel-container').flickity('destroy');
-        $('.studio-grid').flickity('destroy');
-        $('.community-gallery-images').flickity('destroy');
-        $('.class-type-gallery').flickity('destroy');
-
-        $('.show-cast-container').flickity('destroy');
+        $('.hire-us-grid, .testimonial-carousel-container, .studio-grid, .community-gallery-images, .class-type-gallery, .show-cast-container').flickity('destroy');
         $('.show-cast-container').flickity({
           prevNextButtons: true,
           cellAlign: 'left',
