@@ -3156,12 +3156,12 @@ ul.tribe-events-grid-view {
       margin-right: auto; }
   #calendar-area .close-row {
     background-color: #FFEC00;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: left; }
     #calendar-area .close-row button {
       background-color: transparent;
       border: 0;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       outline: 0; }
     @media (min-width: 480px) {
@@ -3221,7 +3221,10 @@ ul.tribe-events-grid-view {
 .show-events-page {
   width: 100% !important; }
   .show-events-page .show-item {
-    margin: 1% 1.1%; }
+    margin: 1% 2.5%; }
+    @media (min-width: 480px) {
+      .show-events-page .show-item {
+        margin: 1% 1.1%; } }
 
 .filter-shows-group {
   display: -webkit-box;
