@@ -18,12 +18,12 @@
       cellAlign: 'left',
       contain: true
     });
-    // $('.show-cast-container').flickity({
-    //   prevNextButtons: false,
-    //   cellAlign: 'left',
-    //   pageDots: false,
-    //   contain: true
-    // });
+    $('.show-cast-container').flickity({
+      prevNextButtons: false,
+      cellAlign: 'left',
+      pageDots: false,
+      contain: true
+    });
   }
 
   $(window).on('resize', function() {
@@ -45,6 +45,14 @@
           cellAlign: 'left',
           contain: true
         });
+
+        $('.show-cast-container').flickity('destroy');
+        $('.show-cast-container').flickity({
+          prevNextButtons: false,
+          cellAlign: 'left',
+          pageDots: false,
+          contain: true
+        });
       } 
       else {
         $('.hire-us-grid').flickity('destroy');
@@ -52,6 +60,14 @@
         $('.studio-grid').flickity('destroy');
         $('.community-gallery-images').flickity('destroy');
         $('.class-type-gallery').flickity('destroy');
+
+        $('.show-cast-container').flickity('destroy');
+        $('.show-cast-container').flickity({
+          prevNextButtons: true,
+          cellAlign: 'left',
+          contain: false,
+          pageDots: false
+        });
       }
   });
 
@@ -67,7 +83,7 @@
     wrapAround: true,
   });
   $('.show-cast-container').flickity({
-    prevNextButtons: false,
+    prevNextButtons: true,
     cellAlign: 'left',
     contain: false,
     pageDots: false

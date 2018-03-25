@@ -22,7 +22,7 @@ body {
   }
 }
 
-.site-content {
+.content-area {
   max-width: $desktop__content-area;
   @include desktop {
     margin: 0 auto;
@@ -183,8 +183,8 @@ body {
 /***************************
  *PAGE: Cast and Instructor 
  ***************************/
-
 .tax-role {
+
   .content-area {
     padding: 2rem 0;
   }
@@ -278,7 +278,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    padding: 1rem;
+    padding: 1rem 0 0;
     margin: 0;
     background: #fff;
     border: 1px solid #979797;
@@ -292,8 +292,10 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      padding: 1rem;
     }
     .portrait-wrapper {
+      position: relative;
       width: 85vw;
       height: 85vw;
       margin: 1rem auto;
@@ -306,6 +308,10 @@ body {
         order: 1;
       }
       img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: auto;
         height: 100%;
         min-height: 100%;
@@ -359,8 +365,12 @@ body {
       }
     }
     .person-description {
+
+      padding: 0 1rem;
+
       @include desktop {
         width: 67%;
+        padding: 0 1rem 1rem 0;
         margin: -185px 0 0 1.5rem;
         order: 5;
       }
