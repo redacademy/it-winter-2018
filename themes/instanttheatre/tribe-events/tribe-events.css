@@ -1,0 +1,21 @@
+.tribe-events-present {
+  background: #FFEC00;
+}
+
+.tribe-events-calendar thead th {
+  color: #000;
+  border: none;
+  background: #FFEC00;
+}
+
+.tribe-events-calendar div[id*=tribe-events-daynum-],
+.tribe-events-calendar div[id*=tribe-events-daynum-] a,
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] a
+{
+  background: #00B6CB;
+}
+
+#tribe-events .tribe-events-button {
+  display: none;
+}
