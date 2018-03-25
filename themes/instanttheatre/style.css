@@ -3303,7 +3303,7 @@ ul.tribe-events-grid-view {
     background-color: #008898; }
 
 .show-cast-container .show-cast-item {
-  max-width: 100px;
+  width: 100px;
   margin: 0 20px; }
   .show-cast-container .show-cast-item img {
     width: 100px;
