@@ -113,12 +113,13 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   .photo {
-    width: 320px; // max-width: none;
-    height: 200px;
-    margin-right: 10px;
+    width: 230px; // max-width: none;
+    height: 230px;
+    margin-right: 20px;
     overflow: hidden;
     img {
-      max-width: none;
+      height: 100%;
+      object-fit: cover;
     }
   }
   .instagram-feed {

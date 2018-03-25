@@ -1092,7 +1092,7 @@ input[type="submit"] {
         .site-info .secondary .contact-info .social-icons a:last-child {
           margin: 0; }
     .site-info .secondary .subscribe {
-      width: 360px; }
+      max-width: 360px; }
       .site-info .secondary .subscribe p {
         margin-bottom: 1rem; }
   .site-info .mc4wp-form-fields {
@@ -1294,7 +1294,7 @@ object {
  *SITE WIDE
  *******************/
 html {
-  background: #fff; }
+  background: #f5f5f5; }
 
 body {
   max-width: 1440px;
@@ -1317,7 +1317,9 @@ body {
   #wpadminbar:hover {
     opacity: 1; }
 
-/* Front page */
+/***********************
+ *PAGE: Front page 
+ ***********************/
 .learn-more-link {
   text-transform: capitalize; }
 
@@ -1346,7 +1348,7 @@ body {
   margin-bottom: 2rem; }
 
 .what-is-improv {
-  margin-top: 3.75rem;
+  margin: 3.75rem auto 0;
   max-width: 1240px;
   padding: 0rem;
   background: url("../../assets/images/yellow-wave-banner-background.png"); }
@@ -1384,19 +1386,22 @@ body {
 
 /* //////////////////flickity/////////////////// */
 .instagram-carousel {
-  max-width: 1240px; }
+  max-width: 1240px;
+  margin: 0 auto; }
   .instagram-carousel .photo {
-    width: 320px;
-    height: 200px;
-    margin-right: 10px;
+    width: 230px;
+    height: 230px;
+    margin-right: 20px;
     overflow: hidden; }
     .instagram-carousel .photo img {
-      max-width: none; }
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
   .instagram-carousel .instagram-feed {
     margin-bottom: 2rem; }
 
 .banner-carousel {
-  margin-top: 3.75rem;
+  margin: 1rem auto;
   max-width: 1240px;
   background: #fff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -1872,8 +1877,9 @@ tags archive page
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .banner-carousel {
+    height: 500px;
     padding: 1rem;
-    height: 500px; }
+    margin: 5rem auto 0; }
     .banner-carousel .flickity-viewport {
       max-height: 466px; }
     .banner-carousel .banner-cell {
@@ -1949,16 +1955,30 @@ tags archive page
  *PAGE: List of Classes
  *************************/
 .list-of-classes .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .list-of-classes .page-header ul {
-    display: none; }
+  position: relative; }
+  .list-of-classes .page-header .view-switch {
+    display: none;
+    list-style: none; }
+    @media (min-width: 480px) {
+      .list-of-classes .page-header .view-switch {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0; } }
+    .list-of-classes .page-header .view-switch li {
+      margin-right: 1rem;
+      text-decoration: underline; }
   .list-of-classes .page-header h1.main-heading {
-    margin: 0.5rem; }
+    margin: 0.5rem;
+    text-align: center; }
+  .list-of-classes .page-header .selected {
+    color: #6AC5D0;
+    font-weight: 700; }
+
+.list-of-classes #class-calendar {
+  display: none; }
 
 .list-of-classes .no-classes {
   border: 0.75rem solid #fff;
@@ -2264,64 +2284,69 @@ ERROR404
     margin-right: auto;
     text-align: left;
     max-width: 1000px; }
-  .page .gform_wrapper .top_label input.medium {
-    width: 100%; }
-  .page .gform_wrapper .top_label input.datepicker {
-    width: 40%; }
-  .page .gform_wrapper .gform_heading {
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto; }
-    .page .gform_wrapper .gform_heading .gform_title {
-      font-size: 24px;
-      color: black;
-      padding-bottom: 20px; }
-  .page .gform_wrapper .gform_body {
-    background-color: #FFEC00; }
-    .page .gform_wrapper .gform_body ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      max-width: 90%;
-      margin-left: auto !important;
-      margin-right: auto !important; }
-      @media (min-width: 480px) {
-        .page .gform_wrapper .gform_body ul {
-          max-width: 570px; } }
-  .page .gform_wrapper .gform_footer {
-    background-color: #FFEC00;
-    margin: 0;
-    padding-bottom: 40px;
-    text-align: center; }
-    .page .gform_wrapper .gform_footer .gform_button {
-      background-color: #00B6CB;
-      max-width: 50%;
-      color: white;
-      font-size: 14px;
-      text-transform: uppercase;
-      border-radius: 5px;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      text-shadow: none;
-      padding: 10px 50px;
-      border: 0; }
-      .page .gform_wrapper .gform_footer .gform_button:hover {
-        background-color: #008898; }
-  .page .gform_wrapper .gfield_radio {
-    padding: 0;
-    margin-top: 0; }
-  .page .gform_wrapper .top_label .gfield_time_ampm {
-    margin-top: 15px; }
-  .page .gform_wrapper .field_description_below .gfield_description {
-    padding-top: 5px; }
+  .page .gform_wrapper {
+    margin-top: 40px; }
+    @media (min-width: 480px) {
+      .page .gform_wrapper {
+        margin-top: 20px; } }
+    .page .gform_wrapper .top_label input.medium {
+      width: 100%; }
+    .page .gform_wrapper .top_label input.datepicker {
+      width: 40%; }
+    .page .gform_wrapper .gform_heading {
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto; }
+      .page .gform_wrapper .gform_heading .gform_title {
+        font-size: 24px;
+        color: black;
+        padding-bottom: 20px; }
+    .page .gform_wrapper .gform_body {
+      background-color: #FFEC00; }
+      .page .gform_wrapper .gform_body ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        max-width: 90%;
+        margin-left: auto !important;
+        margin-right: auto !important; }
+        @media (min-width: 480px) {
+          .page .gform_wrapper .gform_body ul {
+            max-width: 570px; } }
+    .page .gform_wrapper .gform_footer {
+      background-color: #FFEC00;
+      margin: 0;
+      padding-bottom: 40px;
+      text-align: center; }
+      .page .gform_wrapper .gform_footer .gform_button {
+        background-color: #00B6CB;
+        max-width: 50%;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        text-shadow: none;
+        padding: 10px 50px;
+        border: 0; }
+        .page .gform_wrapper .gform_footer .gform_button:hover {
+          background-color: #008898; }
+    .page .gform_wrapper .gfield_radio {
+      padding: 0;
+      margin-top: 0; }
+    .page .gform_wrapper .top_label .gfield_time_ampm {
+      margin-top: 15px; }
+    .page .gform_wrapper .field_description_below .gfield_description {
+      padding-top: 5px; }
   .page .hire-us-grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3131,12 +3156,12 @@ ul.tribe-events-grid-view {
       margin-right: auto; }
   #calendar-area .close-row {
     background-color: #FFEC00;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: left; }
     #calendar-area .close-row button {
       background-color: transparent;
       border: 0;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       outline: 0; }
     @media (min-width: 480px) {
@@ -3196,7 +3221,10 @@ ul.tribe-events-grid-view {
 .show-events-page {
   width: 100% !important; }
   .show-events-page .show-item {
-    margin: 1% 1.1%; }
+    margin: 1% 2.5%; }
+    @media (min-width: 480px) {
+      .show-events-page .show-item {
+        margin: 1% 1.1%; } }
 
 .filter-shows-group {
   display: -webkit-box;

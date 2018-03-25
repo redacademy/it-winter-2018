@@ -58,8 +58,7 @@
     $('.shows-taxonomy-filter-area').hide();
   })
 
-  $('.done-button').on('click', function(e) {
-    e.preventDefault();
+  $('.done-button').on('click', function() {
     $('.shows-taxonomy-filter-area').hide();
   })
 

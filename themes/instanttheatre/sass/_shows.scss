@@ -456,12 +456,12 @@ ul.tribe-events-grid-view {
 
    .close-row {
      background-color: $color__yellow-brand;
-     padding: 15px 0;
+     padding: 10px 0;
      text-align: left;
      button {
        background-color: transparent;
        border: 0;
-       font-size: 20px;
+       font-size: 25px;
        font-weight: bold;
        outline: 0;
      }
@@ -558,7 +558,10 @@ ul.tribe-events-grid-view {
 .show-events-page {
   width: 100%!important;
   .show-item {
-    margin: 1% 1.1%;
+    margin: 1% 2.5%;
+    @include desktop {
+      margin: 1% 1.1%;
+    }
   }
 }
 
