@@ -10,16 +10,34 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			
+			<h1>Shows</h1>
 
 			<?php if ( is_active_sidebar( 'shows-calendar' ) ) : ?>
 				<div id="calendar-area" class="shows-calendar-area widget-area" role="complementary">
+					<div class="mobile-filter-area">
+						<h2>Filter by:</h2>
+						<button class="mobile-filter-button date">Date</button>
+						<button class="mobile-filter-button genre">Genre</button>
+					</div><!-- end of mobile-filter-area -->
+
+					<div class="mobile-shows-calendar-date-area">
+						<div class="close-row">
+							<button class="close-button">X</button>
+						</div>
+						<p>Select a date:</p>
+						<?php dynamic_sidebar( 'shows-calendar' ); ?>
+					</div><!-- end of mobile-shows-calendar-date-area -->
+
 					<div class="shows-calendar-date-area">
 						<h3>Select a Date:</h3>
 						<?php dynamic_sidebar( 'shows-calendar' ); ?>
 					</div><!-- end of shows-calendar-date-area -->
 
 					<div class="shows-taxonomy-filter-area">
+
+						<div class="close-row">
+							<button class="close-button">X</button>
+						</div>
 
 						<?php 
 							$terms = get_terms( array (
@@ -40,6 +58,9 @@ get_header(); ?>
 									</div><!-- genre-buttons -->
 									<div class="show-all-container">
 										<button class="filter-btn selected show-all-button" data-filter="*">Show All</button>
+									</div>
+									<div class="done-area">
+										<button class="done-button">Done</button>
 									</div>
 								</div><!-- end of filter-button-group -->
 							
