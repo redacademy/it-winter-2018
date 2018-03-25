@@ -499,13 +499,14 @@ Our Community page
     @include desktop {
       display: flex;
       align-items: flex-start;
+      padding-left: 5%;
+      padding-right: 5%;
       .community-block {
         margin-top: 0px;
       }
     }
     p {
       padding-left: 5%;
-      padding-right: 5%;
     }
     .quote-entry {
       background-color: $color__yellow-brand;
@@ -536,6 +537,9 @@ Our Community page
     h2{
       margin-top: 0;
       font-size: 1.375rem;
+      @include desktop {
+        font-size: 1.75rem;
+      }
     }
   }
   .community-gallery-images {
