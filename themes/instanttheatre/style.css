@@ -2292,8 +2292,7 @@ ERROR404
               justify-content: center;
       max-width: 90%;
       margin-left: auto !important;
-      margin-right: auto !important;
-      padding-top: 40px; }
+      margin-right: auto !important; }
       @media (min-width: 480px) {
         .page .gform_wrapper .gform_body ul {
           max-width: 570px; } }
@@ -2319,8 +2318,6 @@ ERROR404
   .page .gform_wrapper .gfield_radio {
     padding: 0;
     margin-top: 0; }
-  .page .gform_wrapper .gfield_calculation {
-    display: none; }
   .page .gform_wrapper .top_label .gfield_time_ampm {
     margin-top: 15px; }
   .page .gform_wrapper .field_description_below .gfield_description {
@@ -2340,7 +2337,8 @@ ERROR404
       border-radius: 4px;
       width: 95%;
       margin: 2% 1%;
-      padding: 0 20px; }
+      padding: 0 20px;
+      background-color: white; }
       @media (min-width: 480px) {
         .page .hire-us-grid .hire-us-part {
           width: 48%;
@@ -2579,7 +2577,8 @@ ERROR404
       border-radius: 5px;
       margin: 20px;
       padding: 15px;
-      margin-bottom: 0px; }
+      margin-bottom: 0px;
+      background-color: white; }
       @media (min-width: 480px) {
         .page .studio-grid .studio-grid-part {
           margin-bottom: 0;
@@ -2789,12 +2788,24 @@ http://flickity.metafizzy.co
             align-items: center; }
   .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
     text-align: left;
-    margin: 0;
-    margin-top: 2%; }
+    margin: 2% 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (min-width: 480px) {
+      .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
+        margin: 0;
+        margin-top: 7px;
+        width: 400px;
+        height: 37px; } }
     .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
       background-color: #00B6CB;
-      padding: 10px 20px;
+      width: 50%;
+      padding: 15px 0;
       border-radius: 20px; }
+      @media (min-width: 480px) {
+        .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
+          padding: 10px 20px; } }
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
         background-color: #008898; }
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a.tribe-events-button {
@@ -2972,25 +2983,52 @@ ul.tribe-events-grid-view {
     width: 100%; } }
 
 #calendar-area {
-  border: 1px solid #D5D5D5;
   border-radius: 4px;
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  #calendar-area .shows-calendar-date-area {
-    width: 25%; }
-  #calendar-area .shows-taxonomy-filter-area {
-    width: 70%; }
-    #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
+  padding: 15px; }
+  @media (min-width: 480px) {
+    #calendar-area {
+      border: 1px solid #D5D5D5;
+      padding: 30px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      background-color: white; } }
+  #calendar-area .shows-calendar-date-area {
+    width: 25%;
+    display: none; }
+    @media (min-width: 480px) {
+      #calendar-area .shows-calendar-date-area {
+        display: block; } }
+  #calendar-area .shows-taxonomy-filter-area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 100;
+    display: none; }
+    @media (min-width: 480px) {
+      #calendar-area .shows-taxonomy-filter-area {
+        width: 70%;
+        display: block;
+        position: static;
+        height: inherit;
+        background-color: transparent; } }
+    #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
+      display: block; }
+      @media (min-width: 480px) {
+        #calendar-area .shows-taxonomy-filter-area .filter-shows-group {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:hover {
         background-color: #00B6CB;
         text-shadow: none; }
@@ -3002,14 +3040,96 @@ ul.tribe-events-grid-view {
         color: white;
         text-shadow: none; }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
-        width: 10%; }
+        margin-left: 5%; }
+        @media (min-width: 480px) {
+          #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
+            width: 10%;
+            margin: 0; } }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
         width: 100%;
-        text-align: left;
-        padding-left: 10%; }
-  #calendar-area .genre-buttons {
-    width: 90%;
+        text-align: center; }
+        @media (min-width: 480px) {
+          #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
+            padding-left: 10%;
+            text-align: left; } }
+    #calendar-area .shows-taxonomy-filter-area .done-button {
+      font-size: 16px;
+      text-transform: none;
+      outline: 0;
+      position: absolute;
+      bottom: 30px;
+      right: 10px;
+      background-color: transparent;
+      border: 0;
+      color: #00B6CB; }
+      @media (min-width: 480px) {
+        #calendar-area .shows-taxonomy-filter-area .done-button {
+          display: none; } }
+  #calendar-area .mobile-filter-area {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media (min-width: 480px) {
+      #calendar-area .mobile-filter-area {
+        display: none; } }
+    #calendar-area .mobile-filter-area .mobile-filter-button {
+      background-color: #00B6CB;
+      border: 0;
+      border-radius: 4px;
+      color: white;
+      text-shadow: none;
+      width: 48%;
+      margin: 1%;
+      padding: 15px 0; }
+    #calendar-area .mobile-filter-area h2 {
+      width: 100%;
+      text-align: left; }
+  #calendar-area .mobile-shows-calendar-date-area {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 100; }
+    @media (min-width: 480px) {
+      #calendar-area .mobile-shows-calendar-date-area {
+        display: none; } }
+    #calendar-area .mobile-shows-calendar-date-area #shows-calendar {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      height: 300px; }
+    #calendar-area .mobile-shows-calendar-date-area p {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto; }
+  #calendar-area .close-row {
+    background-color: #FFEC00;
+    padding: 15px 0;
     text-align: left; }
+    #calendar-area .close-row button {
+      background-color: transparent;
+      border: 0;
+      font-size: 20px;
+      font-weight: bold;
+      outline: 0; }
+    @media (min-width: 480px) {
+      #calendar-area .close-row {
+        display: none; } }
+  @media (min-width: 480px) {
+    #calendar-area .genre-buttons {
+      width: 90%;
+      text-align: left; } }
   #calendar-area h3 {
     text-align: left;
     margin: 10px 0; }
@@ -3018,6 +3138,11 @@ ul.tribe-events-grid-view {
   #calendar-area table {
     margin: 0;
     border: 1px solid #D5D5D5; }
+  #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar {
+    line-height: 1.6; }
+    @media (min-width: 480px) {
+      #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar {
+        line-height: 1.5; } }
   #calendar-area .tribe-mini-calendar-wrapper .tribe-mini-calendar-nav td {
     padding: 5px 0;
     background: #FFEC00;
@@ -3054,6 +3179,8 @@ ul.tribe-events-grid-view {
 
 .show-events-page {
   width: 100% !important; }
+  .show-events-page .show-item {
+    margin: 1% 1.1%; }
 
 .filter-shows-group {
   display: -webkit-box;
@@ -3108,10 +3235,14 @@ ul.tribe-events-grid-view {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-left: 5px; }
+  @media (min-width: 480px) {
+    .social-media-share-links {
+      text-align: left;
+      margin: 0; } }
   .social-media-share-links li {
     width: 50px;
     margin: 0 5px; }
@@ -3126,11 +3257,18 @@ ul.tribe-events-grid-view {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
 
-@media (min-width: 480px) {
-  .show-page-container h3, .show-page-container .show-cast-container {
-    width: 100%;
-    text-align: left;
-    margin: 0; } }
+.show-page-container h3, .show-page-container .show-cast-container {
+  text-align: left; }
+  @media (min-width: 480px) {
+    .show-page-container h3, .show-page-container .show-cast-container {
+      width: 100%;
+      margin: 0; } }
+
+.show-page-container h3 {
+  margin-left: 10px; }
+  @media (min-width: 480px) {
+    .show-page-container h3 {
+      margin: 0; } }
 
 .show-events-page li {
   margin: 0 10%; }
