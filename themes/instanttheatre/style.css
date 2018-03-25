@@ -2834,6 +2834,7 @@ http://flickity.metafizzy.co
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
         background-color: #008898; }
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a.tribe-events-button {
+        display: block;
         margin: 0 5px; }
   .single-tribe_events .entry-content .tribe-event-tags {
     display: -webkit-box;
