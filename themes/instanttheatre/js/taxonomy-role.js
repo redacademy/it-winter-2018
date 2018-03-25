@@ -1,6 +1,8 @@
 jQuery(document).ready(function($) {
 
-  //ISOTOPE filtering plug-in
+  /****************************
+   * ISOTOPE filtering plug-in
+   ****************************/
   // initialise
   var grid = $('.person-gallery').isotope({
     // options
@@ -8,33 +10,35 @@ jQuery(document).ready(function($) {
     layoutMode: 'fitRows'
   });
 
-  // Register filter buttons click event
+  // Register filter button click events
   $('.filter-button-group').on( 'click', 'button', function() {
     var filterValue = $(this).attr('data-filter');
     grid.isotope({ filter: filterValue });
   });
-
   
   $('.tax-role .filter-btn').on('click', function(){
     $('.tax-role .filter-btn').removeClass('selected');
     $(this).addClass('selected');
   });
 
-  //Display overlay when person tile is clicked
-
-  //WP Rest API call retrieves person information
-  $('.person-tile').on('click', function (e) {
+  /***********************
+   * Display overlay 
+   ***********************/
+  //Click event
+  $('.person-tile, .show-cast-item').on('click', function (e) {
     e.preventDefault();
 
-    //Get Post ID from element ID (i.e. #postid-61 )
+    //Regex gets Post ID from element ID (i.e. #postid-61 = 61 )
     var postID = $(this).attr('id').match(/\d+$/)[0];
+    console.log(postID);
     
+    //Get overlay content (WP Rest API call) 
     $.ajax({
       method: 'GET',
       url: api_vars.root_url + 'wp/v2/post_people/' + postID + '?_embed',
       success: function( response ) {
         
-        //Response data
+        //Store response data
         var title = response.title.rendered;
         var description = response.content.rendered;
         var featured_image = response._embedded["wp:featuredmedia"]["0"].source_url;
@@ -42,7 +46,7 @@ jQuery(document).ready(function($) {
         var twitter_link = response.twitter_link;
         var instagram_link = response.instagram_link;
 
-        //Update overlay content
+        //Insert content into overlay
         $('#portrait').attr({
           src: featured_image,
           alt: 'portrait of ' + title });
@@ -68,7 +72,7 @@ jQuery(document).ready(function($) {
     });
   });
 
-  //Close the overlay
+  //Click event to close overlay
   $('.overlay').on('click', function() {
     $('.overlay').removeClass('m-fadeIn');
   });

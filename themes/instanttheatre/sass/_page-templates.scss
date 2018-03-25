@@ -252,6 +252,7 @@ body {
       }
     }
   }
+}
   .overlay {
     visibility: hidden;
     opacity: 0;
@@ -342,6 +343,7 @@ body {
       }
       a[class|='social'] {
         margin-right: 0.5rem;
+        text-decoration: none;
       }
     }
     .close-link {
@@ -358,12 +360,12 @@ body {
     .person-description {
       @include desktop {
         width: 67%;
-        margin-top: -185px;
+        margin: -185px 0 0 1.5rem;
         order: 5;
       }
     }
   }
-}
+// }
 
 /***************************
  *PAGE: Auditions 
