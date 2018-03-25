@@ -5,9 +5,8 @@
 /*******************
  *SITE WIDE
  *******************/
-
 html {
-  background: #fff;
+  background: #f5f5f5;
 }
 
 body {
@@ -15,7 +14,9 @@ body {
   background: #fff;
   @include desktop {
     margin: 0 auto;
-    background: $site__background__rokect,$site__background;
+    background: 
+      $site__background__rokect,
+      $site__background;
     background-size: 150px, 100%;
     background-repeat: no-repeat;
   }
@@ -35,7 +36,9 @@ body {
   }
 }
 
-/* Front page */
+/***********************
+ *PAGE: Front page 
+ ***********************/
 
 .learn-more-link {
   text-transform: capitalize;
@@ -499,13 +502,14 @@ Our Community page
     @include desktop {
       display: flex;
       align-items: flex-start;
+      padding-left: 5%;
+      padding-right: 5%;
       .community-block {
         margin-top: 0px;
       }
     }
     p {
       padding-left: 5%;
-      padding-right: 5%;
     }
     .quote-entry {
       background-color: $color__yellow-brand;
@@ -536,6 +540,9 @@ Our Community page
     h2{
       margin-top: 0;
       font-size: 1.375rem;
+      @include desktop {
+        font-size: 1.75rem;
+      }
     }
   }
   .community-gallery-images {
@@ -673,18 +680,43 @@ tags archive page
 /*************************
  *PAGE: List of Classes
  *************************/
-
 .list-of-classes {
   .page-header {
-    display: flex;
-    justify-content: center;
-    ul {
+    position: relative;
+    // justify-content: center;
+
+    .view-switch {
       display: none;
+      list-style: none;
+
+      @include desktop {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      li {
+        margin-right: 1rem;
+        text-decoration: underline;
+      }
     }
+
     h1.main-heading {
       margin: 0.5rem;
+      text-align: center;
+    }
+
+    .selected {
+      color: $color__lightblue-brand;
+      font-weight: 700;
     }
   }
+
+  #class-calendar {
+    display: none;
+  }
+
   .no-classes {
     border: 0.75rem solid #fff;
     padding: 0.5rem 0;
@@ -793,7 +825,6 @@ tags archive page
  *PAGE: About Our Classes
  *************************/
  .yellow-wave-panel {
-
   background: $color__yellow-brand;
 
   > * {
@@ -811,7 +842,6 @@ tags archive page
 }
 
 .class-type-gallery {
-
   @include desktop {
     display: flex;
   }
@@ -854,7 +884,6 @@ tags archive page
 }
 
 .why-take-classes {
-
   p {
     padding: 0.5rem;
 
@@ -906,6 +935,7 @@ tags archive page
     }
   }
 }
+
 
 
 /*******************

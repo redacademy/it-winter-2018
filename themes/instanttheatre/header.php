@@ -31,38 +31,27 @@
 					<label for="toggle-button" class="hamburger-toggle"><i class="fa fa-bars"></i></label>
 
 				<nav class="toggle-menu-wrapper">
-
-					<div class="search">
-						<label for="toggle-button" class="hamburger-toggle-button"><i class="fa fa-bars"></i></label>
-						<form>
-							<input type="text" id="hamburger-search" placeholder="Search">
-							<button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+						<form class="search-form" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+						<label for="toggle-button" class="hamburger-toggle-button"><i class="fa fa-bars"></i></label>	
+							<label>
+								<input type="search" class="search-field" placeholder="Type and press enter!" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+							</label>
+							<button type="submit" id="search-button">
+								<i class="fa fa-search"></i>
+								<span class="screen-reader-text"><?php echo esc_html( 'Search' ); ?></span>
+							</button>
 						</form>
-					</div><!--search-->
+	
 
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
 
 					<div class="social-media-links">	
-						<a href="#"><i class="fa fa-facebook-square"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="https://www.facebook.com/instanttheatrecompany/"><i class="fa fa-facebook-square"></i></a>
+						<a href="https://twitter.com/instanttheatre?lang=en"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.instagram.com/instanttheatre/?hl=en"><i class="fa fa-instagram"></i></a>
 					</div><!--social media links-->
 
 				</nav><!--toggle menu wrapper-->
-
-				<!-- <div class="home-banner-clickables">
-					<ul>
-						<div class="desktop-search">
-							<input type="text" id="desktop-search-field" placeholder="Type and press enter">
-							<button type="button" id="desktop-search-button"><i class="fa fa-search"></i></button>
-						</div>	
-						<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					</ul>
-				</div>	home banner clickables -->
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
-
-			<div id="content" class="site-content">

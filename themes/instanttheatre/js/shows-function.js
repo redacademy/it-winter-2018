@@ -21,13 +21,11 @@
 
 
   var pageUrl = $('.website-url-for-javascript-hidden').text();
-  console.log(pageUrl);
 
   //initilizing share buttons on show page
   
   function setShareLinks() {
     var pageUrl = $('.website-url-for-javascript-hidden').text();
-    console.log(pageUrl);
     
     $('.social-share.facebook').on('click', function() {
         var url = 'https://www.facebook.com/sharer.php?u=' + pageUrl;
@@ -42,8 +40,27 @@
 
   setShareLinks();
 
-  if ($(window).width() < 480) {
+  //mobile show list view functionality to show/hide filter areas
+
+  $('.mobile-filter-button.date').on('click', function() {
+    $('.mobile-shows-calendar-date-area').show();
+  })
+
+  $('.close-button').on('click', function() {
+    $('.mobile-shows-calendar-date-area').hide();
+  })
+
+  $('.mobile-filter-button.genre').on('click', function() {
+    $('.shows-taxonomy-filter-area').show();
+  })
+
+  $('.close-button').on('click', function() {
     $('.shows-taxonomy-filter-area').hide();
-  }
+  })
+
+  $('.done-button').on('click', function(e) {
+    e.preventDefault();
+    $('.shows-taxonomy-filter-area').hide();
+  })
 
 })(jQuery);

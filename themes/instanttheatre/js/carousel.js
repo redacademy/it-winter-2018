@@ -23,9 +23,10 @@
       contain: true
     });
     $('.show-cast-container').flickity({
-      prevNextButtons: false
-    })
-  };
+      prevNextButtons: false,
+      pageDots: false
+    });
+  }
 
   $(window).on('resize', function() {
       if ($(window).width() < 480) {
@@ -47,8 +48,9 @@
           contain: true
         });
         $('.show-cast-container').flickity({
-          prevNextButtons: false
-        })
+          prevNextButtons: false,
+          pageDots: false
+        });
       } else {
         $('.hire-us-grid').flickity('destroy');
         $('.testimonial-carousel-container').flickity('destroy');
@@ -57,8 +59,9 @@
         $('.class-type-gallery').flickity('destroy');
         // $('.photo-gallery-container').flickity('destroy');
         $('.show-cast-container').flickity({
-          prevNextButtons: true
-        })
+          prevNextButtons: true,
+          pageDots: false
+        });
       }
   });
 

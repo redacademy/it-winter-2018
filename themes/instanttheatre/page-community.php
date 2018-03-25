@@ -15,21 +15,21 @@ get_header(); ?>
         <?php get_template_part( 'template-parts/content', 'page' ); ?>
         <div class="our-community">
           <div class="quote-entry">
-            <p class="quote-hook"><?php echo CFS() -> get ('entry_quote'); ?></p>
-            <p class="quote-hook"> - <?php echo CFS() -> get ('author_of_quote'); ?></p>
+            <p class="quote-hook"><?php echo esc_html( CFS() -> get ('entry_quote') ); ?></p>
+            <p class="quote-hook"> - <?php echo esc_html( CFS() -> get ('author_of_quote') ); ?></p>
           </div>
-          <p class="community-block"><?php echo CFS() -> get ('our_community'); ?></p>
+          <p class="community-block"><?php echo esc_html( CFS() -> get ('our_community') ); ?></p>
         </div>
         <div class="venue-wrapper">
-          <h2><?php echo CFS()->get( 'venue_name' ); ?></h2>
-          <p><?php echo CFS()->get( 'venue_description' ); ?></p>
+          <h2><?php echo esc_html( CFS()->get( 'venue_name' ) ); ?></h2>
+          <p><?php echo esc_html( CFS()->get( 'venue_description' ) ); ?></p>
         </div>
 
       <?php endwhile; // End of the loop. ?>
 
 <div class="community-gallery-images">
 <?php 
-$venues = CFS()->get( 'featured_venue_images' );
+$venues = CFS()->get('featured_venue_images');
 foreach ( $venues as $venue ) :?>
   <div class="community-gallery">
     <?php echo '<img src=" ' . $venue['image'] . '">'; ?>
@@ -39,6 +39,4 @@ foreach ( $venues as $venue ) :?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

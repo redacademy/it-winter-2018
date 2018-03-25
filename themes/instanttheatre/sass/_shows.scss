@@ -64,12 +64,23 @@
 
     #tribe-events .tribe-events-cal-links {
       text-align: left;
-      margin: 0;
-      margin-top: 2%;
+      margin: 2% 5px;
+      display: flex;
+      @include desktop {
+        margin: 0;
+        margin-top: 7px;
+        width: 400px;
+        height: 37px;
+      }
       a {
         background-color: $color__blue-brand;
-        padding: 10px 20px;
+        width: 50%;
+        padding: 15px 0;
         border-radius: 20px;
+        @include desktop {
+          padding: 10px 20px;
+          // width: 100%;
+        }
         &:hover {
           background-color: darken($color__blue-brand, 10%);
         }
@@ -182,6 +193,9 @@ ul.tribe-events-grid-view {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .people-content-info{
+    display: none;
+  }
   li {
     display: flex;
     flex-direction: column;
@@ -233,6 +247,32 @@ ul.tribe-events-grid-view {
       margin-left: 10px;
     }
   }
+  .type-post_people{
+    .show-item{
+    .tribe-events-grid-thumbnail{
+      img{
+        width: 100%;
+      }
+    }
+    .people-content-info{
+      display: block;
+    }
+      .related-events-time-info{
+        display: none;
+      }
+      .related-events-venue-info{
+        display: none;
+      }
+      .related-events-links{
+        a{
+          margin-left: 0;
+        }
+        .buy-tickets-button{
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 //overriding styles for events single page meta area
@@ -258,20 +298,53 @@ ul.tribe-events-grid-view {
 
 //styling for shows list/calendar view
  #calendar-area {
-   border: 1px solid $color__lightgrey-border;
    border-radius: 4px;
-   padding: 30px;
-   display: flex;
-   justify-content: space-between;
+   padding: 15px;
+   @include desktop {
+    border: 1px solid $color__lightgrey-border;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+   }
    .shows-calendar-date-area {
      width: 25%;
+     display: none;
+     @include desktop {
+       display: block;
+     }
    }
    .shows-taxonomy-filter-area {
-     width: 70%; 
+     position: fixed;
+     width: 100%; 
+     height: 100%;
+     top: 0; 
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: white;
+     z-index: 100;
+     display: none;
+     @include desktop {
+       width: 70%; 
+       display: block;
+       position: static;
+       height: inherit;
+       background-color: transparent;
+     }
      .filter-shows-group {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
+        @include desktop {
+          display: flex;
+          flex-wrap: wrap;
+        }
         .filter-btn {
+          width: 45%;
+          margin: 2.5%;
+          @include desktop {
+            margin: 0.5rem;
+            width: 10.5rem;
+          }
           &:hover {
             background-color: $color__blue-brand;
             text-shadow: none;
@@ -287,18 +360,121 @@ ul.tribe-events-grid-view {
           }
         }
         h3 {
-          width: 10%;
+          margin-left: 5%;
+          @include desktop {
+            width: 10%;
+            margin: 0;
+          }
         }
         .show-all-container {
           width: 100%;
-          text-align: left;
-          padding-left: 10%;
+          text-align: center;
+          @include desktop {
+            padding-left: 10%;
+            text-align: left;
+          }
         }
      }
+
+     .done-button {
+       font-size: 16px;
+       text-transform: none;
+       outline: 0;
+       position: absolute;
+       bottom: 30px;
+       right: 10px;
+       background-color: transparent;
+       border: 0;
+       color: $color__blue-brand;
+       @include desktop {
+         display: none;
+       }
+     }
+
+     .genre-buttons {
+      display: flex; 
+      flex-wrap: wrap;
+      @include desktop {
+        display: block;
+      }
+    }
+
    }
-   .genre-buttons {
-     width: 90%;
+
+   .mobile-filter-area {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     @include desktop {
+       display: none;
+     }
+     .mobile-filter-button {
+       background-color: $color__blue-brand;
+       border: 0;
+       border-radius: 4px;
+       color: white;
+       text-shadow: none;
+       width: 48%;
+       margin: 1%;
+       padding: 15px 0;
+     }
+     h2 {
+       width: 100%;
+       text-align: left;
+     }
+   }
+
+   .mobile-shows-calendar-date-area {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 100;
+    @include desktop {
+      display: none;
+    }
+
+    #shows-calendar {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      height: 300px;
+    }
+
+    p {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+   }
+
+   .close-row {
+     background-color: $color__yellow-brand;
+     padding: 15px 0;
      text-align: left;
+     button {
+       background-color: transparent;
+       border: 0;
+       font-size: 20px;
+       font-weight: bold;
+       outline: 0;
+     }
+     @include desktop {
+      display: none;
+    }
+   }
+
+   .genre-buttons {
+     @include desktop {
+      width: 90%;
+      text-align: left;
+     }
    }
    h3 {
      text-align: left;
@@ -312,6 +488,12 @@ ul.tribe-events-grid-view {
      border: 1px solid $color__lightgrey-border;
    }
     .tribe-mini-calendar-wrapper {
+      .tribe-mini-calendar {
+        line-height: 1.6;
+        @include desktop {
+          line-height: 1.5;
+        }
+      }
       .tribe-mini-calendar-nav {
         td {
           padding: 5px 0;
@@ -375,6 +557,9 @@ ul.tribe-events-grid-view {
 
 .show-events-page {
   width: 100%!important;
+  .show-item {
+    margin: 1% 1.1%;
+  }
 }
 
 .filter-shows-group {
@@ -454,8 +639,12 @@ ul.tribe-events-grid-view {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  text-align: left;
   display: flex;
+  margin-left: 5px;
+  @include desktop {
+    text-align: left;
+    margin: 0;
+  }
   li {
     width: 50px;
     margin: 0 5px;
@@ -471,9 +660,15 @@ ul.tribe-events-grid-view {
     flex-wrap: wrap;
   }
   h3, .show-cast-container {
+    text-align: left;
     @include desktop {
       width: 100%;
-      text-align: left;
+      margin: 0;
+    }
+  }
+  h3 {
+    margin-left: 10px;
+    @include desktop {
       margin: 0;
     }
   }
