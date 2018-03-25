@@ -604,6 +604,10 @@ ul.tribe-events-grid-view {
   display: none;
 }
 
+.tribe-events-list .tribe-events-event-image img {
+  width: 100%;
+}
+
 .tribe-events-list .tribe-events-loop {
   .tribe-events-event-image {
     width: 100%;
@@ -627,6 +631,16 @@ ul.tribe-events-grid-view {
     &::visited {
       color: black;
     }
+  }
+}
+
+#tribe-events .tribe-events-button {
+  display: block;
+  background-color: $color__blue-brand;
+  border-radius: 50px;
+  padding: 10px 30px;
+  &:hover {
+    background-color: darken($color__blue-brand, 10%);
   }
 }
 
