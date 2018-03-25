@@ -16,22 +16,6 @@ jQuery(document).ready(function($){
       $('.sub-menu').css('display', 'none')
      $('.menu-item-has-children').on('hover', desktopMenu)
     }
-
-
-    var $searchInput = $('.search-field');
-$('.main-navigation .search-field').on('click', function (evt) {
-  evt.preventDefault();
-  $searchInput.focus();
-
-  $(document).on('keypress', function (event) {
-    if ($searchInput.val() !== '') {
-      if (event.which == 13) {
-        console.log('enter pressed');
-        $('.search-form').submit();
-      }
-    }
-  });
-});
   })
   
   /*********************
