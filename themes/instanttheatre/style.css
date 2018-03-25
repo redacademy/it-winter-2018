@@ -3032,7 +3032,8 @@ ul.tribe-events-grid-view {
 
 .tribe-events-loop .tribe-events-event-meta {
   background-color: white;
-  border: 0; }
+  border: 0;
+  padding-bottom: 0; }
   @media (min-width: 480px) {
     .tribe-events-loop .tribe-events-event-meta {
       background: transparent; } }
@@ -3351,18 +3352,38 @@ ul.tribe-events-grid-view {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
 
-.show-page-container h3, .show-page-container .show-cast-container {
+.show-page-container h3 {
   text-align: left; }
   @media (min-width: 480px) {
-    .show-page-container h3, .show-page-container .show-cast-container {
+    .show-page-container h3 {
       width: 100%;
       margin: 0; } }
 
+.show-page-container .show-cast-container {
+  text-align: left; }
+  @media (min-width: 480px) {
+    .show-page-container .show-cast-container {
+      width: 95%;
+      margin-left: 50px; } }
+
 .show-page-container h3 {
+  text-align: left;
   margin-left: 10px; }
   @media (min-width: 480px) {
     .show-page-container h3 {
       margin: 0; } }
+
+.show-page-container .flickity-prev-next-button.previous {
+  left: -50px; }
+
+.show-page-container .flickity-prev-next-button.next {
+  right: -50px; }
+
+.show-page-container .flickity-prev-next-button {
+  background: transparent;
+  color: #ED1651; }
+  .show-page-container .flickity-prev-next-button .arrow {
+    fill: #ED1651; }
 
 .show-events-page li {
   margin: 0 10%; }

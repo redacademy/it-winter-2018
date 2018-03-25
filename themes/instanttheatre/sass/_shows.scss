@@ -307,6 +307,7 @@ ul.tribe-events-grid-view {
 .tribe-events-loop .tribe-events-event-meta {
   background-color: white;
   border: 0;
+  padding-bottom: 0;
   @include desktop {
     background: transparent;
   }
@@ -705,20 +706,42 @@ ul.tribe-events-grid-view {
     display: flex;
     flex-wrap: wrap;
   }
-  h3, .show-cast-container {
+  h3 {
     text-align: left;
     @include desktop {
       width: 100%;
       margin: 0;
     }
   }
+  .show-cast-container {
+    text-align: left;
+    @include desktop {
+      width: 95%;
+      margin-left: 50px;
+    }
+  }
   h3 {
+    text-align: left;
     margin-left: 10px;
     @include desktop {
       margin: 0;
     }
   }
-}
+  .flickity-prev-next-button.previous {
+    left: -50px;
+  }
+  .flickity-prev-next-button.next {
+    right: -50px;
+  }
+  .flickity-prev-next-button {
+    background: transparent;
+    color: $color__red-brand;
+    .arrow {
+      fill: $color__red-brand;
+    }
+    }
+  }
+
 
 .show-events-page {
   li {
