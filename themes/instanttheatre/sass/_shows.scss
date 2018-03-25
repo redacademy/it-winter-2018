@@ -297,6 +297,34 @@ ul.tribe-events-grid-view {
   }
 }
 
+.tribe-events-day-time-slot {
+  padding: 0 10px;
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.tribe-events-loop .tribe-events-event-meta {
+  background-color: white;
+  border: 0;
+  @include desktop {
+    background: transparent;
+  }
+  .tribe-events-venue-details {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.tribe-events-day-time-slot .time-details {
+  padding: 0;
+}
+
+//overriding styling of single day list view of events
+.events-archive .entry-content, .events-archive .entry-header {
+  width: 100%;
+}
+
 //styling for shows list/calendar view
  #calendar-area {
    border-radius: 4px;
@@ -687,3 +715,6 @@ ul.tribe-events-grid-view {
 #tribe-events-content .single-event-description {
   text-align: center;
 }
+
+//styling for single day list view of events (when you click on a calendar date)
+

@@ -3009,6 +3009,28 @@ ul.tribe-events-grid-view {
   .tribe-events-event-meta .tribe-events-meta-group-venue {
     width: 100%; } }
 
+.tribe-events-day-time-slot {
+  padding: 0 10px; }
+  @media (min-width: 480px) {
+    .tribe-events-day-time-slot {
+      padding: 0; } }
+
+.tribe-events-loop .tribe-events-event-meta {
+  background-color: white;
+  border: 0; }
+  @media (min-width: 480px) {
+    .tribe-events-loop .tribe-events-event-meta {
+      background: transparent; } }
+  .tribe-events-loop .tribe-events-event-meta .tribe-events-venue-details {
+    padding: 0;
+    border: 0; }
+
+.tribe-events-day-time-slot .time-details {
+  padding: 0; }
+
+.events-archive .entry-content, .events-archive .entry-header {
+  width: 100%; }
+
 #calendar-area {
   border-radius: 4px;
   padding: 15px; }
