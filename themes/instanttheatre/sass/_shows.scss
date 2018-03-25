@@ -339,6 +339,12 @@ ul.tribe-events-grid-view {
           flex-wrap: wrap;
         }
         .filter-btn {
+          width: 45%;
+          margin: 2.5%;
+          @include desktop {
+            margin: 0.5rem;
+            width: 10.5rem;
+          }
           &:hover {
             background-color: $color__blue-brand;
             text-shadow: none;
@@ -384,6 +390,15 @@ ul.tribe-events-grid-view {
          display: none;
        }
      }
+
+     .genre-buttons {
+      display: flex; 
+      flex-wrap: wrap;
+      @include desktop {
+        display: block;
+      }
+    }
+
    }
 
    .mobile-filter-area {

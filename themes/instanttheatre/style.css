@@ -3029,16 +3029,23 @@ ul.tribe-events-grid-view {
           display: flex;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; } }
-      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:hover {
-        background-color: #00B6CB;
-        text-shadow: none; }
-      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn.selected {
-        background-color: #00B6CB; }
-      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:focus {
-        outline: 0;
-        background-color: #00B6CB;
-        color: white;
-        text-shadow: none; }
+      #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn {
+        width: 45%;
+        margin: 2.5%; }
+        @media (min-width: 480px) {
+          #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn {
+            margin: 0.5rem;
+            width: 10.5rem; } }
+        #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:hover {
+          background-color: #00B6CB;
+          text-shadow: none; }
+        #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn.selected {
+          background-color: #00B6CB; }
+        #calendar-area .shows-taxonomy-filter-area .filter-shows-group .filter-btn:focus {
+          outline: 0;
+          background-color: #00B6CB;
+          color: white;
+          text-shadow: none; }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
         margin-left: 5%; }
         @media (min-width: 480px) {
@@ -3065,6 +3072,15 @@ ul.tribe-events-grid-view {
       @media (min-width: 480px) {
         #calendar-area .shows-taxonomy-filter-area .done-button {
           display: none; } }
+    #calendar-area .shows-taxonomy-filter-area .genre-buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      @media (min-width: 480px) {
+        #calendar-area .shows-taxonomy-filter-area .genre-buttons {
+          display: block; } }
   #calendar-area .mobile-filter-area {
     width: 100%;
     display: -webkit-box;
