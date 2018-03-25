@@ -2757,12 +2757,24 @@ http://flickity.metafizzy.co
             align-items: center; }
   .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
     text-align: left;
-    margin: 0;
-    margin-top: 2%; }
+    margin: 2% 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (min-width: 480px) {
+      .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links {
+        margin: 0;
+        margin-top: 7px;
+        width: 400px;
+        height: 37px; } }
     .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
       background-color: #00B6CB;
-      padding: 10px 20px;
+      width: 50%;
+      padding: 15px 0;
       border-radius: 20px; }
+      @media (min-width: 480px) {
+        .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a {
+          padding: 10px 20px; } }
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a:hover {
         background-color: #008898; }
       .single-tribe_events .entry-content #tribe-events .tribe-events-cal-links a.tribe-events-button {
@@ -2937,7 +2949,8 @@ ul.tribe-events-grid-view {
       display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; } }
+              justify-content: space-between;
+      background-color: white; } }
   #calendar-area .shows-calendar-date-area {
     width: 25%;
     display: none; }
@@ -3121,6 +3134,8 @@ ul.tribe-events-grid-view {
 
 .show-events-page {
   width: 100% !important; }
+  .show-events-page .show-item {
+    margin: 1% 1.1%; }
 
 .filter-shows-group {
   display: -webkit-box;
@@ -3175,10 +3190,14 @@ ul.tribe-events-grid-view {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-left: 5px; }
+  @media (min-width: 480px) {
+    .social-media-share-links {
+      text-align: left;
+      margin: 0; } }
   .social-media-share-links li {
     width: 50px;
     margin: 0 5px; }
@@ -3193,11 +3212,18 @@ ul.tribe-events-grid-view {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
 
-@media (min-width: 480px) {
-  .show-page-container h3, .show-page-container .show-cast-container {
-    width: 100%;
-    text-align: left;
-    margin: 0; } }
+.show-page-container h3, .show-page-container .show-cast-container {
+  text-align: left; }
+  @media (min-width: 480px) {
+    .show-page-container h3, .show-page-container .show-cast-container {
+      width: 100%;
+      margin: 0; } }
+
+.show-page-container h3 {
+  margin-left: 10px; }
+  @media (min-width: 480px) {
+    .show-page-container h3 {
+      margin: 0; } }
 
 .show-events-page li {
   margin: 0 10%; }
