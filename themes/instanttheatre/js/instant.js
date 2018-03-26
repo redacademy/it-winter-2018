@@ -3,10 +3,11 @@ jQuery(document).ready(function($){
   /*********************
  * on reload, if home page, add (big header)
 *********************/
-  // $(window).on('load', function(){
     if($('body').hasClass('home') ){
       $('body').addClass('front-page');
-    }    
+    } else{
+        $('.front-page-snap-menu').css('height', 100);
+      }
     if( $(window).width() < 480 ) {
       console.log('captain, were below 480');
       $('.sub-menu').css('display', 'none')
@@ -16,7 +17,7 @@ jQuery(document).ready(function($){
       $('.sub-menu').css('display', 'none')
      $('.menu-item-has-children').on('hover', desktopMenu)
     }
-  // })
+  
   
   /*********************
  * home page header resize (scroll) event listener
@@ -25,13 +26,14 @@ jQuery(document).ready(function($){
     var documentY = window.pageYOffset;
 
     if ($('body').hasClass('home')) {
-      $('body').addClass('front-page');
+      $('body').addClass('front-page')
       if (documentY > 300) {
         $('body').removeClass('front-page');
-      } else
+      } else{
         $('body').addClass('front-page');
     }
   }
+}
   window.addEventListener('scroll', headerResize);
 
 /******************

@@ -734,6 +734,7 @@ tags archive page
       li {
         margin-right: 1rem;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
 
@@ -1030,9 +1031,9 @@ SEARCH RESULTS
       // :not(:last-child) {
         margin-right: 1rem;
       // }
+      }
     }
-  }
-  
+  }  
 }
 
 
@@ -1083,4 +1084,5 @@ ERROR404
       color: #fff;
     }
   }
-}}
+ }
+
