@@ -1,7 +1,7 @@
 (function ($) {
-  // $('form').on('submit', function (e) {
-  //     e.preventDefault();
-  // });
+  $('form').on('submit', function (e) {
+      e.preventDefault();
+  });
 
   var $searchInput = $('.search-field');
   $('.main-navigation .search-field').on('click', function (e) {
