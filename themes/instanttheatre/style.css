@@ -2436,7 +2436,7 @@ ERROR404
     .page .business-widget {
       background: url("../../assets/images/yellow-wave-banner-background.png");
       padding: 45px;
-      margin-top: 0; } }
+      margin: 30px 0 50px 0; } }
   .page .business-widget .business-grid {
     margin-left: auto;
     margin-right: auto;
@@ -2503,6 +2503,9 @@ ERROR404
       -ms-flex-pack: center;
           justify-content: center;
   margin: 20px 0; }
+  @media (min-width: 480px) {
+    .page .company-grid {
+      margin: 20px 0 50px 0; } }
   .page .company-grid img {
     width: 162px;
     height: 162px;
