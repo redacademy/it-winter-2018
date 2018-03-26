@@ -1964,7 +1964,8 @@ tags archive page
         top: 0; } }
     .list-of-classes .page-header .view-switch li {
       margin-right: 1rem;
-      text-decoration: underline; }
+      text-decoration: underline;
+      cursor: pointer; }
   .list-of-classes .page-header h1.main-heading {
     margin: 0.5rem;
     text-align: center; }
@@ -2971,7 +2972,8 @@ ul.tribe-events-grid-view {
       width: 100%; }
     ul.tribe-events-grid-view li h3 {
       text-align: left;
-      margin: 5px;
+      margin: 5px 0;
+      font-weight: bold;
       font-size: 16px; }
     ul.tribe-events-grid-view li .tribe-related-event-info {
       text-align: left;
@@ -3340,21 +3342,6 @@ ul.tribe-events-grid-view {
     .social-media-share-links li:hover {
       cursor: pointer; }
 
-@media (min-width: 480px) {
-  .show-page-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
-
-.show-page-container h3 {
-  text-align: left; }
-  @media (min-width: 480px) {
-    .show-page-container h3 {
-      width: 100%;
-      margin: 0; } }
-
 .show-page-container .show-cast-container {
   text-align: left; }
   @media (min-width: 480px) {
@@ -3367,7 +3354,7 @@ ul.tribe-events-grid-view {
   margin-left: 10px; }
   @media (min-width: 480px) {
     .show-page-container h3 {
-      margin: 0; } }
+      margin: 20px 0; } }
 
 .show-page-container .flickity-prev-next-button.previous {
   left: -50px; }
@@ -3380,6 +3367,11 @@ ul.tribe-events-grid-view {
   color: #ED1651; }
   .show-page-container .flickity-prev-next-button .arrow {
     fill: #ED1651; }
+
+.show-page-container .share-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .show-events-page li {
   margin: 0 10%; }
