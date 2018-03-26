@@ -2637,6 +2637,9 @@ ERROR404
       .page .studio-grid .studio-grid-part {
         margin-bottom: 0;
         width: 33%; } }
+    .page .studio-grid .studio-grid-part h3 {
+      font-weight: bold;
+      margin-top: 13px; }
     .page .studio-grid .studio-grid-part img {
       height: 200px;
       width: 350px;
