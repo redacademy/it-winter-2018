@@ -735,6 +735,10 @@ ul.tribe-events-grid-view {
   }
   .share-links {
     display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
   }
 }
 
