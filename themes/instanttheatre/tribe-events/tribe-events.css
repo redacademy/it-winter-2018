@@ -1,4 +1,10 @@
 /* Month Calendar View Styling */
+#tribe-events-content table.tribe-events-calendar {
+  background: #fff;
+  border: 8px solid #fff;
+  border-radius: 4px;
+}
+
 .tribe-events-present {
   background: #FFEC00;
 }

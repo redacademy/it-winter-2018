@@ -8,7 +8,7 @@
 // Add your custom taxonomies here...
 
 // Register Custom Taxonomy
-function show_genre_taxonomy() {
+function it_show_genre_taxonomy() {
 
 	$labels = array(
 		'name'                       => 'Show Genres',
@@ -46,11 +46,11 @@ function show_genre_taxonomy() {
 	register_taxonomy( 'show_genre', array( 'tribe_events' ), $args );
 
 }
-add_action( 'init', 'show_genre_taxonomy', 0 );
+add_action( 'init', 'it_show_genre_taxonomy', 0 );
 
 
 // Register Custom Taxonomy - Role
-function person_role_taxonomy() {
+function it_person_role_taxonomy() {
 
 	$labels = array(
 		'name'                       => 'Roles',
@@ -87,10 +87,10 @@ function person_role_taxonomy() {
 	register_taxonomy( 'role', array( 'post_people' ), $args );
 
 }
-add_action( 'init', 'person_role_taxonomy', 0 );
+add_action( 'init', 'it_person_role_taxonomy', 0 );
 
 // Register Custom Taxonomy
-function taxonomy_class_type() {
+function it_taxonomy_class_type() {
 
 	$labels = array(
 		'name'                       => 'Class Types',
@@ -127,4 +127,4 @@ function taxonomy_class_type() {
 	register_taxonomy( 'class_type', array( 'tribe_events' ), $args );
 
 }
-add_action( 'init', 'taxonomy_class_type', 0 );
+add_action( 'init', 'it_taxonomy_class_type', 0 );

@@ -6,10 +6,10 @@
  */
 
 // Add your custom post types here...
-if ( ! function_exists('people_post_type') ) {
+if ( ! function_exists('it_people_post_type') ) {
 
   // Register Custom Post Type: People
-  function people_post_type() {
+  function it_people_post_type() {
 
     $labels = array(
       'name'                  => 'People',
@@ -64,6 +64,6 @@ if ( ! function_exists('people_post_type') ) {
     register_post_type( 'post_people', $args );
 
   }
-  add_action( 'init', 'people_post_type', 0 );
+  add_action( 'init', 'it_people_post_type', 0 );
   
 }
