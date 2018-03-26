@@ -1030,6 +1030,9 @@ input[type="submit"] {
 .widget_search .search-submit {
   display: none; }
 
+.site-footer {
+  margin-top: 3rem; }
+
 .site-info {
   background-color: #FEEA1E;
   max-width: 480px;
@@ -1038,7 +1041,7 @@ input[type="submit"] {
   margin: 0 auto; }
   .site-info .widget_custom_html {
     margin: 0; }
-  .site-info .our-mission p {
+  .site-info .our-mission aside p {
     margin-bottom: 1rem; }
   .site-info h2,
   .site-info h3,
@@ -1646,26 +1649,8 @@ body {
 /***************************
  *PAGE: Auditions 
  ***************************/
-.auditions-containor {
-  background-color: #FFEC00;
-  width: 100%; }
-  .auditions-containor .email-field {
-    max-width: 345px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    text-align: left;
-    margin: 0 auto; }
-    .auditions-containor .email-field .fname,
-    .auditions-containor .email-field .email-input {
-      width: 100%; }
+.audition-p {
+  text-align: center; }
 
 /***************************
  *PAGE: Contact Us
@@ -1865,12 +1850,13 @@ tags archive page
 *******************/
 @media screen and (min-width: 480px) {
   .what-is-improv {
-    padding: 2rem; }
+    padding: 2rem;
+    margin-bottom: 5rem; }
     .what-is-improv .what-is-improv-containor {
       background: rgba(255, 255, 255, 0.8); }
     .what-is-improv .improv-button-set {
       margin: 0 auto;
-      width: 40%;
+      max-width: 600px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
@@ -1885,7 +1871,8 @@ tags archive page
   .banner-carousel {
     height: 500px;
     padding: 1rem;
-    margin: 5rem auto 0; }
+    margin: 5rem auto 0;
+    margin-bottom: 5rem; }
     .banner-carousel .flickity-viewport {
       max-height: 466px; }
     .banner-carousel .banner-cell {
@@ -1906,28 +1893,6 @@ tags archive page
       z-index: 0; }
     .banner-carousel .flickity-prev-next-button {
       top: 250px; }
-  .auditions-containor {
-    background-color: #FFEC00;
-    width: 100%;
-    padding: 2rem;
-    margin-bottom: 3.75rem; }
-    .auditions-containor .email-field {
-      max-width: 570px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      text-align: left;
-      margin: 0 auto; }
-      .auditions-containor .email-field .fname,
-      .auditions-containor .email-field .email-input {
-        width: 100%; }
   .page main .entry-content-contact-page {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2785,6 +2750,11 @@ http://flickity.metafizzy.co
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
   background: #00B6CB; }
+
+@media screen and (min-width: 480px) {
+  .instagram-carousel .flickity-prev-next-button,
+  .instagram-carousel .flickity-page-dots {
+    display: none; } }
 
 .single-tribe_events .entry-content h1 {
   text-align: center;
