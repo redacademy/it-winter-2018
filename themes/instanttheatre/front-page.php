@@ -116,7 +116,9 @@ get_header();
 		<?php endif; ?>
 		
 		</div>
-
+		<div class="front-page-links">
+		<a href="<?php echo get_site_url()?>/show-list/" class="browse-more-link"><span>browse more shows</span> <i class="fa fa-chevron-right"></i></a>
+	</div>
 			
 		<!-- // Grab the 5 next "party" events (by tag) -->
 
@@ -182,6 +184,11 @@ get_header();
 		<?php else : ?>
 					<h2>Nothing found!</h2>
 		<?php endif; ?>
+	</div>
+		
+		<div class="front-page-links">
+		
+		<a href="<?php echo get_site_url()?>/classes/" class="browse-more-link">browse more classes <i class="fa fa-chevron-right"></i></a>
 		
 		</div>
 

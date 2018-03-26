@@ -1307,23 +1307,8 @@ body {
   height: 500px;
   background-color: gray; }
 
-.upcoming-shows,
-.upcoming-classes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
-.show-wrapper,
-.class-wrapper {
-  width: 380px;
-  height: 395px;
-  background-color: gray;
-  margin-bottom: 2rem; }
+.browse-more-link {
+  text-decoration: none; }
 
 .what-is-improv {
   margin: 3.75rem auto 0;
@@ -1355,6 +1340,7 @@ body {
         flex-wrap: wrap; }
 
 .page .front-page-links {
+  text-transform: capitalize;
   text-align: right;
   margin-bottom: 2rem; }
 

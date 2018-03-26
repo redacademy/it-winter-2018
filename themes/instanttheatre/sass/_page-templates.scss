@@ -51,19 +51,8 @@ body {
   background-color: gray;
 }
 
-.upcoming-shows,
-.upcoming-classes {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.show-wrapper,
-.class-wrapper {
-  width: 380px;
-  height: 395px;
-  background-color: gray;
-  margin-bottom: 2rem;
+.browse-more-link{
+  text-decoration: none;
 }
 
 .what-is-improv {
@@ -94,6 +83,7 @@ body {
 
 .page {
   .front-page-links {
+    text-transform: capitalize;    
     text-align: right;
     margin-bottom: 2rem;
   }
