@@ -1358,6 +1358,7 @@ body {
     .what-is-improv .what-is-improv-containor p {
       text-align: center; }
     .what-is-improv .what-is-improv-containor h2 {
+      text-align: center;
       margin-top: 0; }
   .what-is-improv .improv-button-set {
     display: -webkit-box;

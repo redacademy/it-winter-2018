@@ -8,8 +8,8 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -45,14 +45,14 @@ get_header();
 				</div>
 			</div>
 		
-		<?php
-}   // end foreach /////////////////////////////////////////////////
-?>
+			<?php
+			}   // end foreach /////////////////////////////////////////////////
+			?>
 
-			</div>
-			
+		</div><!-- banner-caroucell -->
+
+
 <!-- ///////////////////////////shows///////////////////////// -->
-					
 		<h1>upcoming shows</h1>
 
 		<!-- // Grab the 3 next events (by categroies) -->
@@ -76,43 +76,43 @@ get_header();
 		
 		<ul class="tribe-events-grid-view show-events-page">
 		
-		<?php if ( $shows->have_posts() ) : ?>
+			<?php if ( $shows->have_posts() ) : ?>
 		
-			 <?php while ( $shows->have_posts() ) : $shows->the_post(); ?>
+			<?php while ( $shows->have_posts() ) : $shows->the_post(); ?>
 		
-			 <li class="show-item">
+			<li class="show-item">
 		
-			 <div class="tribe-events-grid-thumbnail">
+				<div class="tribe-events-grid-thumbnail">
 		
-			 <?php if ( has_post_thumbnail() ) : ?>
+			 		<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'large' ); ?>
-						<?php endif; ?>
-						</div>
+					<?php endif; ?>
+				</div>
 		
-					
-					<h3 class="tribe-related-events-title"><?php the_title(); ?></h3>
-					<div class="related-events-time-info">
+				<h3 class="tribe-related-events-title"><?php the_title(); ?></h3>
+				<div class="related-events-time-info">
 					<p><?php echo tribe_get_start_date( $post, true, 'l, F j' ); ?></p>
-						 <p><?php echo tribe_get_start_date( $post, true, 'h:i A' ); ?></p>
-		</div>
-		<div class="related-events-venue-info">
-						 <?php	
-				echo tribe_get_venue() . ' | ' . tribe_get_formatted_cost();
-		?>
-		</div>
-		<div class="related-events-links">
-				<a href="<?php echo tribe_get_event_website_url( $post ); ?>" class="buy-tickets-button">Buy Tickets</a>
-					 <a href="<?php echo tribe_get_event_link( $post ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
-					 </div>
-		</li>
+					<p><?php echo tribe_get_start_date( $post, true, 'h:i A' ); ?></p>
+				</div>
+
+				<div class="related-events-venue-info">
+					<?php echo tribe_get_venue() . ' | ' . tribe_get_formatted_cost();?>
+				</div>
+
+				<div class="related-events-links">
+					<a href="<?php echo tribe_get_event_website_url( $post ); ?>" class="buy-tickets-button">Buy Tickets</a>
+					<a href="<?php echo tribe_get_event_link( $post ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
+				</div>
+
+			</li>
 		
-			 <?php endwhile; ?>
+			<?php endwhile; ?>
 		</ul>
 		
 		<?php the_posts_navigation(); ?>
-			 <?php wp_reset_postdata(); ?>
+			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
-					<h2>Nothing found!</h2>
+			<h2>Nothing found!</h2>
 		<?php endif; ?>
 		
 		</div>
@@ -189,7 +189,7 @@ get_header();
 
 
 
-		<!--/////////////////////// whats improv////////////////////////////// -->
+<!--/////////////////////// whats improv////////////////////////////// -->
 			
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -200,7 +200,7 @@ get_header();
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->
-			
+
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -216,13 +216,13 @@ get_header();
 				<h1>instagram</h1>
 			<div id="instagram-feed" class="instagram-feed"></div>
 			<div class="front-page-links"><a class="front-page-links" href="https://www.instagram.com/instanttheatre/">view on instagram <i class="fa fa-chevron-right"></i></a>
-</div>
+		</div>
 		</section>
 
 
 
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>
