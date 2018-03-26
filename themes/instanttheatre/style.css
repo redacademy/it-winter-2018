@@ -1042,6 +1042,8 @@ input[type="submit"] {
   margin: 0 auto; }
   .site-info .widget_custom_html {
     margin: 0; }
+  .site-info .our-mission p {
+    margin-bottom: 1rem; }
   .site-info h2,
   .site-info h3,
   .site-info p {
@@ -1354,6 +1356,8 @@ body {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
+    .what-is-improv .improv-button-set .blue-btn {
+      min-width: 140px; }
     .what-is-improv .improv-button-set a:link,
     .what-is-improv .improv-button-set a:visited {
       font-size: 14px;

@@ -5,6 +5,7 @@
 /*******************
  *SITE WIDE
  *******************/
+
 html {
   background: #f5f5f5;
 }
@@ -14,9 +15,7 @@ body {
   background: #fff;
   @include desktop {
     margin: 0 auto;
-    background: 
-      $site__background__rokect,
-      $site__background;
+    background: $site__background__rokect, $site__background;
     background-size: 150px, 100%;
     background-repeat: no-repeat;
   }
@@ -51,7 +50,7 @@ body {
   background-color: gray;
 }
 
-.browse-more-link{
+.browse-more-link {
   text-decoration: none;
 }
 
@@ -80,19 +79,21 @@ body {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    .blue-btn{
+      min-width: 140px;
+    }
     a:link,
-    a:visited{
+    a:visited {
       font-size: 14px;
       color: white;
-    text-decoration: none;
-      
+      text-decoration: none;
     }
   }
 }
 
 .page {
   .front-page-links {
-    text-transform: capitalize;    
+    text-transform: capitalize;
     text-align: right;
     margin-bottom: 2rem;
   }
@@ -133,7 +134,7 @@ body {
   margin: 1rem auto;
   max-width: 1240px;
   background: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);  
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   .flickity-page-dots {
     top: 200px;
     height: 10px;
@@ -180,15 +181,14 @@ body {
         }
       }
     }
-
   }
 }
 
 /***************************
  *PAGE: Cast and Instructor 
  ***************************/
-.tax-role {
 
+.tax-role {
   .content-area {
     padding: 2rem 0;
   }
@@ -258,130 +258,130 @@ body {
     }
   }
 }
-  .overlay {
-    visibility: hidden;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.8);
-    overflow-x: hidden;
-    z-index: 1;
-    &.m-fadeIn {
-      visibility: visible;
-      opacity: 1;
-      transition: visibility 0s linear 0s, opacity 300ms;
-    }
+
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  overflow-x: hidden;
+  z-index: 1;
+  &.m-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
   }
-  .overlay-content {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    padding: 1rem 0 0;
-    margin: 0;
-    background: #fff;
-    border: 1px solid #979797;
-    border-radius: 4px;
-    z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 1rem 0 0;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  z-index: 1;
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+  }
+  .portrait-wrapper {
+    position: relative;
+    width: 85vw;
+    height: 85vw;
+    margin: 1rem auto;
+    overflow: hidden;
     @include desktop {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      max-width: 800px;
+      width: 20%;
+      height: 235px;
+      min-width: 235px;
+      margin: 0 1.25rem 0 0;
+      order: 1;
+    }
+    img {
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      padding: 1rem;
-    }
-    .portrait-wrapper {
-      position: relative;
-      width: 85vw;
-      height: 85vw;
-      margin: 1rem auto;
-      overflow: hidden;
+      width: auto;
+      height: 100%;
+      min-height: 100%;
+      max-height: none;
+      min-width: 100%;
+      max-width: none;
       @include desktop {
-        width: 20%;
-        height: 235px;
-        min-width: 235px;
-        margin: 0 1.25rem 0 0;
-        order: 1;
-      }
-      img {
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: auto;
-        height: 100%;
-        min-height: 100%;
-        max-height: none;
-        min-width: 100%;
-        max-width: none;
-        @include desktop {
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-    }
-    .person-title {
-      display: block;
-      padding: 1rem 0;
-      text-align: center;
-      font-size: 1.375rem;
-      font-weight: 500;
-      background: $color__yellow-brand;
-      @include desktop {
-        display: inline-block;
-        padding: 0;
-        margin-right: 1rem;
-        background: none;
-        vertical-align: text-bottom;
-        order: 2;
-      }
-    }
-    .social-links {
-      text-align: center;
-      @include desktop {
-        display: inline-block;
-        order: 3;
-      }
-      a[class|='social'] {
-        margin-right: 0.5rem;
-        text-decoration: none;
-      }
-    }
-    .close-link {
-      position: relative;
-      top: 48px;
-      left: 16px;
-      @include desktop {
-        position: static;
-        text-align: right;
-        flex-grow: 1;
-        order: 4;
-      }
-    }
-    .person-description {
-
-      padding: 0 1rem;
-
-      @include desktop {
-        width: 67%;
-        padding: 0 1rem 1rem 0;
-        margin: -185px 0 0 1.5rem;
-        order: 5;
       }
     }
   }
-// }
+  .person-title {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: 500;
+    background: $color__yellow-brand;
+    @include desktop {
+      display: inline-block;
+      padding: 0;
+      margin-right: 1rem;
+      background: none;
+      vertical-align: text-bottom;
+      order: 2;
+    }
+  }
+  .social-links {
+    text-align: center;
+    @include desktop {
+      display: inline-block;
+      order: 3;
+    }
+    a[class|='social'] {
+      margin-right: 0.5rem;
+      text-decoration: none;
+    }
+  }
+  .close-link {
+    position: relative;
+    top: 48px;
+    left: 16px;
+    @include desktop {
+      position: static;
+      text-align: right;
+      flex-grow: 1;
+      order: 4;
+    }
+  }
+  .person-description {
+    padding: 0 1rem;
+    @include desktop {
+      width: 67%;
+      padding: 0 1rem 1rem 0;
+      margin: -185px 0 0 1.5rem;
+      order: 5;
+    }
+  }
+}
 
+// }
 /***************************
  *PAGE: Auditions 
  ***************************/
@@ -516,7 +516,7 @@ Our Community page
 *******************/
 
 .page-template-default {
-  .entry-title{
+  .entry-title {
     text-align: center;
   }
   .our-community {
@@ -536,29 +536,29 @@ Our Community page
       background-color: $color__yellow-brand;
       text-align: center;
       width: 100%;
-        .quote-hook {
-          text-align: center;
-          margin: 0;
-          padding: 2%;
-          @include desktop{
-            text-align: left;
-            background-color: rgba(255, 255, 255, 0.8);
-            margin: 0px;
-          }
-        }
+      .quote-hook {
+        text-align: center;
+        margin: 0;
+        padding: 2%;
         @include desktop {
-          margin-bottom: 5%;
-          padding: 0px;
-          background-image: url("../../assets/images/yellow-wave-banner-background.png");
-          background-position: center;
-          padding: 3%;
+          text-align: left;
+          background-color: rgba(255, 255, 255, 0.8);
+          margin: 0px;
+        }
+      }
+      @include desktop {
+        margin-bottom: 5%;
+        padding: 0px;
+        background-image: url("../../assets/images/yellow-wave-banner-background.png");
+        background-position: center;
+        padding: 3%;
       }
     }
   }
-  .venue-wrapper{
+  .venue-wrapper {
     text-align: center;
     padding: 5%;
-    h2{
+    h2 {
       margin-top: 0;
       font-size: 1.375rem;
       @include desktop {
@@ -598,22 +598,17 @@ Our Community page
       padding-left: 5%;
     }
   } //havana theatre
-}//page-template-default
-
+} //page-template-default
 /*****************
 tags archive page
 *******************/
 
-
 @media screen and (min-width: $mobile_break) {
-
   .what-is-improv {
     padding: 2rem;
-
     .what-is-improv-containor {
       background: rgba(255, 255, 255, 0.8);
     }
-    
     .improv-button-set {
       margin: 0 auto;
       width: 40%;
@@ -621,147 +616,120 @@ tags archive page
       justify-content: space-around;
     }
   }
-
-    .upcoming-shows,
-    .upcoming-classes {
-      justify-content: space-between;
+  .upcoming-shows,
+  .upcoming-classes {
+    justify-content: space-between;
+  }
+  .banner-carousel {
+    height: 500px;
+    padding: 1rem;
+    margin: 5rem auto 0;
+    .flickity-viewport {
+      max-height: 466px;
     }
-
-    .banner-carousel {
-
-      height: 500px;
-      padding: 1rem;
-      margin: 5rem auto 0;
-
-      .flickity-viewport {
-        max-height: 466px;
-      }
-
-      .banner-cell {
-        display: flex;
-        width: 100%;
-        height: 100%;
-
-          .banner-thumbnail {
-            // max-width: none;
-            height: 100%;
-            margin-right: 2rem;
-          }
-          .banner-text-info {
-            min-width: 400px;
-            max-width: 400px;
-            padding: 0;
-          }
-      }
-
-      .flickity-page-dots {
-        top: 100%;
-        z-index: 0;
-      }
-
-      .flickity-prev-next-button {
-        top: 250px;
-      }
-
-    }
-
-    .auditions-containor {
-
-      background-color: $color__yellow-brand;
+    .banner-cell {
+      display: flex;
       width: 100%;
-      padding: 2rem;
-      margin-bottom: 3.75rem;
-
-      .email-field {
-        max-width: 570px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        margin: 0 auto;
-
-          .fname,
-          .email-input {
-            width: 100%;
-          }
+      height: 100%;
+      .banner-thumbnail {
+        // max-width: none;
+        height: 100%;
+        margin-right: 2rem;
+      }
+      .banner-text-info {
+        min-width: 400px;
+        max-width: 400px;
+        padding: 0;
       }
     }
-
-    .page main .entry-content-contact-page {
-
-      justify-content: center;
-
-      iframe {
-        display: block;
+    .flickity-page-dots {
+      top: 100%;
+      z-index: 0;
+    }
+    .flickity-prev-next-button {
+      top: 250px;
+    }
+  }
+  .auditions-containor {
+    background-color: $color__yellow-brand;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 3.75rem;
+    .email-field {
+      max-width: 570px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      margin: 0 auto;
+      .fname,
+      .email-input {
+        width: 100%;
       }
-
-      .contact-sidebar {
-        padding-left: 3rem;
-        width: auto;
-        display: flex;
-        justify-content: flex-start;
-          ul {
-            margin: 0;
-            padding: 0;
-          }
-
-      }
-
-      p {
+    }
+  }
+  .page main .entry-content-contact-page {
+    justify-content: center;
+    iframe {
+      display: block;
+    }
+    .contact-sidebar {
+      padding-left: 3rem;
+      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      ul {
         margin: 0;
-      }
-
-      li {
-        list-style: none;
-        display: flex;
-      }
-
-      span {
-        width: 200px;
+        padding: 0;
       }
     }
+    p {
+      margin: 0;
+    }
+    li {
+      list-style: none;
+      display: flex;
+    }
+    span {
+      width: 200px;
+    }
+  }
 }
 
 /*************************
  *PAGE: List of Classes
  *************************/
+
 .list-of-classes {
   .page-header {
     position: relative;
-
     .view-switch {
       display: none;
       list-style: none;
-
       @include desktop {
         display: flex;
         position: absolute;
         right: 0;
         top: 0;
       }
-
       li {
         margin-right: 1rem;
         text-decoration: underline;
         cursor: pointer;
       }
     }
-
     h1.main-heading {
       margin: 0.5rem;
       text-align: center;
     }
-
     .selected {
       color: $color__lightblue-brand;
       font-weight: 700;
     }
   }
-
   #class-calendar {
     display: none;
   }
-
   .no-classes {
     border: 0.75rem solid #fff;
     padding: 0.5rem 0;
@@ -818,20 +786,16 @@ tags archive page
     }
     .cell {
       text-align: left;
-
-      &:first-child{
+      &:first-child {
         width: 65%;
         padding-left: 0.5rem;
-
         @include desktop {
           padding-left: none;
         }
-
       }
       &:last-child {
         width: 35%;
         padding-right: 0.5rem;
-
         @include desktop {
           padding-right: none;
         }
@@ -866,7 +830,6 @@ tags archive page
         }
       }
     }
-
     .blue-btn {
       max-width: 125px;
       color: white;
@@ -880,17 +843,16 @@ tags archive page
 /*************************
  *PAGE: About Our Classes
  *************************/
- .yellow-wave-panel {
-  background: $color__yellow-brand;
 
-  > * {
+.yellow-wave-panel {
+  background: $color__yellow-brand;
+  >* {
     background: #fff content-box;
     padding: 1rem;
   }
-
   @include desktop {
     background: url("../../assets/images/yellow-wave-banner-background.png");
-    > * {
+    >* {
       background: rgba(255, 255, 255, 0.75) content-box;
       padding: 3rem;
     }
@@ -901,7 +863,6 @@ tags archive page
   @include desktop {
     display: flex;
   }
-  
   .gallery-item {
     display: flex;
     flex-direction: column;
@@ -909,27 +870,22 @@ tags archive page
     align-items: middle;
     width: 100%;
     padding: 0.5rem;
-
     @include desktop {
       width: 25%;
     }
-
     &:first-child {
       padding-left: 1rem;
     }
     &:last-child {
       padding-right: 1rem;
     }
-
     .item-logo {
       width: 66px;
       margin: 0 auto;
     }
-
     p {
       text-align: center;
     }
-
     .blue-btn {
       max-width: 125px;
       margin: auto auto 0;
@@ -942,22 +898,18 @@ tags archive page
 .why-take-classes {
   p {
     padding: 0.5rem;
-
     @include desktop {
       padding: 0;
     }
   }
-
   @include desktop {
     .content-panel {
       display: flex;
       justify-content: space-between;
       margin-bottom: 2rem;
-
-      > * {
+      >* {
         width: 47.5%
       }
-
       .panel-image {
         overflow: hidden;
       }
@@ -966,7 +918,6 @@ tags archive page
         width: auto;
         max-width: none;
       }
-
       &:nth-child(odd) {
         flex-direction: row;
       }
@@ -983,7 +934,6 @@ tags archive page
       width: 100%;
       margin-right: 2rem;
       overflow: hidden;
-
       @include desktop {
         width: 250px;
         height: auto;
@@ -992,64 +942,55 @@ tags archive page
   }
 }
 
-
-
 /*******************
 SEARCH RESULTS
 ********************/
-.search-results{
-.search-results-wrapper{
-  @include desktop{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-  }
-  article{
-    width: 100%;
-    height: 500px;
-    border: 1px solid darkslategrey;
-    margin-bottom:10px;
-    padding-top: 10px;
-    @include desktop{
-      width: 33%;
-    }
-    .image-wrapper{
-      height: 300px;
-      position: relative;
-      overflow: hidden;
-    img{
-      position: absolute;
-      
-      // width:100%;
-      height: 100%;
-      max-width: none;
-      }
-    }
-    }
-  }
-.photo-gallery {
 
-  .gallery-item {
-    width: 95%;
-    margin: 0 auto;
-
+.search-results {
+  .search-results-wrapper {
     @include desktop {
-      width: 33.333%;
-      
-      // :not(:last-child) {
-        margin-right: 1rem;
-      // }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+    }
+    article {
+      width: 100%;
+      height: 500px;
+      border: 1px solid darkslategrey;
+      margin-bottom: 10px;
+      padding-top: 10px;
+      @include desktop {
+        width: 33%;
+      }
+      .image-wrapper {
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        img {
+          position: absolute; // width:100%;
+          height: 100%;
+          max-width: none;
+        }
       }
     }
-  }  
+  }
+  .photo-gallery {
+    .gallery-item {
+      width: 95%;
+      margin: 0 auto;
+      @include desktop {
+        width: 33.333%; // :not(:last-child) {
+        margin-right: 1rem; // }
+      }
+    }
+  }
 }
-
-
 
 /*********************
 ERROR404
 *********************/
+
 .error404 {
   .error-404 {
     display: flex;
@@ -1093,5 +1034,4 @@ ERROR404
       color: #fff;
     }
   }
- }
-
+}
