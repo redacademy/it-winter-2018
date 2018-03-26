@@ -3345,7 +3345,7 @@ ul.tribe-events-grid-view {
   @media (min-width: 480px) {
     .show-page-container h3 {
       width: 100%;
-      margin: 0; } }
+      margin: 5px 0; } }
 
 .show-page-container .show-cast-container {
   text-align: left; }
