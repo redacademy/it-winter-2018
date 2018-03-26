@@ -26,20 +26,20 @@ get_header();
 				<div class="banner-cell" >
 				<div class="banner-thumbnail">
 					<?php
-					echo '<a href="'.$values[0].'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
+					echo '<a href="'. esc_url( $values[0] ).'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
 					?>
 		
 				</div>
 				<div class="banner-text-info">
 					<?php
-					echo '<h2><a href="'.$values[0].'" target="'.$values[2].'"> '. $values[1]. '</a></h2>';
+					echo '<h2><a href="'. esc_url( $values[0] ).'" target="'.$values[2].'"> '. $values[1]. '</a></h2>';
 		
 					echo $field['banner_info'];
 					?>
 					<div class='button-wrapper'>
 						<button class="buy-tickets-button"><?php echo $field[ 'eb_link' ]; ?></button>
 						<?php
-						echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >learn more</a>';
+						echo '<a href="'. esc_url( $values[0] ).'" target="'.$values[2].'" class="learn-more-link" >learn more</a>';
 						?>
 					</div>
 				</div>
