@@ -703,15 +703,8 @@ ul.tribe-events-grid-view {
 
 .show-page-container {
   @include desktop {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  h3 {
-    text-align: left;
-    @include desktop {
-      width: 100%;
-      margin: 5px 0;
-    }
+    // display: flex;
+    // flex-wrap: wrap;
   }
   .show-cast-container {
     text-align: left;
@@ -724,7 +717,7 @@ ul.tribe-events-grid-view {
     text-align: left;
     margin-left: 10px;
     @include desktop {
-      margin: 0;
+      margin: 20px 0;
     }
   }
   .flickity-prev-next-button.previous {
@@ -739,8 +732,11 @@ ul.tribe-events-grid-view {
     .arrow {
       fill: $color__red-brand;
     }
-    }
   }
+  .share-links {
+    display: flex;
+  }
+}
 
 
 .show-events-page {
