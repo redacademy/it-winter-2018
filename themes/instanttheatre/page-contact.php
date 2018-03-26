@@ -39,9 +39,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<<<<<<< HEAD
 
-=======
 	
->>>>>>> e42a46d35eddaabe670eb8a44c45ac4c22a68f35
 <?php get_footer(); ?>
