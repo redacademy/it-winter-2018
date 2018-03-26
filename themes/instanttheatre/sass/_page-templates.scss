@@ -30,7 +30,7 @@ body {
 }
 
 #wpadminbar {
-  opacity: 0.05;
+  position: fixed;
   &:hover {
     opacity: 1;
   }
@@ -454,7 +454,7 @@ body {
     }
     .our-story {
       text-align: left;
-      padding: 0px;
+      padding: 2%;
       @include desktop {
         display: flex;
         flex-direction: row-reverse;
@@ -514,19 +514,22 @@ Our Community page
     @include desktop {
       display: flex;
       align-items: flex-start;
-      padding-left: 5%;
-      padding-right: 5%;
+      padding-left: 2%;
+      padding-right: 2%;
       .community-block {
         margin-top: 0px;
       }
     }
     p {
-      padding-left: 5%;
+      padding-left: 3%;
     }
     .quote-entry {
       background-color: $color__yellow-brand;
       text-align: center;
       width: 100%;
+      @include desktop{
+        width: 85%;
+      }
         .quote-hook {
           text-align: center;
           margin: 0;

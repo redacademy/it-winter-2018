@@ -81,6 +81,11 @@ function desktopMenu() {
   $('.sub-menu').removeClass('active');
   $('.menu-item-has-children').find('.sub-menu').hide();
   $(this).children('.sub-menu').show();
+  $('.selector-nav').on('hover', function(){
+    if($('.selector-nav').not('.menu-item-has-children')){
+     $(this).siblings('.selector-nav').find('.sub-menu').css('display','none')
+    }
+  })
 }
 
 
