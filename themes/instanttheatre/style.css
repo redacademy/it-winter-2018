@@ -1334,13 +1334,9 @@ body {
     .what-is-improv .what-is-improv-containor p {
       text-align: center; }
     .what-is-improv .what-is-improv-containor h2 {
-<<<<<<< HEAD
       text-align: center;
-      margin-top: 0; }
-=======
       margin-top: 0;
       text-align: center; }
->>>>>>> 0abdb522f288832c4cceeb1adfa1b0642ccc770c
   .what-is-improv .improv-button-set {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1388,6 +1384,11 @@ body {
   background: #fff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
+  .banner-carousel .flickity-page-dots {
+    top: 200px;
+    height: 10px; }
+  .banner-carousel .flickity-prev-next-button {
+    top: 100px; }
   .banner-carousel .banner-cell {
     width: 100%; }
     .banner-carousel .banner-cell .banner-thumbnail {
@@ -1395,6 +1396,7 @@ body {
       height: 200px;
       overflow: hidden; }
       .banner-carousel .banner-cell .banner-thumbnail img {
+        width: 100%;
         height: 100%;
         -o-object-fit: cover;
            object-fit: cover; }
@@ -1414,11 +1416,6 @@ body {
           text-decoration: none; }
           .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink:link, .banner-carousel .banner-cell .banner-text-info .buy-tickets-button .cfs-hyperlink:visited {
             color: white; }
-    .banner-carousel .banner-cell .flickity-page-dots {
-      top: 200px;
-      height: 10px; }
-    .banner-carousel .banner-cell .flickity-prev-next-button {
-      top: 100px; }
 
 /***************************
  *PAGE: Cast and Instructor 
