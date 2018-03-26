@@ -33,22 +33,22 @@ if ( is_array( $posts ) && ! empty( $posts ) ) : ?>
 			<a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="url" rel="bookmark"><?php echo $thumb ?></a>
 		</div>
 		<div class="tribe-related-event-info">
-      <h3 class="tribe-related-events-title"><a href="<?php echo tribe_get_event_link( $post ); ?>" class="tribe-event-url" rel="bookmark"><?php echo get_the_title( $post->ID ); ?></a></h3>
+      <h3 class="tribe-related-events-title"><a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="tribe-event-url" rel="bookmark"><?php echo esc_html( get_the_title( $post->ID ) ); ?></a></h3>
       <div class="related-events-time-info">
 			<?php
 				if ( $post->post_type == Tribe__Events__Main::POSTTYPE ) { ?>
-          <p><?php echo tribe_get_start_date( $post, true, 'l, F j' ); ?></p>
-          <p><?php echo tribe_get_start_date( $post, true, 'h:i A' ); ?></p>
+          <p><?php echo esc_html( tribe_get_start_date( $post, true, 'l, F j' ) ); ?></p>
+          <p><?php echo esc_html( tribe_get_start_date( $post, true, 'h:i A' ) ); ?></p>
       </div>
       <div class="related-events-venue-info">
-        <?php echo tribe_get_venue( $post ) . ' | ' . tribe_get_formatted_cost( $post ); ?>
+        <?php echo esc_html( tribe_get_venue( $post ) ) . ' | ' . esc_html( tribe_get_formatted_cost( $post ) ); ?>
       </div>
       <?php
 				}
       ?>
       <div class="related-events-links">
-        <a href="<?php echo tribe_get_event_website_url( $post ); ?>" class="buy-tickets-button">Buy Tickets</a>
-        <a href="<?php echo tribe_get_event_link( $post ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
+        <a href="<?php echo esc_url( tribe_get_event_website_url( $post ) ); ?>" class="buy-tickets-button">Buy Tickets</a>
+        <a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
       </div>
 		</div>
 	</li>

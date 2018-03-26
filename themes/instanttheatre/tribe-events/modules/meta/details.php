@@ -13,7 +13,7 @@ $time_format = get_option( 'time_format', Tribe__Date_Utils::TIMEFORMAT );
 $time_range_separator = tribe_get_option( 'timeRangeSeparator', ' - ' );
 
 $start_datetime = tribe_get_start_date();
-$start_date = tribe_get_start_date( null, false );
+$start_date = tribe_get_start_date( null, false, 'l, F j' );
 $start_time = tribe_get_start_date( null, false, $time_format );
 $start_ts = tribe_get_start_date( null, false, Tribe__Date_Utils::DBDATEFORMAT );
 
@@ -54,7 +54,7 @@ $website = tribe_get_event_website_link();
 <div class="tribe-events-meta-group tribe-events-meta-group-details">
 
 	<div class="buy-tickets-link-wrapper mobile-view-hidden">
-      <a href="<?php echo tribe_get_event_website_url(); ?>" class="buy-tickets-button">Buy Tickets</a>
+      <a href="<?php echo esc_url( tribe_get_event_website_url() ); ?>" class="buy-tickets-button">Buy Tickets</a>
   </div>
 	<dl>
 

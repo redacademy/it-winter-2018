@@ -1,12 +1,13 @@
 // Hire Us, Book Events and Book Studio
 
 .page {
-    text-align: center;
+    // text-align: center;
     // max-width: $desktop__content-area;
     h1 {
       margin-top: 1em;
       color: black;
       padding: 0 20px;
+      text-align: center;
       @include desktop {
         padding: 0;
       }
@@ -20,6 +21,10 @@
 
     //css for forms
     .gform_wrapper {
+      margin-top: 40px;
+      @include desktop {
+        margin-top: 20px;
+      }
       .top_label input.medium {
         width: 100%;
       }
@@ -50,11 +55,6 @@
             max-width: 570px;
           }
         }
-
-        //targeting calendars for styling
-        // .gform_fields .gfield .gfield_date_month {
-        //   border: 2px solid red;
-        // }
       }
       .gform_footer {
         background-color: $color__yellow-brand;
@@ -63,7 +63,6 @@
         text-align: center;
 
         .gform_button {
-          // margin-left: 737px;
           background-color: $color__blue-brand;
           max-width: 50%;
           color: white;
@@ -83,9 +82,6 @@
         padding: 0;
         margin-top: 0;
       }
-      // .gfield_calculation {
-      //   display: none;
-      // }
       .top_label .gfield_time_ampm {
         margin-top: 15px;
       }

@@ -14,7 +14,7 @@ get_header();
 			<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 
 			<div class="archive-title-wrapper">
-				<h1><?php echo $term->name; ?></h1>
+				<h1><?php echo esc_html( $term->name ); ?></h1>
 			</div>
 
 			<?php
@@ -27,7 +27,7 @@ get_header();
 				<button class="filter-btn selected" data-filter="*">All</button>
 				<?php foreach ( $termchildren as $child ) : ?>
 					<?php $term = get_term_by( 'id', $child, $taxonomy_name ); ?>
-					<button class="filter-btn" data-filter=".role-<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
+					<button class="filter-btn" data-filter=".role-<?php echo esc_attr( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></button>
 				<?php endforeach; ?>
 			</div>
 
@@ -41,7 +41,7 @@ get_header();
 
 						<?php $post_classes = implode(" ", get_post_class() ); ?>
 
-						<div id="post-<?php the_ID(); ?>" class="<?php echo $post_classes; ?> person-tile">
+						<div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr( $post_classes ); ?> person-tile">
 							<a href="">
 								<div class="person-image-wrapper">
 									<?php if ( has_post_thumbnail() ) : ?>
