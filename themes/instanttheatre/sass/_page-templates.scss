@@ -580,12 +580,14 @@ Our Community page
     }
     .community-gallery {
       width: 95%;
+      padding: 3%;
       @include desktop {
         width: 33%;
+        padding: 0;
       }
       img {
         height: 300px;
-        width: 95%;
+        width: 100%;
       }
     }
   }

@@ -730,8 +730,6 @@ input[type="submit"] {
     .front-page .main-navigation .selector-nav {
       display: block;
       color: black; }
-      .front-page .main-navigation .selector-nav a:hover {
-        color: #6AC5D0; }
     .front-page .main-navigation .home-banner-clickables {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1805,9 +1803,6 @@ Our Community page
   background-color: #FFEC00;
   text-align: center;
   width: 100%; }
-  @media (min-width: 480px) {
-    .page-template-default .our-community .quote-entry {
-      width: 85%; } }
   .page-template-default .our-community .quote-entry .quote-hook {
     text-align: center;
     margin: 0;
@@ -1851,13 +1846,15 @@ Our Community page
     margin-right: auto;
     margin-left: auto; }
   .page-template-default .community-gallery-images .community-gallery {
-    width: 95%; }
+    width: 95%;
+    padding: 3%; }
     @media (min-width: 480px) {
       .page-template-default .community-gallery-images .community-gallery {
-        width: 33%; } }
+        width: 33%;
+        padding: 0; } }
     .page-template-default .community-gallery-images .community-gallery img {
       height: 300px;
-      width: 95%; }
+      width: 100%; }
 
 .page-template-default .havana-theatre h1 {
   text-transform: capitalize; }
