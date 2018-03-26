@@ -1,6 +1,5 @@
 .single-tribe_events {
   .entry-content {
-    margin-top: 60px;
     h1 {
       text-align: center;
       margin: 20px;
@@ -753,3 +752,10 @@ ul.tribe-events-grid-view {
   text-align: center;
 }
 
+//styling to override paragraph margin on single show page for mobile 
+#tribe-events div.tribe-events-single-event-description {
+  padding: 0 10px;
+  @include desktop {
+    padding: 0;
+  }
+}
