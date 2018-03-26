@@ -74,10 +74,19 @@ body {
     background: $color__yellow-brand;
   }
   .improv-button-set {
+    text-align: center;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    a:link,
+    a:visited{
+      font-size: 14px;
+      color: white;
+    text-decoration: none;
+      
+    }
   }
 }
 

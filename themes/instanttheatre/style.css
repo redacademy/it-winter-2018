@@ -1340,6 +1340,8 @@ body {
       margin-top: 0;
       text-align: center; }
   .what-is-improv .improv-button-set {
+    text-align: center;
+    text-transform: uppercase;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1352,6 +1354,11 @@ body {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
+    .what-is-improv .improv-button-set a:link,
+    .what-is-improv .improv-button-set a:visited {
+      font-size: 14px;
+      color: white;
+      text-decoration: none; }
 
 .page .front-page-links {
   text-transform: capitalize;
