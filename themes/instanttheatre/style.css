@@ -1805,9 +1805,6 @@ Our Community page
   background-color: #FFEC00;
   text-align: center;
   width: 100%; }
-  @media (min-width: 480px) {
-    .page-template-default .our-community .quote-entry {
-      width: 85%; } }
   .page-template-default .our-community .quote-entry .quote-hook {
     text-align: center;
     margin: 0;
