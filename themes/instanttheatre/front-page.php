@@ -6,63 +6,56 @@
  */
 
 get_header();
- ?>
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
 <!-- ///////////////banner /////////////////////-->
-			<div class="banner-carousel">
+		<div class="banner-carousel">
 
-		<?php		$fields = CFS()->get( 'banner_loop' );
-foreach ( $fields as $field ) {
+			<?php		$fields = CFS()->get( 'banner_loop' );
+			foreach ( $fields as $field ) {
 	
-	$keys = array_keys($field['title_link']);
-$values = array_values($field['title_link']);
+				$keys = array_keys($field['title_link']);
+				$values = array_values($field['title_link']);
 
-	?>
-	<div class="banner-cell" >
-	<div class="banner-thumbnail">
-		<?php
-		echo '<a href="'.$values[0].'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
+				?>
+				<div class="banner-cell" >
+				<div class="banner-thumbnail">
+					<?php
+					echo '<a href="'.$values[0].'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
 					?>
 		
-	</div>
-	<div class="banner-text-info">
-	<?php
-echo '<h2><a href="'.$values[0].'" target="'.$values[2].'"> '. $values[1]. '</a></h2>';
+				</div>
+				<div class="banner-text-info">
+					<?php
+					echo '<h2><a href="'.$values[0].'" target="'.$values[2].'"> '. $values[1]. '</a></h2>';
 		
-		echo $field['banner_info'];
-		
-		?>
-		<div class='button-wrapper'>
-		<button class="buy-tickets-button"><?php echo $field[ 'eb_link' ]; ?></button>
-
-		<?php
-echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >learn more</a>';
-?>
-</div>
-
-
-		</div>
-</div>
+					echo $field['banner_info'];
+					?>
+					<div class='button-wrapper'>
+						<button class="buy-tickets-button"><?php echo $field[ 'eb_link' ]; ?></button>
+						<?php
+						echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >learn more</a>';
+						?>
+					</div>
+				</div>
+			</div>
 		
 		<?php
 }   // end foreach /////////////////////////////////////////////////
 ?>
 
 			</div>
-			<h1>upcoming shows</h1>
-					<!-- ///////////////////////////shows///////////////////////// -->
+			
+<!-- ///////////////////////////shows///////////////////////// -->
+					
+		<h1>upcoming shows</h1>
 
-		<!-- // Grab the 5 next "party" events (by tag) -->
+		<!-- // Grab the 3 next events (by categroies) -->
 		<div class="shows-grid">
 
 		<?php $events = array(
@@ -76,10 +69,8 @@ echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >
 							'terms' => 'shows'
 					)
 			)
-		
 		);
 		?>
-		
 		
 		<?php $shows = new WP_Query( $events ); /* $args set above*/ ?>
 		
@@ -127,8 +118,10 @@ echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >
 		</div>
 
 			
-			<h1>upcoming classes</h1>
 		<!-- // Grab the 5 next "party" events (by tag) -->
+
+		<h1>upcoming classes</h1>
+
 		<div class="shows-grid">
 
 		<?php $class_events = array(
@@ -202,24 +195,12 @@ echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-## -->
-		
-
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
+			</article><!-- #post-## -->
+			
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -244,6 +225,4 @@ echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
