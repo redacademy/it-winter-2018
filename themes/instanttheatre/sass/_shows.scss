@@ -85,6 +85,7 @@
           background-color: darken($color__blue-brand, 10%);
         }
         &.tribe-events-button {
+          display: block;
           margin: 0 5px;
         } 
       }
@@ -296,6 +297,35 @@ ul.tribe-events-grid-view {
   }
 }
 
+.tribe-events-day-time-slot {
+  padding: 0 10px;
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.tribe-events-loop .tribe-events-event-meta {
+  background-color: white;
+  border: 0;
+  padding-bottom: 0;
+  @include desktop {
+    background: transparent;
+  }
+  .tribe-events-venue-details {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.tribe-events-day-time-slot .time-details {
+  padding: 0;
+}
+
+//overriding styling of single day list view of events
+.events-archive .entry-content, .events-archive .entry-header {
+  width: 100%;
+}
+
 //styling for shows list/calendar view
  #calendar-area {
    border-radius: 4px;
@@ -456,12 +486,12 @@ ul.tribe-events-grid-view {
 
    .close-row {
      background-color: $color__yellow-brand;
-     padding: 15px 0;
+     padding: 10px 0;
      text-align: left;
      button {
        background-color: transparent;
        border: 0;
-       font-size: 20px;
+       font-size: 25px;
        font-weight: bold;
        outline: 0;
      }
@@ -558,7 +588,10 @@ ul.tribe-events-grid-view {
 .show-events-page {
   width: 100%!important;
   .show-item {
-    margin: 1% 1.1%;
+    margin: 1% 2.5%;
+    @include desktop {
+      margin: 1% 1.1%;
+    }
   }
 }
 
@@ -570,6 +603,10 @@ ul.tribe-events-grid-view {
 
 #tribe-events-bar {
   display: none;
+}
+
+.tribe-events-list .tribe-events-event-image img {
+  width: 100%;
 }
 
 .tribe-events-list .tribe-events-loop {
@@ -598,11 +635,21 @@ ul.tribe-events-grid-view {
   }
 }
 
+#tribe-events .tribe-events-button {
+  display: block;
+  background-color: $color__blue-brand;
+  border-radius: 50px;
+  padding: 10px 30px;
+  &:hover {
+    background-color: darken($color__blue-brand, 10%);
+  }
+}
+
 //styling for cast members on show details page
 
 .show-cast-container {
   .show-cast-item {
-    max-width: 100px;
+    width: 100px;
     margin: 0 20px;
 
     img {
@@ -659,20 +706,42 @@ ul.tribe-events-grid-view {
     display: flex;
     flex-wrap: wrap;
   }
-  h3, .show-cast-container {
+  h3 {
     text-align: left;
     @include desktop {
       width: 100%;
       margin: 0;
     }
   }
+  .show-cast-container {
+    text-align: left;
+    @include desktop {
+      width: 95%;
+      margin-left: 50px;
+    }
+  }
   h3 {
+    text-align: left;
     margin-left: 10px;
     @include desktop {
       margin: 0;
     }
   }
-}
+  .flickity-prev-next-button.previous {
+    left: -50px;
+  }
+  .flickity-prev-next-button.next {
+    right: -50px;
+  }
+  .flickity-prev-next-button {
+    background: transparent;
+    color: $color__red-brand;
+    .arrow {
+      fill: $color__red-brand;
+    }
+    }
+  }
+
 
 .show-events-page {
   li {
@@ -683,3 +752,6 @@ ul.tribe-events-grid-view {
 #tribe-events-content .single-event-description {
   text-align: center;
 }
+
+//styling for single day list view of events (when you click on a calendar date)
+

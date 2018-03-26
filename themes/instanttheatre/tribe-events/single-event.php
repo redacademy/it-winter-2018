@@ -90,15 +90,15 @@ $event_id = get_the_ID();
 				<div class="show-cast-container">
 					<?php
 						$actors = CFS()->get( 'people' ); ?>
-						<?php if (isset($actors)) : ?>
+					<?php if (isset($actors)) : ?>
 						<?php foreach( $actors as $post_id ) : ?>
-						<div class="show-cast-item">
-							<?php $the_post = get_post( $post_id ); ?>
-							<?php echo get_the_post_thumbnail( $the_post->ID ); ?>
-							<p><?php echo $the_post->post_title; ?></p>
-						</div><!-- show-cast-item -->
-					<?php endforeach; ?>
-						<?php endif; ?>
+							<div id="post-<?php echo $post_id; ?>" class="show-cast-item">
+								<?php $the_post = get_post( $post_id ); ?>
+								<?php echo get_the_post_thumbnail( $the_post->ID ); ?>
+								<p><?php echo $the_post->post_title; ?></p>
+							</div><!-- show-cast-item -->
+						<?php endforeach; ?>
+					<?php endif; ?>
 				</div><!-- show-cast-container -->
 			</div>
 			<div class="mobile-view-hidden">
@@ -111,3 +111,26 @@ $event_id = get_the_ID();
 	<?php endwhile; ?>
 
 </div><!-- #tribe-events-content -->
+
+<div class="overlay">
+	<div class="overlay-content">
+		<div class="close-link">
+			<i class="fa fa-times fa-2x"></i>
+		</div>
+		<span class="person-title"></span>
+		<div class="portrait-wrapper">
+			<img id="portrait" src="" alt="">
+		</div>
+		<div class="social-links">
+			<a class="social-facebook" href="" target="_blank">
+				<i class="fa fa-facebook-square fa-2x"></i>
+			</a>
+			<a class="social-twitter" href="" target="_blank">
+				<i class="fa fa-twitter fa-2x"></i>
+			</a>
+			<a class="social-instagram" href="" target="_blank"`>
+				<i class="fa fa-instagram fa-2x"></i>
+			</a>
+		</div>
+		<p class="person-description"></p>
+</div>

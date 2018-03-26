@@ -22,7 +22,7 @@ get_header(); ?>
 
 					<div class="mobile-shows-calendar-date-area">
 						<div class="close-row">
-							<button class="close-button">X</button>
+							<button class="close-button"><i class="fa fa-times"></i></button>
 						</div>
 						<p>Select a date:</p>
 						<?php dynamic_sidebar( 'shows-calendar' ); ?>
@@ -36,7 +36,7 @@ get_header(); ?>
 					<div class="shows-taxonomy-filter-area">
 
 						<div class="close-row">
-							<button class="close-button">X</button>
+							<button class="close-button"><i class="fa fa-times"></i></button>
 						</div>
 
 						<?php 
