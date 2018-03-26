@@ -20,7 +20,7 @@
   }
 
 
-  var pageUrl = $('.website-url-for-javascript-hidden').text();
+  // var pageUrl = $('.website-url-for-javascript-hidden').text();
 
   //initilizing share buttons on show page
   
@@ -58,7 +58,8 @@
     $('.shows-taxonomy-filter-area').hide();
   })
 
-  $('.done-button').on('click', function() {
+  $('.done-button').on('click', function(event) {
+    event.preventDefault();
     $('.shows-taxonomy-filter-area').hide();
   })
 
