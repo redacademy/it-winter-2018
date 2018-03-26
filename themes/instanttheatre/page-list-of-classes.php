@@ -38,12 +38,12 @@ get_header(); ?>
 				<?php foreach ( $terms as $term ) : ?>
 					<div class="schedule-header">
 						<div class="schedule-header-logo">
-							<img src="<?php echo get_template_directory_uri() . '/assets/logo/rocket/rocket-' . $term->slug; ?>.svg" alt="<?php echo $term->name . ' category'; ?>"/>
-							<h2 class="featured"><?php echo $term->slug; ?></h2>
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/logo/rocket/rocket-' . $term->slug ); ?>.svg" alt="<?php echo esc_html( $term->name . ' category' ); ?>"/>
+							<h2 class="featured"><?php echo esc_html( $term->slug ); ?></h2>
 						</div>
 						<div class="schedule-header-text">
-							<h2><?php echo $term->name; ?> Classes</h2>
-							<p><?php echo $term->description; ?></p>
+							<h2><?php echo esc_html( $term->name ); ?> Classes</h2>
+							<p><?php echo esc_html( $term->description ); ?></p>
 						</div>
 					</div>
 					
@@ -63,7 +63,7 @@ get_header(); ?>
 
 					<!-- Output class schedule table -->
 					<?php if ( $classes->have_posts() ) : ?>
-						<ul id="<?php echo $term->slug ?>" class="class-schedule">
+						<ul id="<?php echo esc_html( $term->slug ); ?>" class="class-schedule">
 							<li>
 								<p class="cell">Class</p>
 								<p class="cell">Date</p>
@@ -104,13 +104,13 @@ get_header(); ?>
 										?>
 									</p>
 									<!-- Prerequisite -->
-									<p class="cell"><?php echo $prerequisite; ?></p>
+									<p class="cell"><?php echo esc_html( $prerequisite ); ?></p>
 									<!-- Instructor -->
 									<div class="cell">
 										<?php if ( isset($instructors) ) : ?>
 											<?php foreach( $instructors as $post_id ) : ?>
 												<?php $instructor = get_post( $post_id ); ?>
-												<?php echo '<div>' . $instructor->post_title . '</div>'; ?>
+												<?php echo '<div>' . esc_html( $instructor->post_title ) . '</div>'; ?>
 											<?php endforeach; ?>
 										<?php endif; ?>
 									</div>

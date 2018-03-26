@@ -62,7 +62,7 @@ $event_id = get_the_ID();
 			<div class="show-page-container">
 				<!-- Buy Tickets button to link to eventbrite page -->
 				<div class="buy-tickets-link-wrapper desktop-view-hidden">
-					<a href="<?php echo tribe_get_event_website_url(); ?>" class="buy-tickets-button">Buy Tickets</a>
+					<a href="<?php echo esc_url( tribe_get_event_website_url() ); ?>" class="buy-tickets-button">Buy Tickets</a>
 				</div>
 
 				<!-- Event content -->
@@ -72,7 +72,7 @@ $event_id = get_the_ID();
 				</div>
 
 				<!-- using this to grab website url to pass to jquery to create the social media share links -->
-				<div class="website-url-for-javascript-hidden"><?php echo tribe_get_event_website_url(); ?></div>
+				<div class="website-url-for-javascript-hidden"><?php echo esc_url( tribe_get_event_website_url() ); ?></div>
 				<h3>Share</h3>
 				<ul class="social-media-share-links">
 					<li class="social-share facebook"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/Share/Facebook.svg" alt="Share Page on Facebook" /></li>
@@ -95,7 +95,7 @@ $event_id = get_the_ID();
 							<div id="post-<?php echo $post_id; ?>" class="show-cast-item">
 								<?php $the_post = get_post( $post_id ); ?>
 								<?php echo get_the_post_thumbnail( $the_post->ID ); ?>
-								<p><?php echo $the_post->post_title; ?></p>
+								<p><?php echo esc_html( $the_post->post_title ); ?></p>
 							</div><!-- show-cast-item -->
 						<?php endforeach; ?>
 					<?php endif; ?>
@@ -128,7 +128,7 @@ $event_id = get_the_ID();
 			<a class="social-twitter" href="" target="_blank">
 				<i class="fa fa-twitter fa-2x"></i>
 			</a>
-			<a class="social-instagram" href="" target="_blank"`>
+			<a class="social-instagram" href="" target="_blank">
 				<i class="fa fa-instagram fa-2x"></i>
 			</a>
 		</div>

@@ -392,7 +392,7 @@ ul.tribe-events-grid-view {
         h3 {
           margin-left: 5%;
           @include desktop {
-            width: 10%;
+            width: 100%;
             margin: 0;
           }
         }
@@ -400,7 +400,6 @@ ul.tribe-events-grid-view {
           width: 100%;
           text-align: center;
           @include desktop {
-            padding-left: 10%;
             text-align: left;
           }
         }
@@ -502,7 +501,7 @@ ul.tribe-events-grid-view {
 
    .genre-buttons {
      @include desktop {
-      width: 90%;
+      width: 100%;
       text-align: left;
      }
    }
@@ -752,6 +751,4 @@ ul.tribe-events-grid-view {
 #tribe-events-content .single-event-description {
   text-align: center;
 }
-
-//styling for single day list view of events (when you click on a calendar date)
 

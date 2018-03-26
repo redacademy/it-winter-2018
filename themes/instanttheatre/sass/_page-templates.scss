@@ -78,6 +78,7 @@ body {
     h2 {
       text-align: center;
       margin-top: 0;
+      text-align: center;
     }
     padding: 3rem;
     background: $color__yellow-brand;
@@ -513,6 +514,9 @@ Our Community page
 *******************/
 
 .page-template-default {
+  .entry-title{
+    text-align: center;
+  }
   .our-community {
     @include desktop {
       display: flex;

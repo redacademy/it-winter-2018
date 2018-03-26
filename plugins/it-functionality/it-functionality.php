@@ -8,9 +8,9 @@
  *
  * @wordpress-plugin
  * Plugin Name: Instant Theatre Company Functionality
- * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
+ * Description: Provides core functionality for the Instant Theatre Company website independant of the Instant Theate Company theme.
  * Version:     1.0.0
- * Author:      Your Name
+ * Author:      Guy Chappell, Dakota Mauza, Brandon Lio, Ning Yu Luo
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -25,14 +25,14 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * @since 1.0.0
  */
-define( 'RF_DIR', dirname( __FILE__ ) );
+define( 'IT_DIR', dirname( __FILE__ ) );
 
 /**
  * General housekeeping and plugin activation tasks
  *
  * @since 1.0.0
  */
-include_once( RF_DIR . '/lib/functions/general.php' );
+include_once( IT_DIR . '/lib/functions/general.php' );
 register_activation_hook( __FILE__, array( 'RF_General', 'plugin_activation' ) );
 
 /**
@@ -40,11 +40,11 @@ register_activation_hook( __FILE__, array( 'RF_General', 'plugin_activation' ) )
  *
  * @since 1.0.0
  */
-include_once( RF_DIR . '/lib/functions/post-types.php' );
+include_once( IT_DIR . '/lib/functions/post-types.php' );
 
 /**
  * Taxonomies
  *
  * @since 1.0.0
  */
-include_once( RF_DIR . '/lib/functions/taxonomies.php' );
+include_once( IT_DIR . '/lib/functions/taxonomies.php' );

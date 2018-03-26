@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
   /*********************
  * on reload, if home page, add (big header)
 *********************/
-  $(window).on('load', function(){
+  // $(window).on('load', function(){
     if($('body').hasClass('home') ){
       $('body').addClass('front-page');
     }    
@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
       $('.sub-menu').css('display', 'none')
      $('.menu-item-has-children').on('hover', desktopMenu)
     }
-  })
+  // })
   
   /*********************
  * home page header resize (scroll) event listener

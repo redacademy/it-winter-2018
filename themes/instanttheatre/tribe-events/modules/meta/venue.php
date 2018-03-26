@@ -51,7 +51,7 @@ $website = tribe_get_venue_website_link();
     <?php endif ?>
     
     <div class="events-tags">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/show-details/tag.svg" alt="tag logo" class="show-meta-logo"><?php echo tribe_meta_event_tags( sprintf( esc_html__( ' ', 'the-events-calendar' ), tribe_get_event_label_singular() ), ' ', false ) ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icons/show-details/Tag.svg" alt="tag logo" class="show-meta-logo"><?php echo tribe_meta_event_tags( sprintf( esc_html__( ' ', 'the-events-calendar' ), tribe_get_event_label_singular() ), ' ', false ) ?>
     </div>
 
 		<?php do_action( 'tribe_events_single_meta_venue_section_end' ) ?>
