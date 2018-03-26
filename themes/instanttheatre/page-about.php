@@ -15,7 +15,7 @@ get_header(); ?>
 
 					<?php get_template_part( 'template-parts/content', 'page' ); ?>
 					<div class="our-story">
-						<img src="<?php echo get_template_directory_uri();?>/assets/images/other-images/Our Story Image.jpg">
+					<img src="<?php echo CFS()->get( 'our_story_image' ); ?>">
 						<div class="our-story-text">
 							<?php echo esc_html(CFS() ->get( 'our_story' ) );?>
 						</div>
