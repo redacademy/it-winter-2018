@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 /* Menus */
+
 .front-page-snap-menu{
 	width: 100%;
 	height: 44px;
@@ -194,9 +195,6 @@
 } //main nav
 @media screen and (min-width: 481px) {
 	.front-page {
-		// .content-area{
-		// 	padding-top: 90px;
-		//  }
 		 .front-page-snap-menu{
 			 height: 300px;
 			 transition: .5s;
@@ -220,11 +218,6 @@
 			.selector-nav {
 				display: block;
 				color: black;
-				a{
-					&:hover{
-						color: $color__lightblue-brand;
-					}
-				}
 			}
 			.home-banner-clickables {
 				display: flex;
