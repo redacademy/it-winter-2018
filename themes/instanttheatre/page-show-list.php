@@ -51,8 +51,8 @@ get_header(); ?>
 									<h3>Genres:</h3>
 									<div class="genre-buttons">
 									<?php foreach ( $terms as $term ) : ?>
-										<button class="filter-btn" data-filter=".<?php echo $term->slug; ?>">
-											<?php echo $term->name; ?>
+										<button class="filter-btn" data-filter=".<?php echo esc_html( $term->slug ); ?>">
+											<?php echo esc_html( $term->name ); ?>
 										</button>
 									<?php endforeach; ?>
 									</div><!-- genre-buttons -->
@@ -106,29 +106,29 @@ get_header(); ?>
 									}
 								?>
 
-								<li class="show-item <?php echo $genre_list; ?>">
+								<li class="show-item <?php echo esc_html( $genre_list ); ?>">
 								<?php 
 								$thumb = ( has_post_thumbnail( $post->ID ) ) ? get_the_post_thumbnail( $post->ID, 'large' ) : '<img src="' . esc_url( trailingslashit( Tribe__Events__Pro__Main::instance()->pluginUrl ) . 'src/resources/images/tribe-related-events-placeholder.png' ) . '" alt="' . esc_attr( get_the_title( $post->ID ) ) . '" />';
 								?>
 								<div class="tribe-events-grid-thumbnail">
 									<a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="url" rel="bookmark"><?php echo $thumb ?></a>
 								</div>
-								<h3 class="tribe-related-events-title"><?php the_title(); ?></h3>
+								<h3 class="tribe-related-events-title"><?php esc_html( the_title() ); ?></h3>
 								<div class="related-events-time-info">
 								<?php 
 								if ( $post->post_type == Tribe__Events__Main::POSTTYPE ) { ?>
-									<p><?php echo tribe_get_start_date( $post, true, 'l, F j' ); ?></p>
-									<p><?php echo tribe_get_start_date( $post, true, 'h:i A' ); ?></p>
+									<p><?php echo esc_html( tribe_get_start_date( $post, true, 'l, F j' ) ); ?></p>
+									<p><?php echo esc_html( tribe_get_start_date( $post, true, 'h:i A' ) ); ?></p>
 								</div>
 								<div class="related-events-venue-info">
 								<?php }
-								echo tribe_get_venue( $post ) . ' | ' . tribe_get_formatted_cost( $post );
+								echo esc_html( tribe_get_venue( $post ) ) . ' | ' . esc_html( tribe_get_formatted_cost( $post ) );
 								?>
 								</div>
 
 								<div class="related-events-links">
-        					<a href="<?php echo tribe_get_event_website_url( $post ); ?>" class="buy-tickets-button">Buy Tickets</a>
-        					<a href="<?php echo tribe_get_event_link( $post ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
+        					<a href="<?php echo esc_url( tribe_get_event_website_url( $post ) ); ?>" class="buy-tickets-button">Buy Tickets</a>
+        					<a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
       					</div>
 							</li>
 							<?php 
