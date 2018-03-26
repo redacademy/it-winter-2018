@@ -188,6 +188,9 @@
 } //main nav
 @media screen and (min-width: 481px) {
 	.front-page {
+		.content-area{
+			padding-top: 25px;
+		}
 		.main-navigation {
 			position: relative;
 			height: 300px;
@@ -312,7 +315,9 @@
 		} //main nav (home)
 	} //body.home 
 
-
+.content-area{
+ padding-top: 100px;
+}
 
 	.main-navigation {
 		align-items: flex-start;
@@ -408,7 +413,8 @@
 				margin: 0;
 				.selector-nav {
 					position: static;
-					font-family: "Roboto";
+					font-weight: bold;
+					// font-family: "Roboto";
 					text-transform: uppercase;
 					&::after {
 						content: none;
