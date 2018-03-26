@@ -30,6 +30,7 @@ access_log
 # ========================================================== #
 plugins/*
 !plugins/it-functionality/
+!plugins/contact-widget/
 
 # Ignore everything in "themes" except the active theme. #
 # ====================================================== #
