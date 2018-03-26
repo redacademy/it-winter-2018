@@ -57,7 +57,7 @@ add_action( 'after_setup_theme', 'red_starter_content_width', 0 );
  */
 function red_starter_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html( 'our-mission' ),
+		'name'          => esc_html( 'Footage Our Mission' ),
 		'id'            => 'our-mission',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -66,7 +66,7 @@ function red_starter_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html( 'contact-info' ),
+		'name'          => esc_html( 'Footage contact info' ),
 		'id'            => 'contact-info',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -75,7 +75,7 @@ function red_starter_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html( 'subscribe' ),
+		'name'          => esc_html( 'Footage Subscribe' ),
 		'id'            => 'subscribe',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -84,7 +84,7 @@ function red_starter_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html( 'contact-page-contact-sidebar' ),
+		'name'          => esc_html( 'Contact Page Contact Sidebar' ),
 		'id'            => 'contact-page-contact-sidebar',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -93,7 +93,7 @@ function red_starter_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html( 'shows_calendar' ),
+		'name'          => esc_html( 'Shows Calendar' ),
 		'id'            => 'shows-calendar',
 		'description'   => '',
 		'before_widget' => '<div id="shows-calendar">',

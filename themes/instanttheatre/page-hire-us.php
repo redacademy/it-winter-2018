@@ -15,6 +15,8 @@ get_header(); ?>
 				<h1><?php the_title(); ?> </h1>
 				
 				<?php	the_post_thumbnail(); ?>
+
+				<!-- needs to be unescaped for <br> to occur -->
 				<p><?php echo CFS()->get( 'hire_us_description' ); ?></p>
 				
 				<div class="hire-us-grid">
@@ -24,15 +26,15 @@ get_header(); ?>
 				<?php 
 					foreach ( $fields as $field ) { ?>
 					<div class="hire-us-part">
-					<h2><?php echo $field['heading']; ?></h2>
-					<p><?php echo $field['description']; ?></p>
+					<h2><?php echo esc_html( $field['heading'] ); ?></h2>
+					<p><?php echo esc_html( $field['description'] ); ?></p>
 					<h3>Perfect for:</h3>
 					<?php 
 						$perfect_for = $field['perfect_for']; 
 						$perfect_for = explode(", ", $perfect_for); ?>
 						<ul><?php
 						foreach ( $perfect_for as $fits ) { ?>
-							<li><?php echo $fits; ?></li>
+							<li><?php echo esc_html( $fits ); ?></li>
 						<?php 
 						}
 					?></ul></div>
@@ -40,6 +42,7 @@ get_header(); ?>
 					}
 					?></div>
 
+					<!-- needs to be unescaped for <br> to occur -->
 					<h1>Applied Improv</h1>
 					<p><?php echo CFS()->get( 'applied_improv' );  ?></p>
 
@@ -49,8 +52,8 @@ get_header(); ?>
 				<?php 
 					foreach ( $applied_improv as $field ) { ?>
 					<div class="hire-us-part">
-					<h2><?php echo $field['title']; ?></h2>
-					<p><?php echo $field['description']; ?></p>
+					<h2><?php echo esc_html( $field['title'] ); ?></h2>
+					<p><?php echo esc_html( $field['description'] ); ?></p>
 					</div>
 					<?php
 					}
@@ -63,9 +66,9 @@ get_header(); ?>
 						$articles = CFS()->get( 'business_articles' );
 						foreach ( $articles as $article ) { ?>
 						<div class="business-grid-part">
-							<p><?php echo $article['article_excerpt']; ?></p>
+							<p><?php echo esc_html( $article['article_excerpt'] ); ?></p>
 							<span class="article-source">
-									<p><?php echo $article['article_location']; ?></p>
+									<p><?php echo esc_html( $article['article_location'] ); ?></p>
 									<?php echo $article['article_link']; ?>
 							</span>
 						</div>
@@ -78,7 +81,7 @@ get_header(); ?>
 				<?php 
 					$companies = CFS()->get( 'company_images' );
 					foreach ( $companies as $company ) : ?>
-						<img src="<?php echo $company['image']; ?>">
+						<img src="<?php echo esc_url( $company['image'] ); ?>">
 				<?php endforeach; ?>
 				</div>
 
@@ -90,12 +93,12 @@ get_header(); ?>
 						$testimonials = CFS()->get( 'testimonials' );
 						foreach ( $testimonials as $testimonial ) { ?>
 						<div class="testimonial-grid-part">
-							<img src="<?php echo $testimonial['image'] ?>">
+							<img src="<?php echo esc_url( $testimonial['image'] ); ?>">
 							<div class="testimonial-description">
-							<p><?php echo $testimonial['testimonial']; ?></p>
+							<p><?php echo esc_html( $testimonial['testimonial'] ); ?></p>
 							<span class="testimonial-source">
-									<p><?php echo $testimonial['author']; ?></p>, 
-									<?php echo $testimonial['authors_position']; ?>
+									<p><?php echo esc_html( $testimonial['author'] ); ?></p>, 
+									<?php echo esc_html( $testimonial['authors_position'] );  ?>
 							</span>
 							</div>
 						</div>
