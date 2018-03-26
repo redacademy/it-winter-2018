@@ -84,7 +84,7 @@ get_header();
 			<a class="social-twitter" href="" target="_blank">
 				<i class="fa fa-twitter fa-2x"></i>
 			</a>
-			<a class="social-instagram" href="" target="_blank"`>
+			<a class="social-instagram" href="" target="_blank">
 				<i class="fa fa-instagram fa-2x"></i>
 			</a>
 		</div>
