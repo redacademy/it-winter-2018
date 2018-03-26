@@ -2958,7 +2958,8 @@ ul.tribe-events-grid-view {
       width: 100%; }
     ul.tribe-events-grid-view li h3 {
       text-align: left;
-      margin: 5px;
+      margin: 5px 0;
+      font-weight: bold;
       font-size: 16px; }
     ul.tribe-events-grid-view li .tribe-related-event-info {
       text-align: left;
