@@ -22,12 +22,6 @@ get_header(); ?>
 	<div class="entry-content-contact-page">
 		
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-				'after'  => '</div>',
-			) );
-		?>
 
 <div id="contact-sidebar" class="contact-sidebar">
                 <?php
@@ -45,5 +39,9 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> e42a46d35eddaabe670eb8a44c45ac4c22a68f35
 <?php get_footer(); ?>

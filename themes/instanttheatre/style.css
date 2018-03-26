@@ -2052,9 +2052,17 @@ tags archive page
     .class-schedule li .cell {
       text-align: left; }
       .class-schedule li .cell:first-child {
-        width: 65%; }
+        width: 65%;
+        padding-left: 0.5rem; }
+        @media (min-width: 480px) {
+          .class-schedule li .cell:first-child {
+            padding-left: none; } }
       .class-schedule li .cell:last-child {
-        width: 35%; }
+        width: 35%;
+        padding-right: 0.5rem; }
+        @media (min-width: 480px) {
+          .class-schedule li .cell:last-child {
+            padding-right: none; } }
       .class-schedule li .cell:not(:first-child):not(:last-child) {
         display: none; }
         @media (min-width: 480px) {
@@ -2284,7 +2292,8 @@ ERROR404
 .page h1 {
   margin-top: 1em;
   color: black;
-  padding: 0 20px; }
+  padding: 0 20px;
+  text-align: center; }
   @media (min-width: 480px) {
     .page h1 {
       padding: 0; } }
@@ -3115,14 +3124,13 @@ ul.tribe-events-grid-view {
         margin-left: 5%; }
         @media (min-width: 480px) {
           #calendar-area .shows-taxonomy-filter-area .filter-shows-group h3 {
-            width: 10%;
+            width: 100%;
             margin: 0; } }
       #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
         width: 100%;
         text-align: center; }
         @media (min-width: 480px) {
           #calendar-area .shows-taxonomy-filter-area .filter-shows-group .show-all-container {
-            padding-left: 10%;
             text-align: left; } }
     #calendar-area .shows-taxonomy-filter-area .done-button {
       font-size: 16px;
@@ -3209,7 +3217,7 @@ ul.tribe-events-grid-view {
         display: none; } }
   @media (min-width: 480px) {
     #calendar-area .genre-buttons {
-      width: 90%;
+      width: 100%;
       text-align: left; } }
   #calendar-area h3 {
     text-align: left;
