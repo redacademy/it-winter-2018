@@ -9,11 +9,9 @@ jQuery(document).ready(function($){
         $('.front-page-snap-menu').css('height', 100);
       }
     if( $(window).width() < 480 ) {
-      console.log('captain, were below 480');
       $('.sub-menu').css('display', 'none')
       $('.menu-item-has-children').on('click', hamburgerMenu)
     }else{
-      console.log('captain, were above 480');
       $('.sub-menu').css('display', 'none')
      $('.menu-item-has-children').on('hover', desktopMenu)
     }

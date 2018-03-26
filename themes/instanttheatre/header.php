@@ -34,7 +34,7 @@
 						<form class="search-form" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 						<label for="toggle-button" class="hamburger-toggle-button"><i class="fa fa-bars"></i></label>	
 							<label>
-								<input type="search" class="search-field" placeholder="Type and press enter!" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+								<input type="search" class="search-field" placeholder="Search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
 							</label>
 							<button type="submit" id="search-button">
 								<i class="fa fa-search"></i>
