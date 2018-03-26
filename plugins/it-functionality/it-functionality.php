@@ -8,9 +8,9 @@
  *
  * @wordpress-plugin
  * Plugin Name: Instant Theatre Company Functionality
- * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
+ * Description: Provides core functionality for the Instant Theatre Company website independant of the Instant Theate Company theme.
  * Version:     1.0.0
- * Author:      Your Name
+ * Author:      Guy Chappell, Dakota Mauza, Brandon Lio, Ning Yu Luo
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */

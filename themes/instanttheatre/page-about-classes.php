@@ -28,10 +28,10 @@ get_header(); ?>
 				<div class="class-type-gallery">
 					<?php foreach ( $terms as $term ) : ?>
 						<div class="gallery-item">
-							<img class="item-logo" src="<?php echo get_template_directory_uri() . '/assets/logo/rocket/rocket-' . $term->slug; ?>.svg" alt="<?php echo $term->name . ' category'; ?>"/>
-							<span class="featured"><?php echo $term->slug; ?></span>
-							<p><?php echo $term->description; ?></p>
-							<a class="blue-btn" href="<?php echo get_permalink( get_page_by_path( 'list-of-classes' ) ) . '#' . $term->slug; ?>">See Classes</a>
+							<img class="item-logo" src="<?php echo esc_url( get_template_directory_uri() . '/assets/logo/rocket/rocket-' . $term->slug ); ?>.svg" alt="<?php echo $term->name . ' category'; ?>"/>
+							<span class="featured"><?php echo esc_html( $term->slug ); ?></span>
+							<p><?php echo esc_html( $term->description ); ?></p>
+							<a class="blue-btn" href="<?php echo esc_url( get_permalink( get_page_by_path( 'list-of-classes' ) ) . '#' . $term->slug ); ?>">See Classes</a>
 						</div>
 					<?php	endforeach; wp_reset_postdata(); ?>
 				</div>
@@ -47,10 +47,10 @@ get_header(); ?>
 					<?php foreach ( $contents as $content ) : ?>
 						<div class="content-panel">
 							<div class="panel-image">
-								<img src="<?php echo $content['photo']; ?> "/>
+								<img src="<?php echo esc_url( $content['photo'] ); ?> "/>
 							</div>
 							<div>
-								<?php echo $content['content']; ?>
+								<?php echo wp_kses_post( $content['content'] ); ?>
 							</div>
 						</div>
 					<?php endforeach; ?>
@@ -66,12 +66,12 @@ get_header(); ?>
 				<?php $testimonials = CFS()->get( 'testimonials' ); ?>
 				<?php foreach ( $testimonials as $testimonial ) : ?>
 					<div class="testimonial-grid-part">
-						<img src="<?php echo $testimonial['image'] ?>">
+						<img src="<?php echo esc_url( $testimonial['image'] ); ?>">
 						<div class="testimonial-description">
-							<p><?php echo $testimonial['testimonial']; ?></p>
+							<p><?php echo esc_html( $testimonial['testimonial'] ); ?></p>
 							<span class="testimonial-source">
-								<p><?php echo $testimonial['author']; ?></p>, 
-								<?php echo $testimonial['authors_position']; ?>
+								<p><?php echo esc_html( $testimonial['author'] ); ?></p>, 
+								<?php echo esc_html( $testimonial['authors_position'] ); ?>
 							</span>
 						</div>
 					</div>
@@ -87,7 +87,7 @@ get_header(); ?>
 				<?php $photos = CFS()->get( 'photo_gallery' ); ?>
 				<?php foreach ( $photos as $photo ) : ?>
 					<div class="gallery-item">
-						<img src="<?php echo $photo['photo'] ?>">
+						<img src="<?php echo esc_url( $photo['photo'] ); ?>">
 					</div>
 				<?php endforeach; ?>
 			</div>
