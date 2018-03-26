@@ -1955,7 +1955,8 @@ tags archive page
         top: 0; } }
     .list-of-classes .page-header .view-switch li {
       margin-right: 1rem;
-      text-decoration: underline; }
+      text-decoration: underline;
+      cursor: pointer; }
   .list-of-classes .page-header h1.main-heading {
     margin: 0.5rem;
     text-align: center; }
