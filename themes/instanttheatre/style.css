@@ -2748,6 +2748,11 @@ http://flickity.metafizzy.co
   opacity: 1;
   background: #00B6CB; }
 
+@media screen and (min-width: 480px) {
+  .instagram-carousel .flickity-prev-next-button,
+  .instagram-carousel .flickity-page-dots {
+    display: none; } }
+
 .single-tribe_events .entry-content h1 {
   text-align: center;
   margin: 20px;
