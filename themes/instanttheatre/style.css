@@ -1031,6 +1031,8 @@ input[type="submit"] {
   min-width: none;
   padding: 2rem;
   margin: 0 auto; }
+  .site-info .widget_custom_html {
+    margin: 0; }
   .site-info h2,
   .site-info h3,
   .site-info p {
@@ -1332,7 +1334,8 @@ body {
     padding: 3rem;
     background: #FFEC00; }
     .what-is-improv .what-is-improv-containor p {
-      text-align: center; }
+      text-align: center;
+      max-width: none; }
     .what-is-improv .what-is-improv-containor h2 {
       text-align: center;
       margin-top: 0;
@@ -1689,7 +1692,7 @@ body {
     display: -ms-flexbox;
     display: flex; }
   .page main .entry-content-contact-page span {
-    font-weight: 500;
+    font-weight: 600;
     width: 150px; }
 
 /**************
@@ -1941,7 +1944,6 @@ tags archive page
       display: -ms-flexbox;
       display: flex; }
     .page main .entry-content-contact-page span {
-      font-weight: 500;
       width: 200px; } }
 
 /*************************
