@@ -244,6 +244,4 @@ echo '<a href="'.$values[0].'" target="'.$values[2].'" class="learn-more-link" >
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
