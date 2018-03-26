@@ -40,8 +40,8 @@ get_header(); ?>
 
 		<div class="related-events-time-info">
 
-					<p><?php echo tribe_get_start_date( $post, true, 'l, F j' ); ?></p>
-						 <p><?php echo tribe_get_start_date( $post, true, 'h:i A' ); ?></p>
+					<p><?php echo esc_html( tribe_get_start_date( $post, true, 'l, F j' ) ); ?></p>
+						 <p><?php echo esc_html( tribe_get_start_date( $post, true, 'h:i A' ) ); ?></p>
 						 </div>
 
 						 <div class="related-events-venue-info">
@@ -50,8 +50,8 @@ get_header(); ?>
 		?>
 		</div>
 		<div class="related-events-links">
-				<a href="<?php echo tribe_get_event_website_url( $post ); ?>" class="buy-tickets-button">Buy Tickets</a>
-					 <a href="<?php echo tribe_get_event_link( $post ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
+				<a href="<?php echo esc_url( tribe_get_event_website_url( $post ) ); ?>" class="buy-tickets-button">Buy Tickets</a>
+					 <a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="learn-more-link" rel="bookmark">Learn More</a>
 					 </div>
 </li>
 

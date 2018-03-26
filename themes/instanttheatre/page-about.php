@@ -17,7 +17,7 @@ get_header(); ?>
 					<div class="our-story">
 						<img src="<?php echo get_template_directory_uri();?>/assets/images/other-images/Our Story Image.jpg">
 						<div class="our-story-text">
-							<?php echo CFS() ->get( 'our_story' );?>
+							<?php echo esc_html(CFS() ->get( 'our_story' ) );?>
 						</div>
 					</div>
 
@@ -29,11 +29,11 @@ get_header(); ?>
 				<div class="nikolai-experience">
 					<div class="improv-experience">
 						<h2>improv experience</h2>
-						<?php echo CFS() -> get ( 'improv_experience' ); ?>
+						<?php echo esc_html( CFS() -> get ( 'improv_experience' ) ); ?>
 					</div>
 					<div class="acting-experience">
 						<h2>acting experience</h2>
-						<?php echo CFS() -> get ( 'acting_experience' ); ?>
+						<?php echo esc_html( CFS() -> get ( 'acting_experience' ) ); ?>
 					</div>
 				</div>
 
