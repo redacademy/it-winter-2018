@@ -15,6 +15,13 @@
       pageDots: false,
       contain: true
     });
+    $('.photo-gallery-container').flickity({
+      prevNextButtons: false,
+      cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
+      pageDots: false
+    });
   }
 
   $(window).on('resize', function() {
