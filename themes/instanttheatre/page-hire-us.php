@@ -17,7 +17,7 @@ get_header(); ?>
 				<?php	the_post_thumbnail(); ?>
 
 				<!-- needs to be unescaped for <br> to occur -->
-				<p><?php echo wp_kses_post( CFS()->get( 'hire_us_description' ) ); ?></p>
+				<p class="hire-us-page-paragraph"><?php echo wp_kses_post( CFS()->get( 'hire_us_description' ) ); ?></p>
 				
 				<div class="hire-us-grid">
 			  <?php
@@ -44,7 +44,7 @@ get_header(); ?>
 
 					<!-- needs to be unescaped for <br> to occur -->
 					<h1>Applied Improv</h1>
-					<p><?php echo wp_kses_post( CFS()->get( 'applied_improv' ) );  ?></p>
+					<p class="hire-us-page-paragraph"><?php echo wp_kses_post( CFS()->get( 'applied_improv' ) );  ?></p>
 
 					<div class="hire-us-grid">
 			  <?php $applied_improv = CFS()->get( 'where_applied' ); ?>

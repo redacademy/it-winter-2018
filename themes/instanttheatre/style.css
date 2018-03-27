@@ -2265,10 +2265,13 @@ ERROR404
       padding: 0; } }
 
 .page p {
-  margin-left: auto;
-  margin-right: auto;
   text-align: left;
-  max-width: 1000px; }
+  margin: 0 10px; }
+  @media (min-width: 480px) {
+    .page p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px; } }
 
 .page .gform_wrapper {
   margin-top: 40px; }
@@ -2629,6 +2632,12 @@ ERROR404
     margin: 0; }
   .page .studio-grid p {
     margin-bottom: 0; }
+
+.content-area .hire-us-page-paragraph {
+  margin: 0 10px; }
+  @media (min-width: 480px) {
+    .content-area .hire-us-page-paragraph {
+      margin: 0; } }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
