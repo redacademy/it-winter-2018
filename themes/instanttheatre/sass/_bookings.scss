@@ -13,10 +13,13 @@
       }
     }
     p {
-      margin-left: auto;
-      margin-right: auto;
+      @include desktop {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+      }
       text-align: left;
-      max-width: 1000px;
+      margin: 0 10px;
     }
 
     //css for forms
@@ -162,7 +165,7 @@
       @include desktop {
         background: url("../../assets/images/yellow-wave-banner-background.png");
         padding: 45px;
-        margin-top: 0;
+        margin: 30px 0 50px 0;
       }
       .business-grid {
         margin-left: auto;
@@ -225,6 +228,9 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: 20px 0;
+      @include desktop {
+        margin: 20px 0 50px 0;
+      }
       img {
         width: 162px;
         height: 162px;
@@ -360,6 +366,10 @@
           margin-bottom: 0;
           width: 33%;
         }
+        h3 {
+          font-weight: bold;
+          margin-top: 13px;
+        }
         img {
           height: 200px;
           width: 350px;
@@ -392,3 +402,10 @@
     }
     
   }
+
+.content-area .hire-us-page-paragraph {
+  margin: 0 10px;
+  @include desktop {
+    margin: 0;
+  }
+}

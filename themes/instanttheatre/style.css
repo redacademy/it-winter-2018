@@ -512,10 +512,6 @@ input[type="submit"] {
 # Navigation
 --------------------------------------------------------------*/
 /* Menus */
-.front-page-snap-menu {
-  width: 100%;
-  height: 44px; }
-
 .main-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,7 +526,7 @@ input[type="submit"] {
   width: 100%;
   height: 60px;
   background-color: #FFEC00;
-  z-index: 10; }
+  z-index: 999; }
   @media (min-width: 480px) {
     .main-navigation {
       max-width: 1440px; } }
@@ -724,7 +720,7 @@ input[type="submit"] {
             justify-content: space-between;
     -webkit-transition: .5s;
     transition: .5s;
-    z-index: 10; }
+    z-index: 999; }
     .front-page .main-navigation a {
       position: relative; }
     .front-page .main-navigation .selector-nav {
@@ -831,12 +827,12 @@ input[type="submit"] {
       display: none; }
   .front-page-snap-menu {
     height: 300px;
-    width: 300%; }
+    width: 100%; }
   .main-navigation {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    z-index: 10; }
+    z-index: 990; }
     .main-navigation .home-banner-clickables {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1034,6 +1030,9 @@ input[type="submit"] {
 .widget_search .search-submit {
   display: none; }
 
+.site-footer {
+  margin-top: 3rem; }
+
 .site-info {
   background-color: #FEEA1E;
   max-width: 480px;
@@ -1042,7 +1041,7 @@ input[type="submit"] {
   margin: 0 auto; }
   .site-info .widget_custom_html {
     margin: 0; }
-  .site-info .our-mission p {
+  .site-info .our-mission aside p {
     margin-bottom: 1rem; }
   .site-info h2,
   .site-info h3,
@@ -1650,26 +1649,8 @@ body {
 /***************************
  *PAGE: Auditions 
  ***************************/
-.auditions-containor {
-  background-color: #FFEC00;
-  width: 100%; }
-  .auditions-containor .email-field {
-    max-width: 345px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    text-align: left;
-    margin: 0 auto; }
-    .auditions-containor .email-field .fname,
-    .auditions-containor .email-field .email-input {
-      width: 100%; }
+.audition-p {
+  text-align: center; }
 
 /***************************
  *PAGE: Contact Us
@@ -1811,14 +1792,15 @@ Our Community page
       .page-template-default .our-community .quote-entry .quote-hook {
         text-align: left;
         background-color: rgba(255, 255, 255, 0.8);
-        margin: 0px; } }
+        margin: 0px;
+        padding: 3.5%; } }
   @media (min-width: 480px) {
     .page-template-default .our-community .quote-entry {
       margin-bottom: 5%;
       padding: 0px;
       background-image: url("../../assets/images/yellow-wave-banner-background.png");
       background-position: center;
-      padding: 3%; } }
+      padding: 3.5%; } }
 
 .page-template-default .venue-wrapper {
   text-align: center;
@@ -1854,7 +1836,8 @@ Our Community page
         padding: 0; } }
     .page-template-default .community-gallery-images .community-gallery img {
       height: 300px;
-      width: 100%; }
+      width: 90%;
+      border: 1px solid black; }
 
 .page-template-default .havana-theatre h1 {
   text-transform: capitalize; }
@@ -1868,12 +1851,13 @@ tags archive page
 *******************/
 @media screen and (min-width: 480px) {
   .what-is-improv {
-    padding: 2rem; }
+    padding: 2rem;
+    margin-bottom: 5rem; }
     .what-is-improv .what-is-improv-containor {
       background: rgba(255, 255, 255, 0.8); }
     .what-is-improv .improv-button-set {
       margin: 0 auto;
-      width: 40%;
+      max-width: 600px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
@@ -1888,7 +1872,8 @@ tags archive page
   .banner-carousel {
     height: 500px;
     padding: 1rem;
-    margin: 5rem auto 0; }
+    margin: 5rem auto 0;
+    margin-bottom: 5rem; }
     .banner-carousel .flickity-viewport {
       max-height: 466px; }
     .banner-carousel .banner-cell {
@@ -1909,28 +1894,6 @@ tags archive page
       z-index: 0; }
     .banner-carousel .flickity-prev-next-button {
       top: 250px; }
-  .auditions-containor {
-    background-color: #FFEC00;
-    width: 100%;
-    padding: 2rem;
-    margin-bottom: 3.75rem; }
-    .auditions-containor .email-field {
-      max-width: 570px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      text-align: left;
-      margin: 0 auto; }
-      .auditions-containor .email-field .fname,
-      .auditions-containor .email-field .email-input {
-        width: 100%; }
   .page main .entry-content-contact-page {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2191,6 +2154,9 @@ tags archive page
 /*******************
 SEARCH RESULTS
 ********************/
+.search-no-results .page-content fieldset {
+  border: 0; }
+
 @media (min-width: 480px) {
   .search-results .search-results-wrapper {
     display: -webkit-box;
@@ -2206,7 +2172,6 @@ SEARCH RESULTS
 .search-results .search-results-wrapper article {
   width: 100%;
   height: 500px;
-  border: 1px solid darkslategrey;
   margin-bottom: 10px;
   padding-top: 10px; }
   @media (min-width: 480px) {
@@ -2301,10 +2266,13 @@ ERROR404
       padding: 0; } }
 
 .page p {
-  margin-left: auto;
-  margin-right: auto;
   text-align: left;
-  max-width: 1000px; }
+  margin: 0 10px; }
+  @media (min-width: 480px) {
+    .page p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px; } }
 
 .page .gform_wrapper {
   margin-top: 40px; }
@@ -2436,7 +2404,7 @@ ERROR404
     .page .business-widget {
       background: url("../../assets/images/yellow-wave-banner-background.png");
       padding: 45px;
-      margin-top: 0; } }
+      margin: 30px 0 50px 0; } }
   .page .business-widget .business-grid {
     margin-left: auto;
     margin-right: auto;
@@ -2503,6 +2471,9 @@ ERROR404
       -ms-flex-pack: center;
           justify-content: center;
   margin: 20px 0; }
+  @media (min-width: 480px) {
+    .page .company-grid {
+      margin: 20px 0 50px 0; } }
   .page .company-grid img {
     width: 162px;
     height: 162px;
@@ -2635,6 +2606,9 @@ ERROR404
       .page .studio-grid .studio-grid-part {
         margin-bottom: 0;
         width: 33%; } }
+    .page .studio-grid .studio-grid-part h3 {
+      font-weight: bold;
+      margin-top: 13px; }
     .page .studio-grid .studio-grid-part img {
       height: 200px;
       width: 350px;
@@ -2659,6 +2633,12 @@ ERROR404
     margin: 0; }
   .page .studio-grid p {
     margin-bottom: 0; }
+
+.content-area .hire-us-page-paragraph {
+  margin: 0 10px; }
+  @media (min-width: 480px) {
+    .content-area .hire-us-page-paragraph {
+      margin: 0; } }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
@@ -2780,6 +2760,11 @@ http://flickity.metafizzy.co
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
   background: #00B6CB; }
+
+@media screen and (min-width: 480px) {
+  .instagram-carousel .flickity-prev-next-button,
+  .instagram-carousel .flickity-page-dots {
+    display: none; } }
 
 .single-tribe_events .entry-content h1 {
   text-align: center;
@@ -3330,7 +3315,9 @@ ul.tribe-events-grid-view {
   .show-cast-container .show-cast-item img {
     width: 100px;
     height: 100px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .show-cast-container .show-cast-item p {
     text-align: center; }
 

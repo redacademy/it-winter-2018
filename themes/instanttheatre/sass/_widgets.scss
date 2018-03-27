@@ -16,18 +16,24 @@
 	display: none;
 }
 
+.site-footer {
+	margin-top: 3rem;
+}
+
 .site-info {
 	background-color: #FEEA1E;
 	max-width: 480px;
 	min-width: none;
 	padding: 2rem;
 	margin: 0 auto;
-	.widget_custom_html{
+	.widget_custom_html {
 		margin: 0;
 	}
-	.our-mission{
-		p{
-			margin-bottom: 1rem;
+	.our-mission {
+		aside {
+			p {
+				margin-bottom: 1rem;
+			}
 		}
 	}
 	h2,
@@ -64,12 +70,11 @@
 		}
 		.subscribe {
 			max-width: 360px;
-			p{
+			p {
 				margin-bottom: 1rem;
 			}
 		}
 	}
-
 	.mc4wp-form-fields {
 		display: flex;
 		flex-direction: column;
@@ -79,7 +84,7 @@
 			width: 100%;
 			height: 50px;
 			padding-left: 1.5rem;
-			&:focus{
+			&:focus {
 				outline: none;
 			}
 		}

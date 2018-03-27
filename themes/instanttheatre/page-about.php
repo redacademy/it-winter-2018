@@ -15,7 +15,7 @@ get_header(); ?>
 
 					<?php get_template_part( 'template-parts/content', 'page' ); ?>
 					<div class="our-story">
-					<img src="<?php echo CFS()->get( 'our_story_image' ); ?>">
+					<img src="<?php echo esc_url( CFS()->get( 'our_story_image' )); ?>">
 						<div class="our-story-text">
 							<?php echo esc_html(CFS() ->get( 'our_story' ) );?>
 						</div>
@@ -24,7 +24,7 @@ get_header(); ?>
 				<?php endwhile; // End of the loop. ?>
 
 				<h1>our school director</h1>
-				<img src="<?php echo CFS()->get('school_director');?>"class="nikolai-pic">
+				<img src="<?php echo esc_url( CFS()->get('school_director') );?>"class="nikolai-pic">
 				<p>nikolai witschl</p>
 				<div class="nikolai-experience">
 					<div class="improv-experience">
