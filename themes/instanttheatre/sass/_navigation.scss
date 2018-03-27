@@ -188,7 +188,9 @@
 		.social-media-links {
 			order: 3;
 			font-size: 30px;
+		a{
 			text-decoration: none;
+			}
 		}
 	}
 } //main nav
@@ -311,6 +313,7 @@
 					order: 3;
 					z-index: 0;
 					padding-right: 5px;
+					text-decoration: none;
 					a{
 						text-decoration: none;
 					}
@@ -426,11 +429,9 @@
 					position: static;
 					font-weight: bold; // font-family: "Roboto";
 					text-transform: uppercase;
-					.menu-item-has-children{
 					&::after {
 						content: none;
 					}
-				}
 				}
 				.sub-menu {
 					width: 100%;
