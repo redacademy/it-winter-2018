@@ -408,5 +408,11 @@
   margin: 0 10px;
   @include desktop {
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
+
+.size-details {
+  margin-bottom: 15px;
 }
