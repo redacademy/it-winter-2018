@@ -2272,7 +2272,8 @@ ERROR404
     .page p {
       margin-left: auto;
       margin-right: auto;
-      max-width: 1000px; } }
+      max-width: 1000px;
+      margin-bottom: 1.5rem; } }
 
 .page .gform_wrapper {
   margin-top: 40px; }
