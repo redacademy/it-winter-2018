@@ -30,14 +30,14 @@
 					</h1>
 
 
-					<nav id="site-navigation" class="main-navigation" role="navigation">
+					<nav id="site-navigation" class="main-navigation">
 						<a class="desktop-rocket-logo" href="<?php echo esc_url(home_url('/') );?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/primary/black.png" />
 						</a>
 						<a class="circular-rocket-logo" href="<?php echo esc_url(home_url('/') );?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/circular/black.png" />
 						</a>
-						<input type="checkbox" class="menu-toggle" id="toggle-button" aria-controls="primary-menu" aria-expanded="false"></input>
+						<input type="checkbox" class="menu-toggle" id="toggle-button" aria-controls="primary-menu" aria-expanded="false">
 						<label for="toggle-button" class="hamburger-toggle">
 							<i class="fa fa-bars"></i>
 						</label>

@@ -13,19 +13,26 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-<!-- ///////////////banner /////////////////////-->
+		<?php
+		//======================================================================
+		// Banner carousel
+		//======================================================================
+		?>
 		<div class="banner-carousel">
 
-			<?php		$fields = CFS()->get( 'banner_loop' );
+			<?php	// print the banner loop content
+			$fields = CFS()->get( 'banner_loop' );
 			foreach ( $fields as $field ) {
-	
+				// set up values for php links array
 				$keys = array_keys($field['title_link']);
 				$values = array_values($field['title_link']);
 
 				?>
 				<div class="banner-cell" >
+					<?php // thumbnail wrap for img ?>
 				<div class="banner-thumbnail">
 					<?php
+					//wrapping the image and title with the input link in admin
 					echo '<a href="'. esc_url( $values[0] ).'" target="'.$values[2].'">'.'<img src="' . $field['banner_image']. '" alt="Banner Image">'.'</a>';
 					?>
 		
@@ -49,13 +56,21 @@ get_header();
 			}   // end foreach /////////////////////////////////////////////////
 			?>
 
-		</div><!-- banner-caroucell -->
+		</div><?php // closing banner-caroucell?>
 
 
-<!-- ///////////////////////////shows///////////////////////// -->
+		<?php 
+
+		//======================================================================
+		// shows section
+		//======================================================================
+
+		?>
 		<h1>upcoming shows</h1>
 
-		<!-- // Grab the 3 next events (by categroies) -->
+		<?php 
+		// Grab the 3 next show events (by categroies)
+		?>
 		<div class="shows-grid">
 
 		<?php $events = array(
@@ -63,6 +78,7 @@ get_header();
 				'eventDisplay'   => 'list',
 				'posts_per_page' => 3,
 				'tax_query'=> array(
+					//need another array to set up the taxonomy args for event calender
 					array(
 							'taxonomy' => 'tribe_events_cat',
 							'field' => 'slug',
@@ -117,11 +133,22 @@ get_header();
 		
 		</div>
 
+		<?php // link to show lis ?>
+
 		<div class="front-page-links">
 		<a href="<?php echo get_site_url()?>/show-list/" class="browse-more-link"><span>browse more shows</span> <i class="fa fa-chevron-right"></i></a>
 		</div>
 			
-		<!-- // Grab the 5 next "party" events (by tag) -->
+
+			
+		<?php 
+
+		//======================================================================
+		// classes section
+		//======================================================================
+
+		// Grab the 3 next coming classes in events calendar
+		?>
 
 		<h1>upcoming classes</h1>
 
@@ -191,7 +218,11 @@ get_header();
 		</div>
 
 
-<!--/////////////////////// whats improv////////////////////////////// -->
+<?php
+//======================================================================
+// what is improv section
+//======================================================================
+?>	
 			
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -200,19 +231,25 @@ get_header();
 
 				<div class="entry-content">
 					<?php the_content(); ?>
-				</div><!-- .entry-content -->
-			</article><!-- #post-## -->
+				</div><?php // entry-content  ?>
+			</article><?php // #post-## ?>
 
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; ?>
+			<?php endif; ?>
 
+
+		<?php
+		//======================================================================
+		// instagram feed section
+		//======================================================================
+		?>	
 
 		<section class="instagram-carousel">
 				<h1>instagram</h1>
@@ -224,7 +261,7 @@ get_header();
 
 
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+	</main><?php // #main ?>
+</div><?php // #primary ?>
 
 <?php get_footer(); ?>
