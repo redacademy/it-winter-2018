@@ -2658,6 +2658,9 @@ ERROR404
 .size-details {
   margin-bottom: 15px; }
 
+.banner-text-info p {
+  margin: 5px 0; }
+
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
 ---------------------------------------------- */
