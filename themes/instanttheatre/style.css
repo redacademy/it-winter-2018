@@ -1807,14 +1807,15 @@ Our Community page
       .page-template-default .our-community .quote-entry .quote-hook {
         text-align: left;
         background-color: rgba(255, 255, 255, 0.8);
-        margin: 0px; } }
+        margin: 0px;
+        padding: 3.5%; } }
   @media (min-width: 480px) {
     .page-template-default .our-community .quote-entry {
       margin-bottom: 5%;
       padding: 0px;
       background-image: url("../../assets/images/yellow-wave-banner-background.png");
       background-position: center;
-      padding: 5%; } }
+      padding: 3.5%; } }
 
 .page-template-default .venue-wrapper {
   text-align: center;

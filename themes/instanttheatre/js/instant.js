@@ -37,6 +37,9 @@ jQuery(document).ready(function ($) {
   /******************
    * Window resize set TO
    */
+  var width = $(window).width(), 
+        height = $(window).height();
+
   $(window).resize(function () {
     if (this.resizeTO) clearTimeout(this.resizeTO);
     this.resizeTO = setTimeout(function () {
@@ -46,18 +49,20 @@ jQuery(document).ready(function ($) {
 
   $(window).bind('resizeEnd', function () {
 
+if($(window).width() != width && $(window).height() != height){
+  
     if ($(window).width() < 480) {
-      console.log('captain, were below 480');
       $('.sub-menu').css('display', 'block')
       $('.sub-menu').hide()
       $('.menu-item-has-children').off('hover', desktopMenu)
       $('.menu-item-has-children').on('click', hamburgerMenu)
     } else {
-      console.log('captain, were above 480');
+      
       $('.sub-menu').css('display', 'none')
       $('.menu-item-has-children').off('click', hamburgerMenu)
       $('.menu-item-has-children').on('hover', desktopMenu)
     }
+  }
 
   });
 
@@ -75,16 +80,18 @@ jQuery(document).ready(function ($) {
   }
 
   function desktopMenu() {
+    console.log('hover');
     $('.sub-menu').css('display', 'flex')
     $('.sub-menu').removeClass('active');
     $('.menu-item-has-children').find('.sub-menu').hide();
     $(this).children('.sub-menu').show();
-    if ($('.selector-nav').not('.menu-item-has-children')) {
-      $(this).siblings('.selector-nav').find('.sub-menu').css('display', 'none')
-    }
+     var firstMenuItem = $('.menu-item').eq(0);
+     console.log(firstMenuItem);
+    $(firstMenuItem).on('hover', function(){
+      $('.sub-menu').css('display', 'none');
+    });
+
   }
-
-
 
 
 }) //document ready, jquery
