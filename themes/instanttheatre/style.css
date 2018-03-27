@@ -701,8 +701,9 @@ input[type="submit"] {
       -webkit-box-ordinal-group: 4;
           -ms-flex-order: 3;
               order: 3;
-      font-size: 30px;
-      text-decoration: none; }
+      font-size: 30px; }
+      .main-navigation .menu-toggle:checked ~ .toggle-menu-wrapper .social-media-links a {
+        text-decoration: none; }
 
 @media screen and (min-width: 481px) {
   .front-page .front-page-snap-menu {
@@ -826,7 +827,8 @@ input[type="submit"] {
             -ms-flex-order: 3;
                 order: 3;
         z-index: 0;
-        padding-right: 5px; }
+        padding-right: 5px;
+        text-decoration: none; }
         .front-page .main-navigation .toggle-menu-wrapper .social-media-links a {
           text-decoration: none; }
     .front-page .main-navigation .menu-toggle {
@@ -944,7 +946,7 @@ input[type="submit"] {
           position: static;
           font-weight: bold;
           text-transform: uppercase; }
-          .main-navigation .toggle-menu-wrapper #primary-menu .selector-nav .menu-item-has-children::after {
+          .main-navigation .toggle-menu-wrapper #primary-menu .selector-nav::after {
             content: none; }
         .main-navigation .toggle-menu-wrapper #primary-menu .sub-menu {
           width: 100%;
@@ -2657,6 +2659,9 @@ ERROR404
 
 .size-details {
   margin-bottom: 15px; }
+
+.banner-text-info p {
+  margin: 5px 0; }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
