@@ -386,21 +386,8 @@ body {
  *PAGE: Auditions 
  ***************************/
 
-.auditions-containor {
-  background-color: $color__yellow-brand;
-  width: 100%;
-  .email-field {
-    max-width: 345px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin: 0 auto;
-    .fname,
-    .email-input {
-      width: 100%;
-    }
-  }
+.audition-p{
+  text-align: center;
 }
 
 /***************************
@@ -610,12 +597,13 @@ tags archive page
 @media screen and (min-width: $mobile_break) {
   .what-is-improv {
     padding: 2rem;
+    margin-bottom: 5rem;
     .what-is-improv-containor {
       background: rgba(255, 255, 255, 0.8);
     }
     .improv-button-set {
       margin: 0 auto;
-      width: 40%;
+      max-width: 600px;
       flex-direction: row;
       justify-content: space-around;
     }
@@ -628,6 +616,8 @@ tags archive page
     height: 500px;
     padding: 1rem;
     margin: 5rem auto 0;
+    margin-bottom: 5rem;
+    
     .flickity-viewport {
       max-height: 466px;
     }
@@ -652,24 +642,6 @@ tags archive page
     }
     .flickity-prev-next-button {
       top: 250px;
-    }
-  }
-  .auditions-containor {
-    background-color: $color__yellow-brand;
-    width: 100%;
-    padding: 2rem;
-    margin-bottom: 3.75rem;
-    .email-field {
-      max-width: 570px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-      margin: 0 auto;
-      .fname,
-      .email-input {
-        width: 100%;
-      }
     }
   }
   .page main .entry-content-contact-page {
