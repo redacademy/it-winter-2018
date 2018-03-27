@@ -1661,7 +1661,7 @@ body {
 /***************************
  *PAGE: Auditions 
  ***************************/
-.audition-p {
+.page .audition-p {
   text-align: center; }
 
 /***************************
@@ -2653,7 +2653,15 @@ ERROR404
   margin: 0 10px; }
   @media (min-width: 480px) {
     .content-area .hire-us-page-paragraph {
-      margin: 0; } }
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto; } }
+
+.size-details {
+  margin-bottom: 15px; }
+
+.banner-text-info p {
+  margin: 5px 0; }
 
 /*! Flickity v2.0.11
 http://flickity.metafizzy.co
