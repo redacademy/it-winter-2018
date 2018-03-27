@@ -42,7 +42,7 @@
 						</div>
 
 						<div class= "footer-logo" >
-                <a href="#masthead" class='logo-wrapper'><img src="<?php echo get_template_directory_uri();?>/assets/logo/rocket/black.svg" class="footer__logo-img"/>Back To Top</a>
+                <a href="#masthead" class='logo-wrapper'><img src="<?php echo get_template_directory_uri();?>/assets/logo/rocket/black.svg" class="footer__logo-img" alt="black-logo-rokect"/>Back To Top</a>
 							</div>
 				</div>
 				</div><!-- .site-info -->
