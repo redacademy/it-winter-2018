@@ -187,13 +187,8 @@ get_header();
 	</div>
 		
 		<div class="front-page-links">
-		
-		<a href="<?php echo get_site_url()?>/classes/" class="browse-more-link">browse more classes <i class="fa fa-chevron-right"></i></a>
-		
+			<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'list-of-classes' ) ) ); ?>" class="browse-more-link">browse more classes <i class="fa fa-chevron-right"></i></a>
 		</div>
-
-
-
 
 
 <!--/////////////////////// whats improv////////////////////////////// -->
