@@ -3305,7 +3305,9 @@ ul.tribe-events-grid-view {
   .show-cast-container .show-cast-item img {
     width: 100px;
     height: 100px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .show-cast-container .show-cast-item p {
     text-align: center; }
 
